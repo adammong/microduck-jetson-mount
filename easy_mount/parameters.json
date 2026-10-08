@@ -1,14 +1,14 @@
 {
   "units": "mm",
   "tray_origin_trunk_mm": [
-    -65,
+    50,
     0,
-    25
+    -18
   ],
   "tray_euler_xyz_deg": [
     90,
     0,
-    -90
+    90
   ],
   "torso_side_inner_y": 33.1,
   "torso_arm_wall": 4,
@@ -49,14 +49,14 @@
     32
   ],
   "battery_cradle_origin_trunk_mm": [
-    44,
+    -104,
     0,
-    -10
+    0
   ],
   "battery_cradle_euler_xyz_deg": [
     90,
     0,
-    90
+    -90
   ],
   "battery_local_center_mm": [
     0,
@@ -79,8 +79,8 @@
   "jetson_mass_g": 175,
   "battery_mass_g": 73,
   "ancillary_mass_g": 74,
-  "notes": "External captive saddle fitted to the pinned simulation shell, not verified against production hardware. Six M4 thumb screws and nuts (two torso, two removable tray, two Jetson end gate). No original robot screws are removed. OEM Jetson base retained. Foam pad dimensions are nominal. Physical fit, shell strength and swept motions remain required. v04: Jetson rotated 180 degrees in its tray, connectors face up. Data route ends at an unconnected provisional head-side USB plug; exact production host socket and shell entry require measurement. Converter is a fit allowance, not an electrically selected part. Ancillary masses are estimates; flexible cable tension is not modeled. v05: GNB8504S60AHV 4S LiHV 850mAh pack, manufacturer body 73x18x32 mm and 73g +/-2g; cradle resized with 1mm side clearance and a 0.6mm bottom pad. Battery shell/plug details and flexible factory leads are simplified. Electrical protection/cutoff and conditioning remain unselected.",
-  "revision": "v05",
+  "notes": "External captive saddle fitted to the pinned simulation shell, not verified against production hardware. Six M4 thumb screws and nuts (two torso, two removable tray, two Jetson end gate). No original robot screws are removed. OEM Jetson base retained. Foam pad dimensions are nominal. Physical fit, shell strength and swept motions remain required. v04: Jetson rotated 180 degrees in its tray, connectors face up. Data route ends at an unconnected provisional head-side USB plug; exact production host socket and shell entry require measurement. Converter is a fit allowance, not an electrically selected part. Ancillary masses are estimates; flexible cable tension is not modeled. v05: GNB8504S60AHV 4S LiHV 850mAh pack, manufacturer body 73x18x32 mm and 73g +/-2g; cradle resized with 1mm side clearance and a 0.6mm bottom pad. Battery shell/plug details and flexible factory leads are simplified. Electrical protection/cutoff and conditioning remain unselected. v06: front Jetson tray with independent corner gates; rear battery cradle integrated into saddle. More-open tray windows. Same electronics and conservative component masses. Balance and moving-head clearance are evaluated in simulation, not a hardware payload rating.",
+  "revision": "v06",
   "jetson_inplane_rotation_deg": 180,
   "hardware_pads_straps_mass_g": 22,
   "data_cable_mass_g": 14,
@@ -92,9 +92,9 @@
     12
   ],
   "converter_center_trunk_mm": [
-    51,
-    -54,
-    -10
+    -64,
+    54,
+    0
   ],
   "jetson_usb_c_face_tray_mm": [
     -42,
@@ -110,140 +110,135 @@
   "power_cable_diameter_mm": 3,
   "data_cable_route_trunk_mm": [
     [
-      -77.2,
-      42,
-      100
+      62.2,
+      -42,
+      57
     ],
     [
-      -77.2,
-      42,
-      118
+      62.2,
+      -42,
+      77
     ],
     [
-      -93,
-      64,
-      139
+      83,
+      -64,
+      102
     ],
     [
+      85,
       -89,
-      89,
-      136
+      112
     ],
     [
-      -55,
-      104,
-      124
-    ],
-    [
-      -10,
-      108,
+      77,
+      -104,
       120
     ],
     [
-      25,
-      108,
+      65,
+      -108,
       120
     ],
     [
       50,
-      95,
+      -95,
       120
     ],
     [
       50,
-      75,
+      -75,
       120
     ]
   ],
   "power_cable_route_trunk_mm": [
     [
-      -80.4,
-      -44,
-      96
+      65.4,
+      44,
+      53
     ],
     [
-      -80.4,
-      -44,
-      116
+      65.4,
+      44,
+      73
     ],
     [
-      -98,
-      -62,
-      132
+      83,
+      62,
+      89
     ],
     [
-      -110,
-      -88,
-      111
+      95,
+      88,
+      73
     ],
     [
-      -94,
-      -90,
-      55
+      65,
+      90,
+      50
     ],
     [
-      -60,
-      -90,
+      10,
+      90,
       25
     ],
     [
-      -10,
-      -97,
+      -35,
+      97,
       5
     ],
     [
-      37,
-      -104,
-      -6
+      -85,
+      104,
+      4
     ],
     [
-      75,
-      -104,
-      -6
+      -120,
+      104,
+      4
     ],
     [
-      92.68,
-      -96.68,
-      -6
+      -137.68,
+      96.68,
+      4
     ],
     [
-      100,
-      -79,
-      -6
+      -145,
+      79,
+      4
     ],
     [
-      92.68,
-      -61.32,
-      -6
+      -137.68,
+      61.32,
+      4
     ],
     [
-      75,
-      -54,
-      -6
+      -120,
+      54,
+      4
     ],
     [
-      58,
-      -54,
-      -6
+      -71,
+      54,
+      4
     ]
   ],
   "head_usb_plug_body_center_trunk_mm": [
     50,
-    66,
+    -66,
     120
   ],
   "head_usb_access_marker_trunk_mm": [
     50,
-    47.5,
+    -47.5,
     120
   ],
   "minimum_cable_bend_radius_mm": 10,
   "battery_pocket_depth_mm": 36,
   "battery_bottom_pad_mm": 0.6,
   "converter_pad_center_trunk_mm": [
-    42,
-    -47,
-    -10
+    -54,
+    47,
+    0
   ],
   "converter_pad_size_trunk_mm": [
     4,
@@ -251,8 +246,8 @@
     20
   ],
   "converter_strap_slot_y_mm": [
-    -69,
-    -40
+    40,
+    69
   ],
   "battery_model": "GNB8504S60AHV",
   "battery_nominal_voltage_v": 15.2,
@@ -262,39 +257,44 @@
   "battery_mass_tolerance_g": 2,
   "battery_extension_route_trunk_mm": [
     [
-      75,
-      -91.5,
-      -13
+      -135,
+      91.5,
+      -3
     ],
     [
-      80,
-      -104,
-      -13
+      -140,
+      104,
+      -3
     ],
     [
-      98,
-      -109,
-      -13
+      -158,
+      109,
+      -3
     ],
     [
-      115,
-      -94,
-      -13
+      -175,
+      94,
+      -3
     ],
     [
-      110,
+      -170,
+      71,
+      -3
+    ],
+    [
+      -140,
+      54,
+      4
+    ],
+    [
       -71,
-      -13
-    ],
-    [
-      90,
-      -54,
-      -13
-    ],
-    [
-      58,
-      -54,
-      -13
+      54,
+      4
     ]
-  ]
+  ],
+  "tray_window_size_mm": [
+    24,
+    24
+  ],
+  "tray_window_pitch_mm": 30
 }

@@ -4,24 +4,24 @@ import argparse,json,math
 import numpy as np
 import mujoco,onnxruntime as ort
 from microduck_local.walk_env import MicroduckWalkEnv
-ROOT=Path(__file__).resolve().parents[1]
+from paths import ROOT,model_root,result_root,revision
 
-def scene(variant,feet=False):
-    return ROOT/'tmp/mac-models'/variant/'src/mjlab_microduck/robot/microduck'/('scene_feet_only.xml' if feet else 'scene_walk.xml')
+def scene(variant,feet=False,rev=None):
+    return model_root(rev)/variant/'src/mjlab_microduck/robot/microduck'/('scene_feet_only.xml' if feet else 'scene_walk.xml')
 
-def rollout(variant,policy,cmd,seed,seconds=10,render=None,feet=False,strict=False):
-    path=scene(variant,feet)
+def rollout(variant,policy,cmd,seed,seconds=10,render=None,feet=False,strict=False,rev=None,bus_delay=False,obs_noise=False,domain_rand=False):
+    path=scene(variant,feet,rev)
     compiled=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb'))) if path.with_suffix('.mjb').exists() else None
     from strict_env import StrictWalkEnv
     cls=StrictWalkEnv if strict else MicroduckWalkEnv
     env=cls(model=compiled,scene_xml=str(path),seed=seed,actuator_force='bam',
-            obs_noise=False,domain_rand=False,action_delay=False,random_yaw=False,
+            obs_noise=obs_noise,domain_rand=domain_rand,action_delay=bus_delay,random_yaw=False,
             command_resample_s=1000,max_episode_s=seconds+1)
     obs,_=env.reset(seed=seed)
     env.twist_cmd[:]=cmd;env.head_cmd[:]=0;env.body_cmd[:]=0
     obs=env._get_obs()
     assert obs.shape==(61,) and env.action_space.shape==(14,)
-    start=env.data.qpos[:3].copy();n=int(seconds/.02);tilts=[];zs=[];errors=[];contacts=set()
+    start=env.data.qpos[:3].copy();n=int(seconds/.02);tilts=[];zs=[];errors=[];contacts=set();yaws=[]
     frames=[];renderer=None;nonfoot_frames=0;selfcontact_frames=0;max_penetration=0.;max_contact_force=0.
     def geom_label(g):
         name=mujoco.mj_id2name(env.model,mujoco.mjtObj.mjOBJ_GEOM,g)
@@ -40,6 +40,8 @@ def rollout(variant,policy,cmd,seed,seconds=10,render=None,feet=False,strict=Fal
         assert all(v<=1e-6 for name,v in info.get('episode_rewards',{}).items() if name.endswith('_penalty'))
         tilt=math.degrees(math.acos(np.clip(-env._projected_gravity()[2],-1,1)))
         z=float(env.data.xpos[env.trunk_body_id,2]);tilts.append(tilt);zs.append(z)
+        rot=env.data.xmat[env.trunk_body_id].reshape(3,3)
+        yaws.append(math.atan2(rot[1,0],rot[0,0]))
         errors.append(float(np.linalg.norm(env.body_lin_vel()[:2]-np.array(cmd[:2]))))
         nonfoot=False;selfcontact=False
         for ci,contact in enumerate(env.data.contact):
@@ -68,6 +70,8 @@ def rollout(variant,policy,cmd,seed,seconds=10,render=None,feet=False,strict=Fal
         mass_kg=float(env.model.body_mass.sum()),contact_model='feet_only' if feet else 'groundcontact',nonfoot_ground_fraction=nonfoot_frames/(k+1),
         payload_selfcontact_fraction=selfcontact_frames/(k+1),max_payload_penetration_m=max_penetration,
         max_payload_contact_force_n=max_contact_force,strict_nonfoot_floor=strict,
+        revision=rev or revision(),bus_delay=bus_delay,observation_noise=obs_noise,domain_randomization=domain_rand,
+        yaw_change_rad=float(np.unwrap(yaws)[-1]-np.unwrap(yaws)[0]),
         failure_reason=info.get('failure_reason','height_or_tilt' if done else None))
     if renderer:
         import imageio.v2 as imageio
@@ -83,15 +87,19 @@ def rollout(variant,policy,cmd,seed,seconds=10,render=None,feet=False,strict=Fal
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--policy',default=str(ROOT/'tmp/sim-inputs/alpha_walking.onnx'))
     ap.add_argument('--seeds',type=int,default=8);ap.add_argument('--seconds',type=float,default=10)
-    ap.add_argument('--variant',choices=['stock','loaded','both'],default='both');ap.add_argument('--feet-only',action='store_true');ap.add_argument('--strict',action='store_true')
-    ap.add_argument('--out',type=Path,default=ROOT/'results/mac-v05/baseline.json');ap.add_argument('--render',action='store_true')
+    ap.add_argument('--variant',choices=['stock','loaded','both'],default='both');ap.add_argument('--feet-only',action='store_true');ap.add_argument('--strict',action='store_true');ap.add_argument('--revision',default=None)
+    ap.add_argument('--out',type=Path,default=result_root()/'baseline.json');ap.add_argument('--render',action='store_true')
+    ap.add_argument('--bus-delay',action='store_true');ap.add_argument('--obs-noise',action='store_true');ap.add_argument('--domain-rand',action='store_true')
+    ap.add_argument('--extended',action='store_true',help='Also test reverse, sideways, combined motion and opposite turns')
     args=ap.parse_args();policy=None if args.policy=='null' else ort.InferenceSession(args.policy,providers=['CPUExecutionProvider'])
     results=[]
+    tasks=[('stand',[0.,0.,0.]),('forward',[.3,0.,0.]),('turn',[0.,0.,.5])]
+    if args.extended:tasks += [('reverse',[-.2,0.,0.]),('left',[0.,.15,0.]),('right',[0.,-.15,0.]),('turn_right',[0.,0.,-.5]),('curve',[.2,0.,.5])]
     for variant in ('stock','loaded') if args.variant=='both' else [args.variant]:
-        for name,cmd in [('stand',[0.,0.,0.]),('forward',[.3,0.,0.]),('turn',[0.,0.,.5])]:
+        for name,cmd in tasks:
             for seed in range(args.seeds):
                 dest=args.out.parent/(args.out.stem+'-'+variant+'-'+name) if args.render and seed==0 else None
-                r=rollout(variant,policy,cmd,seed,args.seconds,dest,args.feet_only,args.strict);r['task']=name;results.append(r)
+                r=rollout(variant,policy,cmd,seed,args.seconds,dest,args.feet_only,args.strict,args.revision,args.bus_delay,args.obs_noise,args.domain_rand);r['task']=name;results.append(r)
             group=results[-args.seeds:];print(variant,name,sum(r['survived'] for r in group),'/',args.seeds,'mean seconds',round(np.mean([r['seconds'] for r in group]),3),flush=True)
     args.out.write_text(json.dumps(results,indent=2)+'\n')
 if __name__=='__main__':main()

@@ -24,18 +24,18 @@
     ]
   },
   "loaded": {
-    "mass_kg": 1.1885158048587487,
+    "mass_kg": 1.179337261211853,
     "com_world_m": [
-      -0.011524324152175205,
-      -0.0013874879408010314,
-      0.14072345627597788
+      0.0026874498474411383,
+      0.0014556734238487178,
+      0.13278605685597705
     ],
     "footprint_x_limits_m": [
       -0.019984078378851564,
       0.03401592219998175
     ],
-    "rear_static_margin_mm": 8.459754226676358,
-    "projected_sole_hull_margin_mm": 8.459754202883413,
+    "rear_static_margin_mm": 22.671528226292704,
+    "projected_sole_hull_margin_mm": 22.67152820377786,
     "sole_z_limits_m": [
       [
         0.0028176381322670696,
@@ -48,9 +48,9 @@
     ]
   },
   "com_shift_world_mm": [
-    -12.085113240041478,
-    -1.3738599204789201,
-    -1.0251599343478468
+    2.1266607595748654,
+    1.4693014441708292,
+    -8.96255935434867
   ],
   "scope": "Static COM for reference HOME. The hull uses projected entire sole meshes and assumes full usable sole contact, so margin is optimistic. Not a policy rollout, gait test, measured hardware result or payload rating."
 }

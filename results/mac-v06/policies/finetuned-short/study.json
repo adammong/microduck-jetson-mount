@@ -1,0 +1,19 @@
+{
+  "variant": "loaded",
+  "seed": 0,
+  "requested_steps": 262144,
+  "envs": 8,
+  "elapsed_s": 33.816028118133545,
+  "mount_revision": "v06",
+  "actuator": "bam",
+  "device": "cpu",
+  "domain_randomization": false,
+  "observation_noise": false,
+  "contact_model": "groundcontact",
+  "assist": false,
+  "symmetry_loss": false,
+  "strict_nonfoot_floor": true,
+  "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+  "requested_learning_rate": 1e-05,
+  "init_from": "results/mac-v06/policies/teacher-import"
+}

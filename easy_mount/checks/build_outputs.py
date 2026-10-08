@@ -34,7 +34,7 @@ def write_xml(tree,path):
 def main():
     p=parameters();parts=[];posed={};checks={"printed_parts":[],"printed_part_overlaps_mm3":[]}
     sim=ROOT/"simulation";meshes=sim/"meshes";meshes.mkdir(exist_ok=True)
-    for name in ["saddle","front_gate","jetson_tray","jetson_gate"]:
+    for name in ["saddle","front_gate","jetson_tray","jetson_gate_left","jetson_gate_right"]:
         s=read_step(ROOT/"STEP"/(name+".step"))
         assert s.is_valid and len(s.solids())==1,(name,"invalid/disconnected")
         target=ROOT/"STL"/(name+".stl")
@@ -88,12 +88,23 @@ def main():
         assert volume<.001,("battery or factory lead/strap through print",name,volume)
         checks["battery"]["print_intersections_mm3"].append({"print":name,"volume":float(volume)})
     wiring=wiring_groups()
-    parts.append(properties(cube((30,60,40),(-60,0,25)),p["hardware_pads_straps_mass_g"]/1000,"estimated_knobs_nuts_pads_straps"))
+    # Keep the hardware allowance, but place it at the actual fastener/strap sites.
+    tx,ty,tz=p["tray_origin_trunk_mm"]
+    hardware=[]
+    for sign in (-1,1):
+        hardware.append(cube((8,8,6),(46.5,sign*p["gate_screw_y"],24)))
+        hardware.append(cube((8,8,6),(tx+6.5,sign*p["dock_x"],tz)))
+        hardware.append(cube((8,8,6),(tx+14.5,sign*p["dock_x"],tz+54)))
+    for i,shape in enumerate(hardware):parts.append(properties(shape,.002,"estimated_thumb_fastener_"+str(i)))
+    parts.append(properties(cube((8,70,30),(tx-5,0,tz+20)),.004,"estimated_six_captive_nuts"))
+    parts.append(properties(cube((12,74,20),vec(battery.center())),.002,"estimated_battery_retaining_strap"))
+    parts.append(properties(cube((12,66,20),(-18,0,25)),.004,"estimated_torso_pads"))
+    assert abs(sum(x["mass_kg"] for x in parts[-9:])-p["hardware_pads_straps_mass_g"]/1000)<1e-9
     for name,key in [("data","data_cable_mass_g"),("power","power_cable_mass_g"),("converter","converter_mass_g")]:
         assert wiring[name].is_valid,(name,"invalid wiring envelope")
         parts.append(properties(wiring[name],p[key]/1000,"estimated_"+name+"_wiring_envelope"))
     assert sum(p[k] for k in ["hardware_pads_straps_mass_g","data_cable_mass_g","power_cable_mass_g","converter_mass_g"])==p["ancillary_mass_g"]
-    checks["wiring"]={"data":route_metrics(p["data_cable_route_trunk_mm"],(0,0,1),(0,-1,0)),"power":route_metrics(p["power_cable_route_trunk_mm"],(0,0,1),(-1,0,0)),"battery_extension":route_metrics(p["battery_extension_route_trunk_mm"],(0,-1,0),(-1,0,0)),"scope":"Approximate purchased cable envelopes in HOME. Head plug is deliberately free; production socket access unverified. No flexible-cable tension or simultaneous-motion validation.","print_intersections_mm3":[]}
+    checks["wiring"]={"data":route_metrics(p["data_cable_route_trunk_mm"],(0,0,1),(0,1,0)),"power":route_metrics(p["power_cable_route_trunk_mm"],(0,0,1),(1,0,0)),"battery_extension":route_metrics(p["battery_extension_route_trunk_mm"],(0,1,0),(1,0,0)),"scope":"Approximate purchased cable envelopes in HOME. Head plug is deliberately free; production socket access unverified. No flexible-cable tension or simultaneous-motion validation.","print_intersections_mm3":[]}
     for name,wshape in wiring.items():
         for pname,pshape in posed.items():
             volume=0.
@@ -137,7 +148,9 @@ def main():
         box("lower_capture_lip_"+str(sign),(12,7.1,1.6),(-18,sign*33.55,2))
         box("outer_clip_wall_"+str(sign),(12,4,35),(-18,sign*35.1,19.3))
         box("upper_seat_"+str(sign),(12,6,3),(-18,sign*24,43.5))
-        box("rear_dock_"+str(sign),(18,12,26),(-60,sign*59,22))
+        box("front_dock_"+str(sign),(14,12,26),(tx-7,sign*59,tz+2))
+        box("front_dock_arm_"+str(sign),(4,26,8),(42,sign*46,24))
+        box("front_dock_riser_"+str(sign),(8,12,38),(42,sign*59,11))
     R=Rotation.from_euler("xyz",p["tray_euler_xyz_deg"],degrees=True).as_matrix()
     origin=np.array(p["tray_origin_trunk_mm"])
     def pack_box(name,size,center):
@@ -145,15 +158,19 @@ def main():
         box(name,abs(R)@np.array(size),R@np.array(center)+origin)
     pack_box("jetson",(103,90.876875,34.77),(0,0,21.385))
     pack_box("tray_plate",(113,104,3),(0,0,1.5))
-    pack_box("open_gate_bridge",(122,3,3),(0,57.5,-3.5))
     for sign in (-1,1):
-        pack_box("open_gate_upright_"+str(sign),(4,3,14),(sign*59,61.5,5))
-        pack_box("open_gate_backlink_"+str(sign),(4,7,3),(sign*59,59.5,-3.5))
+        pack_box("corner_gate_tab_"+str(sign),(2.1,3,7.5),(sign*50.85,47.3,6.75))
+        pack_box("corner_gate_link_"+str(sign),(6,4,4),(sign*53.5,50,10))
+        pack_box("corner_gate_screw_boss_"+str(sign),(12,12,4),(sign*59,54,10))
     BR=Rotation.from_euler("xyz",p["battery_cradle_euler_xyz_deg"],degrees=True).as_matrix()
     BO=np.array(p["battery_cradle_origin_trunk_mm"])
     box("battery",abs(BR)@np.array(p["battery_size"]),BR@np.array(p["battery_local_center_mm"])+BO)
-    box("front_battery_pocket",(p["battery_pocket_depth_mm"],p["battery_size"][0]+2*p["battery_clearance_per_side"]+4,p["battery_size"][1]+2*p["battery_clearance_per_side"]+4),(44+p["battery_pocket_depth_mm"]/2,0,-10))
-    box("front_battery_back_panel",(4,40,52),(42,0,4))
+    bx,by,bz=p["battery_cradle_origin_trunk_mm"]
+    box("rear_battery_pocket",(p["battery_pocket_depth_mm"],p["battery_size"][0]+2*p["battery_clearance_per_side"]+4,p["battery_size"][1]+2*p["battery_clearance_per_side"]+4),(bx-p["battery_pocket_depth_mm"]/2,0,bz))
+    bottom=bz-(p["battery_size"][1]+2*p["battery_clearance_per_side"]+4)/2
+    box("rear_battery_back_panel",(4,40,26-bottom),(bx+2,0,(26+bottom)/2))
+    for sign in (-1,1):box("rear_battery_web_"+str(sign),(abs(bx+52)+4,6,6),((bx-52)/2,sign*11,23))
+    box("converter_pad_riser",(4,12,8),(-54,30,10))
     box("converter_pad",p["converter_pad_size_trunk_mm"],p["converter_pad_center_trunk_mm"])
     box("converter_envelope",p["converter_size_trunk_mm"],p["converter_center_trunk_mm"])
     for sign in (-1,1):pack_box("tray_rail_"+str(sign),(4.4,97,10.5),(sign*52.9,-1,8.25))
@@ -174,7 +191,7 @@ def main():
     # the complete loop. They are fit checks only, with no cable constraint.
     cable_root=ET.parse(patched[1]).getroot();cable_body=cable_root.find(".//body[@name='easy_mount_payload']")
     probe_names=[]
-    for cname,end in [("data",(0,-1,0)),("power",(-1,0,0))]:
+    for cname,end in [("data",(0,1,0)),("power",(1,0,0))]:
         spline=route(p[cname+"_cable_route_trunk_mm"],(0,0,1),end)
         points=spline(np.linspace(spline.x[0],spline.x[-1],85))
         for i,(start,finish) in enumerate(zip(points[:-1],points[1:])):
@@ -249,8 +266,8 @@ def main():
     assert not access_hits,("robot obstructs connector corridor",access_hits[:3])
     checks["connector_keepout"].update({"robot_poses_checked":len(nearby)+1,"robot_interferences":access_hits,"minimum_robot_convex_gap_m":float(access_gap)})
     (sim/"validation.json").write_text(json.dumps(checks,indent=2)+"\n")
-    (sim/"mass_properties.json").write_text(json.dumps({"mass_kg":mass,"com_trunk_m":com.tolist(),"inertia_trunk_kg_m2":I.tolist(),"parts":parts,"collision_boxes":boxes,"assumptions":["Fully dense PETG scaled by printed_mass_scale","Jetson and GNB8504S60AHV battery use uniform specified-mass envelopes; battery 73g includes stock leads at body COM, +/-2g manufacturer tolerance","74 g ancillary allowance split into 22 g hardware, 14 g data cable, 18 g power wiring and 20 g conditioning/cutoff allowance","Cable/plug mass uses HOME geometry fixed to trunk; head motion and flexible-cable tension are not modeled","Rigid fit to reference robot; physical shell strength and production fit unverified"]},indent=2)+"\n")
-    print(json.dumps({"payload_g":round(mass*1000,1),"plastic_g":round(sum(x["mass_kg"] for x in parts[:4])*1000,1),"sweep_interferences":len(contacts),"near_home_interferences":len(near_contacts)}))
+    (sim/"mass_properties.json").write_text(json.dumps({"mass_kg":mass,"com_trunk_m":com.tolist(),"inertia_trunk_kg_m2":I.tolist(),"parts":parts,"collision_boxes":boxes,"assumptions":["Fully dense PETG scaled by printed_mass_scale","Jetson and GNB8504S60AHV battery use uniform specified-mass envelopes; battery 73g includes stock leads at body COM, +/-2g manufacturer tolerance","74 g ancillary allowance split into 22 g approximately placed fasteners/pads/strap, 14 g data cable, 18 g power wiring and 20 g conditioning/cutoff allowance","Cable/plug mass uses HOME geometry fixed to trunk; head motion and flexible-cable tension are not modeled","Rigid fit to reference robot; physical shell strength and production fit unverified"]},indent=2)+"\n")
+    print(json.dumps({"payload_g":round(mass*1000,1),"plastic_g":round(sum(x["mass_kg"] for x in parts[:5])*1000,1),"sweep_interferences":len(contacts),"near_home_interferences":len(near_contacts)}))
     make_previews(p,R)
     from balance_estimate import main as balance_estimate
     balance_estimate()

@@ -1,0 +1,139 @@
+{
+  "runs": [
+    {
+      "name": "teacher-import",
+      "status": "BASELINE comparison actor; incomplete command tracking; no hardware validation",
+      "study": {
+        "run_name": "v06-teacher-import-s0",
+        "robot": "microduck",
+        "task": "walk",
+        "contract": {
+          "id": "microduck-61-v1",
+          "robot": "microduck",
+          "obs_dim": 61,
+          "act_dim": 14,
+          "rate_hz": 50.0,
+          "slots": [
+            [
+              "base_ang_vel",
+              0,
+              3
+            ],
+            [
+              "projected_gravity",
+              3,
+              6
+            ],
+            [
+              "joint_pos_rel",
+              6,
+              20
+            ],
+            [
+              "joint_vel",
+              20,
+              34
+            ],
+            [
+              "last_action",
+              34,
+              48
+            ],
+            [
+              "twist_cmd",
+              48,
+              51
+            ],
+            [
+              "head_pose_cmd",
+              51,
+              55
+            ],
+            [
+              "body_pose_cmd",
+              55,
+              61
+            ]
+          ],
+          "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+        },
+        "pinned_command": false,
+        "teacher": "tmp/sim-inputs/alpha_walking.onnx",
+        "exact_actor_import": true,
+        "keep_command_normalizer": true,
+        "mount_revision": "v06",
+        "episodes": 80,
+        "states": 40000,
+        "critic_epochs": 20,
+        "max_action_error_rad": 7.152557373046875e-07,
+        "teacher_survived": 80,
+        "elapsed_s": 9.19888710975647,
+        "env_kwargs": {
+          "actuator_force": "bam",
+          "domain_rand": false,
+          "obs_noise": false,
+          "action_delay": true
+        },
+        "status": "BASELINE comparison actor; incomplete command tracking; no hardware validation"
+      }
+    },
+    {
+      "name": "finetuned-short",
+      "status": "REJECTED: worsened forward command tracking",
+      "study": {
+        "variant": "loaded",
+        "seed": 0,
+        "requested_steps": 262144,
+        "envs": 8,
+        "elapsed_s": 33.816028118133545,
+        "mount_revision": "v06",
+        "actuator": "bam",
+        "device": "cpu",
+        "domain_randomization": false,
+        "observation_noise": false,
+        "contact_model": "groundcontact",
+        "assist": false,
+        "symmetry_loss": false,
+        "strict_nonfoot_floor": true,
+        "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+        "requested_learning_rate": 1e-05,
+        "init_from": "results/mac-v06/policies/teacher-import"
+      }
+    },
+    {
+      "name": "finetuned-long",
+      "status": "REJECTED: worsened forward command tracking and one forward fall",
+      "study": {
+        "variant": "loaded",
+        "seed": 1,
+        "requested_steps": 1048576,
+        "envs": 8,
+        "elapsed_s": 155.01823329925537,
+        "mount_revision": "v06",
+        "actuator": "bam",
+        "device": "cpu",
+        "domain_randomization": false,
+        "observation_noise": false,
+        "contact_model": "groundcontact",
+        "assist": false,
+        "symmetry_loss": false,
+        "strict_nonfoot_floor": true,
+        "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+        "requested_learning_rate": 3e-06,
+        "init_from": "results/mac-v06/policies/teacher-import"
+      }
+    }
+  ],
+  "versions": {
+    "mujoco": "3.10.0",
+    "torch": "2.9.1",
+    "stable-baselines3": "2.9.0",
+    "gymnasium": "1.3.0",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.29.0",
+    "numpy": "2.5.2"
+  },
+  "platform": "Apple Silicon M5 Mac; CPU",
+  "selected": "teacher-import",
+  "selection": "Neither fine-tuned policy beats the unchanged actor reliably; use teacher only as a simulation baseline"
+}

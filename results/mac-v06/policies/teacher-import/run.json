@@ -1,0 +1,73 @@
+{
+  "run_name": "v06-teacher-import-s0",
+  "robot": "microduck",
+  "task": "walk",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "pinned_command": false,
+  "teacher": "tmp/sim-inputs/alpha_walking.onnx",
+  "exact_actor_import": true,
+  "keep_command_normalizer": true,
+  "mount_revision": "v06",
+  "episodes": 80,
+  "states": 40000,
+  "critic_epochs": 20,
+  "max_action_error_rad": 7.152557373046875e-07,
+  "teacher_survived": 80,
+  "elapsed_s": 9.19888710975647,
+  "env_kwargs": {
+    "actuator_force": "bam",
+    "domain_rand": false,
+    "obs_noise": false,
+    "action_delay": true
+  },
+  "status": "BASELINE comparison actor; incomplete command tracking; no hardware validation"
+}

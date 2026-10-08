@@ -5,5 +5,5 @@ export CADGEN_CACHE_DIR="$PWD/tmp/cad-cache"
 export CADGEN_DAEMON_STATE_DIR="$PWD/tmp/cad-daemon"
 export CADGEN_DAEMON=0
 export XDG_CACHE_HOME="$PWD/tmp/cache"
-.venv/bin/python easy_mount/src/easy_mount_assembly.py
-.venv/bin/python easy_mount/checks/build_outputs.py
+"${CAD_PYTHON:-.venv/bin/python}" easy_mount/src/easy_mount_assembly.py
+"${CAD_PYTHON:-.venv/bin/python}" easy_mount/checks/build_outputs.py

@@ -1,0 +1,68 @@
+{
+  "run_name": "v06-loaded-bam-s0-262144-strict-warm-teacher",
+  "envs": 8,
+  "steps": 262144,
+  "robot": "microduck",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "task": "walk",
+  "pinned_command": false,
+  "seed": 0,
+  "env_kwargs": {
+    "domain_rand": false,
+    "obs_noise": false,
+    "actuator_force": "bam"
+  },
+  "microduck_rl_sha": "",
+  "init_from": "results/mac-v06/policies/teacher-import",
+  "status": "REJECTED: worsened forward command tracking",
+  "keep_command_normalizer": true
+}

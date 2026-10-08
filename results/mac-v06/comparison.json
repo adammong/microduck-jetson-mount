@@ -1,0 +1,318 @@
+{
+  "baseline": {
+    "forward": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 3.190776098050998,
+      "mean_velocity_error_m_s": 0.18605039956416708,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0030613115924875457,
+      "mean_velocity_error_m_s": 0.00645236985969465,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.001712524052082872,
+      "mean_velocity_error_m_s": 0.0020656936153583393,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.0
+    }
+  },
+  "v05-control": {
+    "forward": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": -0.17744133164666986,
+      "mean_velocity_error_m_s": 0.24263974152361262,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.204
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 7,
+      "mean_forward_m": -0.8065407783330983,
+      "mean_velocity_error_m_s": 0.09366714453265967,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.5348837209302325
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": -0.06956254402531739,
+      "mean_velocity_error_m_s": 0.10040697061496462,
+      "mean_yaw_rate_rad_s": 0.0,
+      "max_payload_selfcontact_fraction": 0.146
+    }
+  },
+  "teacher-robustness": {
+    "curve": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.247638328072118,
+      "mean_velocity_error_m_s": 0.1806836710071959,
+      "mean_yaw_rate_rad_s": 0.4068186627130636,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "forward": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 3.0296321558960635,
+      "mean_velocity_error_m_s": 0.2116962017957662,
+      "mean_yaw_rate_rad_s": 0.023196557739816027,
+      "max_payload_selfcontact_fraction": 0.001
+    },
+    "left": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0036973327405094457,
+      "mean_velocity_error_m_s": 0.14990022201895556,
+      "mean_yaw_rate_rad_s": -0.0036561414418668937,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "reverse": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0006008189281774027,
+      "mean_velocity_error_m_s": 0.20003625733207978,
+      "mean_yaw_rate_rad_s": -0.00021467760492710453,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0016095365630333148,
+      "mean_velocity_error_m_s": 0.15000213601674695,
+      "mean_yaw_rate_rad_s": -0.0038970067549707623,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0010572176198453168,
+      "mean_velocity_error_m_s": 0.0051119830684588155,
+      "mean_yaw_rate_rad_s": -4.432441765496415e-05,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.002150736651259918,
+      "mean_velocity_error_m_s": 0.0033191729143830294,
+      "mean_yaw_rate_rad_s": 0.0020729488251709934,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn_right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0023456799760415894,
+      "mean_velocity_error_m_s": 0.004571043827217831,
+      "mean_yaw_rate_rad_s": -0.00488593502444343,
+      "max_payload_selfcontact_fraction": 0.0
+    }
+  },
+  "teacher-randomized": {
+    "curve": {
+      "trials": 8,
+      "survived": 7,
+      "mean_forward_m": 0.13413267320428982,
+      "mean_velocity_error_m_s": 0.18225619573405571,
+      "mean_yaw_rate_rad_s": 0.4083849493059323,
+      "max_payload_selfcontact_fraction": 0.033402922755741124
+    },
+    "forward": {
+      "trials": 8,
+      "survived": 6,
+      "mean_forward_m": 2.8366276580131613,
+      "mean_velocity_error_m_s": 0.2134802495166475,
+      "mean_yaw_rate_rad_s": 0.019075002720087098,
+      "max_payload_selfcontact_fraction": 0.03578528827037773
+    },
+    "left": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.025872272037244945,
+      "mean_velocity_error_m_s": 0.16327574971484943,
+      "mean_yaw_rate_rad_s": 0.047115832277968867,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "reverse": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": -0.236251257162295,
+      "mean_velocity_error_m_s": 0.2140588173096354,
+      "mean_yaw_rate_rad_s": 0.0259330770114825,
+      "max_payload_selfcontact_fraction": 0.003
+    },
+    "right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.353351277901797,
+      "mean_velocity_error_m_s": 0.16795329604749823,
+      "mean_yaw_rate_rad_s": 0.0072168054341269685,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0022492968178940203,
+      "mean_velocity_error_m_s": 0.010915678970277476,
+      "mean_yaw_rate_rad_s": 0.009577893043762912,
+      "max_payload_selfcontact_fraction": 0.002
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 6,
+      "mean_forward_m": -0.09897759255011196,
+      "mean_velocity_error_m_s": 0.0817332600737134,
+      "mean_yaw_rate_rad_s": 0.21761275069891922,
+      "max_payload_selfcontact_fraction": 0.02054794520547945
+    },
+    "turn_right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.12514814029636845,
+      "mean_velocity_error_m_s": 0.05848015553811896,
+      "mean_yaw_rate_rad_s": -0.09823321360195086,
+      "max_payload_selfcontact_fraction": 0.0
+    }
+  },
+  "finetuned": {
+    "curve": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": -0.18992873595928628,
+      "mean_velocity_error_m_s": 0.18017997534754118,
+      "mean_yaw_rate_rad_s": 0.533871682200212,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "forward": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.7925505321325168,
+      "mean_velocity_error_m_s": 0.21369560680548605,
+      "mean_yaw_rate_rad_s": 0.12884536138893599,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "left": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.004143976955136797,
+      "mean_velocity_error_m_s": 0.1498438624869144,
+      "mean_yaw_rate_rad_s": -0.0028146164802927086,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "reverse": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0009743514251144788,
+      "mean_velocity_error_m_s": 0.200056410493195,
+      "mean_yaw_rate_rad_s": -0.0004144345311704058,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0028667805962681635,
+      "mean_velocity_error_m_s": 0.1500628599848876,
+      "mean_yaw_rate_rad_s": -0.002329633097675142,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0008542466611361068,
+      "mean_velocity_error_m_s": 0.005074543918700661,
+      "mean_yaw_rate_rad_s": 4.3487780019173315e-05,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0030582094800090803,
+      "mean_velocity_error_m_s": 0.0028296166463956255,
+      "mean_yaw_rate_rad_s": 0.0024691099537616154,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn_right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0025523229265099322,
+      "mean_velocity_error_m_s": 0.004568479066157002,
+      "mean_yaw_rate_rad_s": -0.005426582309434942,
+      "max_payload_selfcontact_fraction": 0.0
+    }
+  },
+  "finetuned-long": {
+    "curve": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.11175454506536239,
+      "mean_velocity_error_m_s": 0.19578300835794477,
+      "mean_yaw_rate_rad_s": 0.7530441125531808,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "forward": {
+      "trials": 8,
+      "survived": 7,
+      "mean_forward_m": 0.38892847142625825,
+      "mean_velocity_error_m_s": 0.25821468765286326,
+      "mean_yaw_rate_rad_s": 0.41630643480894947,
+      "max_payload_selfcontact_fraction": 0.056179775280898875
+    },
+    "left": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.00506977160721495,
+      "mean_velocity_error_m_s": 0.14998984102088683,
+      "mean_yaw_rate_rad_s": 0.00207175714305558,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "reverse": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0027176758312639168,
+      "mean_velocity_error_m_s": 0.20015390582744358,
+      "mean_yaw_rate_rad_s": 0.006659103381497498,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.003902589055843968,
+      "mean_velocity_error_m_s": 0.15013439269039577,
+      "mean_yaw_rate_rad_s": 0.003322187036478499,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "stand": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0018085606075803407,
+      "mean_velocity_error_m_s": 0.005215421681596127,
+      "mean_yaw_rate_rad_s": 0.002570858409271908,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.0028193405136795477,
+      "mean_velocity_error_m_s": 0.004735617208654957,
+      "mean_yaw_rate_rad_s": 0.006281273675678459,
+      "max_payload_selfcontact_fraction": 0.0
+    },
+    "turn_right": {
+      "trials": 8,
+      "survived": 8,
+      "mean_forward_m": 0.004093223834148656,
+      "mean_velocity_error_m_s": 0.0031707820309760104,
+      "mean_yaw_rate_rad_s": -0.00034389525397009874,
+      "max_payload_selfcontact_fraction": 0.0
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Derived from Pollen Robotics alpha_walking.onnx, microduck-policies revision 088524a64e2557dc453256b6071dbb9d23888802 (upstream model card: Apache-2.0).
+The mounted critic and PPO changes were produced locally on 2026-10-07.
+MicroDuck Lab bbf0326ef97975f7062368914e0729504d17226f provides the trainer and export wrapper.
+These models are comparison artifacts; neither fine-tuned actor is selected for use.

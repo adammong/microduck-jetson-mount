@@ -4,17 +4,17 @@
       "name": "saddle",
       "valid_solid": true,
       "watertight_stl": true,
-      "volume_mm3": 27232.328411713115,
+      "volume_mm3": 42890.648753206464,
       "print_bounds_mm": [
         [
-          -54.5,
-          -65.0,
+          -90.0,
+          -57.54582595825195,
           0.0
         ],
         [
-          54.5,
-          65.0,
-          44.02000045776367
+          90.0,
+          57.54999923706055,
+          57.220001220703125
         ]
       ]
     },
@@ -22,17 +22,17 @@
       "name": "front_gate",
       "valid_solid": true,
       "watertight_stl": true,
-      "volume_mm3": 31996.624082318638,
+      "volume_mm3": 20498.882973605323,
       "print_bounds_mm": [
         [
-          -26.498245239257812,
-          -58.04999923706055,
+          -29.996479034423828,
+          -65.0,
           0.0
         ],
         [
-          26.5,
-          58.045196533203125,
-          43.5
+          30.0,
+          65.0,
+          18.0
         ]
       ]
     },
@@ -40,7 +40,7 @@
       "name": "jetson_tray",
       "valid_solid": true,
       "watertight_stl": true,
-      "volume_mm3": 39676.85040115419,
+      "volume_mm3": 29979.071446409056,
       "print_bounds_mm": [
         [
           -71.0,
@@ -55,20 +55,38 @@
       ]
     },
     {
-      "name": "jetson_gate",
+      "name": "jetson_gate_left",
       "valid_solid": true,
       "watertight_stl": true,
-      "volume_mm3": 2883.6654975296083,
+      "volume_mm3": 596.8327487648104,
       "print_bounds_mm": [
         [
-          -65.0,
-          -8.600000381469727,
+          -7.599999904632568,
+          -7.099999904632568,
           0.0
         ],
         [
-          65.0,
-          8.600000381469727,
-          17.0
+          7.599999904632568,
+          7.099999904632568,
+          9.0
+        ]
+      ]
+    },
+    {
+      "name": "jetson_gate_right",
+      "valid_solid": true,
+      "watertight_stl": true,
+      "volume_mm3": 596.8327487647979,
+      "print_bounds_mm": [
+        [
+          -7.599999904632568,
+          -7.099999904632568,
+          0.0
+        ],
+        [
+          7.599999904632568,
+          7.099999904632568,
+          9.0
         ]
       ]
     }
@@ -91,7 +109,14 @@
     {
       "parts": [
         "saddle",
-        "jetson_gate"
+        "jetson_gate_left"
+      ],
+      "volume": 0.0
+    },
+    {
+      "parts": [
+        "saddle",
+        "jetson_gate_right"
       ],
       "volume": 0.0
     },
@@ -105,14 +130,35 @@
     {
       "parts": [
         "front_gate",
-        "jetson_gate"
+        "jetson_gate_left"
+      ],
+      "volume": 0.0
+    },
+    {
+      "parts": [
+        "front_gate",
+        "jetson_gate_right"
       ],
       "volume": 0.0
     },
     {
       "parts": [
         "jetson_tray",
-        "jetson_gate"
+        "jetson_gate_left"
+      ],
+      "volume": 0.0
+    },
+    {
+      "parts": [
+        "jetson_tray",
+        "jetson_gate_right"
+      ],
+      "volume": 0.0
+    },
+    {
+      "parts": [
+        "jetson_gate_left",
+        "jetson_gate_right"
       ],
       "volume": 0.0
     }
@@ -142,14 +188,18 @@
         "volume": 0.0
       },
       {
-        "name": "jetson_gate",
+        "name": "jetson_gate_left",
+        "volume": 0.0
+      },
+      {
+        "name": "jetson_gate_right",
         "volume": 0.0
       }
     ],
     "scope": "Reserved 50 mm straight plug corridor ABOVE the connector edge; actual plugs and insertion motions still require physical verification.",
     "robot_poses_checked": 127,
     "robot_interferences": [],
-    "minimum_robot_convex_gap_m": 0.006157565843448329
+    "minimum_robot_convex_gap_m": 0.006166222652573995
   },
   "battery": {
     "model": "GNB8504S60AHV",
@@ -173,25 +223,29 @@
         "volume": 0.0
       },
       {
-        "print": "jetson_gate",
+        "print": "jetson_gate_left",
+        "volume": 0.0
+      },
+      {
+        "print": "jetson_gate_right",
         "volume": 0.0
       }
     ]
   },
   "wiring": {
     "data": {
-      "centerline_length_mm": 250.99886305704783,
-      "minimum_sampled_bend_radius_mm": 11.178579240647014,
+      "centerline_length_mm": 161.51909469264098,
+      "minimum_sampled_bend_radius_mm": 12.516847395347071,
       "sample_count": 2001
     },
     "power": {
-      "centerline_length_mm": 431.9343510841052,
-      "minimum_sampled_bend_radius_mm": 15.276029976444594,
+      "centerline_length_mm": 449.5226175022543,
+      "minimum_sampled_bend_radius_mm": 12.601899311333495,
       "sample_count": 2001
     },
     "battery_extension": {
-      "centerline_length_mm": 140.18947339591625,
-      "minimum_sampled_bend_radius_mm": 15.761607204985806,
+      "centerline_length_mm": 186.67723647898322,
+      "minimum_sampled_bend_radius_mm": 15.689872431826016,
       "sample_count": 2001
     },
     "scope": "Approximate purchased cable envelopes in HOME. Head plug is deliberately free; production socket access unverified. No flexible-cable tension or simultaneous-motion validation.",
@@ -213,7 +267,12 @@
       },
       {
         "wiring": "data",
-        "print": "jetson_gate",
+        "print": "jetson_gate_left",
+        "volume": 0.0
+      },
+      {
+        "wiring": "data",
+        "print": "jetson_gate_right",
         "volume": 0.0
       },
       {
@@ -233,7 +292,12 @@
       },
       {
         "wiring": "power",
-        "print": "jetson_gate",
+        "print": "jetson_gate_left",
+        "volume": 0.0
+      },
+      {
+        "wiring": "power",
+        "print": "jetson_gate_right",
         "volume": 0.0
       },
       {
@@ -253,29 +317,124 @@
       },
       {
         "wiring": "converter",
-        "print": "jetson_gate",
+        "print": "jetson_gate_left",
+        "volume": 0.0
+      },
+      {
+        "wiring": "converter",
+        "print": "jetson_gate_right",
         "volume": 0.0
       }
     ],
     "HOME_centerline_capsule_robot_interferences": [],
-    "HOME_minimum_robot_convex_gap_m": 0.0288820167001856,
+    "HOME_minimum_robot_convex_gap_m": 0.006722922015307473,
     "scope_robot_fit": "HOME only, approximate tube centerline capsules versus reference robot convex meshes; free head plug, head articulation and insertion remain unverified"
   },
   "sampled_joint_sweep": {
     "poses": 127,
-    "minimum_convex_distance_m": -0.022354973763198876,
+    "minimum_convex_distance_m": -0.025211355904364997,
     "interferences": [
       {
-        "pose": "left_hip_pitch:0.7854",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "leg",
-        "penetration_m": -0.001375417277843994
+        "pose": "left_hip_yaw:0.5236",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "upper_leg_left",
+        "penetration_m": -0.003785603068674648
       },
       {
-        "pose": "left_hip_pitch:0.7854",
+        "pose": "left_hip_yaw:0.5236",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0036747850849120564
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "leg",
+        "penetration_m": -0.017731080583045667
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.018291753163731203
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.01050352156247707
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.015922234105456654
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "seeed_bearing__configuration_default",
+        "penetration_m": -0.016245714132718206
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "ankle_left",
+        "penetration_m": -0.025211354962945312
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "leg",
+        "penetration_m": -0.02399943628940882
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
         "mount": "easy_tray_plate",
         "robot_mesh": "xl330",
-        "penetration_m": -0.0025833293116469818
+        "penetration_m": -0.009549209629789359
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.011034208094015464
+      },
+      {
+        "pose": "left_hip_pitch:-1.5708",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "ankle_left",
+        "penetration_m": -0.0047502121808339955
+      },
+      {
+        "pose": "left_hip_pitch:-1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.0020645837494149832
+      },
+      {
+        "pose": "left_hip_pitch:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "leg",
+        "penetration_m": -0.00027886045510286487
+      },
+      {
+        "pose": "left_hip_pitch:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0034036879833472876
+      },
+      {
+        "pose": "left_hip_pitch:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "seeed_bearing__configuration_default",
+        "penetration_m": -0.00110024984489233
+      },
+      {
+        "pose": "left_hip_pitch:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "ankle_left",
+        "penetration_m": -0.0029244636182562426
       },
       {
         "pose": "left_hip_pitch:1.1781",
@@ -291,81 +450,27 @@
       },
       {
         "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
+        "mount": "easy_converter_pad",
         "robot_mesh": "leg",
-        "penetration_m": -0.005893394752685467
+        "penetration_m": -0.01575525054670155
       },
       {
         "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
+        "mount": "easy_converter_pad",
         "robot_mesh": "xl330",
-        "penetration_m": -0.012473965848420088
+        "penetration_m": -0.01232081223366603
       },
       {
         "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
-        "robot_mesh": "sole_left",
-        "penetration_m": -0.022354940394356596
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.021745910691332204
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
-        "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.007396058165654488
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_jetson",
-        "robot_mesh": "ankle_left",
-        "penetration_m": -0.01619455498831232
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "leg",
-        "penetration_m": -0.00989339475268547
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_plate",
+        "mount": "easy_converter_envelope",
         "robot_mesh": "xl330",
-        "penetration_m": -0.01647396584842009
+        "penetration_m": -0.010018586859867198
       },
       {
         "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.006600290822917215
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_plate",
+        "mount": "easy_converter_envelope",
         "robot_mesh": "ankle_left",
-        "penetration_m": -0.008345144925431393
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_rail_-1",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.013473965799113339
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_rail_-1",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.004490573522576873
-      },
-      {
-        "pose": "left_hip_pitch:1.1781",
-        "mount": "easy_tray_rail_-1",
-        "robot_mesh": "ankle_left",
-        "penetration_m": -0.017194554871324277
+        "penetration_m": -0.006356015536462595
       },
       {
         "pose": "left_hip_pitch:1.5708",
@@ -411,111 +516,159 @@
       },
       {
         "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_rear_dock_1",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.015155836594276668
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_rear_dock_1",
-        "robot_mesh": "sole_left",
-        "penetration_m": -0.004998346044104554
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_rear_dock_1",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.01025918924352546
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_rear_dock_1",
-        "robot_mesh": "ankle_left",
-        "penetration_m": -0.018250212244854673
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0005483813469688292
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "sole_left",
-        "penetration_m": -0.020576200805390868
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.020194728048647883
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "ankle_left",
-        "penetration_m": -0.00928087812874815
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
+        "mount": "easy_converter_pad_riser",
         "robot_mesh": "leg",
-        "penetration_m": -0.000999436289408795
+        "penetration_m": -0.0007985080048577671
       },
       {
         "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.004548381346968834
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "sole_left",
-        "penetration_m": -0.005971263894306773
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.009259189351660896
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
+        "mount": "easy_converter_pad_riser",
         "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.0024977518619256484
+        "penetration_m": -0.0011387286694201813
       },
       {
         "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_plate",
+        "mount": "easy_converter_pad_riser",
         "robot_mesh": "ankle_left",
-        "penetration_m": -0.013280878181423712
+        "penetration_m": -0.0015524945040057921
       },
       {
         "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_rail_-1",
+        "mount": "easy_converter_pad",
+        "robot_mesh": "leg",
+        "penetration_m": -0.0017248587794465504
+      },
+      {
+        "pose": "left_hip_pitch:1.5708",
+        "mount": "easy_converter_pad",
         "robot_mesh": "xl330",
-        "penetration_m": -0.0015483812985997597
+        "penetration_m": -0.00549147480580507
       },
       {
         "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_rail_-1",
-        "robot_mesh": "sole_left",
-        "penetration_m": -0.016471263881476083
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_rail_-1",
-        "robot_mesh": "foot_left",
-        "penetration_m": -0.019759189310077377
-      },
-      {
-        "pose": "left_hip_pitch:1.5708",
-        "mount": "easy_tray_rail_-1",
+        "mount": "easy_converter_pad",
         "robot_mesh": "ankle_left",
-        "penetration_m": -0.010280878166674565
+        "penetration_m": -0.0035690232489776997
+      },
+      {
+        "pose": "left_hip_pitch:1.5708",
+        "mount": "easy_converter_envelope",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0014671158481011585
+      },
+      {
+        "pose": "left_hip_pitch:1.5708",
+        "mount": "easy_converter_envelope",
+        "robot_mesh": "ankle_left",
+        "penetration_m": -0.005623070023603063
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_jetson",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.005311570377028271
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.003890434651225766
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.009311570377028282
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.007890434651225776
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.005756411992692265
+      },
+      {
+        "pose": "left_knee:0.7854",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.004347164457796044
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.0024405022777310376
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.0028117260544506116
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.0024283664187680354
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.0005016382661923169
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.006428366418768046
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.004501638266192327
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.002915819259636551
+      },
+      {
+        "pose": "left_knee:1.1781",
+        "mount": "easy_tray_rail_1",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.0010126401162429068
+      },
+      {
+        "pose": "left_knee:1.5708",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.006814695581034973
+      },
+      {
+        "pose": "left_knee:1.5708",
+        "mount": "easy_front_dock_1",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.004824527282001261
+      },
+      {
+        "pose": "left_knee:1.5708",
+        "mount": "easy_front_dock_riser_1",
+        "robot_mesh": "sole_left",
+        "penetration_m": -0.0033948900644647823
+      },
+      {
+        "pose": "left_knee:1.5708",
+        "mount": "easy_front_dock_riser_1",
+        "robot_mesh": "foot_left",
+        "penetration_m": -0.0018437827200153533
       },
       {
         "pose": "neck_pitch:-1.5708",
@@ -525,33 +678,99 @@
       },
       {
         "pose": "neck_pitch:-1.5708",
-        "mount": "easy_battery",
-        "robot_mesh": "jaw_soft",
-        "penetration_m": -0.00252740945572751
+        "mount": "easy_jetson",
+        "robot_mesh": "neck",
+        "penetration_m": -0.002499999372363213
       },
       {
         "pose": "neck_pitch:-1.5708",
-        "mount": "easy_battery",
-        "robot_mesh": "jaw",
-        "penetration_m": -0.004227409226976668
-      },
-      {
-        "pose": "neck_pitch:-1.5708",
-        "mount": "easy_front_battery_pocket",
-        "robot_mesh": "jaw_soft",
-        "penetration_m": -0.00488945190518785
-      },
-      {
-        "pose": "neck_pitch:-1.5708",
-        "mount": "easy_front_battery_pocket",
-        "robot_mesh": "jaw",
-        "penetration_m": -0.006589451607473168
-      },
-      {
-        "pose": "neck_pitch:-1.5708",
-        "mount": "easy_front_battery_back_panel",
+        "mount": "easy_jetson",
         "robot_mesh": "xl330",
-        "penetration_m": -0.007578499776482608
+        "penetration_m": -0.005016937276482629
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "neck",
+        "penetration_m": -0.002499999372363213
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "neck_pitch",
+        "penetration_m": -0.008685517899116018
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "seeed_bearing__configuration__22x16x4",
+        "penetration_m": -0.0006498033172641637
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "face_part",
+        "penetration_m": -0.005509079700819222
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "jaw_soft",
+        "penetration_m": -0.015120532222428111
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "top_head_shell",
+        "penetration_m": -0.006449904582766744
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "soft_mouth_top",
+        "penetration_m": -0.009850353354206394
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "noenoeil",
+        "penetration_m": -0.002624321742081812
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "jaw",
+        "penetration_m": -0.016826420898964606
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_jetson",
+        "robot_mesh": "bottom_head_shell",
+        "penetration_m": -0.009652056260408867
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "neck",
+        "penetration_m": -0.006499999372363224
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0004999997438237894
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0014999997438238154
+      },
+      {
+        "pose": "neck_pitch:-1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "neck",
+        "penetration_m": -0.006499999372363225
       },
       {
         "pose": "neck_pitch:-1.2435",
@@ -561,105 +780,33 @@
       },
       {
         "pose": "neck_pitch:-1.2435",
-        "mount": "easy_front_battery_back_panel",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0032068559536659676
+        "mount": "easy_jetson",
+        "robot_mesh": "jaw",
+        "penetration_m": -0.0008658349839854307
       },
       {
-        "pose": "neck_pitch:0.7199",
+        "pose": "neck_pitch:-1.2435",
         "mount": "easy_tray_plate",
-        "robot_mesh": "bottom_head_shell",
-        "penetration_m": -0.00476699378543586
+        "robot_mesh": "neck",
+        "penetration_m": -0.0037801832187678843
       },
       {
-        "pose": "neck_pitch:0.7199",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.004649319556184106
-      },
-      {
-        "pose": "neck_pitch:0.7199",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0025412392873661142
-      },
-      {
-        "pose": "neck_pitch:0.7199",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "bottom_head_shell",
-        "penetration_m": -0.0031791231688530226
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_jetson",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.0203091538745947
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_jetson",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.010707120709528143
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_jetson",
-        "robot_mesh": "bottom_head_shell",
-        "penetration_m": -0.010276863202606346
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_jetson",
-        "robot_mesh": "speaker",
-        "penetration_m": -0.008159909182656052
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "motor_support",
-        "penetration_m": -0.002530078275833083
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.018892870603639766
-      },
-      {
-        "pose": "neck_pitch:1.0472",
+        "pose": "neck_pitch:-1.2435",
         "mount": "easy_tray_plate",
         "robot_mesh": "xl330",
-        "penetration_m": -0.014707120709528149
+        "penetration_m": -0.0024141825112334245
       },
       {
-        "pose": "neck_pitch:1.0472",
+        "pose": "neck_pitch:-1.2435",
         "mount": "easy_tray_plate",
-        "robot_mesh": "bottom_head_shell",
-        "penetration_m": -0.01427686320260635
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0005745054361727073
       },
       {
-        "pose": "neck_pitch:1.0472",
+        "pose": "neck_pitch:-1.2435",
         "mount": "easy_tray_plate",
-        "robot_mesh": "speaker",
-        "penetration_m": -0.0043925199331000635
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "motor_support",
-        "penetration_m": -0.00231852565984611
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.02104162498554836
-      },
-      {
-        "pose": "neck_pitch:1.0472",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "speaker",
-        "penetration_m": -0.0009303106814051173
+        "robot_mesh": "neck",
+        "penetration_m": -0.0037801832187678848
       },
       {
         "pose": "head_pitch:-1.5708",
@@ -710,18 +857,6 @@
         "penetration_m": -0.0009147097846289548
       },
       {
-        "pose": "head_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.001818638812449002
-      },
-      {
-        "pose": "head_pitch:-1.5708",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.009263249933833938
-      },
-      {
         "pose": "head_pitch:-1.1781",
         "mount": "easy_upper_seat_-1",
         "robot_mesh": "top_head_shell",
@@ -752,22 +887,40 @@
         "penetration_m": -0.01229083140877123
       },
       {
-        "pose": "head_pitch:-1.1781",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.0014050252765423373
+        "pose": "head_pitch:1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "jaw_soft",
+        "penetration_m": -0.00105664651004963
       },
       {
-        "pose": "head_pitch:-0.7854",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.003145178163798007
+        "pose": "head_pitch:1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "soft_mouth_top",
+        "penetration_m": -0.0007125461915926113
       },
       {
-        "pose": "head_pitch:-0.3927",
-        "mount": "easy_open_gate_bridge",
-        "robot_mesh": "top_head_shell",
-        "penetration_m": -0.0031052534707171854
+        "pose": "head_pitch:1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "jaw",
+        "penetration_m": -0.0025593373854327296
+      },
+      {
+        "pose": "head_pitch:1.5708",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "bottom_head_shell",
+        "penetration_m": -0.0012378660576124988
+      },
+      {
+        "pose": "right_hip_yaw:-0.5236",
+        "mount": "easy_front_dock_-1",
+        "robot_mesh": "upper_leg_right",
+        "penetration_m": -0.0037856046714900148
+      },
+      {
+        "pose": "right_hip_yaw:-0.5236",
+        "mount": "easy_front_dock_-1",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.003674785084911987
       },
       {
         "pose": "right_hip_pitch:-1.5708",
@@ -812,114 +965,6 @@
         "penetration_m": -0.0013824129963681397
       },
       {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_rear_dock_-1",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.015155836594277198
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_rear_dock_-1",
-        "robot_mesh": "ankle_right",
-        "penetration_m": -0.01825021252930675
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_rear_dock_-1",
-        "robot_mesh": "sole_right",
-        "penetration_m": -0.004998345995634565
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_rear_dock_-1",
-        "robot_mesh": "foot_right",
-        "penetration_m": -0.010259189335850948
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0005483813469663311
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "ankle_right",
-        "penetration_m": -0.009280878064726647
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "sole_right",
-        "penetration_m": -0.02057620010015944
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_jetson",
-        "robot_mesh": "foot_right",
-        "penetration_m": -0.02019472707082089
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.004548381346966336
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "leg",
-        "penetration_m": -0.0009994362882370794
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "ankle_right",
-        "penetration_m": -0.013280878064726652
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "sole_right",
-        "penetration_m": -0.005971264226438261
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.002497751861922179
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "foot_right",
-        "penetration_m": -0.009259189384919042
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_rail_1",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0015483812985972619
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_rail_1",
-        "robot_mesh": "ankle_right",
-        "penetration_m": -0.010280877901459762
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_rail_1",
-        "robot_mesh": "sole_right",
-        "penetration_m": -0.016471264143418016
-      },
-      {
-        "pose": "right_hip_pitch:-1.5708",
-        "mount": "easy_tray_rail_1",
-        "robot_mesh": "foot_right",
-        "penetration_m": -0.019759189366049888
-      },
-      {
         "pose": "right_hip_pitch:-1.1781",
         "mount": "easy_lower_capture_lip_-1",
         "robot_mesh": "leg",
@@ -932,106 +977,202 @@
         "penetration_m": -0.0011575791864893823
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0020645843883371345
+      },
+      {
+        "pose": "right_hip_pitch:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "xl330",
+        "penetration_m": -0.0034036879833413557
+      },
+      {
+        "pose": "right_hip_pitch:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "leg",
+        "penetration_m": -0.0002788600173316054
+      },
+      {
+        "pose": "right_hip_pitch:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "ankle_right",
+        "penetration_m": -0.002924464017709303
+      },
+      {
+        "pose": "right_hip_pitch:1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "seeed_bearing__configuration_default",
+        "penetration_m": -0.0011002496688689435
+      },
+      {
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "xl330",
-        "penetration_m": -0.0124739658484187
+        "penetration_m": -0.01829175316372641
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "leg",
-        "penetration_m": -0.005893394918411953
+        "penetration_m": -0.017731079945340254
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "ankle_right",
-        "penetration_m": -0.016194554969424974
+        "penetration_m": -0.025211355904364997
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "sole_right",
-        "penetration_m": -0.022354973763198876
+        "penetration_m": -0.010503521372210858
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.0073960581656536675
+        "penetration_m": -0.01624571393841208
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_jetson",
         "robot_mesh": "foot_right",
-        "penetration_m": -0.021745909963373902
+        "penetration_m": -0.015922234244734858
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_tray_plate",
         "robot_mesh": "xl330",
-        "penetration_m": -0.016473965848418703
+        "penetration_m": -0.009549209629793746
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
+        "pose": "right_hip_pitch:1.5708",
         "mount": "easy_tray_plate",
         "robot_mesh": "leg",
-        "penetration_m": -0.009893394918411959
+        "penetration_m": -0.023999436288237107
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "ankle_right",
-        "penetration_m": -0.008345145455759338
-      },
-      {
-        "pose": "right_hip_pitch:-1.1781",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "seeed_bearing__configuration_default",
-        "penetration_m": -0.006600290822918063
-      },
-      {
-        "pose": "right_hip_pitch:-1.1781",
-        "mount": "easy_tray_rail_1",
+        "pose": "right_hip_pitch:1.5708",
+        "mount": "easy_tray_rail_-1",
         "robot_mesh": "xl330",
-        "penetration_m": -0.013473965799111956
+        "penetration_m": -0.011034208094015193
       },
       {
-        "pose": "right_hip_pitch:-1.1781",
-        "mount": "easy_tray_rail_1",
+        "pose": "right_hip_pitch:1.5708",
+        "mount": "easy_tray_rail_-1",
         "robot_mesh": "ankle_right",
-        "penetration_m": -0.017194554989630514
-      },
-      {
-        "pose": "right_hip_pitch:-1.1781",
-        "mount": "easy_tray_rail_1",
-        "robot_mesh": "foot_right",
-        "penetration_m": -0.004490573712819043
-      },
-      {
-        "pose": "right_hip_pitch:-0.7854",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "xl330",
-        "penetration_m": -0.0025833293116521924
-      },
-      {
-        "pose": "right_hip_pitch:-0.7854",
-        "mount": "easy_tray_plate",
-        "robot_mesh": "leg",
-        "penetration_m": -0.0013754171763850007
+        "penetration_m": -0.004750212411564338
       },
       {
         "pose": "right_knee:-1.5708",
-        "mount": "easy_converter_pad",
+        "mount": "easy_front_dock_-1",
         "robot_mesh": "sole_right",
-        "penetration_m": -0.004071849710272379
+        "penetration_m": -0.006814695652786356
       },
       {
         "pose": "right_knee:-1.5708",
-        "mount": "easy_converter_pad",
+        "mount": "easy_front_dock_-1",
         "robot_mesh": "foot_right",
-        "penetration_m": -0.002071871918356842
+        "penetration_m": -0.004824527315704663
+      },
+      {
+        "pose": "right_knee:-1.5708",
+        "mount": "easy_front_dock_riser_-1",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.0033948897714202375
+      },
+      {
+        "pose": "right_knee:-1.5708",
+        "mount": "easy_front_dock_riser_-1",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0018437085964353966
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_front_dock_-1",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.002440502146947294
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_front_dock_-1",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0028117262786231407
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.002428366598764914
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0005011379424315066
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.006428366598764924
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.004501137942431517
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_tray_rail_-1",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.002915819594992558
+      },
+      {
+        "pose": "right_knee:-1.1781",
+        "mount": "easy_tray_rail_-1",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0010125093131215864
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_jetson",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.005311571120401648
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_jetson",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.0038894133478082353
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.009311571120401659
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_tray_plate",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.007889413347808247
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_tray_rail_-1",
+        "robot_mesh": "sole_right",
+        "penetration_m": -0.0057564122235821925
+      },
+      {
+        "pose": "right_knee:-0.7854",
+        "mount": "easy_tray_rail_-1",
+        "robot_mesh": "foot_right",
+        "penetration_m": -0.00434716488455493
       }
     ],
     "scope": "HOME plus nine samples per limited joint, one joint at a time; not combined-motion or load validation"
@@ -1039,7 +1180,7 @@
   "near_home_joint_sweep": {
     "poses": 126,
     "offset_limit_rad": 0.2,
-    "minimum_convex_distance_m": 0.0005118167624128463,
+    "minimum_convex_distance_m": 0.0005118167624128464,
     "interferences": [],
     "scope": "Nine samples per joint within HOME +/- 0.2 radians, one joint at a time; not a verified operating envelope or gait test"
   }

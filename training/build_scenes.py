@@ -4,7 +4,8 @@ import xml.etree.ElementTree as ET
 import json, hashlib, copy
 import mujoco
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'tmp/mac-models'
+from paths import model_root,result_root
+OUT=model_root()
 
 def build():
     records=[]
@@ -36,6 +37,6 @@ def build():
             del compiled
             records.append(dict(variant=variant,contacts=contacts,source=str(source.relative_to(ROOT)),
                 source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),scene=str(dest.relative_to(ROOT))))
-    (ROOT/'results/mac-v05/scenes.json').write_text(json.dumps(records,indent=2)+'\n')
+    (result_root()/'scenes.json').write_text(json.dumps(records,indent=2)+'\n')
     return OUT
 if __name__=='__main__': print(build())

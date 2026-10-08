@@ -16,12 +16,15 @@ def battery_shape():
         strap+=cube((5,8,1),(sign*39,0,5))
     strap=color(strap.moved(loc),"purchased_retaining_strap_illustrative","#656A70")
     items=[body,label,pad,strap]
+    # Relocate the original illustrative factory leads into the rear-facing frame.
+    bx,by,bz=p["battery_cradle_origin_trunk_mm"]
+    leads_loc=bd.Location((bx+44,by,bz+10))*bd.Location((0,0,0),(0,0,180))
     discharge=[[75,-36.5,-9],[76,-47,-9],[77,-58,-11],[75,-69.5,-13]]
     for dz,c in [(-1.5,"#BF3B34"),(1.5,"#25282B")]:
         points=[[x,y,z+dz] for x,y,z in discharge]
-        items.append(color(tube(points,.95,(0,-1,0),(0,-1,0)),"approx_factory_discharge_lead",c))
-    items.append(color(cube((8,11,7),(75,-75,-13)),"XT30_factory_plug_approximate","#F0BE37"))
+        items.append(color(tube(points,.95,(0,-1,0),(0,-1,0)).moved(leads_loc),"approx_factory_discharge_lead",c))
+    items.append(color(cube((8,11,7),(75,-75,-13)).moved(leads_loc),"XT30_factory_plug_approximate","#F0BE37"))
     balance=[[73,-36.5,-13],[77,-43,-14],[84,-44,-15]]
-    items.append(color(tube(balance,1.2,(0,-1,0),(1,0,0)),"approx_factory_balance_bundle","#D8DADF"))
-    items.append(color(cube((6,14,5),(87,-44,-15)),"JST_XH_5pin_approximate_verify_pack","#E6E9E9"))
+    items.append(color(tube(balance,1.2,(0,-1,0),(1,0,0)).moved(leads_loc),"approx_factory_balance_bundle","#D8DADF"))
+    items.append(color(cube((6,14,5),(87,-44,-15)).moved(leads_loc),"JST_XH_5pin_approximate_verify_pack","#E6E9E9"))
     return bd.Compound(children=items,label="purchased_GNB_4S_850mAh_pack_and_retention_envelopes")

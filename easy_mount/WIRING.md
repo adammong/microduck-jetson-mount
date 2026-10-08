@@ -1,4 +1,4 @@
-# Wiring fit study — v05
+# Wiring fit study — v06
 
 Blue: USB-C data cable from Jetson J5 to a **FREE head-side plug**. The amber
 ring marks an area to survey, not a modeled socket, opening or drilling target.
@@ -35,14 +35,14 @@ a cable alone does not add that feature.
   centroid annotations. Connector face planes are estimated from the vendor
   envelope, and the modeled plug bodies are generic overmold allowances.
 - Approximate USB plug bodies: 12×21×7 mm at Jetson, 12×18×7 mm at the free
-  head end. Cable diameter 4.5 mm. Main blue centerline is about 251 mm.
+  head end. Cable diameter 4.5 mm. Main blue centerline is about 162 mm.
 - Approximate DC plug body: 9 mm diameter ×22 mm. Power cable diameter 3 mm.
-  Main power centerline is about 432 mm, plus a custom XT30 extension. Exact spline lengths are in `simulation/validation.json`.
+  Main power centerline is about 450 mm, plus a custom XT30 extension. Exact spline lengths are in `simulation/validation.json`.
 - Curved service loops target at least 10 mm bend radius. These are sampled
   geometric radii, not cable-manufacturer approvals or a head travel test.
 - Two outboard tray eyes accept cable ties for strain relief. Leave head-side
   slack free to move. Do not tie it across a joint or tension a board socket.
-- Converter allowance 14×24×12 mm, strapped to the new front gate side pad;
+- Converter allowance 14×24×12 mm, strapped to the rear saddle side pad;
   its electrical suitability is completely unverified. Replace its dimensions
   and mass with the selected converter before printing that pad.
 

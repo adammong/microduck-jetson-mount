@@ -12,10 +12,12 @@ Source: NVIDIA Jetson Orin Nano developer-kit 3D STEP download. `GLB/jetson_devk
 
 ## Purchased-part illustrations
 
-Battery body dimensions and mass are based on GAONENG GNB specifications linked in `easy_mount/battery_selection.json`. Battery label, lead placement and connectors are simplified illustrations. Standard fasteners, cable overmolds and the power-conditioning allowance are approximate fit geometry, not product manufacturing models. Model sources and documentation distinguish these from the four printable mount parts.
+Battery body dimensions and mass are based on GAONENG GNB specifications linked in `easy_mount/battery_selection.json`. Battery label, lead placement and connectors are simplified illustrations. Standard fasteners, cable overmolds and the power-conditioning allowance are approximate fit geometry, not product manufacturing models. Model sources and documentation distinguish these from the five printable mount parts.
 
 No blanket license is assigned to this mixed-source repository.
 
 ## Mac simulation and policies
 
 The setup downloads [jonathanhawkins/microduck-lab](https://github.com/jonathanhawkins/microduck-lab) at `bbf0326ef97975f7062368914e0729504d17226f` (Apache 2.0). The simulator scene wrappers are from `pollen-robotics/microduck_rl` at `badc4e7ffe5507fd7acb1a21487bd2925c1afe5a`. The official `alpha_walking.onnx` is downloaded from `pollen-robotics/microduck-policies` revision `088524a64e2557dc453256b6071dbb9d23888802`; it is not redistributed here. Source URLs and SHA-256 hashes are recorded in `training/inputs.json`. The archived stock/loaded pilot policies were trained locally for this study and are marked rejected experimental policies. Source harness and dependency caches stay outside Git.
+
+The v06 native teacher import and fine-tuned derivatives retain that actor's weights. The pinned upstream [model metadata](https://huggingface.co/api/models/pollen-robotics/microduck-policies/revision/088524a64e2557dc453256b6071dbb9d23888802) declares Apache 2.0. Copies of the license and attribution are in `results/mac-v06/policies/LICENSE` and `NOTICE`; modifications and policy selection status are recorded with each artifact. The original downloaded ONNX file remains in the ignored input cache.

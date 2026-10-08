@@ -1,0 +1,20 @@
+{
+  "results/mac-v06/policies/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+  "results/mac-v06/policies/NOTICE": "a1595c18814325c8f38d52ce7805e542f5f1513086f140eb8de5f69783fce69f",
+  "results/mac-v06/policies/finetuned-long/vecnormalize.pkl": "eb03256de28ea617705551182e9c9b7a2e70403424722e0648764e4e61255ced",
+  "results/mac-v06/policies/finetuned-long/study.json": "fe921234a84da87866cfe11a0d75431cf24743646e71f53c09abaaf5f7fcf7e8",
+  "results/mac-v06/policies/finetuned-long/model.sb3": "34710065ac8775b29253bd953927b76de249704f89dfd93739ed22acb47baaf1",
+  "results/mac-v06/policies/finetuned-long/progress.jsonl": "b6df88fe192aee335c9ba0f8ffae6469f39490017ef30ceae7dafa7e5cfcc819",
+  "results/mac-v06/policies/finetuned-long/policy.onnx": "585b2a4caba3f9542a7e895ccd8d528c5fb57aaa6242f158a64fcdfbada4da40",
+  "results/mac-v06/policies/finetuned-long/run.json": "e801059b3f83b703f636cbd2288f4778205ba20febee95f2c7b84e5933c4819b",
+  "results/mac-v06/policies/teacher-import/vecnormalize.pkl": "f822e577cda86cf315efd80b44b63ff7e61dff009c7197e85b725d5f3c28f129",
+  "results/mac-v06/policies/teacher-import/model.sb3": "d9fec1adb95924bc98727f66428c8fa16dd92e261d392649c5e213a6bea778f4",
+  "results/mac-v06/policies/teacher-import/policy.onnx": "2fd5064ec0f176ccc90149af83bc93014cf6eef25ce6659f3bd860a10c1b3be7",
+  "results/mac-v06/policies/teacher-import/run.json": "a67a07507e444404375d9ae1bfaeba0f0d3c5cc3ab509bae77dfe051cfa931bd",
+  "results/mac-v06/policies/finetuned-short/vecnormalize.pkl": "b89231e8a3b5d4d813347bdef381008b99dd6ed976e40a6b6a67969f12082df3",
+  "results/mac-v06/policies/finetuned-short/study.json": "72ea1398bc11e0805c41158e5a2b24387fb2e22cd036c2f2f8c605210757c3dc",
+  "results/mac-v06/policies/finetuned-short/model.sb3": "34afe2847fd4872943bce22a3bc8ffe0f0dcead500f04229926c3524181bec51",
+  "results/mac-v06/policies/finetuned-short/progress.jsonl": "3ea8cc549e341e9fe3eeeeaeb902b7030b54fadb4b02ded87f607fa7bd6cef94",
+  "results/mac-v06/policies/finetuned-short/policy.onnx": "e5b5bd5cc0e4278aaddb9550190a93f01174ed4315c1cd8fbce75bdea1a323dd",
+  "results/mac-v06/policies/finetuned-short/run.json": "a2d0a74180e9821370cc1aa33b67f5ff57734285d567680427788f5819f51440"
+}

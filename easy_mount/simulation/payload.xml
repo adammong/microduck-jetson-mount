@@ -4,7 +4,8 @@
     <mesh name="easy_saddle" file="meshes/saddle.stl" scale="0.001 0.001 0.001" />
     <mesh name="easy_front_gate" file="meshes/front_gate.stl" scale="0.001 0.001 0.001" />
     <mesh name="easy_jetson_tray" file="meshes/jetson_tray.stl" scale="0.001 0.001 0.001" />
-    <mesh name="easy_jetson_gate" file="meshes/jetson_gate.stl" scale="0.001 0.001 0.001" />
+    <mesh name="easy_jetson_gate_left" file="meshes/jetson_gate_left.stl" scale="0.001 0.001 0.001" />
+    <mesh name="easy_jetson_gate_right" file="meshes/jetson_gate_right.stl" scale="0.001 0.001 0.001" />
     <mesh name="easy_wiring_data" file="meshes/wiring_data.stl" scale="0.001 0.001 0.001" />
     <mesh name="easy_wiring_power" file="meshes/wiring_power.stl" scale="0.001 0.001 0.001" />
     <mesh name="easy_wiring_converter" file="meshes/wiring_converter.stl" scale="0.001 0.001 0.001" />
@@ -12,11 +13,12 @@
   </asset>
   <worldbody>
     <body name="easy_mount_payload">
-      <inertial mass="0.45127262485874875" pos="-0.0312677493567 -0.0036319601309 0.0190486545522" fullinertia="0.00110245832116 0.00239995605547 0.00252700262012 0.000139306447145 0.000457360093072 -0.00012257812952" />
+      <inertial mass="0.44209408121185306" pos="0.00623390343685 0.00390590407636 -0.00216005086215" fullinertia="0.00105016944336 0.00332784476579 0.00354798414129 0.000208883407615 0.000152334073687 5.48240362169e-05" />
       <geom name="easy_saddle_visual" type="mesh" mesh="easy_saddle" group="2" mass="0" contype="0" conaffinity="0" rgba="0.91 0.65 0.2 1" />
       <geom name="easy_front_gate_visual" type="mesh" mesh="easy_front_gate" group="2" mass="0" contype="0" conaffinity="0" rgba="0.91 0.65 0.2 1" />
       <geom name="easy_jetson_tray_visual" type="mesh" mesh="easy_jetson_tray" group="2" mass="0" contype="0" conaffinity="0" rgba="0.15 0.4 0.48 1" />
-      <geom name="easy_jetson_gate_visual" type="mesh" mesh="easy_jetson_gate" group="2" mass="0" contype="0" conaffinity="0" rgba="0.91 0.65 0.2 1" />
+      <geom name="easy_jetson_gate_left_visual" type="mesh" mesh="easy_jetson_gate_left" group="2" mass="0" contype="0" conaffinity="0" rgba="0.91 0.65 0.2 1" />
+      <geom name="easy_jetson_gate_right_visual" type="mesh" mesh="easy_jetson_gate_right" group="2" mass="0" contype="0" conaffinity="0" rgba="0.91 0.65 0.2 1" />
       <geom name="easy_wiring_data_visual" type="mesh" mesh="easy_wiring_data" group="2" mass="0" contype="0" conaffinity="0" rgba="0.19 0.55 0.86 1" />
       <geom name="easy_wiring_power_visual" type="mesh" mesh="easy_wiring_power" group="2" mass="0" contype="0" conaffinity="0" rgba="0.26 0.68 0.46 1" />
       <geom name="easy_wiring_converter_visual" type="mesh" mesh="easy_wiring_converter" group="2" mass="0" contype="0" conaffinity="0" rgba="0.44 0.39 0.69 1" />
@@ -27,26 +29,34 @@
       <geom name="easy_lower_capture_lip_-1" type="box" size="0.006 0.00355 0.0008" pos="-0.018 -0.03355 0.002" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_outer_clip_wall_-1" type="box" size="0.006 0.002 0.0175" pos="-0.018 -0.0351 0.0193" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_upper_seat_-1" type="box" size="0.006 0.003 0.0015" pos="-0.018 -0.024 0.0435" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_rear_dock_-1" type="box" size="0.009 0.006 0.013" pos="-0.06 -0.059 0.022" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_-1" type="box" size="0.007 0.006 0.013" pos="0.043 -0.059 -0.016" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_arm_-1" type="box" size="0.002 0.013 0.004" pos="0.042 -0.046 0.024" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_riser_-1" type="box" size="0.004 0.006 0.019" pos="0.042 -0.059 0.011" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_side_arm_1" type="box" size="0.047 0.002 0.006" pos="-0.007 0.0351 0.024" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_lower_capture_lip_1" type="box" size="0.006 0.00355 0.0008" pos="-0.018 0.03355 0.002" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_outer_clip_wall_1" type="box" size="0.006 0.002 0.0175" pos="-0.018 0.0351 0.0193" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
       <geom name="easy_upper_seat_1" type="box" size="0.006 0.003 0.0015" pos="-0.018 0.024 0.0435" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_rear_dock_1" type="box" size="0.009 0.006 0.013" pos="-0.06 0.059 0.022" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_jetson" type="box" size="0.017385 0.0515 0.0454384375" pos="-0.086385 -4.74842387632e-18 0.025" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_tray_plate" type="box" size="0.0015 0.0565 0.052" pos="-0.0665 -3.33066907388e-19 0.025" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_open_gate_bridge" type="box" size="0.0015 0.061 0.0015" pos="-0.0615 7.77156117238e-19 0.0825" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_open_gate_upright_-1" type="box" size="0.007 0.002 0.0015" pos="-0.07 0.059 0.0865" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_open_gate_backlink_-1" type="box" size="0.0015 0.002 0.0035" pos="-0.0615 0.059 0.0845" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_open_gate_upright_1" type="box" size="0.007 0.002 0.0015" pos="-0.07 -0.059 0.0865" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_open_gate_backlink_1" type="box" size="0.0015 0.002 0.0035" pos="-0.0615 -0.059 0.0845" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_battery" type="box" size="0.016 0.0365 0.009" pos="0.0626 -4.13002965161e-18 -0.01" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_front_battery_pocket" type="box" size="0.018 0.0395 0.012" pos="0.062 0 -0.01" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_front_battery_back_panel" type="box" size="0.002 0.02 0.026" pos="0.042 0 0.004" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_converter_pad" type="box" size="0.002 0.027 0.01" pos="0.042 -0.047 -0.01" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_converter_envelope" type="box" size="0.007 0.012 0.006" pos="0.051 -0.054 -0.01" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_tray_rail_-1" type="box" size="0.00525 0.0022 0.0485" pos="-0.07325 0.0529 0.024" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
-      <geom name="easy_tray_rail_1" type="box" size="0.00525 0.0022 0.0485" pos="-0.07325 -0.0529 0.024" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_1" type="box" size="0.007 0.006 0.013" pos="0.043 0.059 -0.016" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_arm_1" type="box" size="0.002 0.013 0.004" pos="0.042 0.046 0.024" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_front_dock_riser_1" type="box" size="0.004 0.006 0.019" pos="0.042 0.059 0.011" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_jetson" type="box" size="0.017385 0.0515 0.0454384375" pos="0.071385 -4.74842387632e-18 -0.018" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_tray_plate" type="box" size="0.0015 0.0565 0.052" pos="0.0515 -3.33066907388e-19 -0.018" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_tab_-1" type="box" size="0.00375 0.00105 0.0015" pos="0.05675 -0.05085 0.0293" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_link_-1" type="box" size="0.002 0.003 0.002" pos="0.06 -0.0535 0.032" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_screw_boss_-1" type="box" size="0.002 0.006 0.006" pos="0.06 -0.059 0.036" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_tab_1" type="box" size="0.00375 0.00105 0.0015" pos="0.05675 0.05085 0.0293" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_link_1" type="box" size="0.002 0.003 0.002" pos="0.06 0.0535 0.032" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_corner_gate_screw_boss_1" type="box" size="0.002 0.006 0.006" pos="0.06 0.059 0.036" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_battery" type="box" size="0.016 0.0365 0.009" pos="-0.1226 -4.13002965161e-18 4.13002965161e-18" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_rear_battery_pocket" type="box" size="0.018 0.0395 0.012" pos="-0.122 0 0" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_rear_battery_back_panel" type="box" size="0.002 0.02 0.019" pos="-0.102 0 0.007" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_rear_battery_web_-1" type="box" size="0.028 0.003 0.003" pos="-0.078 -0.011 0.023" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_rear_battery_web_1" type="box" size="0.028 0.003 0.003" pos="-0.078 0.011 0.023" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_converter_pad_riser" type="box" size="0.002 0.006 0.004" pos="-0.054 0.03 0.01" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_converter_pad" type="box" size="0.002 0.027 0.01" pos="-0.054 0.047 0" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_converter_envelope" type="box" size="0.007 0.012 0.006" pos="-0.064 0.054 0" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_tray_rail_-1" type="box" size="0.00525 0.0022 0.0485" pos="0.05825 -0.0529 -0.019" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
+      <geom name="easy_tray_rail_1" type="box" size="0.00525 0.0022 0.0485" pos="0.05825 0.0529 -0.019" group="3" mass="0" rgba="0.7 0.5 0.2 1" />
     </body>
   </worldbody>
 </mujoco>

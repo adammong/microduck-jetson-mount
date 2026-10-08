@@ -1,0 +1,300 @@
+{
+  "units": "mm",
+  "tray_origin_trunk_mm": [
+    -65,
+    0,
+    25
+  ],
+  "tray_euler_xyz_deg": [
+    90,
+    0,
+    -90
+  ],
+  "torso_side_inner_y": 33.1,
+  "torso_arm_wall": 4,
+  "torso_clip_x_range": [
+    -24,
+    -12
+  ],
+  "torso_top_pad_mm": 1.0,
+  "torso_front_pad_mm": 2.0,
+  "lower_capture_lip_y": 30.0,
+  "lower_capture_lip_z": [
+    1.2,
+    2.8
+  ],
+  "gate_screw_y": 35.1,
+  "gate_screw_z": 24,
+  "dock_x": 59,
+  "dock_hole_y": 0,
+  "dock_pin_y": -7,
+  "dock_pin_diameter": 5.0,
+  "dock_pin_clearance_diameter": 5.6,
+  "m4_clearance_diameter": 4.5,
+  "m4_nut_pocket_af": 7.25,
+  "m4_nut_pocket_depth": 3.5,
+  "jetson_base_size": [
+    103,
+    90.5,
+    6.5
+  ],
+  "jetson_base_clearance_per_side": 0.6,
+  "jetson_bottom_z": 4.0,
+  "jetson_rail_capture_x": 50.7,
+  "jetson_rail_cap_bottom_z": 11.0,
+  "tray_thickness": 3.0,
+  "battery_size": [
+    73,
+    18,
+    32
+  ],
+  "battery_cradle_origin_trunk_mm": [
+    44,
+    0,
+    -10
+  ],
+  "battery_cradle_euler_xyz_deg": [
+    90,
+    0,
+    90
+  ],
+  "battery_local_center_mm": [
+    0,
+    0,
+    18.6
+  ],
+  "connector_keepout_size_mm": [
+    99.4,
+    50,
+    46.9
+  ],
+  "connector_keepout_center_mm": [
+    0,
+    70.8,
+    26.55
+  ],
+  "battery_clearance_per_side": 1.0,
+  "petg_density_g_cm3": 1.27,
+  "printed_mass_scale": 1.0,
+  "jetson_mass_g": 175,
+  "battery_mass_g": 73,
+  "ancillary_mass_g": 74,
+  "notes": "External captive saddle fitted to the pinned simulation shell, not verified against production hardware. Six M4 thumb screws and nuts (two torso, two removable tray, two Jetson end gate). No original robot screws are removed. OEM Jetson base retained. Foam pad dimensions are nominal. Physical fit, shell strength and swept motions remain required. v04: Jetson rotated 180 degrees in its tray, connectors face up. Data route ends at an unconnected provisional head-side USB plug; exact production host socket and shell entry require measurement. Converter is a fit allowance, not an electrically selected part. Ancillary masses are estimates; flexible cable tension is not modeled. v05: GNB8504S60AHV 4S LiHV 850mAh pack, manufacturer body 73x18x32 mm and 73g +/-2g; cradle resized with 1mm side clearance and a 0.6mm bottom pad. Battery shell/plug details and flexible factory leads are simplified. Electrical protection/cutoff and conditioning remain unselected.",
+  "revision": "v05",
+  "jetson_inplane_rotation_deg": 180,
+  "hardware_pads_straps_mass_g": 22,
+  "data_cable_mass_g": 14,
+  "power_cable_mass_g": 18,
+  "converter_mass_g": 20,
+  "converter_size_trunk_mm": [
+    14,
+    24,
+    12
+  ],
+  "converter_center_trunk_mm": [
+    51,
+    -54,
+    -10
+  ],
+  "jetson_usb_c_face_tray_mm": [
+    -42,
+    45.45,
+    12.2
+  ],
+  "jetson_dc_face_tray_mm": [
+    44,
+    45.1,
+    15.4
+  ],
+  "data_cable_diameter_mm": 4.5,
+  "power_cable_diameter_mm": 3,
+  "data_cable_route_trunk_mm": [
+    [
+      -77.2,
+      42,
+      100
+    ],
+    [
+      -77.2,
+      42,
+      118
+    ],
+    [
+      -93,
+      64,
+      139
+    ],
+    [
+      -89,
+      89,
+      136
+    ],
+    [
+      -55,
+      104,
+      124
+    ],
+    [
+      -10,
+      108,
+      120
+    ],
+    [
+      25,
+      108,
+      120
+    ],
+    [
+      50,
+      95,
+      120
+    ],
+    [
+      50,
+      75,
+      120
+    ]
+  ],
+  "power_cable_route_trunk_mm": [
+    [
+      -80.4,
+      -44,
+      96
+    ],
+    [
+      -80.4,
+      -44,
+      116
+    ],
+    [
+      -98,
+      -62,
+      132
+    ],
+    [
+      -110,
+      -88,
+      111
+    ],
+    [
+      -94,
+      -90,
+      55
+    ],
+    [
+      -60,
+      -90,
+      25
+    ],
+    [
+      -10,
+      -97,
+      5
+    ],
+    [
+      37,
+      -104,
+      -6
+    ],
+    [
+      75,
+      -104,
+      -6
+    ],
+    [
+      92.68,
+      -96.68,
+      -6
+    ],
+    [
+      100,
+      -79,
+      -6
+    ],
+    [
+      92.68,
+      -61.32,
+      -6
+    ],
+    [
+      75,
+      -54,
+      -6
+    ],
+    [
+      58,
+      -54,
+      -6
+    ]
+  ],
+  "head_usb_plug_body_center_trunk_mm": [
+    50,
+    66,
+    120
+  ],
+  "head_usb_access_marker_trunk_mm": [
+    50,
+    47.5,
+    120
+  ],
+  "minimum_cable_bend_radius_mm": 10,
+  "battery_pocket_depth_mm": 36,
+  "battery_bottom_pad_mm": 0.6,
+  "converter_pad_center_trunk_mm": [
+    42,
+    -47,
+    -10
+  ],
+  "converter_pad_size_trunk_mm": [
+    4,
+    54,
+    20
+  ],
+  "converter_strap_slot_y_mm": [
+    -69,
+    -40
+  ],
+  "battery_model": "GNB8504S60AHV",
+  "battery_nominal_voltage_v": 15.2,
+  "battery_capacity_mah": 850,
+  "battery_energy_wh": 12.92,
+  "battery_max_voltage_v": 17.4,
+  "battery_mass_tolerance_g": 2,
+  "battery_extension_route_trunk_mm": [
+    [
+      75,
+      -91.5,
+      -13
+    ],
+    [
+      80,
+      -104,
+      -13
+    ],
+    [
+      98,
+      -109,
+      -13
+    ],
+    [
+      115,
+      -94,
+      -13
+    ],
+    [
+      110,
+      -71,
+      -13
+    ],
+    [
+      90,
+      -54,
+      -13
+    ],
+    [
+      58,
+      -54,
+      -13
+    ]
+  ]
+}

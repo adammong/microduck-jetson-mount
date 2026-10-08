@@ -1,0 +1,66 @@
+{
+  "manufacturer": "GAONENG GNB",
+  "model": "GNB8504S60AHV",
+  "chemistry": "LiHV lithium polymer",
+  "cells": "4S1P",
+  "capacity_mah": 850,
+  "nominal_voltage_v": 15.2,
+  "full_charge_voltage_v": 17.4,
+  "nominal_energy_wh": 12.92,
+  "manufacturer_body_HWL_mm": [
+    32,
+    18,
+    73
+  ],
+  "CAD_local_XYZ_mm": [
+    73,
+    18,
+    32
+  ],
+  "manufacturer_mass_g": 73,
+  "manufacturer_mass_tolerance_g": 2,
+  "discharge_connector": "XT30",
+  "balance_connector": "5-pin JST-XH envelope (verify chosen pack)",
+  "manufacturer_url": "https://www.gaoneng.shop/products/gaoneng-gnb-lihv-4s-15.2v-850mah-60c-xt30-lipo-battery-long-range",
+  "seller_url": "https://www.racedayquads.com/products/gaoneng-gnb-15-2v-4s-850mah-60c-lihv-micro-battery-long-type-xt30",
+  "checked_on": "2026-10-05",
+  "CAD_provenance": "No exact GNB8504S60AHV or XT30 match returned by reachable step.parts API. Simplified dimensioned envelope; no vendor CAD available in this search.",
+  "inertia_assumption": "Manufacturer 73g placed uniformly in the body envelope; includes the stock pack leads/connectors at this simplified body COM. Factory lead visual meshes carry zero extra mass.",
+  "runtime_estimate": {
+    "usable_fraction": 0.8,
+    "conditioning_efficiency": 0.9,
+    "assumed_total_Jetson_draw_w": [
+      15,
+      25,
+      30
+    ],
+    "minutes": [
+      37.2096,
+      22.325760000000002,
+      18.6048
+    ],
+    "scope": "Arithmetic estimate for Jetson only, not measured module power, robot runtime or a load test"
+  },
+  "alternatives": [
+    {
+      "model": "Tattu TAA4503S75XT3",
+      "energy_wh": 5,
+      "mass_g": 42,
+      "reason": "Fits old pocket but too little capacity for revised preference"
+    },
+    {
+      "model": "GNB8503S60AHV",
+      "energy_wh": 9.69,
+      "mass_g": 52,
+      "reason": "Lower weight alternative; 4S selected for larger energy reserve and voltage headroom"
+    }
+  ],
+  "seller_stock_at_check": "RaceDayQuads product page reports In stock on 2026-10-05; stock and shipping can change",
+  "manufacturer_shipping_note": "Manufacturer banner reports temporarily paused US shipping; US reseller listed separately",
+  "pocket_internal_WHD_mm": [
+    75,
+    20,
+    36
+  ],
+  "pocket_fit_note": "1 mm body clearance per side before strap; modeled 1 mm strap occupies the end clearance. Verify actual strap thickness and purchased pack before printing. Factory lead exit position/length and connector envelopes are approximate."
+}

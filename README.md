@@ -4,6 +4,12 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the balanced v06 mount](docs/v06-robot.png)
 
+## Walking policy video
+
+[![Walking policy on the loaded v06 robot](docs/v06-policy-walking.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/mac-v06/preview-loaded-forward.mp4)
+
+[Watch or download the full MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/mac-v06/preview-loaded-forward.mp4). This is the unchanged official walking policy on the loaded v06 model in Mac MuJoCo simulation, with no assistance; it is not a hardware demonstration. The fine-tuned policies remain rejected.
+
 ## Start here
 
 - [Assembly, hardware, printing and limitations](easy_mount/README.md)

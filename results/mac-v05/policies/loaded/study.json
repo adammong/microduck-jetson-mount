@@ -1,0 +1,17 @@
+{
+  "variant": "loaded",
+  "seed": 0,
+  "requested_steps": 1048576,
+  "envs": 8,
+  "elapsed_s": 124.65186309814453,
+  "actuator": "bam",
+  "device": "cpu",
+  "domain_randomization": false,
+  "observation_noise": false,
+  "contact_model": "groundcontact",
+  "assist": false,
+  "symmetry_loss": false,
+  "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+  "strict_nonfoot_floor": false,
+  "status": "Rejected: stock learned to stand rather than walk; loaded exploits non-foot floor support."
+}

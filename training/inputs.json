@@ -1,0 +1,20 @@
+[
+  {
+    "file": "scene_walk.xml",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/badc4e7ffe5507fd7acb1a21487bd2925c1afe5a/src/mjlab_microduck/robot/microduck/scene_walk.xml",
+    "sha256": "6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+    "bytes": 2341
+  },
+  {
+    "file": "scene.xml",
+    "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/badc4e7ffe5507fd7acb1a21487bd2925c1afe5a/src/mjlab_microduck/robot/microduck/scene.xml",
+    "sha256": "9a85461121ba8273083c482c166f27e143ca386993b3ec8f8d97eb09aa257d31",
+    "bytes": 2350
+  },
+  {
+    "file": "alpha_walking.onnx",
+    "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_walking.onnx",
+    "sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "bytes": 793705
+  }
+]

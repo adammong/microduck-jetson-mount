@@ -1,0 +1,94 @@
+[
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.054617504050335525,
+    "lateral_m": 0.1140094861921505,
+    "max_tilt_deg": 53.00317556303297,
+    "final_height_m": 0.09401866124118755,
+    "mean_height_m": 0.09323597188091727,
+    "mean_xy_velocity_error_m_s": 0.030416218708059765,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.94,
+    "payload_selfcontact_fraction": 0.928,
+    "max_payload_penetration_m": 0.004407395153689951,
+    "max_payload_contact_force_n": 20.298516511890234,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.36,
+    "survived": false,
+    "forward_m": -0.08184450910421671,
+    "lateral_m": 0.005443530719654568,
+    "max_tilt_deg": 32.63061465452247,
+    "final_height_m": 0.06958832359573641,
+    "mean_height_m": 0.10560786083074553,
+    "mean_xy_velocity_error_m_s": 0.5558683890660268,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.05555555555555555,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.005749492590736156,
+    "max_payload_contact_force_n": 46.745916380564395,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.04740175507339528,
+    "lateral_m": 0.12431437587006001,
+    "max_tilt_deg": 53.21782251806447,
+    "final_height_m": 0.09293145905058631,
+    "mean_height_m": 0.09359051647633063,
+    "mean_xy_velocity_error_m_s": 0.028951575008194882,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.93,
+    "payload_selfcontact_fraction": 0.894,
+    "max_payload_penetration_m": 0.0036831564845697384,
+    "max_payload_contact_force_n": 26.434417168859447,
+    "task": "turn"
+  }
+]

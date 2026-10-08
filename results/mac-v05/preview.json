@@ -1,0 +1,165 @@
+[
+  {
+    "variant": "stock",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": 0.0007779880541690398,
+    "lateral_m": 0.000454921106865616,
+    "max_tilt_deg": 0.8598005848622401,
+    "final_height_m": 0.11656887274550372,
+    "mean_height_m": 0.11662679561443311,
+    "mean_xy_velocity_error_m_s": 0.0009197012326199671,
+    "payload_contact_pairs": [],
+    "mass_kg": 0.7372431799999999,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.0,
+    "max_payload_contact_force_n": 0.0,
+    "task": "stand"
+  },
+  {
+    "variant": "stock",
+    "seed": 0,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": 1.0920649465152068,
+    "lateral_m": -0.32611617797401515,
+    "max_tilt_deg": 3.820800372020023,
+    "final_height_m": 0.11797049948686701,
+    "mean_height_m": 0.11779595282029125,
+    "mean_xy_velocity_error_m_s": 0.2202475400675089,
+    "payload_contact_pairs": [],
+    "mass_kg": 0.7372431799999999,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.0,
+    "max_payload_contact_force_n": 0.0,
+    "task": "forward"
+  },
+  {
+    "variant": "stock",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": 0.0031257381228228113,
+    "lateral_m": 0.003506642231546685,
+    "max_tilt_deg": 0.6611601635285344,
+    "final_height_m": 0.1156895375295039,
+    "mean_height_m": 0.1158827736965908,
+    "mean_xy_velocity_error_m_s": 0.001913054333053809,
+    "payload_contact_pairs": [],
+    "mass_kg": 0.7372431799999999,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.0,
+    "max_payload_contact_force_n": 0.0,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.6407994951592147,
+    "lateral_m": 0.13796629330863633,
+    "max_tilt_deg": 17.09836067742569,
+    "final_height_m": 0.11483538214312917,
+    "mean_height_m": 0.11426725997947744,
+    "mean_xy_velocity_error_m_s": 0.08526495039703923,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.216,
+    "max_payload_penetration_m": 0.00185245171409325,
+    "max_payload_contact_force_n": 17.38012207251158,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": 0.2655380989339909,
+    "lateral_m": -0.6096147923381168,
+    "max_tilt_deg": 6.598557498683222,
+    "final_height_m": 0.11574897468877311,
+    "mean_height_m": 0.11377205400164223,
+    "mean_xy_velocity_error_m_s": 0.24407852043345207,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.156,
+    "max_payload_penetration_m": 0.000673952759045963,
+    "max_payload_contact_force_n": 4.453582143370475,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/sim-inputs/alpha_walking.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.11566793710342956,
+    "lateral_m": 0.0575513786246347,
+    "max_tilt_deg": 11.97179031413887,
+    "final_height_m": 0.11472521879724032,
+    "mean_height_m": 0.11465080434081917,
+    "mean_xy_velocity_error_m_s": 0.10471255214683538,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.0,
+    "payload_selfcontact_fraction": 0.036,
+    "max_payload_penetration_m": 0.0009419862483942029,
+    "max_payload_contact_force_n": 5.505864195573595,
+    "task": "turn"
+  }
+]

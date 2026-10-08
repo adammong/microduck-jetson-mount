@@ -13,12 +13,13 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 - [Editable CAD assembly](easy_mount/STEP/easy_mount_assembly.step)
 - [Four print STLs](easy_mount/STL/)
 - [MuJoCo models and validation reports](easy_mount/simulation/)
+- [Mac simulation and training](training/README.md) · [v05 simulation findings](results/mac-v05/REPORT.md)
 
 The estimated payload is **451.3 g**, including fully dense PETG and estimated ancillary hardware. The battery is specified at **73 g**, with **12.92 Wh** nominal energy. Runtime arithmetic estimates 22–37 minutes at 15–25 W total Jetson draw, including reserve and conversion losses; it does not predict robot motor runtime.
 
 ## Prototype status
 
-Physical shell fit, structural strength, power conditioning/protection and walking are unverified. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
+Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. Preliminary Mac simulations show backward drift and head/mount contacts; the CPU training pilot did not produce a usable gait. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
 
 ## Rebuild
 

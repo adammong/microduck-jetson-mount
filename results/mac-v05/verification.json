@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "strict_guard": "Stock forward roll survives; backpack-supported pilot is rejected",
+  "mass_kg": {
+    "stock": 0.7372431799999999,
+    "loaded": 1.1885158048587487
+  },
+  "added_mass_kg": 0.45127262485874886,
+  "obs": 61,
+  "actions": 14,
+  "policy_rate_hz": 50,
+  "physics_rate_hz": 200,
+  "repeatability": "Two isolated 2-second seed-0 rollouts per variant are exactly equal",
+  "actuator": "BAM XL330 M6, nominal firmware current limit 1.75 A, no strength scaling",
+  "contact_model": "groundcontact, mount collision boxes active",
+  "setup_recheck": "Pinned uv.lock environment audited and CAD-derived scenes rebuilt",
+  "native_resume_check": "Archived model.sb3 and VecNormalize restored; 2,048 guarded PPO steps and ONNX export completed"
+}

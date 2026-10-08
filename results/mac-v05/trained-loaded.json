@@ -1,0 +1,735 @@
+[
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.054617504050335525,
+    "lateral_m": 0.1140094861921505,
+    "max_tilt_deg": 53.00317556303297,
+    "final_height_m": 0.09401866124118755,
+    "mean_height_m": 0.09323597188091727,
+    "mean_xy_velocity_error_m_s": 0.030416218708059765,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.94,
+    "payload_selfcontact_fraction": 0.928,
+    "max_payload_penetration_m": 0.004407395153689951,
+    "max_payload_contact_force_n": 20.298516511890234,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 1,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.044958159204575035,
+    "lateral_m": 0.10527654688301125,
+    "max_tilt_deg": 52.34545417675134,
+    "final_height_m": 0.09194001534669402,
+    "mean_height_m": 0.09272584851566516,
+    "mean_xy_velocity_error_m_s": 0.027000078082403837,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.932,
+    "payload_selfcontact_fraction": 0.928,
+    "max_payload_penetration_m": 0.0024417975534870026,
+    "max_payload_contact_force_n": 65.7235003802504,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 2,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05367926991564623,
+    "lateral_m": 0.09787117171061746,
+    "max_tilt_deg": 52.34006632464341,
+    "final_height_m": 0.09327235303623639,
+    "mean_height_m": 0.09269676357274079,
+    "mean_xy_velocity_error_m_s": 0.029032217780015634,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.936,
+    "payload_selfcontact_fraction": 0.926,
+    "max_payload_penetration_m": 0.005808398064101716,
+    "max_payload_contact_force_n": 17.122011758243442,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 3,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05325294276742615,
+    "lateral_m": 0.09024455346701184,
+    "max_tilt_deg": 51.91323135535572,
+    "final_height_m": 0.09132025111698737,
+    "mean_height_m": 0.09235331754687515,
+    "mean_xy_velocity_error_m_s": 0.02908214912629083,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.942,
+    "payload_selfcontact_fraction": 0.926,
+    "max_payload_penetration_m": 0.004153834846836298,
+    "max_payload_contact_force_n": 43.96149253229211,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 4,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.06742379250950706,
+    "lateral_m": 0.11627136932049284,
+    "max_tilt_deg": 53.21112778159291,
+    "final_height_m": 0.09345331864056684,
+    "mean_height_m": 0.09316662932610018,
+    "mean_xy_velocity_error_m_s": 0.031040413565762346,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.95,
+    "payload_selfcontact_fraction": 0.924,
+    "max_payload_penetration_m": 0.0047356975815292315,
+    "max_payload_contact_force_n": 25.897102126544205,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 5,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.056827510403267736,
+    "lateral_m": 0.10428575859195031,
+    "max_tilt_deg": 53.15928132748552,
+    "final_height_m": 0.09406281686382663,
+    "mean_height_m": 0.09318841644057783,
+    "mean_xy_velocity_error_m_s": 0.028597874963819377,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.94,
+    "payload_selfcontact_fraction": 0.91,
+    "max_payload_penetration_m": 0.0048588259215872134,
+    "max_payload_contact_force_n": 73.3063712991308,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 6,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.06181471165255194,
+    "lateral_m": 0.09767233539546755,
+    "max_tilt_deg": 52.91311274732742,
+    "final_height_m": 0.09387703217254807,
+    "mean_height_m": 0.09313829406244342,
+    "mean_xy_velocity_error_m_s": 0.02821989319823306,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.936,
+    "payload_selfcontact_fraction": 0.912,
+    "max_payload_penetration_m": 0.003670367064024252,
+    "max_payload_contact_force_n": 19.639073452931775,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 7,
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05675153874252453,
+    "lateral_m": 0.10259191704442137,
+    "max_tilt_deg": 52.58253012866464,
+    "final_height_m": 0.09265186383768298,
+    "mean_height_m": 0.09274981872291314,
+    "mean_xy_velocity_error_m_s": 0.029860338967497485,
+    "payload_contact_pairs": [
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.944,
+    "payload_selfcontact_fraction": 0.916,
+    "max_payload_penetration_m": 0.0035045944841703286,
+    "max_payload_contact_force_n": 28.737394151227452,
+    "task": "stand"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.36,
+    "survived": false,
+    "forward_m": -0.08184450910421671,
+    "lateral_m": 0.005443530719654568,
+    "max_tilt_deg": 32.63061465452247,
+    "final_height_m": 0.06958832359573641,
+    "mean_height_m": 0.10560786083074553,
+    "mean_xy_velocity_error_m_s": 0.5558683890660268,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.05555555555555555,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.005749492590736156,
+    "max_payload_contact_force_n": 46.745916380564395,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 1,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.34,
+    "survived": false,
+    "forward_m": -0.0765995356943718,
+    "lateral_m": 0.0053610441168754,
+    "max_tilt_deg": 32.33454241420222,
+    "final_height_m": 0.06788377779481312,
+    "mean_height_m": 0.10322300988825728,
+    "mean_xy_velocity_error_m_s": 0.5519034318902509,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.058823529411764705,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.006645666977361471,
+    "max_payload_contact_force_n": 32.53489827478879,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 2,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.04492585588513564,
+    "lateral_m": 0.0861097189367706,
+    "max_tilt_deg": 51.61724776841394,
+    "final_height_m": 0.09350478615615086,
+    "mean_height_m": 0.09223785371576629,
+    "mean_xy_velocity_error_m_s": 0.30439689251716623,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.94,
+    "payload_selfcontact_fraction": 0.95,
+    "max_payload_penetration_m": 0.0038308999570149105,
+    "max_payload_contact_force_n": 27.439164591176237,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 3,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.36,
+    "survived": false,
+    "forward_m": -0.0812608280618373,
+    "lateral_m": -0.0012908197023563442,
+    "max_tilt_deg": 32.343933538159945,
+    "final_height_m": 0.06986206722749985,
+    "mean_height_m": 0.10374054581861555,
+    "mean_xy_velocity_error_m_s": 0.5613749253319478,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.05555555555555555,
+    "payload_selfcontact_fraction": 0.05555555555555555,
+    "max_payload_penetration_m": 0.005286784507749907,
+    "max_payload_contact_force_n": 28.906288166051382,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 4,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.36,
+    "survived": false,
+    "forward_m": -0.08098170389573665,
+    "lateral_m": -0.0054296866878658576,
+    "max_tilt_deg": 30.79435526924097,
+    "final_height_m": 0.06984326115064976,
+    "mean_height_m": 0.10614695063697793,
+    "mean_xy_velocity_error_m_s": 0.5504094964830728,
+    "payload_contact_pairs": [
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.05555555555555555,
+    "payload_selfcontact_fraction": 0.05555555555555555,
+    "max_payload_penetration_m": 0.0029921664721438562,
+    "max_payload_contact_force_n": 43.23668269938402,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 5,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.36,
+    "survived": false,
+    "forward_m": -0.08116210413307105,
+    "lateral_m": 0.0021165641992567023,
+    "max_tilt_deg": 31.709953653796816,
+    "final_height_m": 0.0691487762772785,
+    "mean_height_m": 0.104723882774747,
+    "mean_xy_velocity_error_m_s": 0.5539508305147937,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.05555555555555555,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.004863236121648552,
+    "max_payload_contact_force_n": 27.56503661914781,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 6,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.34,
+    "survived": false,
+    "forward_m": -0.07773677757199363,
+    "lateral_m": -0.004741802770538279,
+    "max_tilt_deg": 31.070068588298373,
+    "final_height_m": 0.06939932145174992,
+    "mean_height_m": 0.10459873820721241,
+    "mean_xy_velocity_error_m_s": 0.5589099651041038,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.058823529411764705,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.0036836358304317696,
+    "max_payload_contact_force_n": 43.62955228366782,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 7,
+    "command": [
+      0.3,
+      0.0,
+      0.0
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 0.34,
+    "survived": false,
+    "forward_m": -0.07842318492836596,
+    "lateral_m": 0.0024188007609092245,
+    "max_tilt_deg": 31.730855717336453,
+    "final_height_m": 0.06919590798580937,
+    "mean_height_m": 0.10500600849914624,
+    "mean_xy_velocity_error_m_s": 0.5647996958710436,
+    "payload_contact_pairs": [
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.058823529411764705,
+    "payload_selfcontact_fraction": 0.0,
+    "max_payload_penetration_m": 0.0040809025923025655,
+    "max_payload_contact_force_n": 77.36712405197741,
+    "task": "forward"
+  },
+  {
+    "variant": "loaded",
+    "seed": 0,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.04740175507339528,
+    "lateral_m": 0.12431437587006001,
+    "max_tilt_deg": 53.21782251806447,
+    "final_height_m": 0.09293145905058631,
+    "mean_height_m": 0.09359051647633063,
+    "mean_xy_velocity_error_m_s": 0.028951575008194882,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.93,
+    "payload_selfcontact_fraction": 0.894,
+    "max_payload_penetration_m": 0.0036831564845697384,
+    "max_payload_contact_force_n": 26.434417168859447,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 1,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05764258871857087,
+    "lateral_m": 0.11017241201508188,
+    "max_tilt_deg": 53.479071212870245,
+    "final_height_m": 0.09531326461995951,
+    "mean_height_m": 0.09314048268957012,
+    "mean_xy_velocity_error_m_s": 0.02725661605933052,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.934,
+    "payload_selfcontact_fraction": 0.906,
+    "max_payload_penetration_m": 0.0029754102782715633,
+    "max_payload_contact_force_n": 25.497116818348694,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 2,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05520177015203902,
+    "lateral_m": 0.11008219927263323,
+    "max_tilt_deg": 52.84973941399595,
+    "final_height_m": 0.09350853242861455,
+    "mean_height_m": 0.0932360400433972,
+    "mean_xy_velocity_error_m_s": 0.028019613082242188,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.936,
+    "payload_selfcontact_fraction": 0.918,
+    "max_payload_penetration_m": 0.0047921591901794736,
+    "max_payload_contact_force_n": 26.364677377369965,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 3,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05205045777047445,
+    "lateral_m": 0.0961283166643138,
+    "max_tilt_deg": 52.77472091443749,
+    "final_height_m": 0.09287647666100075,
+    "mean_height_m": 0.09287685119784388,
+    "mean_xy_velocity_error_m_s": 0.027319731001508096,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.936,
+    "payload_selfcontact_fraction": 0.898,
+    "max_payload_penetration_m": 0.003873640477795204,
+    "max_payload_contact_force_n": 77.00385819672,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 4,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.07662911875599762,
+    "lateral_m": 0.12503388364397514,
+    "max_tilt_deg": 53.51014182765071,
+    "final_height_m": 0.0947065603268788,
+    "mean_height_m": 0.09363217736822764,
+    "mean_xy_velocity_error_m_s": 0.02849983498219433,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.934,
+    "payload_selfcontact_fraction": 0.902,
+    "max_payload_penetration_m": 0.0052944012566555065,
+    "max_payload_contact_force_n": 44.11360911269607,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 5,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05454026046345598,
+    "lateral_m": 0.1218794439103506,
+    "max_tilt_deg": 53.715494774782336,
+    "final_height_m": 0.09183088618688802,
+    "mean_height_m": 0.09359953429322199,
+    "mean_xy_velocity_error_m_s": 0.02805948931700982,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.928,
+    "payload_selfcontact_fraction": 0.898,
+    "max_payload_penetration_m": 0.002716650953807514,
+    "max_payload_contact_force_n": 33.86014667059541,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 6,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.06573735555426839,
+    "lateral_m": 0.10982940945481222,
+    "max_tilt_deg": 53.40390714650357,
+    "final_height_m": 0.09442338609366802,
+    "mean_height_m": 0.09339077196386614,
+    "mean_xy_velocity_error_m_s": 0.02734923774506746,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.938,
+    "payload_selfcontact_fraction": 0.908,
+    "max_payload_penetration_m": 0.005609512678595649,
+    "max_payload_contact_force_n": 46.01170891398513,
+    "task": "turn"
+  },
+  {
+    "variant": "loaded",
+    "seed": 7,
+    "command": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "policy": "tmp/mac-runs/loaded-bam-s0-1048576/policy.onnx",
+    "seconds": 10.0,
+    "survived": true,
+    "forward_m": -0.05457165030776249,
+    "lateral_m": 0.12054038323127561,
+    "max_tilt_deg": 53.13450172308488,
+    "final_height_m": 0.09411462593041917,
+    "mean_height_m": 0.09338190566858301,
+    "mean_xy_velocity_error_m_s": 0.027707192318181768,
+    "payload_contact_pairs": [
+      "easy_front_battery_back_panel / left_foot_collision",
+      "easy_front_battery_pocket / left_foot_collision",
+      "easy_open_gate_bridge / jaw_soft:bottom_head_shell",
+      "easy_open_gate_bridge / jaw_soft:top_head_shell",
+      "floor / easy_jetson"
+    ],
+    "mass_kg": 1.1885158048587487,
+    "contact_model": "groundcontact",
+    "nonfoot_ground_fraction": 0.924,
+    "payload_selfcontact_fraction": 0.9,
+    "max_payload_penetration_m": 0.0032457525025080813,
+    "max_payload_contact_force_n": 73.08688183198095,
+    "task": "turn"
+  }
+]

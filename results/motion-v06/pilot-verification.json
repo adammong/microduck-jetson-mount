@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "max_export_error_rad": 4.76837158203125e-07,
+  "max_correction_rad": 0.05420726537704468,
+  "stop_teacher_error_rad": 0.0,
+  "teacher_initializers_unchanged": true,
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "model_mass_kg": 1.179337261211853,
+  "servo_current_limit_a": 1.75,
+  "action_delay": true,
+  "no_assistance": true,
+  "command_watchdog_s": 0.6,
+  "limiter_checks_passed": true,
+  "null_controls": [
+    {
+      "seed": 90,
+      "command": [
+        0,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 0.48,
+      "requested_seconds": 10,
+      "survived": false,
+      "mean_twist": [
+        0.07195310015237748,
+        -0.0014628973440383587,
+        0.06949925464011136
+      ],
+      "sustained_twist": [
+        0.04371129348874092,
+        -0.013027829118072987,
+        0.06663572457386657
+      ],
+      "mean_absolute_twist_error": [
+        0.07351427463200111,
+        0.009120449714839926,
+        0.07712856854399013
+      ],
+      "displacement_world_m": [
+        0.03350256720582851,
+        -5.674797879497794e-06,
+        -0.024473488094940404
+      ],
+      "yaw_change_rad": 0.023076697574990066,
+      "min_height_m": 0.10059422206528228,
+      "mean_height_m": 0.11010976686426972,
+      "max_tilt_deg": 35.029192638581364,
+      "payload_selfcontact_fraction": 0.08333333333333333,
+      "nonfoot_ground_fraction": 0.125,
+      "max_payload_contact_force_n": 15.24547943393097,
+      "max_payload_penetration_m": 0.0017215655618349548,
+      "payload_contact_pairs": [
+        "easy_tray_plate / left_foot_collision",
+        "floor / easy_jetson"
+      ],
+      "failure_reason": "nonfoot_floor_support",
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false
+    },
+    {
+      "seed": 91,
+      "command": [
+        0,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 0.5,
+      "requested_seconds": 10,
+      "survived": false,
+      "mean_twist": [
+        0.06370727674076981,
+        -0.0010783438978066284,
+        0.09812060067391108
+      ],
+      "sustained_twist": [
+        0.0374363474547863,
+        -0.06484813988208771,
+        0.1220358264772847
+      ],
+      "mean_absolute_twist_error": [
+        0.06896370842148833,
+        0.016096184042999374,
+        0.09997579418280494
+      ],
+      "displacement_world_m": [
+        0.029737465533914126,
+        0.00043497828888126394,
+        -0.024354661000373867
+      ],
+      "yaw_change_rad": 0.03196857025367443,
+      "min_height_m": 0.10061163811159764,
+      "mean_height_m": 0.1100380109546191,
+      "max_tilt_deg": 32.93350129930283,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.12,
+      "max_payload_contact_force_n": 15.080991567012385,
+      "max_payload_penetration_m": 0.001042283056763127,
+      "payload_contact_pairs": [
+        "floor / easy_jetson"
+      ],
+      "failure_reason": "nonfoot_floor_support",
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false
+    }
+  ],
+  "policy_sha256": "d8fcdabafbca2242e4350fc6eb3822b1c18d4391920bd4572d5457e487c040e4"
+}

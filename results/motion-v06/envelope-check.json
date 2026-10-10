@@ -1,0 +1,1888 @@
+{
+  "policy": "results/motion-v06/policies/turn-fit/policy.onnx",
+  "revision": "v06",
+  "noise_dr": false,
+  "trials": [
+    {
+      "seed": 100,
+      "command": [
+        0.1,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.0004982924722875452,
+        0.00022429461558999718,
+        -0.001311225949531986
+      ],
+      "sustained_twist": [
+        2.9885235065370983e-05,
+        3.845151928216082e-05,
+        -0.001025657247636144
+      ],
+      "mean_absolute_twist_error": [
+        0.09950170901782858,
+        0.000797030348511953,
+        0.005491233246446291
+      ],
+      "displacement_world_m": [
+        0.009692731588491177,
+        0.004500535715439746,
+        -0.012483202524038658
+      ],
+      "yaw_change_rad": -0.023596254103825584,
+      "min_height_m": 0.11346011881686628,
+      "mean_height_m": 0.11361019879775631,
+      "max_tilt_deg": 2.2664996438535137,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0.1,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.0005400346654392365,
+        0.00015606512652161086,
+        -0.0008639319173495948
+      ],
+      "sustained_twist": [
+        1.4669181288569336e-05,
+        3.308077573905166e-05,
+        -0.0007585429214611903
+      ],
+      "mean_absolute_twist_error": [
+        0.09945996682467688,
+        0.0006351899251741031,
+        0.00516524853725436
+      ],
+      "displacement_world_m": [
+        0.010865196218618388,
+        0.003070616601160303,
+        -0.015466359563318308
+      ],
+      "yaw_change_rad": -0.01832688756921046,
+      "min_height_m": 0.11330639929945835,
+      "mean_height_m": 0.11349486898499629,
+      "max_tilt_deg": 2.0317249296663213,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0.1,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00042960250139117306,
+        6.068174434585671e-05,
+        -0.000245440723154446
+      ],
+      "sustained_twist": [
+        6.557089782897189e-05,
+        3.5127863631916826e-05,
+        -0.0001991855362070702
+      ],
+      "mean_absolute_twist_error": [
+        0.09957039898872494,
+        0.0014145136261358858,
+        0.00940624525000388
+      ],
+      "displacement_world_m": [
+        0.007974227015132836,
+        0.00044353887175439176,
+        -0.016202248499011182
+      ],
+      "yaw_change_rad": 0.000601208578182659,
+      "min_height_m": 0.1130042838350188,
+      "mean_height_m": 0.11341914917978985,
+      "max_tilt_deg": 3.3078395961246616,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0.1,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.000551202337202767,
+        -1.776598652509165e-05,
+        -0.0004728348961951276
+      ],
+      "sustained_twist": [
+        2.6335289918380215e-06,
+        -0.00011638044666243433,
+        0.00023015082493552265
+      ],
+      "mean_absolute_twist_error": [
+        0.09944879915291335,
+        0.0012110835845376186,
+        0.008162454184474395
+      ],
+      "displacement_world_m": [
+        0.01096132701496607,
+        -0.00023904417695711403,
+        -0.009987043285603542
+      ],
+      "yaw_change_rad": -0.011724835712355811,
+      "min_height_m": 0.11305608188423333,
+      "mean_height_m": 0.11334183791021954,
+      "max_tilt_deg": 2.461322363314132,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        -0.075,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        1.2488550722679292e-05,
+        0.0001270349791730414,
+        -0.0021502192254408115
+      ],
+      "sustained_twist": [
+        1.6899284449165304e-05,
+        -1.8981315580967913e-05,
+        -0.002387132537745633
+      ],
+      "mean_absolute_twist_error": [
+        0.07501249153095492,
+        0.0005357678169522924,
+        0.006203459625339828
+      ],
+      "displacement_world_m": [
+        1.4994618692036365e-05,
+        0.0026695980021017355,
+        -0.011169080297541309
+      ],
+      "yaw_change_rad": -0.043107264443029446,
+      "min_height_m": 0.11456840632488982,
+      "mean_height_m": 0.1150756259577021,
+      "max_tilt_deg": 1.5643552581667377,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        -0.075,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        3.390040976336195e-05,
+        4.768649942185732e-05,
+        -0.0014197956136533262
+      ],
+      "sustained_twist": [
+        2.4605667610949744e-05,
+        -3.8221770833486185e-05,
+        -0.001343575680476301
+      ],
+      "mean_absolute_twist_error": [
+        0.0750339033899956,
+        0.0003597646505323695,
+        0.004881219459649264
+      ],
+      "displacement_world_m": [
+        0.0003217921700010901,
+        0.0009281194551606905,
+        -0.014032826441880461
+      ],
+      "yaw_change_rad": -0.027301950752622286,
+      "min_height_m": 0.11484763892648302,
+      "mean_height_m": 0.11513294800441654,
+      "max_tilt_deg": 1.5544412554275815,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        -0.075,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.000104074028614761,
+        2.7050633570107507e-05,
+        -0.0008092855686299564
+      ],
+      "sustained_twist": [
+        5.5284053748212926e-05,
+        5.321726029191688e-06,
+        -0.0009717134383033932
+      ],
+      "mean_absolute_twist_error": [
+        0.07494945159804463,
+        0.0002451192144625249,
+        0.0028137365811256127
+      ],
+      "displacement_world_m": [
+        -0.001671725551516918,
+        0.00044841541039655254,
+        -0.01467030884279752
+      ],
+      "yaw_change_rad": -0.011897210086866438,
+      "min_height_m": 0.11291101976546598,
+      "mean_height_m": 0.11473573536257971,
+      "max_tilt_deg": 1.609367922485393,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        -0.075,
+        0,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00015246784119757705,
+        -2.016551402400779e-05,
+        -0.0027161393050899626
+      ],
+      "sustained_twist": [
+        8.876171817465522e-05,
+        -5.875580616043566e-05,
+        -0.0024798144202678968
+      ],
+      "mean_absolute_twist_error": [
+        0.07515247082142981,
+        0.00036169215752781983,
+        0.006437734565782361
+      ],
+      "displacement_world_m": [
+        0.002754197708016585,
+        -0.0005847469343191463,
+        -0.008348118087781811
+      ],
+      "yaw_change_rad": -0.052616347604328144,
+      "min_height_m": 0.11474637046186835,
+      "mean_height_m": 0.11503403321007814,
+      "max_tilt_deg": 1.6867882672076244,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0,
+        0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.0002165039560329838,
+        0.0002526848866817266,
+        -0.0025054508420350994
+      ],
+      "sustained_twist": [
+        2.1000801825235744e-05,
+        -1.1959898450672037e-05,
+        -0.0005502183679048334
+      ],
+      "mean_absolute_twist_error": [
+        0.0005254137726606878,
+        0.049747315858376336,
+        0.003010422518253503
+      ],
+      "displacement_world_m": [
+        0.004253250895241053,
+        0.005295560557781763,
+        -0.012423486486837554
+      ],
+      "yaw_change_rad": -0.05006551245101233,
+      "min_height_m": 0.11352985993314432,
+      "mean_height_m": 0.11375398107486025,
+      "max_tilt_deg": 2.347687210864375,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "left_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0,
+        0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00026682328464519854,
+        0.0001959769553676658,
+        -0.001962476596340038
+      ],
+      "sustained_twist": [
+        2.0765649945215298e-05,
+        -2.337453457394408e-05,
+        -0.0003819776869434244
+      ],
+      "mean_absolute_twist_error": [
+        0.0005744076648161638,
+        0.04980402378969039,
+        0.002496182417523499
+      ],
+      "displacement_world_m": [
+        0.00525925287758145,
+        0.00399591062375062,
+        -0.015361018331344248
+      ],
+      "yaw_change_rad": -0.040070368685758334,
+      "min_height_m": 0.11354009253872394,
+      "mean_height_m": 0.11376647754971117,
+      "max_tilt_deg": 2.4077782721359116,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "left_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0,
+        0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00016969873861938823,
+        0.0001486932804783727,
+        -0.0019091774129725825
+      ],
+      "sustained_twist": [
+        5.702357978956722e-05,
+        -2.5482366500880637e-05,
+        -0.00047268002258916714
+      ],
+      "mean_absolute_twist_error": [
+        0.0007649297157703927,
+        0.049851307464579685,
+        0.0036910631622667027
+      ],
+      "displacement_world_m": [
+        0.00369296774902297,
+        0.00311749585386056,
+        -0.016289933412793417
+      ],
+      "yaw_change_rad": -0.03823066049865614,
+      "min_height_m": 0.11295196770347225,
+      "mean_height_m": 0.11313823201546507,
+      "max_tilt_deg": 3.008887956506409,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "left_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0,
+        0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00036586828359782685,
+        0.0001648240322600505,
+        -0.0027636880937195163
+      ],
+      "sustained_twist": [
+        7.04076448727875e-05,
+        6.155442542348233e-06,
+        -0.0009486808742966732
+      ],
+      "mean_absolute_twist_error": [
+        0.0006649736147819497,
+        0.04983517671279801,
+        0.0040804389062078835
+      ],
+      "displacement_world_m": [
+        0.007247091030193279,
+        0.003073838948855854,
+        -0.00976986063517954
+      ],
+      "yaw_change_rad": -0.055698146205386836,
+      "min_height_m": 0.11332472979187973,
+      "mean_height_m": 0.11359017978930001,
+      "max_tilt_deg": 2.882557801906137,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "left_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0,
+        -0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        7.762027050341657e-05,
+        0.000110017102090751,
+        -0.001273313710192441
+      ],
+      "sustained_twist": [
+        -0.0001429945932840029,
+        4.0158302325734336e-05,
+        -0.0011142070249653025
+      ],
+      "mean_absolute_twist_error": [
+        0.0016748248203699633,
+        0.05011001784714881,
+        0.023665129820769015
+      ],
+      "displacement_world_m": [
+        0.0014025339693534663,
+        0.00263916383303141,
+        -0.011421519535572133
+      ],
+      "yaw_change_rad": -0.023929809488124842,
+      "min_height_m": 0.11452180500627046,
+      "mean_height_m": 0.11468763852622729,
+      "max_tilt_deg": 1.819729280763402,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "right_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0,
+        -0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00015023192851506905,
+        9.047794278228594e-05,
+        -0.00033165982199814543
+      ],
+      "sustained_twist": [
+        -9.905892052551558e-05,
+        9.098364100724313e-05,
+        -0.0008428755715354873
+      ],
+      "mean_absolute_twist_error": [
+        0.0016098058686042976,
+        0.05009047868784035,
+        0.028405040600644766
+      ],
+      "displacement_world_m": [
+        0.0028973149049032762,
+        0.0017553029910532306,
+        -0.014322951063712036
+      ],
+      "yaw_change_rad": -0.011194441638068795,
+      "min_height_m": 0.11456965542961733,
+      "mean_height_m": 0.11476009066114616,
+      "max_tilt_deg": 1.652682153675429,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "right_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0,
+        -0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.00011689721047804369,
+        0.000244471779615651,
+        -0.003540986682252875
+      ],
+      "sustained_twist": [
+        -0.00024105799617972127,
+        0.00030552887672203927,
+        -0.0034731350368468476
+      ],
+      "mean_absolute_twist_error": [
+        0.0010898885140844072,
+        0.05024447252467371,
+        0.008984202299259742
+      ],
+      "displacement_world_m": [
+        -0.0012698448840764698,
+        0.003942419883874039,
+        -0.014827700934858953
+      ],
+      "yaw_change_rad": -0.06309739619736911,
+      "min_height_m": 0.113308548767542,
+      "mean_height_m": 0.11452960516618257,
+      "max_tilt_deg": 2.366784542405804,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "right_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0,
+        -0.05,
+        0
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.00011962353253238688,
+        0.0001241852808107069,
+        -0.0018640102317311518
+      ],
+      "sustained_twist": [
+        -0.00019485819256260585,
+        0.0001824997879470579,
+        -0.002015552028904374
+      ],
+      "mean_absolute_twist_error": [
+        0.001361665391209044,
+        0.05012418602586877,
+        0.01294649404820898
+      ],
+      "displacement_world_m": [
+        0.0026188116767697014,
+        0.0023845423934179227,
+        -0.008783419429371983
+      ],
+      "yaw_change_rad": -0.03790575291117539,
+      "min_height_m": 0.11429568854575846,
+      "mean_height_m": 0.11446311220034112,
+      "max_tilt_deg": 2.2650311485939887,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "right_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0,
+        0,
+        0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        8.533417807768728e-06,
+        0.00030790462441427735,
+        0.0007371833283522644
+      ],
+      "sustained_twist": [
+        -0.0001937442466630854,
+        0.00025273816549037695,
+        -0.0027008214273598714
+      ],
+      "mean_absolute_twist_error": [
+        0.0010853123207359944,
+        0.0015941918616122167,
+        0.19985463636833964
+      ],
+      "displacement_world_m": [
+        0.0002844175400212846,
+        0.006046485788957286,
+        -0.011787808946451067
+      ],
+      "yaw_change_rad": 0.018587677107175016,
+      "min_height_m": 0.11419772587448052,
+      "mean_height_m": 0.11442688342142225,
+      "max_tilt_deg": 1.383383721409803,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_left_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0,
+        0,
+        0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -3.6973274764420695e-05,
+        0.00036974130570229137,
+        0.0003291329235915991
+      ],
+      "sustained_twist": [
+        -0.0002982205006148004,
+        0.00036248683508119937,
+        -0.002942522171805654
+      ],
+      "mean_absolute_twist_error": [
+        0.0010573819972996149,
+        0.0013062825671074734,
+        0.20000900146640002
+      ],
+      "displacement_world_m": [
+        0.0006763665360368657,
+        0.00524261366265009,
+        -0.014635781959071906
+      ],
+      "yaw_change_rad": 0.020629126163166537,
+      "min_height_m": 0.11427011624448179,
+      "mean_height_m": 0.11449223032763672,
+      "max_tilt_deg": 1.2357474769200933,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_left_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0,
+        0,
+        0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -3.0276274345254704e-05,
+        7.50391467455529e-05,
+        0.0018675692702502633
+      ],
+      "sustained_twist": [
+        -0.0001533792847813389,
+        0.00010430799046591548,
+        -0.001449557915497709
+      ],
+      "mean_absolute_twist_error": [
+        0.0013130194535187058,
+        0.0020059833373226184,
+        0.19846866852589465
+      ],
+      "displacement_world_m": [
+        -0.00157567872647791,
+        0.002245572085057242,
+        -0.015535541318328572
+      ],
+      "yaw_change_rad": 0.03270385589222313,
+      "min_height_m": 0.11346890003602729,
+      "mean_height_m": 0.11401381149597929,
+      "max_tilt_deg": 1.9951771041938486,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_left_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0,
+        0,
+        0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        6.624417006111116e-05,
+        0.00020083964205173287,
+        0.0007344661673705919
+      ],
+      "sustained_twist": [
+        -0.00024559306665291084,
+        0.00026133454388602536,
+        -0.0023428832293447624
+      ],
+      "mean_absolute_twist_error": [
+        0.0012980054664771502,
+        0.0018464163722185275,
+        0.1993903614588501
+      ],
+      "displacement_world_m": [
+        0.0015867715134760634,
+        0.0031781155068680927,
+        -0.00925305234206697
+      ],
+      "yaw_change_rad": 0.017127918533397058,
+      "min_height_m": 0.1137449713907768,
+      "mean_height_m": 0.11409658989526562,
+      "max_tilt_deg": 1.1609584669389423,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_left_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0,
+        0,
+        -0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        3.2036307056330316e-05,
+        -0.00015260503897343369,
+        -0.004168084645011118
+      ],
+      "sustained_twist": [
+        -0.00011589361343043139,
+        -0.0002764309018842444,
+        -0.0005691811211133276
+      ],
+      "mean_absolute_twist_error": [
+        0.0012258671414836612,
+        0.002192397139618606,
+        0.1961349737031014
+      ],
+      "displacement_world_m": [
+        -9.597844822498884e-05,
+        -0.002445272609785125,
+        -0.011416166609397954
+      ],
+      "yaw_change_rad": -0.08329141921225518,
+      "min_height_m": 0.11450026811723002,
+      "mean_height_m": 0.11464976714765265,
+      "max_tilt_deg": 1.5323792102828482,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_right_half"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0,
+        0,
+        -0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        4.563642202651863e-05,
+        -0.00020279995764735758,
+        -0.0032929073386591392
+      ],
+      "sustained_twist": [
+        -0.00012851033748196035,
+        -0.00027225496233844145,
+        1.6038405775836314e-05
+      ],
+      "mean_absolute_twist_error": [
+        0.0011931724105304512,
+        0.002012114533985141,
+        0.19675445974625586
+      ],
+      "displacement_world_m": [
+        0.0003142943930634217,
+        -0.004832700577639988,
+        -0.014288880407636234
+      ],
+      "yaw_change_rad": -0.05925414535976405,
+      "min_height_m": 0.11456105307150435,
+      "mean_height_m": 0.11470975027982501,
+      "max_tilt_deg": 1.4379023204732806,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_right_half"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0,
+        0,
+        -0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -7.697707808387122e-05,
+        -0.0003261856406587533,
+        -0.003533892033554005
+      ],
+      "sustained_twist": [
+        -0.00014357295672634034,
+        -0.00033676370446085083,
+        -0.0003209032179277858
+      ],
+      "mean_absolute_twist_error": [
+        0.001095541050980671,
+        0.001819847965489192,
+        0.1967229407585729
+      ],
+      "displacement_world_m": [
+        -0.0018667909437048802,
+        -0.0062374740624075295,
+        -0.01488588611828455
+      ],
+      "yaw_change_rad": -0.0724069910119986,
+      "min_height_m": 0.11353376331106951,
+      "mean_height_m": 0.1145231496643066,
+      "max_tilt_deg": 2.3570891372219998,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_right_half"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0,
+        0,
+        -0.2
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        8.258455440028456e-05,
+        -0.00032640851733299316,
+        -0.003986679149531914
+      ],
+      "sustained_twist": [
+        -0.00017275174418822795,
+        -0.000344123992598371,
+        -1.2298353625629935e-05
+      ],
+      "mean_absolute_twist_error": [
+        0.0012111830836756211,
+        0.0022307990100641746,
+        0.19601332383070047
+      ],
+      "displacement_world_m": [
+        0.0017034060554040123,
+        -0.0058576092656508405,
+        -0.008857950301959974
+      ],
+      "yaw_change_rad": -0.08383211221671362,
+      "min_height_m": 0.11419420125045751,
+      "mean_height_m": 0.11435346930705954,
+      "max_tilt_deg": 1.5585902151006525,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "turn_right_half"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0.2,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.1753938204678707,
+        -0.005995207864587428,
+        0.44725486731350944
+      ],
+      "sustained_twist": [
+        0.1778152765168084,
+        -0.005218844983189936,
+        0.4539791175134334
+      ],
+      "mean_absolute_twist_error": [
+        0.02880321773560718,
+        0.13341880046311416,
+        0.10848949438384259
+      ],
+      "displacement_world_m": [
+        0.17098006310552455,
+        0.7234180696907376,
+        -0.008003637620228793
+      ],
+      "yaw_change_rad": 8.96948320541195,
+      "min_height_m": 0.11009790628368268,
+      "mean_height_m": 0.11582011235174847,
+      "max_tilt_deg": 4.89012443478159,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_left"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0.2,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.17886812778329478,
+        -0.007538597671999014,
+        0.44989975565203405
+      ],
+      "sustained_twist": [
+        0.1803857680492931,
+        -0.007272069379671141,
+        0.45269426645277305
+      ],
+      "mean_absolute_twist_error": [
+        0.026585681507829577,
+        0.13206634422669594,
+        0.1073369060079552
+      ],
+      "displacement_world_m": [
+        0.17511404276296516,
+        0.7156505244850704,
+        -0.0126784244825809
+      ],
+      "yaw_change_rad": 9.013849526554626,
+      "min_height_m": 0.11009572593686764,
+      "mean_height_m": 0.11603791704359682,
+      "max_tilt_deg": 4.641820288810691,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_left"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0.2,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.1522595963673666,
+        -0.004237594514619559,
+        0.43104846441382855
+      ],
+      "sustained_twist": [
+        0.15306432633764214,
+        -0.004103667153459456,
+        0.43519148471642594
+      ],
+      "mean_absolute_twist_error": [
+        0.048156046907417475,
+        0.13798436828216654,
+        0.08686972380192187
+      ],
+      "displacement_world_m": [
+        0.2664605797123558,
+        0.6055806435836685,
+        -0.011849214695571278
+      ],
+      "yaw_change_rad": 8.64568700241837,
+      "min_height_m": 0.10981946769402594,
+      "mean_height_m": 0.11471559372064669,
+      "max_tilt_deg": 4.645911887359828,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_left"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0.2,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.15891349312616512,
+        -0.0046370955153297476,
+        0.43131609298286405
+      ],
+      "sustained_twist": [
+        0.16150725502106877,
+        -0.004329573541574266,
+        0.43965262537972943
+      ],
+      "mean_absolute_twist_error": [
+        0.04203576552914456,
+        0.13609719686804328,
+        0.0929089567039303
+      ],
+      "displacement_world_m": [
+        0.24307790569365018,
+        0.6194996369624455,
+        -0.00962090685712197
+      ],
+      "yaw_change_rad": 8.631557815392947,
+      "min_height_m": 0.1084957876815132,
+      "mean_height_m": 0.11510035612192358,
+      "max_tilt_deg": 4.747182138856857,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_left"
+    },
+    {
+      "seed": 100,
+      "command": [
+        0.2,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.17394858384528197,
+        -0.00981651134166168,
+        -0.4551235898177888
+      ],
+      "sustained_twist": [
+        0.17499736456407441,
+        -0.008287011295647568,
+        -0.45576603615913736
+      ],
+      "mean_absolute_twist_error": [
+        0.028716819401597603,
+        0.13058570549992146,
+        0.13424958693573205
+      ],
+      "displacement_world_m": [
+        0.06570105623824841,
+        -0.7290317935789287,
+        -0.011157131367617229
+      ],
+      "yaw_change_rad": -9.119820255572703,
+      "min_height_m": 0.10990145737684645,
+      "mean_height_m": 0.1155788390770927,
+      "max_tilt_deg": 4.596018837465553,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_right"
+    },
+    {
+      "seed": 101,
+      "command": [
+        0.2,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.1766152092201519,
+        -0.010660113306177664,
+        -0.4543105047164441
+      ],
+      "sustained_twist": [
+        0.1776849320365323,
+        -0.010551609634470271,
+        -0.45704957251561373
+      ],
+      "mean_absolute_twist_error": [
+        0.027124003143806478,
+        0.1287335210385063,
+        0.14140015647483187
+      ],
+      "displacement_world_m": [
+        0.038871392075419064,
+        -0.7771720366331507,
+        -0.014892144471700591
+      ],
+      "yaw_change_rad": -9.131562942890215,
+      "min_height_m": 0.110631791133919,
+      "mean_height_m": 0.11566834535624684,
+      "max_tilt_deg": 4.735158704489479,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_right"
+    },
+    {
+      "seed": 102,
+      "command": [
+        0.2,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.16062914032686967,
+        -0.005301072268055577,
+        -0.4127696749208884
+      ],
+      "sustained_twist": [
+        0.1621424801896016,
+        -0.004216636605471851,
+        -0.4124566474151589
+      ],
+      "mean_absolute_twist_error": [
+        0.040673672160017306,
+        0.13615654123876447,
+        0.0893417924937996
+      ],
+      "displacement_world_m": [
+        0.31810044171045454,
+        -0.5094616196464088,
+        -0.015636655748583847
+      ],
+      "yaw_change_rad": -8.246861240299996,
+      "min_height_m": 0.10880193757948517,
+      "mean_height_m": 0.11495423234326507,
+      "max_tilt_deg": 5.86875483507261,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_right"
+    },
+    {
+      "seed": 103,
+      "command": [
+        0.2,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        0.1640019237732049,
+        -0.007111060463037575,
+        -0.42582236369773174
+      ],
+      "sustained_twist": [
+        0.16553752215372192,
+        -0.0068898137918181925,
+        -0.42948882757157036
+      ],
+      "mean_absolute_twist_error": [
+        0.03732051020511426,
+        0.13455881681115717,
+        0.10686103467765251
+      ],
+      "displacement_world_m": [
+        0.23111078618062111,
+        -0.587879164255065,
+        -0.008597282984851642
+      ],
+      "yaw_change_rad": -8.513015894193007,
+      "min_height_m": 0.10947416736724425,
+      "mean_height_m": 0.11515125020224855,
+      "max_tilt_deg": 4.738012375221345,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "forward_curve_right"
+    },
+    {
+      "seed": 100,
+      "command": [
+        -0.15,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.1941961047234945,
+        -0.004188333712343592,
+        0.47031008134710334
+      ],
+      "sustained_twist": [
+        -0.1973945118404097,
+        -0.005309107755052132,
+        0.47209029013618464
+      ],
+      "mean_absolute_twist_error": [
+        0.05598704678984359,
+        0.15018752676522126,
+        0.12481880997661991
+      ],
+      "displacement_world_m": [
+        0.05150493614866217,
+        -0.7830105444862347,
+        -0.009379647762889826
+      ],
+      "yaw_change_rad": 9.428067546174491,
+      "min_height_m": 0.11121850486000706,
+      "mean_height_m": 0.11758331775638876,
+      "max_tilt_deg": 5.659739041783362,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_left"
+    },
+    {
+      "seed": 101,
+      "command": [
+        -0.15,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.20261784043442457,
+        -0.003655648286367068,
+        0.47150150738277974
+      ],
+      "sustained_twist": [
+        -0.20534047342836856,
+        -0.004867165617599515,
+        0.47571177409850907
+      ],
+      "mean_absolute_twist_error": [
+        0.06148363537061959,
+        0.14947421463797217,
+        0.12294652006108919
+      ],
+      "displacement_world_m": [
+        0.03346636691274145,
+        -0.885424305078893,
+        -0.015023375998577185
+      ],
+      "yaw_change_rad": 9.448844428999184,
+      "min_height_m": 0.11138917903011572,
+      "mean_height_m": 0.11777868464116072,
+      "max_tilt_deg": 6.00367948663912,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_left"
+    },
+    {
+      "seed": 102,
+      "command": [
+        -0.15,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.15812856133189052,
+        -0.003071605848366744,
+        0.46754666920806914
+      ],
+      "sustained_twist": [
+        -0.16095372149099907,
+        -0.0043138039175311055,
+        0.47858389765721654
+      ],
+      "mean_absolute_twist_error": [
+        0.03731083397660404,
+        0.15061206741868227,
+        0.1317936102520718
+      ],
+      "displacement_world_m": [
+        -0.05361751871207232,
+        -0.6928355144269701,
+        -0.01609490052739955
+      ],
+      "yaw_change_rad": 9.388958421491365,
+      "min_height_m": 0.11054479128339095,
+      "mean_height_m": 0.11656237820770349,
+      "max_tilt_deg": 6.109873314900777,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_left"
+    },
+    {
+      "seed": 103,
+      "command": [
+        -0.15,
+        0,
+        0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.16761172595014795,
+        -0.004165497052730643,
+        0.4742747165086446
+      ],
+      "sustained_twist": [
+        -0.1706534029584792,
+        -0.003982903348223772,
+        0.48043754955096946
+      ],
+      "mean_absolute_twist_error": [
+        0.04145772296795622,
+        0.1505563283771771,
+        0.13351804980136067
+      ],
+      "displacement_world_m": [
+        0.058388244383627504,
+        -0.6562402192890322,
+        -0.008096506303743173
+      ],
+      "yaw_change_rad": 9.527138218875535,
+      "min_height_m": 0.11064982157166563,
+      "mean_height_m": 0.11692120282309176,
+      "max_tilt_deg": 6.003646835068739,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_left"
+    },
+    {
+      "seed": 100,
+      "command": [
+        -0.15,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.20506153610534966,
+        -0.02666404571868043,
+        -0.4970990758601995
+      ],
+      "sustained_twist": [
+        -0.20788867444627815,
+        -0.027999158977432267,
+        -0.5012631661956485
+      ],
+      "mean_absolute_twist_error": [
+        0.0635812771897763,
+        0.15184906308087376,
+        0.1413019020402731
+      ],
+      "displacement_world_m": [
+        0.14692056601866993,
+        0.7663255498173694,
+        -0.006959431367672728
+      ],
+      "yaw_change_rad": -9.951426188991732,
+      "min_height_m": 0.1112057741586543,
+      "mean_height_m": 0.11707605579672387,
+      "max_tilt_deg": 6.5394799378073865,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_right"
+    },
+    {
+      "seed": 101,
+      "command": [
+        -0.15,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.21512435550615192,
+        -0.0277892060750537,
+        -0.5006649032226032
+      ],
+      "sustained_twist": [
+        -0.21804903438521755,
+        -0.02890649109707839,
+        -0.5051036918844802
+      ],
+      "mean_absolute_twist_error": [
+        0.07040018441155553,
+        0.15106999203636315,
+        0.1481219151823169
+      ],
+      "displacement_world_m": [
+        0.14990759097589013,
+        0.8545747951289223,
+        -0.00932754234244322
+      ],
+      "yaw_change_rad": -10.027243712565621,
+      "min_height_m": 0.11115236156661053,
+      "mean_height_m": 0.1172155911528246,
+      "max_tilt_deg": 5.912810904386967,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_right"
+    },
+    {
+      "seed": 102,
+      "command": [
+        -0.15,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.16486393353249879,
+        -0.02314614047617215,
+        -0.44547853166590967
+      ],
+      "sustained_twist": [
+        -0.16724109205520815,
+        -0.022787865190968863,
+        -0.4476223500213879
+      ],
+      "mean_absolute_twist_error": [
+        0.03978231710288674,
+        0.15352034787523008,
+        0.1193986289405059
+      ],
+      "displacement_world_m": [
+        -0.27233724568667983,
+        0.6618266765624109,
+        -0.0139366863901704
+      ],
+      "yaw_change_rad": -8.854652357754597,
+      "min_height_m": 0.11021589900176336,
+      "mean_height_m": 0.11620020299335178,
+      "max_tilt_deg": 7.344969971230891,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_right"
+    },
+    {
+      "seed": 103,
+      "command": [
+        -0.15,
+        0,
+        -0.4
+      ],
+      "schedule": null,
+      "seconds": 20.0,
+      "requested_seconds": 20.0,
+      "survived": true,
+      "mean_twist": [
+        -0.17580684258905238,
+        -0.022741722314152866,
+        -0.453612423271143
+      ],
+      "sustained_twist": [
+        -0.1787509376472897,
+        -0.022790547929342007,
+        -0.45120443756647277
+      ],
+      "mean_absolute_twist_error": [
+        0.04573508695396595,
+        0.1527234623990953,
+        0.12388839780300138
+      ],
+      "displacement_world_m": [
+        -0.17987221465586267,
+        0.7630290835497748,
+        -0.006286127401092606
+      ],
+      "yaw_change_rad": -9.058434912280967,
+      "min_height_m": 0.11040268777483173,
+      "mean_height_m": 0.11648764118438894,
+      "max_tilt_deg": 6.436295520809691,
+      "payload_selfcontact_fraction": 0.0,
+      "nonfoot_ground_fraction": 0.0,
+      "max_payload_contact_force_n": 0.0,
+      "max_payload_penetration_m": 0.0,
+      "payload_contact_pairs": [],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853,
+      "action_delay": true,
+      "observation_noise": false,
+      "domain_randomization": false,
+      "task": "backward_curve_right"
+    }
+  ],
+  "selection_status": "not selected: some settled-start turns stall"
+}

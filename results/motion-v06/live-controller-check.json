@@ -1,0 +1,19 @@
+{
+  "status": "Ready \u2014 hold keys or buttons to move",
+  "actual": [
+    -7.293502159882336e-05,
+    0.0001879669027402997,
+    0.0031123463021727354
+  ],
+  "command": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "seconds": 93.91999999998707,
+  "paused": false,
+  "simulation_only": true,
+  "mass_kg": 1.179337261211853,
+  "servo_current_limit_a": 1.75,
+  "policy_sha256": "92268b6202b3f732b0f5e883fe14b718855077c24a7508d9f32fe20f573df3ee"
+}

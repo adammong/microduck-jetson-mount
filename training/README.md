@@ -33,6 +33,16 @@ The guard ends an episode after three successive control steps with a non-foot f
 
 ## Results and selection
 
+The [directional-motion study](../results/motion-v06/REPORT.md) adds a simulation controller for forward/backward, both sidesteps, both turns, diagonals and curves, plus a keyboard/button page. Six command-conditioned maps and bounded gyro/gravity corrections retain the teacher's exact neural weights and normalization. Paired CEM studies also calibrate turn startup from settled standing and a gyro-based start boost. Final checks use the same command slew as the page: 176/176 fresh 30-second nominal/randomized trials and 8/8 full 69-second sequences, with separate direction-tracking checks and no detected mount contact. Low-command dead zones and hardware transfer remain unresolved.
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/verify_motion.py
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate_motion_batch.py --policy results/motion-v06/policies/selected/policy.onnx --out tmp/directional.json --seeds 8 --seed-start 200 --seconds 30 --slew
+```
+
+Open http://127.0.0.1:8798. W/S forward/back, A/D sideways, Q/E turn, Space stop. Body-frame presets are +0.20/-0.15 m/s forward/back, ±0.10 m/s sideways and ±0.40 rad/s yaw; movement/turn keys combine. The controller requires its tested command ramp and 0.6-second stale-input watchdog. It exports one 61-input/14-output ONNX; CEM parameters and all searches are retained. This is a bounded numerical calibration study, rather than another PPO fine-tune. Earlier candidates, cold-start failures and missed turns remain in the report.
+
 The [faster-walking study](../results/speed-v06/REPORT.md) selects a **simulation-only** feedback correction policy for forward command `[0.5, 0, 0]`. It averages 0.266 m/s net forward progress, with 16/16 fresh 30-second nominal/randomized trials surviving without detected mount contacts. The original teacher network and normalization are retained; bounded gyro/gravity corrections are trained with CEM. Normal/idle commands at or below 0.35 retain the original teacher's output exactly. The study records the rejected 2M/3M-step LAB PPO attempts and the complete bounded calibration history.
 
 ```sh

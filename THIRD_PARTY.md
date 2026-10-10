@@ -16,6 +16,8 @@ Battery body dimensions and mass are based on GAONENG GNB specifications linked 
 
 No blanket license is assigned to this mixed-source repository.
 
+The directional-motion policies in `results/motion-v06/` also derive from the pinned Apache-2.0 walking actor. They retain its weights and normalizer and add command maps, bounded gyro/gravity joint feedback and an observable turn-start activation rule. License copies and modification notices accompany the exported policies. Full calibration and selection records distinguish selected simulation artifacts from rejected candidates; hardware performance is unverified.
+
 ## Mac simulation and policies
 
 The setup downloads [jonathanhawkins/microduck-lab](https://github.com/jonathanhawkins/microduck-lab) at `bbf0326ef97975f7062368914e0729504d17226f` (Apache 2.0). The simulator scene wrappers are from `pollen-robotics/microduck_rl` at `badc4e7ffe5507fd7acb1a21487bd2925c1afe5a`. The official `alpha_walking.onnx` is downloaded from `pollen-robotics/microduck-policies` revision `088524a64e2557dc453256b6071dbb9d23888802`; it is not redistributed here. Source URLs and SHA-256 hashes are recorded in `training/inputs.json`. The archived stock/loaded pilot policies were trained locally for this study and are marked rejected experimental policies. Source harness and dependency caches stay outside Git.

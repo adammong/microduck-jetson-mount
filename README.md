@@ -4,7 +4,17 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the balanced v06 mount](docs/v06-robot.png)
 
-## Walking policy video
+## Directional control
+
+[![Directional-control highlights](docs/v06-policy-directional.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/motion-v06/motion-demo.mp4)
+
+The new **Mac-calibrated directional policy** supports forward/backward, sidesteps, turns, diagonals and curves. It passed **176/176 fresh 30-second simulation trials** with the v06 payload, including observation noise and randomized physics, plus **8/8 complete 69-second control sequences**, with no detected mount contacts. Direction tracking is checked separately from staying upright. Forward/backward presets are +0.20/-0.15 m/s, sideways ±0.10 m/s and turns ±0.40 rad/s. Low-speed commands can still hit the inherited dead zone; hardware is untested.
+
+**Try it on the Mac:** after [setup](training/README.md), run `OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py`, then open http://127.0.0.1:8798. Hold **W/S** forward/back, **A/D** sideways, **Q/E** turn; **Space** stops. Movement and turn keys combine into curves. The control page includes command ramps, stale-command stopping and reset.
+
+[Full directional video](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/motion-v06/motion-demo.mp4) · [Selected ONNX](results/motion-v06/policies/selected/policy.onnx) · [Measurements, training and limitations](results/motion-v06/REPORT.md).
+
+## Faster walking video
 
 [![Faster walking policy on the loaded v06 robot](docs/v06-policy-fast-walking.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/speed-v06/fast-walking.mp4)
 
@@ -33,7 +43,7 @@ The estimated payload is **442.1 g**, including **120.1 g** fully dense PETG and
 
 ## Prototype status
 
-Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. Matched Mac simulations show much less standing drift and a useful forward gait with the existing policy. Survival alone does not prove command tracking: reverse, sideways and turn-in-place remain ineffective. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
+Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. The directional policy now follows the measured motion presets in the loaded simulation; arbitrary slow speeds remain ineffective. The original teacher and rejected candidates remain available for comparison. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
 
 ## Rebuild
 

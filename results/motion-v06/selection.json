@@ -1,0 +1,39 @@
+{
+  "status": "selected for directional control in simulation at the measured command presets",
+  "nominal_trials": 88,
+  "randomized_trials": 88,
+  "survived": 176,
+  "transition_trials": 8,
+  "transition_survived": 8,
+  "direction_tracking_check": "Every active axis delivers at least half its requested signed speed/rate in each confirmation trial and each transition segment; survival and contacts checked separately.",
+  "fresh_nominal_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207
+  ],
+  "fresh_randomized_seeds": [
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227
+  ],
+  "transition_seeds": [
+    180,
+    181,
+    182,
+    183,
+    240,
+    241,
+    242,
+    243
+  ]
+}

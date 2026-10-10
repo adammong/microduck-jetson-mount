@@ -1,0 +1,3 @@
+Derived from Pollen Robotics alpha_walking.onnx, microduck-policies revision 088524a64e2557dc453256b6071dbb9d23888802 (Apache-2.0).
+MicroDuck Lab bbf0326ef97975f7062368914e0729504d17226f provides simulation and BAM motor dynamics.
+Local modifications on 2026-10-09: command-conditioned input maps and bounded static/gyro/gravity joint feedback, calibrated with paired CEM studies; original actor weights and normalization retained. Final ONNX is selected only for directional control in the recorded simulation tests. Hardware untested.

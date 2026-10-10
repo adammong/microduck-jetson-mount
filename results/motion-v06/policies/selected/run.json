@@ -1,0 +1,125 @@
+{
+  "run_name": "v06-directional-motion",
+  "robot": "microduck",
+  "task": "walk",
+  "mount_revision": "v06",
+  "status": "selected for directional control in simulation at the measured command presets",
+  "method": "CEM calibration of command maps and bounded IMU joint feedback around the frozen official actor",
+  "teacher_sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+  "policy_sha256": "92268b6202b3f732b0f5e883fe14b718855077c24a7508d9f32fe20f573df3ee",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "normalizer_and_teacher_weights_unchanged": true,
+  "physics_hz": 200,
+  "policy_hz": 50,
+  "model_mass_kg": 1.179337261211853,
+  "servo_current_limit_a": 1.75,
+  "action_delay": true,
+  "no_assistance": true,
+  "correction_limit_rad": 0.12,
+  "reference_commands": [
+    [
+      0.20000000298023224,
+      0.0,
+      0.0
+    ],
+    [
+      -0.15000000596046448,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.10000000149011612,
+      0.0
+    ],
+    [
+      0.0,
+      -0.10000000149011612,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.4000000059604645
+    ],
+    [
+      0.0,
+      0.0,
+      -0.4000000059604645
+    ]
+  ],
+  "search_records": [
+    "results/motion-v06/calibration/search.json",
+    "results/motion-v06/turn-refinement/search.json",
+    "results/motion-v06/transition-refinement/search.json",
+    "results/motion-v06/activation-study/search.json"
+  ],
+  "limitations": [
+    "Low-command dead zone: arbitrary slow velocity tracking is not established.",
+    "Finite simulation checks; hardware untested.",
+    "Rigid mount/cables; no slip, flex, temperature or terrain validation."
+  ],
+  "turn_activation_boost": 0.3,
+  "command_slew_required": true,
+  "command_watchdog_s": 0.6,
+  "activation_rule": "Low observed gyro during pure turns adds bounded yaw-command activation; no clock or hidden state."
+}

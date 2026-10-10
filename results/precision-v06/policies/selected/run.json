@@ -1,0 +1,169 @@
+{
+  "status": "selected_simulation_only",
+  "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920",
+  "base_policy": "results/motion-v06/policies/selected/policy.onnx",
+  "base_sha256": "92268b6202b3f732b0f5e883fe14b718855077c24a7508d9f32fe20f573df3ee",
+  "parameters": {
+    "profiles": [
+      "forward",
+      "backward",
+      "left",
+      "right",
+      "turn_left",
+      "turn_right"
+    ],
+    "exponents": [
+      0.2,
+      0.1,
+      0.4,
+      0.5,
+      1.0,
+      0.65
+    ],
+    "gains": [
+      0.550000011920929,
+      0.8500000238418579,
+      1.0,
+      0.699999988079071,
+      1.0,
+      1.0
+    ],
+    "turn_feedback": [
+      3.0,
+      6.0
+    ],
+    "balance": [
+      -0.005222530288554706,
+      0.01874271829302053,
+      -0.0010803973378708594,
+      0.013358853153558616,
+      0.030348930687774715
+    ],
+    "recovery": [
+      2.8284780979156494,
+      0.25764355063438416,
+      0.3239991366863251,
+      0.0
+    ],
+    "balance_forward_only": true,
+    "base_policy": "results/motion-v06/policies/selected/policy.onnx",
+    "balance_correction_limit_rad": 0.12,
+    "description": "Continuous command power map and gait amplitude relative to the standing actor, observed yaw-rate feedback at low pure-turn commands; bounded gyro/gravity balance feedback and tilt-triggered standing catch steps. Simulation only."
+  },
+  "source_sha256": {
+    "training/precision_policy.py": "258265921aaf0183da259f0a8c1d361fbf4d952ab88c7ec83ddae69f7daa2e98",
+    "training/evaluate_precision.py": "055ae3961e7f6e49359558e99cf62eb2c309b1b8904d3e0abd9cf0f730d8d2c4",
+    "training/evaluate_motion.py": "534ea0a8af86f519170e1f759d38d8ea51fc5d580a687d1d9efdceb12e954fa8",
+    "training/evaluate_transitions.py": "748792c08a3ce974ae61a7f016211882dde1952c58fadb07646fcdb0c543d5d2",
+    "training/motion_controller.py": "36c280f14b3ae404c158fd250a6aa7123aee5b992395cba388178219a64a9870",
+    "training/teleop_motion.py": "7b329e8197fc88ab4936f39f64c8a865b661fd8b4c614e91edd28e4d34bcce16",
+    "training/tune_precision.py": "a8cc0cdc97d23dbf8ccb6cf82b00abcc67e59825242dd81de768eff4bb5cad2e",
+    "training/tune_precision_turns.py": "027e3be88c51552e0a41740311107b6e91131fde2cff594f4d04b7a7c0f64dd2",
+    "training/tune_balance_recovery.py": "ecb7eaf56cc223dd2177b6cdd5e9eabf0a39bb8d084dea7d3720f0a866413cee",
+    "training/verify_precision.py": "b6c9afb6051f2432cc25450e121375f4d97d3a528b0b92685e47274f2d2351ab",
+    "training/demo_precision.py": "dbec9171cfcbd066b4846827253ce7ba9be065ac5de0587da91a177ecb797fb2",
+    "easy_mount/parameters.json": "ea445ba401be0042cb3cf8f91ef27b05c4ee739d234cc69f61e0a1bbbf2791da",
+    "training/inputs.json": "efca5e7e748a7d97a593bc87091460986d4acaffa24ef9f5a29d8e96f66069a6",
+    "results/mac-v06/scenes.json": "44517aedd22069a97e4567a6e63d98424d49f9ec32ed01f074dca9933d1281c8"
+  },
+  "controller": {
+    "profile": "precision_v1",
+    "acceleration": [
+      0.25,
+      0.2,
+      1.0
+    ],
+    "timeout_s": 0.6,
+    "policy_hz": 50,
+    "lower": [
+      -0.15,
+      -0.1,
+      -0.4
+    ],
+    "upper": [
+      0.2,
+      0.1,
+      0.4
+    ],
+    "metadata_is_read_by_local_controller": true,
+    "hardware_runtime_must_implement_equivalent_ramp": true
+  },
+  "nominal_total_mass_kg": 1.179337261211853,
+  "estimated_payload_mass_kg": 0.442094081211853,
+  "physics_hz": 200,
+  "servo_current_limit_a": 1.75,
+  "training_method": "Bounded command/gait grids and CEM observable feedback; original actor tensors frozen. No new PPO fine-tune.",
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "training_command_ramp": [
+    0.5,
+    0.3,
+    1.5
+  ],
+  "final_nominal_seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607
+  ],
+  "final_randomized_seeds": [
+    620,
+    621,
+    622,
+    623
+  ],
+  "randomized_payload_scales": [
+    0.9,
+    1.1
+  ],
+  "sequence_seeds": [
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827
+  ],
+  "controller_calibration_seeds": [
+    650,
+    651,
+    652,
+    653
+  ],
+  "demo_seeds": [
+    640,
+    641
+  ],
+  "limitations": [
+    "Tiny translation commands can stall",
+    "Strong pushes can cause falls or mount contacts",
+    "Rigid mount, simplified collision boxes and fixed cables",
+    "No hardware, thermal or terrain validation"
+  ],
+  "runtime_versions": {
+    "mujoco": "3.10.0",
+    "numpy": "2.5.2",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.29.0"
+  },
+  "compiled_scene_sha256": "d9c184ad527f5e52da276b510273f194f388079fcc8cd9050a325db718c2a669",
+  "reexport_byte_identical": true
+}

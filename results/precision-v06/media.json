@@ -1,0 +1,103 @@
+{
+  "source": "final-demo-nominal-seed640.mp4",
+  "seed": 640,
+  "simulation_only": true,
+  "full_video": {
+    "path": "motion-demo.mp4",
+    "start_s": 0,
+    "duration_s": 35,
+    "frames": 875
+  },
+  "short_video": {
+    "path": "policy-15s.mp4",
+    "start_s": 18,
+    "duration_s": 15,
+    "frames": 375
+  },
+  "crop": {
+    "top_removed_px": 64,
+    "width": 640,
+    "height": 296
+  },
+  "readme_gif": "docs/v06-policy-precision.gif",
+  "gif_source": "policy-15s.mp4",
+  "gif_rate": 12.5,
+  "schedule": [
+    [
+      2.0,
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      8.0,
+      [
+        0.1,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      10.0,
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      16.0,
+      [
+        0.0,
+        0.0,
+        0.1
+      ]
+    ],
+    [
+      18.0,
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      24.0,
+      [
+        0.0,
+        0.0,
+        -0.1
+      ]
+    ],
+    [
+      35.0,
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ],
+  "pushes": [
+    [
+      27.0,
+      0.12,
+      [
+        0.0,
+        4.0,
+        0.0
+      ]
+    ],
+    [
+      30.0,
+      0.12,
+      [
+        0.0,
+        -4.0,
+        0.0
+      ]
+    ]
+  ]
+}

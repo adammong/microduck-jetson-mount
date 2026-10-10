@@ -4,6 +4,16 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the balanced v06 mount](docs/v06-robot.png)
 
+## Slow movement, stopping and push recovery
+
+[![Mounted slow-turn and push-recovery simulation](docs/v06-policy-precision.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/precision-v06/motion-demo.mp4)
+
+With the **v06 mount included**, the new controller reduces average slow-command tracking error by **45%**. It passed **464/464 non-push trials** and **16/16 full control sequences** without detected contacts. Push survival improved modestly from **74% to 77%**; stronger pushes still cause falls or contacts. Slow turns now work down to ±0.10 rad/s. Tiny translations still stall. Stopping settled in every slow trial, taking a median 0.56 seconds and up to 1.60 seconds; stopping distance remains variable. Hardware is untested.
+
+**Try it:** after [setup](training/README.md), run `OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --policy results/precision-v06/policies/selected/policy.onnx`, then open http://127.0.0.1:8798. Use W/S, A/D, Q/E and Space. The **Speed** slider scales commands; try 50% for translations and 25% for turns. This actor requires the gentler command ramp read automatically by the local controller.
+
+[Full 35-second MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/precision-v06/motion-demo.mp4) · [15-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/precision-v06/policy-15s.mp4) · [Selected ONNX](results/precision-v06/policies/selected/policy.onnx) · [Measurements and limitations](results/precision-v06/REPORT.md). The continuous GIF/short clip shows slow right turning, stopping and two 4 N side pushes in simulation.
+
 ## Directional control
 
 [![Directional-control highlights](docs/v06-policy-directional.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/motion-v06/motion-demo.mp4)
@@ -43,7 +53,7 @@ The estimated payload is **442.1 g**, including **120.1 g** fully dense PETG and
 
 ## Prototype status
 
-Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. The directional policy now follows the measured motion presets in the loaded simulation; arbitrary slow speeds remain ineffective. The original teacher and rejected candidates remain available for comparison. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
+Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. The directional policy follows the measured motion presets in the loaded simulation; the precision controller improves slow turns and some translations, with remaining translation dead zones and push-recovery failures. The original teacher and rejected candidates remain available for comparison. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
 
 ## Rebuild
 

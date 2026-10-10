@@ -8,7 +8,7 @@ import mujoco
 from evaluate import scene
 from evaluate_motion import session
 from fast_env import FastRunEnv
-from motion_controller import CommandLimiter
+from motion_controller import limiter_for_policy
 from paths import ROOT
 
 HTML='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Drive Microduck</title>
@@ -18,11 +18,13 @@ HTML='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewpor
 <button data-key="q">Turn left<br><small>Q</small></button><button data-key="w">Forward<br><small>W / ↑</small></button><button data-key="e">Turn right<br><small>E</small></button>
 <button data-key="a">Left<br><small>A / ←</small></button><button class="stop" id="stop">Stop<br><small>Space</small></button><button data-key="d">Right<br><small>D / →</small></button>
 <span></span><button data-key="s">Backward<br><small>S / ↓</small></button><span></span></div>
-<dl><dt>Forward</dt><dd id="vx">—</dd><dt>Sideways</dt><dd id="vy">—</dd><dt>Turning</dt><dd id="wz">—</dd><dt>Time</dt><dd id="time">—</dd></dl><button id="reset">Reset duck</button><p class="muted">Combine movement and turn keys to follow curves.</p></div></section></main>
+<p><label for="speed">Speed: <span id="speed-label">100%</span></label><input id="speed" type="range" min="0.25" max="1" step="0.05" value="1" style="width:100%"></p>
+<dl><dt>Forward</dt><dd id="vx">—</dd><dt>Sideways</dt><dd id="vy">—</dd><dt>Turning</dt><dd id="wz">—</dd><dt>Time</dt><dd id="time">—</dd></dl><button id="reset">Reset duck</button><p class="muted">Combine movement and turn keys to follow curves. Very small movement commands may still stall.</p></div></section></main>
 <script>const held=new Set(),map={ArrowUp:'w',ArrowDown:'s',ArrowLeft:'a',ArrowRight:'d'};let busy=false,stopped=false;
-function command(){if(stopped)return [0,0,0];return [(held.has('w')?.2:0)-(held.has('s')?.15:0),(held.has('a')?.1:0)-(held.has('d')?.1:0),(held.has('q')?.4:0)-(held.has('e')?.4:0)]}
+function command(){if(stopped)return [0,0,0];const speed=Number(document.querySelector('#speed').value);return [(held.has('w')?.2:0)-(held.has('s')?.15:0),(held.has('a')?.1:0)-(held.has('d')?.1:0),(held.has('q')?.4:0)-(held.has('e')?.4:0)].map(v=>v*speed)}
 async function send(){if(busy)return;busy=true;try{await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command:command()})})}finally{busy=false}document.querySelectorAll('[data-key]').forEach(b=>b.classList.toggle('active',held.has(b.dataset.key)))}
 function clear(){held.clear();stopped=true;fetch('/stop',{method:'POST'});send()}
+document.querySelector('#speed').oninput=()=>{document.querySelector('#speed-label').textContent=Math.round(Number(document.querySelector('#speed').value)*100)+'%';send()};
 document.querySelectorAll('[data-key]').forEach(b=>{b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);held.add(b.dataset.key);stopped=false;send()};b.onpointerup=b.onpointercancel=()=>{held.delete(b.dataset.key);send()}});
 window.onkeydown=e=>{const k=map[e.key]||e.key.toLowerCase();if(k===' '){e.preventDefault();clear();return}if('wasdqe'.includes(k)&&k.length===1){e.preventDefault();held.add(k);stopped=false;send()}};
 window.onkeyup=e=>{held.delete(map[e.key]||e.key.toLowerCase());send()};window.onblur=clear;document.onvisibilitychange=()=>{if(document.hidden)clear()};document.querySelector('#stop').onclick=clear;document.querySelector('#reset').onclick=()=>{clear();fetch('/reset',{method:'POST'})};
@@ -35,7 +37,7 @@ def main():
     ap.add_argument('--port',type=int,default=8798);ap.add_argument('--seed',type=int,default=90)
     ap.add_argument('--idle-exit',type=float,default=15.,help='Exit after this many minutes without input activity (0 disables).');args=ap.parse_args()
     policy=session(args.policy);policy_hash=hashlib.sha256(args.policy.read_bytes()).hexdigest()
-    limiter=CommandLimiter();lock=threading.Lock();shared=dict(jpeg=b'',state=dict(status='Starting',actual=[0.,0.,0.],seconds=0.),reset=False,touched=time.monotonic())
+    limiter=limiter_for_policy(policy);lock=threading.Lock();shared=dict(jpeg=b'',state=dict(status='Starting',actual=[0.,0.,0.],seconds=0.),reset=False,touched=time.monotonic())
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
         def respond(self,body,kind='application/json',status=200):

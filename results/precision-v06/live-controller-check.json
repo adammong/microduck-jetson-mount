@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "forward": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.14183683902025224,
+      0.007640793044120073,
+      0.05512567808351604
+    ],
+    "command": [
+      0.10000000149011612,
+      0.0,
+      0.0
+    ],
+    "seconds": 3.9199999999999386,
+    "paused": false,
+    "simulation_only": true,
+    "mass_kg": 1.179337261211853,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920"
+  },
+  "turn": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      -0.030328259458765387,
+      0.03698327887803316,
+      0.10974057957995927
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.10000000149011612
+    ],
+    "seconds": 4.499999999999926,
+    "paused": false,
+    "simulation_only": true,
+    "mass_kg": 1.179337261211853,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920"
+  },
+  "stop": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.003114979942329228,
+      0.019857480143546127,
+      -0.001951228893572769
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 4.619999999999924,
+    "paused": false,
+    "simulation_only": true,
+    "mass_kg": 1.179337261211853,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920"
+  },
+  "watchdog": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.025926109626889227,
+      -0.014732592888176441,
+      0.08662284954823848
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 5.399999999999907,
+    "paused": false,
+    "simulation_only": true,
+    "mass_kg": 1.179337261211853,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920"
+  },
+  "nonfinite_rejected": true,
+  "speed_slider_present": true
+}

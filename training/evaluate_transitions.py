@@ -3,7 +3,7 @@ import argparse,json
 from pathlib import Path
 import numpy as np
 from evaluate_motion import session,trial
-from motion_controller import CommandLimiter
+from motion_controller import limiter_for_policy
 
 SCHEDULE=[(2,[0.,0.,0.]),(8,[.2,0.,0.]),(10,[0.,0.,0.]),
     (15,[-.15,0.,0.]),(17,[0.,0.,0.]),(22,[0.,.1,0.]),(24,[0.,0.,0.]),
@@ -12,7 +12,7 @@ SCHEDULE=[(2,[0.,0.,0.]),(8,[.2,0.,0.]),(10,[0.,0.,0.]),
     (52,[0.,0.,-.4]),(54,[0.,0.,0.]),(60,[.15,0.,.3]),(66,[.15,0.,-.3]),(69,[0.,0.,0.])]
 
 class SlewedPolicy:
-    def __init__(self,policy):self.policy=policy;self.limiter=CommandLimiter();self.steps=0
+    def __init__(self,policy):self.policy=policy;self.limiter=limiter_for_policy(policy);self.steps=0
     def get_inputs(self):return self.policy.get_inputs()
     def run(self,names,inputs):
         name=self.get_inputs()[0].name;obs=inputs[name].copy();now=self.steps*.02

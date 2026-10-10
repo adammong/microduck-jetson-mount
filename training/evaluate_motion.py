@@ -21,15 +21,20 @@ def session(path):
     opts=ort.SessionOptions();opts.intra_op_num_threads=1;opts.inter_op_num_threads=1
     return ort.InferenceSession(str(path),opts,providers=['CPUExecutionProvider'])
 
-def trial(policy, command, seed, seconds, render=None, noise=False, randomization=False, schedule=None):
+def trial(policy, command, seed, seconds, render=None, noise=False, randomization=False, schedule=None,
+          pushes=(), payload_scale=1., trace=False):
     path=scene('loaded',rev='v06')
-    env=FastRunEnv(model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb'))),
+    model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
+    assert .8<=payload_scale<=1.2
+    payload_body=model.body('easy_mount_payload').id
+    model.body_mass[payload_body]*=payload_scale;model.body_inertia[payload_body]*=payload_scale
+    env=FastRunEnv(model=model,
         scene_xml=str(path),seed=seed,actuator_force='bam',domain_rand=randomization,
         obs_noise=noise,action_delay=True,random_yaw=False,
         command_resample_s=1000,max_episode_s=seconds+1)
     obs,_=env.reset(seed=seed);env.head_cmd[:]=0;env.body_cmd[:]=0
     start=env.data.qpos[:3].copy();vs=[];ws=[];yaws=[];heights=[];tilts=[];commands=[]
-    payload=0;ground=0;force_max=0.;depth_max=0.;pairs=set();frames=[];renderer=None
+    payload=0;ground=0;force_max=0.;depth_max=0.;pairs=set();frames=[];renderer=None;positions=[]
     if render:
         renderer=mujoco.Renderer(env.model,height=360,width=640)
         cam=mujoco.MjvCamera();cam.distance=.8;cam.azimuth=125;cam.elevation=-24
@@ -39,6 +44,11 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         if schedule:
             cmd=np.array(next(c for until,c in schedule if k*.02<until),dtype=np.float32)
         env.twist_cmd[:]=cmd;obs=env._get_obs()
+        # Prescribed external perturbation only; never balance assistance.
+        env.data.xfrc_applied[:]=0
+        for start_s,duration_s,force_world_n in pushes:
+            if start_s<=k*.02<start_s+duration_s:
+                env.data.xfrc_applied[env.trunk_body_id,:3]+=force_world_n
         action=policy.run(None,{policy.get_inputs()[0].name:obs[None].astype(np.float32)})[0].reshape(14)
         obs,reward,done,truncated,info=env.step(action)
         assert np.isfinite(obs).all() and np.isfinite(env.data.qpos).all()
@@ -46,6 +56,7 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         rot=env.data.xmat[env.trunk_body_id].reshape(3,3)
         yaws.append(math.atan2(rot[1,0],rot[0,0]))
         heights.append(float(env.data.xpos[env.trunk_body_id,2]))
+        positions.append(env.data.qpos[:2].copy())
         tilts.append(math.degrees(math.acos(np.clip(-env._projected_gravity()[2],-1,1))))
         p=False;g=False
         for ci,c in enumerate(env.data.contact):
@@ -82,7 +93,10 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         payload_selfcontact_fraction=payload/n,nonfoot_ground_fraction=ground/n,
         max_payload_contact_force_n=force_max,max_payload_penetration_m=depth_max,payload_contact_pairs=sorted(pairs),
         failure_reason=info.get('failure_reason','height_or_tilt' if done else None),
-        mass_kg=float(env.model.body_mass.sum()),action_delay=True,observation_noise=noise,domain_randomization=randomization)
+        mass_kg=float(env.model.body_mass.sum()),action_delay=True,observation_noise=noise,domain_randomization=randomization,
+        pushes=pushes,payload_scale=payload_scale)
+    if trace:
+        result['trace']=dict(dt_s=.02,actual_twist=actual.tolist(),command=cmds.tolist(),position_xy_m=np.array(positions).tolist(),tilt_deg=tilts)
     if schedule:
         result['segments']=[];begin=0.
         for end,c in schedule:

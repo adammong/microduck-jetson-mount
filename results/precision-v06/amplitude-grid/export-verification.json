@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "max_export_error_rad": 4.76837158203125e-07,
+  "max_balance_correction_rad": 0.0,
+  "base_tensors_unchanged": true,
+  "observation_dim": 61,
+  "action_dim": 14,
+  "watchdog_passed": true,
+  "base_sha256": "92268b6202b3f732b0f5e883fe14b718855077c24a7508d9f32fe20f573df3ee",
+  "policy_sha256": "44698c0798c63f1f7306f3d63a164e22e4eb487b3412f4f9d075ec385b3ef679"
+}

@@ -19,3 +19,12 @@ class CommandLimiter:
         self.current+=np.clip(target-self.current,-self.acceleration*dt,self.acceleration*dt)
         return self.current.copy()
 
+def limiter_for_policy(policy):
+    """An exported precision actor requires its gentler tested command ramp."""
+    limiter=CommandLimiter()
+    metadata=policy.get_modelmeta().custom_metadata_map if hasattr(policy,'get_modelmeta') else {}
+    profile=metadata.get('command_limiter','default')
+    if profile not in ('default','precision_v1'):raise ValueError(f'Unknown command limiter: {profile}')
+    if profile=='precision_v1':limiter.acceleration=np.array([.25,.2,1.],np.float32)
+    return limiter
+

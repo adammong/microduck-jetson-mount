@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    "forward",
+    "backward",
+    "left",
+    "right",
+    "turn_left",
+    "turn_right"
+  ],
+  "exponents": [
+    0.65,
+    0.2,
+    0.4,
+    0.65,
+    0.3,
+    0.3
+  ],
+  "balance": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "base_policy": "results/motion-v06/policies/selected/policy.onnx",
+  "balance_correction_limit_rad": 0.12,
+  "description": "Continuous sign-preserving command power map, exact zero command; additional bounded gyro/gravity feedback. Simulation only."
+}

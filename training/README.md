@@ -33,6 +33,16 @@ The guard ends an episode after three successive control steps with a non-foot f
 
 ## Results and selection
 
+The [mounted precision/recovery study](../results/precision-v06/REPORT.md) trains continuous command shaping, gait amplitude, observable low-turn feedback and standing catch steps while preserving the original neural actor. Final paired tests show 45% lower slow-command tracking error, 464/464 non-push trials without detected contacts, and modest push survival improvement from 74% to 77%. Sixteen fresh full control sequences pass. Tiny translations and stronger push recovery remain unresolved. This is CPU grid/CEM calibration, with all searches and rejected candidates retained.
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --policy results/precision-v06/policies/selected/policy.onnx
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/verify_precision.py --folder results/precision-v06/policies/selected --out tmp/precision-check.json
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate_precision.py --policy results/precision-v06/policies/selected/policy.onnx --out tmp/precision-cases.json --suite all --seed-start 600 --seeds 8
+```
+
+The control page's Speed slider scales keyboard/button commands. Try 50% translations or 25% turns; the smallest translations can stall. ONNX metadata selects the required gentler command acceleration `[0.25, 0.20, 1.0]`; other runtimes must implement it and the 0.6-second watchdog explicitly. The old ramp caused a retained sequence failure before this controller change. Full final evaluation, rendering, search and export instructions are in the report. Hardware is untested; the default interactive actor remains the earlier directional policy.
+
 The [directional-motion study](../results/motion-v06/REPORT.md) adds a simulation controller for forward/backward, both sidesteps, both turns, diagonals and curves, plus a keyboard/button page. Six command-conditioned maps and bounded gyro/gravity corrections retain the teacher's exact neural weights and normalization. Paired CEM studies also calibrate turn startup from settled standing and a gyro-based start boost. Final checks use the same command slew as the page: 176/176 fresh 30-second nominal/randomized trials and 8/8 full 69-second sequences, with separate direction-tracking checks and no detected mount contact. Low-command dead zones and hardware transfer remain unresolved.
 
 ```sh

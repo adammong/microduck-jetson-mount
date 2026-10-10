@@ -1,0 +1,47 @@
+{
+  "profiles": [
+    "forward",
+    "backward",
+    "left",
+    "right",
+    "turn_left",
+    "turn_right"
+  ],
+  "exponents": [
+    0.2,
+    0.1,
+    0.4,
+    0.5,
+    1.0,
+    0.65
+  ],
+  "gains": [
+    0.550000011920929,
+    0.8500000238418579,
+    1.0,
+    0.699999988079071,
+    1.0,
+    1.0
+  ],
+  "turn_feedback": [
+    3.0,
+    6.0
+  ],
+  "balance": [
+    -0.005222530288554706,
+    0.01874271829302053,
+    -0.0010803973378708594,
+    0.013358853153558616,
+    0.030348930687774715
+  ],
+  "recovery": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "balance_forward_only": true,
+  "base_policy": "results/motion-v06/policies/selected/policy.onnx",
+  "balance_correction_limit_rad": 0.12,
+  "description": "Continuous command power map and gait amplitude relative to the standing actor, observed yaw-rate feedback at low pure-turn commands; bounded gyro/gravity balance feedback and tilt-triggered standing catch steps. Simulation only."
+}

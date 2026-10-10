@@ -1,0 +1,33 @@
+{
+  "selected": "policies/selected/policy.onnx",
+  "policy_sha256": "b507144a2c4a01205aa38382c67f6117724f00e2c7b9f5910cd7a141b8321920",
+  "status": "simulation_only",
+  "summary": "summary.json",
+  "verification": "final-verification.json",
+  "rejected_or_superseded": [
+    "slow-grid",
+    "amplitude-grid",
+    "balance-cem",
+    "turn-grid",
+    "recovery-cem",
+    "recovery-shaped-cem",
+    "policies/combined-v1",
+    "policies/forward-gated",
+    "policies/recovery-v2"
+  ],
+  "historical_results": [
+    "confirmation-selected-nominal.json",
+    "confirmation-selected-randomized.json",
+    "sequences-nominal.json",
+    "sequences-randomized.json",
+    "demo-nominal.json"
+  ],
+  "historical_results_note": "Same final actor before gentler controller ramp; one seed651 sequence fell. Final authoritative results have final- prefixes.",
+  "final_results": [
+    "final-selected-nominal.json",
+    "final-selected-randomized.json",
+    "final-sequences-nominal.json",
+    "final-sequences-randomized.json",
+    "final-demo-nominal.json"
+  ]
+}

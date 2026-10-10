@@ -33,6 +33,15 @@ The guard ends an episode after three successive control steps with a non-foot f
 
 ## Results and selection
 
+The [faster-walking study](../results/speed-v06/REPORT.md) selects a **simulation-only** feedback correction policy for forward command `[0.5, 0, 0]`. It averages 0.266 m/s net forward progress, with 16/16 fresh 30-second nominal/randomized trials surviving without detected mount contacts. The original teacher network and normalization are retained; bounded gyro/gravity corrections are trained with CEM. Normal/idle commands at or below 0.35 retain the original teacher's output exactly. The study records the rejected 2M/3M-step LAB PPO attempts and the complete bounded calibration history.
+
+```sh
+OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/tune_fast_feedback.py --out tmp/repeat-fast-feedback --generations 8 --population 20 --command .5 --seconds 25 --training-seeds 0 1 2 3 4 5 6 7 8 9 10 11
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate_speed.py --policy results/speed-v06/policies/selected/policy.onnx --out tmp/recheck-fast.json --commands .5 --seeds 8 --seed-start 20 --seconds 30 --render
+```
+
+The selected graph still uses 61 observations / 14 actions at 50 Hz. It is an ONNX policy, with parameters and provenance under `results/speed-v06/policies/selected/`; it is not a resumable PPO checkpoint. CEM resumes conceptually from its recorded parameters/search, and PPO comparison checkpoints remain separately archived. Published measurements validate the 0.5 forward operating point, not higher speeds or general turning. See the report for sampling limits and hardware gaps.
+
 [The v06 report](../results/mac-v06/REPORT.md) shows a substantial **mount balance improvement** with the unchanged walking teacher. The teacher remains the preferred comparison actor: both fine-tuning attempts failed to beat it reliably. Their checkpoints are marked rejected. Surviving a reverse, lateral or turn-in-place trial does not mean following its command; these motions remain ineffective. Randomized forward/curved trials still expose falls and occasional mount contacts.
 
 The [v05 pilots](../results/mac-v05/REPORT.md) are also rejected. Retained artifacts support reproducibility, not deployment. Printed mass, motor heating, shell strength and real fit remain unverified. Inputs and checksums are in [inputs.json](inputs.json); scene source hashes in [scenes.json](../results/mac-v06/scenes.json). The pinned harness's `uv.lock` fixes training dependencies; CAD dependencies remain separate.

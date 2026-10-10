@@ -1,0 +1,10 @@
+2026-10-09 18:12:55.695 python[87287:3707425] 2026-10-09 18:12:55.695077 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+Collected 1 episodes 750 states
+Collected 21 episodes 15048 states
+Collected 41 episodes 30048 states
+Collected 61 episodes 45048 states
+Critic epoch 0 MSE 103964.5630387931
+Critic epoch 5 MSE 74585.5619612069
+Critic epoch 10 MSE 72155.31209590517
+Critic epoch 15 MSE 70377.25956357758
+Saved /Users/among/Documents/ChatGPT/chud robotics/microduck-jetson-mount/tmp/speed-runs/teacher-fast-critic

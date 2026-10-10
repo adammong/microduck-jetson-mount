@@ -1,0 +1,9 @@
+{
+  "title": "Faster walking with the Jetson mount",
+  "description": "walk on the microduck; warm-started from teacher-fast-critic; 3,000,000 steps.",
+  "run_name": "teach-mounted_fast_walk-435f8b",
+  "robot": "microduck",
+  "contract_id": "microduck-61-v1",
+  "task": "walk",
+  "init_from": "teacher-fast-critic"
+}

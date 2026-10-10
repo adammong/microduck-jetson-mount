@@ -1,0 +1,93 @@
+{
+  "run_name": "teach-mounted_fast_walk-435f8b",
+  "envs": 32,
+  "steps": 3000000,
+  "robot": "microduck",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "task": "walk",
+  "pinned_command": false,
+  "seed": 0,
+  "env_kwargs": {
+    "domain_rand": false,
+    "obs_noise": false,
+    "actuator": "bam"
+  },
+  "microduck_rl_sha": "",
+  "init_from": "tmp/speed-runs/teacher-fast-critic",
+  "checkpoint_steps": 2000000,
+  "mount_revision": "v06",
+  "keep_command_normalizer": true,
+  "speed_lo": 0.35,
+  "speed_hi": 0.55,
+  "episode_s": 15.0,
+  "action_delay": true,
+  "recipe_version": 2,
+  "reward_terms": {
+    "keep_pace": 8.0,
+    "track_turn": 4.0,
+    "air_time": 0.5,
+    "stay_upright": 2.0,
+    "pose": 0.5,
+    "head_up": 3.5,
+    "foot_clearance": 2.0,
+    "plant_the_foot": 0.1,
+    "smooth_moves": 1.0,
+    "no_limit_parking": 1.0,
+    "fall": 0.0,
+    "calm_roll": 0.025
+  },
+  "yaw_tracking_variance": 0.025,
+  "symmetry_loss": false,
+  "strict_nonfoot_floor": true,
+  "checkpoint_sha256": "9bdcf9e8ab30b595968d5a6a7470b4bcd9aa3771db200e7ac0b860c4dbd3d56b",
+  "selection_status": "rejected: slower net travel and persistent yaw drift"
+}

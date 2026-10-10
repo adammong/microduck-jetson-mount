@@ -1,0 +1,56 @@
+{
+  "status": "selected for simulation only",
+  "command": [
+    0.5,
+    0,
+    0
+  ],
+  "date": "2026-10-09",
+  "baseline_normal": {
+    "trials": 8,
+    "survived": 7,
+    "mean_body_forward_m_s": 0.15949943289160728,
+    "mean_net_forward_m_s": 0.14692969426782151,
+    "mean_abs_yaw_change_deg": 18.171366631195674,
+    "max_payload_contact_fraction": 0.26548672566371684,
+    "max_nonfoot_ground_fraction": 0.02654867256637168,
+    "mean_both_feet_airborne_fraction": 0.00406858407079646
+  },
+  "baseline_same_command": {
+    "trials": 8,
+    "survived": 8,
+    "mean_body_forward_m_s": 0.24872824735939503,
+    "mean_net_forward_m_s": 0.08305473233123337,
+    "mean_abs_yaw_change_deg": 124.02885369241756,
+    "max_payload_contact_fraction": 0.0,
+    "max_nonfoot_ground_fraction": 0.0,
+    "mean_both_feet_airborne_fraction": 0.0008333333333333333
+  },
+  "selected_nominal": {
+    "trials": 8,
+    "survived": 8,
+    "mean_body_forward_m_s": 0.26909471675753593,
+    "mean_net_forward_m_s": 0.265678531656121,
+    "mean_abs_yaw_change_deg": 14.129875442710372,
+    "max_payload_contact_fraction": 0.0,
+    "max_nonfoot_ground_fraction": 0.0,
+    "mean_both_feet_airborne_fraction": 0.0008333333333333333
+  },
+  "selected_randomized": {
+    "trials": 8,
+    "survived": 8,
+    "mean_body_forward_m_s": 0.275813814252615,
+    "mean_net_forward_m_s": 0.2714437332028323,
+    "mean_abs_yaw_change_deg": 17.32107241270598,
+    "max_payload_contact_fraction": 0.0,
+    "max_nonfoot_ground_fraction": 0.0,
+    "mean_both_feet_airborne_fraction": 0.0012499999999999998
+  },
+  "baseline_successful_normal_walk_net_speed_m_s": 0.16699200226548808,
+  "increase_vs_successful_normal_walk_percent": 59.09656034529043,
+  "transition_survived": 4,
+  "transition_trials": 4,
+  "policy": "policies/selected/policy.onnx",
+  "report": "REPORT.md",
+  "hardware_validated": false
+}

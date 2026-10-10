@@ -1,0 +1,72 @@
+{
+  "run_name": "teach-mounted_fast_walk-d41618",
+  "envs": 32,
+  "steps": 2000000,
+  "robot": "microduck",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "task": "walk",
+  "pinned_command": false,
+  "seed": 0,
+  "env_kwargs": {
+    "domain_rand": false,
+    "obs_noise": false,
+    "actuator": "bam"
+  },
+  "microduck_rl_sha": "",
+  "init_from": "tmp/speed-runs/teacher-v06",
+  "keep_command_normalizer": true,
+  "mount_revision": "v06",
+  "speed_recipe": "mounted_fast_walk",
+  "strict_nonfoot_floor": true,
+  "symmetry_loss": false,
+  "selection_status": "rejected: slower net travel and persistent yaw drift"
+}

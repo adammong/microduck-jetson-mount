@@ -1,0 +1,4 @@
+Derived from Pollen Robotics alpha_walking.onnx, microduck-policies revision 088524a64e2557dc453256b6071dbb9d23888802 (upstream model card: Apache-2.0).
+MicroDuck Lab bbf0326ef97975f7062368914e0729504d17226f provides simulation, BAM motor dynamics and PPO infrastructure.
+Local modifications on 2026-10-09: mounted forward-speed PPO experiments (rejected), and bounded command-gated static/gyro/gravity feedback corrections (selected for simulation at 0.5 m/s command).
+The original teacher MLP and normalization in the selected policy remain unchanged. Its added correction is bounded to +/-0.08 radians. Hardware performance is unverified.

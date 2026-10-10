@@ -6,9 +6,17 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ## Walking policy video
 
+[![Faster walking policy on the loaded v06 robot](docs/v06-policy-fast-walking.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/speed-v06/fast-walking.mp4)
+
+**New Mac-trained fast-walking policy:** about **0.27 m/s**, roughly **59% faster** than the original policy's successful normal walks. It survived **16/16 fresh 30-second trials**, including observation noise and randomized physics, with no detected mount contacts. Four start/stop sequences also survived. The selected policy retains the original walking network and adds small trained gyro/gravity corrections; both PPO fine-tunes remain rejected.
+
+[Watch the fast-walking MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/speed-v06/fast-walking.mp4) · [Selected ONNX policy](results/speed-v06/policies/selected/policy.onnx) · [Measurements, limits and reproduction](results/speed-v06/REPORT.md). Tested forward command: `[0.5, 0, 0]`. This is fast walking in simulation; hardware performance and higher-speed running remain unverified.
+
+Original policy comparison:
+
 [![Walking policy on the loaded v06 robot](docs/v06-policy-walking.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/mac-v06/preview-loaded-forward.mp4)
 
-[Watch or download the full MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/mac-v06/preview-loaded-forward.mp4). This is the unchanged official walking policy on the loaded v06 model in Mac MuJoCo simulation, with no assistance; it is not a hardware demonstration. The fine-tuned policies remain rejected.
+[Watch or download the full MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/mac-v06/preview-loaded-forward.mp4). This is the unchanged official walking policy on the loaded v06 model in Mac MuJoCo simulation, with no assistance; it is not a hardware demonstration. The earlier PPO fine-tunes remain rejected.
 
 ## Start here
 
@@ -19,7 +27,7 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 - [Editable CAD assembly](easy_mount/STEP/easy_mount_assembly.step)
 - [Five print STLs](easy_mount/STL/)
 - [MuJoCo models and validation reports](easy_mount/simulation/)
-- [Mac simulation and training](training/README.md) · [v06 simulation findings](results/mac-v06/REPORT.md) · [historical v05 findings](results/mac-v05/REPORT.md)
+- [Mac simulation and training](training/README.md) · [Faster walking results](results/speed-v06/REPORT.md) · [v06 simulation findings](results/mac-v06/REPORT.md) · [historical v05 findings](results/mac-v05/REPORT.md)
 
 The estimated payload is **442.1 g**, including **120.1 g** fully dense PETG and estimated ancillary hardware. The battery is specified at **73 g**, with **12.92 Wh** nominal energy. Runtime arithmetic estimates 22–37 minutes at 15–25 W total Jetson draw, including reserve and conversion losses; it does not predict robot motor runtime.
 

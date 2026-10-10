@@ -1,0 +1,264 @@
+{
+  "passed_export": true,
+  "max_export_action_error_rad": 0.0,
+  "max_test_correction_rad": 0.053367823362350464,
+  "unchanged_normal_and_idle_max_error_rad": 0.0,
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "transitions": [
+    {
+      "seed": 60,
+      "survived": true,
+      "seconds": 30.0,
+      "phases": [
+        {
+          "phase": "stand",
+          "command_m_s": 0.0,
+          "seconds": 2.0,
+          "mean_body_forward_m_s": 0.001195178555935854,
+          "last_second_mean_body_forward_m_s": -0.0005183588428189978
+        },
+        {
+          "phase": "fast",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.2631479208028759,
+          "last_second_mean_body_forward_m_s": 0.2716815593838692
+        },
+        {
+          "phase": "stop",
+          "command_m_s": 0.0,
+          "seconds": 3.0,
+          "mean_body_forward_m_s": 0.014136404885308972,
+          "last_second_mean_body_forward_m_s": 0.00045554142372566275
+        },
+        {
+          "phase": "normal",
+          "command_m_s": 0.3,
+          "seconds": 5.0,
+          "mean_body_forward_m_s": 0.151505845811218,
+          "last_second_mean_body_forward_m_s": 0.16488038450479509
+        },
+        {
+          "phase": "fast_again",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.2663698394224048,
+          "last_second_mean_body_forward_m_s": 0.26338511019945143
+        },
+        {
+          "phase": "stop_again",
+          "command_m_s": 0.0,
+          "seconds": 4.0,
+          "mean_body_forward_m_s": 0.00958814710743809,
+          "last_second_mean_body_forward_m_s": 7.418413631967269e-05
+        }
+      ],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853
+    },
+    {
+      "seed": 61,
+      "survived": true,
+      "seconds": 30.0,
+      "phases": [
+        {
+          "phase": "stand",
+          "command_m_s": 0.0,
+          "seconds": 2.0,
+          "mean_body_forward_m_s": 0.0010389261904128943,
+          "last_second_mean_body_forward_m_s": -0.00025474881716945673
+        },
+        {
+          "phase": "fast",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.2582656515241251,
+          "last_second_mean_body_forward_m_s": 0.26797485530376436
+        },
+        {
+          "phase": "stop",
+          "command_m_s": 0.0,
+          "seconds": 3.0,
+          "mean_body_forward_m_s": 0.0138573079588726,
+          "last_second_mean_body_forward_m_s": -1.0178158845519647e-05
+        },
+        {
+          "phase": "normal",
+          "command_m_s": 0.3,
+          "seconds": 5.0,
+          "mean_body_forward_m_s": 0.15510183710837736,
+          "last_second_mean_body_forward_m_s": 0.16308226466178893
+        },
+        {
+          "phase": "fast_again",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.26194972697645424,
+          "last_second_mean_body_forward_m_s": 0.2640940195322037
+        },
+        {
+          "phase": "stop_again",
+          "command_m_s": 0.0,
+          "seconds": 4.0,
+          "mean_body_forward_m_s": 0.010229772930333638,
+          "last_second_mean_body_forward_m_s": 0.0003035676190484082
+        }
+      ],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853
+    },
+    {
+      "seed": 62,
+      "survived": true,
+      "seconds": 30.0,
+      "phases": [
+        {
+          "phase": "stand",
+          "command_m_s": 0.0,
+          "seconds": 2.0,
+          "mean_body_forward_m_s": 0.00033778199256630616,
+          "last_second_mean_body_forward_m_s": -0.0002680834275088273
+        },
+        {
+          "phase": "fast",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.27024822341511023,
+          "last_second_mean_body_forward_m_s": 0.26752298295497895
+        },
+        {
+          "phase": "stop",
+          "command_m_s": 0.0,
+          "seconds": 3.0,
+          "mean_body_forward_m_s": 0.01146010831521077,
+          "last_second_mean_body_forward_m_s": 0.00023139818942581768
+        },
+        {
+          "phase": "normal",
+          "command_m_s": 0.3,
+          "seconds": 5.0,
+          "mean_body_forward_m_s": 0.1648072246229276,
+          "last_second_mean_body_forward_m_s": 0.17819530248641968
+        },
+        {
+          "phase": "fast_again",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.2742649331316352,
+          "last_second_mean_body_forward_m_s": 0.2764321818947792
+        },
+        {
+          "phase": "stop_again",
+          "command_m_s": 0.0,
+          "seconds": 4.0,
+          "mean_body_forward_m_s": 0.011421117825727833,
+          "last_second_mean_body_forward_m_s": 2.6089373932336457e-05
+        }
+      ],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853
+    },
+    {
+      "seed": 63,
+      "survived": true,
+      "seconds": 30.0,
+      "phases": [
+        {
+          "phase": "stand",
+          "command_m_s": 0.0,
+          "seconds": 2.0,
+          "mean_body_forward_m_s": 0.0014941071165958419,
+          "last_second_mean_body_forward_m_s": -0.00015707512327935546
+        },
+        {
+          "phase": "fast",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.26548496960836926,
+          "last_second_mean_body_forward_m_s": 0.2739709386229515
+        },
+        {
+          "phase": "stop",
+          "command_m_s": 0.0,
+          "seconds": 3.0,
+          "mean_body_forward_m_s": 0.013548935688522761,
+          "last_second_mean_body_forward_m_s": 0.0001854619145160541
+        },
+        {
+          "phase": "normal",
+          "command_m_s": 0.3,
+          "seconds": 5.0,
+          "mean_body_forward_m_s": 0.16095825571380556,
+          "last_second_mean_body_forward_m_s": 0.1728762736916542
+        },
+        {
+          "phase": "fast_again",
+          "command_m_s": 0.5,
+          "seconds": 8.0,
+          "mean_body_forward_m_s": 0.26967405471950767,
+          "last_second_mean_body_forward_m_s": 0.2705065426230431
+        },
+        {
+          "phase": "stop_again",
+          "command_m_s": 0.0,
+          "seconds": 4.0,
+          "mean_body_forward_m_s": 0.009589681202483007,
+          "last_second_mean_body_forward_m_s": -4.633676244338858e-05
+        }
+      ],
+      "failure_reason": null,
+      "mass_kg": 1.179337261211853
+    }
+  ],
+  "transition_survived": 4,
+  "transition_trials": 4
+}

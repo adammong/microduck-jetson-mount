@@ -1,0 +1,16 @@
+{
+  "payload_model_mass_kg": 1.179337261211853,
+  "contract": [
+    61,
+    14
+  ],
+  "action_delay": true,
+  "asymmetric": true,
+  "preview_command_knob_override_verified": true,
+  "episode_s": 15.0,
+  "critic_fit_actor_max_error": 0.0,
+  "normalizer_identical": true,
+  "null_control_failed": true,
+  "null_failure_reason": "nonfoot_floor_support",
+  "recipe_version": 2
+}

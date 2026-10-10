@@ -1,0 +1,90 @@
+{
+  "run_name": "v06-fast-feedback",
+  "robot": "microduck",
+  "task": "walk",
+  "contract": {
+    "id": "microduck-61-v1",
+    "robot": "microduck",
+    "obs_dim": 61,
+    "act_dim": 14,
+    "rate_hz": 50.0,
+    "slots": [
+      [
+        "base_ang_vel",
+        0,
+        3
+      ],
+      [
+        "projected_gravity",
+        3,
+        6
+      ],
+      [
+        "joint_pos_rel",
+        6,
+        20
+      ],
+      [
+        "joint_vel",
+        20,
+        34
+      ],
+      [
+        "last_action",
+        34,
+        48
+      ],
+      [
+        "twist_cmd",
+        48,
+        51
+      ],
+      [
+        "head_pose_cmd",
+        51,
+        55
+      ],
+      [
+        "body_pose_cmd",
+        55,
+        61
+      ]
+    ],
+    "deploy": "drop-in: the robot's own 61-obs/14-action contract (export-walk bakes the normaliser)"
+  },
+  "mount_revision": "v06",
+  "status": "selected for simulation at command [0.5,0,0]; hardware unverified",
+  "method": "CEM bounded observable feedback",
+  "training_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "training_episode_seconds": 25.0,
+  "search_seed": 74,
+  "teacher_sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+  "policy_sha256": "6b5bc27a3299b49a51959e5b1ffbdcd9db9d7b414afe4008dccdc98230fbbb7d",
+  "parent_search": "results/speed-v06/feedback-study/search.json",
+  "env_kwargs": {
+    "actuator": "bam",
+    "domain_rand": false,
+    "obs_noise": false,
+    "action_delay": true
+  },
+  "physics_hz": 200,
+  "policy_hz": 50,
+  "model_mass_kg": 1.179337261211853,
+  "servo_current_limit_a": 1.75,
+  "no_assistance": true,
+  "unmodified_teacher_at_forward_commands_le_0_35": true,
+  "feedback_parameter_file": "parameters.json"
+}

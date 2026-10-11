@@ -34,9 +34,11 @@ setInterval(async()=>{try{let s=await(await fetch('/state')).json();document.que
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--policy',type=Path,default=ROOT/'results/motion-v06/policies/selected/policy.onnx')
-    ap.add_argument('--port',type=int,default=8798);ap.add_argument('--seed',type=int,default=90)
+    ap.add_argument('--revision',choices=['v06','v07']);ap.add_argument('--port',type=int,default=8798);ap.add_argument('--seed',type=int,default=90)
     ap.add_argument('--idle-exit',type=float,default=15.,help='Exit after this many minutes without input activity (0 disables).');args=ap.parse_args()
-    policy=session(args.policy);policy_hash=hashlib.sha256(args.policy.read_bytes()).hexdigest()
+    policy=session(args.policy);revision=args.revision or policy.get_modelmeta().custom_metadata_map.get('cad_revision','v06')
+    assert revision in ('v06','v07')
+    policy_hash=hashlib.sha256(args.policy.read_bytes()).hexdigest()
     limiter=limiter_for_policy(policy);lock=threading.Lock();shared=dict(jpeg=b'',state=dict(status='Starting',actual=[0.,0.,0.],seconds=0.),reset=False,touched=time.monotonic())
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
@@ -69,9 +71,11 @@ def main():
             except (ValueError,KeyError,TypeError):self.respond(b'{"error":"Invalid command"}',status=400)
     server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
     threading.Thread(target=server.serve_forever,daemon=True).start()
-    path=scene('loaded',rev='v06')
+    path=scene('loaded',rev=revision)
     env=FastRunEnv(model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb'))),scene_xml=str(path),seed=args.seed,actuator_force='bam',domain_rand=False,obs_noise=False,action_delay=True,random_yaw=False,max_episode_s=36000,command_resample_s=1e9)
-    assert abs(env.model.body_mass.sum()-1.179337261211853)<1e-8 and env.bam.max_current==1.75 and not env.spotter
+    folder='clearance_mount' if revision=='v07' else 'easy_mount'
+    payload=json.loads((ROOT/folder/'simulation/mass_properties.json').read_text())['mass_kg']
+    assert abs(env.model.body_mass.sum()-(.73724318+payload))<1e-8 and env.bam.max_current==1.75 and not env.spotter
     env.reset(seed=args.seed);env.head_cmd[:]=0;env.body_cmd[:]=0
     renderer=mujoco.Renderer(env.model,height=360,width=640);cam=mujoco.MjvCamera();cam.distance=.8;cam.azimuth=125;cam.elevation=-24
     opts=mujoco.MjvOption();opts.geomgroup[3:]=0;history=deque(maxlen=25);paused=False;tick=0
@@ -96,7 +100,7 @@ def main():
                 cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],.14];renderer.update_scene(env.data,camera=cam,scene_option=opts)
                 buf=io.BytesIO();Image.fromarray(renderer.render()).save(buf,format='JPEG',quality=82)
                 with lock:
-                    shared['jpeg']=buf.getvalue();shared['state']=dict(status='Duck fell. Reset to continue.' if paused else 'Ready — hold keys or buttons to move',actual=np.mean(history,axis=0).tolist() if history else [0.,0.,0.],command=command.tolist(),seconds=float(env.data.time),paused=paused,simulation_only=True,mass_kg=float(env.model.body_mass.sum()),servo_current_limit_a=env.bam.max_current,policy_sha256=policy_hash)
+                    shared['jpeg']=buf.getvalue();shared['state']=dict(status='Duck fell. Reset to continue.' if paused else 'Ready — hold keys or buttons to move',actual=np.mean(history,axis=0).tolist() if history else [0.,0.,0.],command=command.tolist(),seconds=float(env.data.time),paused=paused,simulation_only=True,revision=revision,mass_kg=float(env.model.body_mass.sum()),servo_current_limit_a=env.bam.max_current,policy_sha256=policy_hash)
             tick+=1;time.sleep(max(0,.02-(time.monotonic()-began)))
     except KeyboardInterrupt:pass
     finally:server.shutdown();server.server_close();renderer.close();env.close()

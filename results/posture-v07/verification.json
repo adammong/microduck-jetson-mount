@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "isolated_mass_kg": [
+    1.1400433407352237,
+    1.1847989141502486,
+    1.2295544875652735
+  ],
+  "nominal_current_a": 1.75,
+  "physics_timestep_s": 0.005,
+  "no_assistance": true,
+  "geometry_poses": [
+    {
+      "pose": "SIT_neutral_head",
+      "mount_penetrations_over_02mm": []
+    },
+    {
+      "pose": "FOLD",
+      "mount_penetrations_over_02mm": []
+    }
+  ],
+  "connector_near_HOME_passed": true,
+  "neutral_head_export_error_rad": 1.1920928955078125e-07,
+  "export_samples": 1000,
+  "base_neural_tensors_unchanged": true,
+  "repeatability_passed": true,
+  "scene_sha256": "24f26ad9dd9e60191626db17d012b70877418c93e4ad14dbd0ec59d76a65cd80",
+  "scope": "Reference-model geometry and simulation only. Stock SIT head-down pose and unrestricted head articulation are not supported; neutral head is required for sitting."
+}

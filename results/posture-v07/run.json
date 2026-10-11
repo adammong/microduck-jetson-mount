@@ -1,0 +1,143 @@
+{
+  "revision": "v07",
+  "runtime": {
+    "python": "3.12.14",
+    "mujoco": "3.10.0",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.29.0",
+    "numpy": "2.5.2",
+    "platform": "arm64"
+  },
+  "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+  "official_policy_revision": "088524a64e2557dc453256b6071dbb9d23888802",
+  "inputs": [
+    {
+      "file": "alpha_stand.onnx",
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_stand.onnx",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+      "bytes": 793705
+    },
+    {
+      "file": "alpha_sitstand.onnx",
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_sitstand.onnx",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "sha256": "c6c40e35e726eabd803d633e090d112994f469921152448367953fbaf9799bc8",
+      "bytes": 793695
+    }
+  ],
+  "cad_runtime": {
+    "cadgen": "0.7.11",
+    "mujoco": "3.15.0"
+  },
+  "training_scene": {
+    "role": "Exact compiled collision-enabled model used for the v07 CEM studies, before front hooks moved onto the removable gate.",
+    "mujoco_version": "3.10.0",
+    "uncompressed_sha256": "0297682544835250f3b8c0372d109bcd87d38e548473042b5c8a69f2fd8ce139",
+    "compressed_bytes": 52217558,
+    "revision": "v07-training-iteration1",
+    "equivalence_checks": [
+      {
+        "pose": "sitstand",
+        "seed": 0,
+        "exact_metrics_and_qpos_equal": true
+      },
+      {
+        "pose": "front",
+        "seed": 1,
+        "exact_metrics_and_qpos_equal": true
+      },
+      {
+        "pose": "back",
+        "seed": 0,
+        "exact_metrics_and_qpos_equal": true
+      }
+    ],
+    "compressed_sha256": "2a78034ffd7be5879f52e81609efc80bb2b60f117fd8fca11518249aacc7ba4d",
+    "scope": "Exact self-contained compiled training model retained; requires pinned MuJoCo 3.10.0. Final geometry is separately rebuilt and evaluated."
+  },
+  "final_scene_sha256": "24f26ad9dd9e60191626db17d012b70877418c93e4ad14dbd0ec59d76a65cd80",
+  "files_sha256": {
+    "clearance_mount/parameters.json": "a76370bfb41b0763b53886ec8bca1c61bffe6a8d9bd6e8d0396922e06c88f7fc",
+    "clearance_mount/simulation/mass_properties.json": "083f6c1d00bf19f0c713152ebec9d84b46b2c9612fd196dd26a58ba95b4fd00d",
+    "clearance_mount/simulation/payload.xml": "2d7bff18e16bf3d4106c7a3b3a673031a0e0276909f3d4da4a1470844a3fdbfb",
+    "training/clearance_policy.py": "6c1825e7b4840f4c9e5226fe6cac59e37f8bf5d3b230ed8437b18597f03d48ae",
+    "clearance_mount/STEP/battery_pack.step": "458c0eb9b341f1946c1973e2ffb9176d0e8a75e4394eb0864a6102ed55397da8",
+    "clearance_mount/STEP/easy_mount_assembly.step": "04dc922ab911b821e5afcbfd43da7a69e22579818dee19ac4af4e98037566437",
+    "clearance_mount/STEP/front_gate.step": "f70aa9f1733d8a8220749753d5fb4c7778afd50220297ecb95143947bbac3258",
+    "clearance_mount/STEP/jetson_gate_left.step": "2bda7b75ff375b25ba234d7e87b3b46ce0e2c4964dda17aff5930681eacc940d",
+    "clearance_mount/STEP/jetson_gate_right.step": "cc8d767ccc8bce1f0ff0250bbc203df50334d75051ec7694175f107561954a70",
+    "clearance_mount/STEP/jetson_tray.step": "98af172b53fa163cc73a58b7d014c98a3fe722825fd4d97d1fd7c5bb58477bcf",
+    "clearance_mount/STEP/saddle.step": "1b09c6836ffc9078f237097d37d9ada03fecf59eaa85f91f717ed47edd62db4e",
+    "clearance_mount/STEP/wiring_layout.step": "e5240df5eb63043841e3d6f25f7a605a389ae625d2703221de9f66c6eaabd9cd",
+    "clearance_mount/STL/front_gate.stl": "169ac6b4cd3bbc80820f372059e6b34ac0fb6951209f58fbcbc2f402da1174f9",
+    "clearance_mount/STL/jetson_gate_left.stl": "899ea3becff265e43444a19aa58d490091f0bd38c2c8590c87a1b146f6c321f4",
+    "clearance_mount/STL/jetson_gate_right.stl": "3f1e8f412203b46df97da11fae9f41fe1e720e692c4e8e871bacc7aa5a3c5000",
+    "clearance_mount/STL/jetson_tray.stl": "cc9023b13867cc8327f63588efea91821ea14da2734112be421009d041638b4a",
+    "clearance_mount/STL/saddle.stl": "a899ea4a6f6568a77352729af7783d15cbfd80c21f6704ed2059d48ff8d483c0",
+    "clearance_mount/src/battery_pack.py": "e6d1e0f3c4078111e23199ffecf73278666a12e9b599c947c85001cfcc7b9f27",
+    "clearance_mount/src/easy_mount_assembly.py": "9a65a59ac92655ab8c5d39f49faf995af53e5619658cf86ff6788fc9e192080a",
+    "clearance_mount/src/front_gate.py": "27a990f048ba7bef4ec650baba430c9212a1fcc5e868cdf99b2dbb036f1c2f55",
+    "clearance_mount/src/jetson_gate_left.py": "bf3bf4b3049d8d3f51803945523c23105bde7d18ccc4013769877bad2a10f119",
+    "clearance_mount/src/jetson_gate_right.py": "aa77dca990cb8faebda8915f78dd4ba1ea99ad87dd40b28b65da724d388bfddf",
+    "clearance_mount/src/jetson_tray.py": "a76b2847426d31d0077bae7e4adb152547fd63bce912af1fe750335e6eeec8bd",
+    "clearance_mount/src/lib/battery.py": "99684399f9e806eac677f722a22384ca2646c7039272a0bf8deb89a4eaf095e3",
+    "clearance_mount/src/lib/design.py": "001c0c3989b6f13d837d01b5e3d4caf766109c6bc566dba386bd2cbc3892b5c9",
+    "clearance_mount/src/lib/wiring.py": "74f05248cc72821a851e5f42748a787f2b39c53c609389fb8b9757c6f50aa014",
+    "clearance_mount/src/saddle.py": "586cac8e8d63f378a03d3d3fbaf2d22f1d41152e0d5fafb7e5dd971ff0a4545a",
+    "clearance_mount/src/wiring_layout.py": "d66bcac0f532107a3e01d86b0756ae8cc4bc91ebf88b9853e4d6ca7f70800bd9",
+    "clearance_mount/checks/balance_estimate.py": "d58aceb2380f7afdf0429135103eb8157beccd81a6de0dc4d86c5f9cd63ce169",
+    "clearance_mount/checks/build_outputs.py": "c77e8157f86580e9e1d5f937e85a19d31191c993e5f64de2931ed13a9c3db488",
+    "clearance_mount/checks/check_attachment.py": "85a1da15e9a41230e46ebab5d77b552e4582c4fb7c2bb00f0007ebd71c04ccb1",
+    "clearance_mount/checks/check_shell_capture.py": "db9dd81851216fb5defcdddde7ccaca0281e04ff0fad3cb7c7cd8317f1baee93",
+    "results/posture-v07/additional-export-verification.json": "1671bb3b55c4e55e02da8395ed7d8bf5bd129786fe3703944483d61f8044949a",
+    "results/posture-v07/controller-verification.json": "d27b0e7b7f80ab27dcc6936443593c2086dfc29ccc9822f899a47ec5b1c6f8f2",
+    "results/posture-v07/export-verification.json": "14d745cf5048453a4c8bae2c181edd45f77a2b0aeefa94601849f919c4702797",
+    "results/posture-v07/limp-physical-falls.json": "62f86234b8cccffab17a50599b87bb8dbcd3248a504b5d9a789c3a59c2960c62",
+    "results/posture-v07/media.json": "45e02ee7898e5f047bf0744454cd37192ade5b87541b0969a69d7527f1692959",
+    "results/posture-v07/physical-falls.json": "9d671e0a23e554d60cfef6a1aef7bc086b8077a4e431b33bdaee2cab427f29b6",
+    "results/posture-v07/recovery-baseline-nominal.json": "8cdfe217a7c65d6401c30d0283ef3bab9a816603a26e535f9255152225560ec0",
+    "results/posture-v07/recovery-baseline-physical-falls.json": "954e156ccb7307e2d7bdf38e8e33b18af45a21a9d411e424b1da8297e775ab6d",
+    "results/posture-v07/recovery-baseline-randomized.json": "60f3fc2bdbad4263db84bea7105d2ebd3084c6638dafcabc10bbf4d0d2ce9487",
+    "results/posture-v07/recovery-nominal.json": "c078a4086470d722c147319e2709ad628e33e7e11c4d95c58dd66534db89356a",
+    "results/posture-v07/recovery-physical-falls.json": "532b3f5c53b31eb2d1e1fbac505dbe1cf5c5da1d8465c6bdec52d4c51f1252b6",
+    "results/posture-v07/recovery-randomized.json": "62484280aa18d4f6febbc4990e6be92ef5c65b08afb787f1ed39cdaeb14a8bdd",
+    "results/posture-v07/selection.json": "97bcc77d79498761f0cea5555ad37efd04fdf15baff2f5f9fe2c5ffbfa4eb586",
+    "results/posture-v07/sitstand-demo.json": "80925ec6ccc78764b78c39ae362b298ebbd6694151436b97d4f40bfffda164d9",
+    "results/posture-v07/sitstand-nominal.json": "492d315ec29a1ba20de2c34ca35aad56d21424ad28f7ae31a0b6e3c958d29cc5",
+    "results/posture-v07/sitstand-randomized.json": "cbd0cdbc844a04bf1750bb3649774c122c2d685f86c0158392b63d23d5c05d86",
+    "results/posture-v07/sitstand-v06-geometry-control.json": "ed638ae6c603fff7151d53c4f2eff7adb846e588ebdd45c4ef88545b8370dc08",
+    "results/posture-v07/summary.json": "f0b55a99cef814b13b843c7a8d95e1cf732e494ff8de1f6af92d396ccc121101",
+    "results/posture-v07/verification.json": "2e063af3dd059cc3cb507dc38a0e7e2891e119e63449914e5cd8932217d5ea8b",
+    "results/posture-v07/walking-adjusted-nominal.json": "e8972cb1d8edb418d1cba3abd32b3c47e1e4459b20270bcf7a4b7c76ab399f80",
+    "results/posture-v07/walking-adjusted-randomized.json": "99694d20c4fc232cb1e252755a19fe341c0b7967168e01486bf942c856254932",
+    "results/posture-v07/walking-bias-grid.json": "935fd8f4cdf13da2f9d8b07745d65e94cf541ed8d6e4230d0e0a786f81ae31b7"
+  },
+  "policies": {
+    "sitstand": {
+      "path": "results/posture-v07/policies/sitstand/policy.onnx",
+      "sha256": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56",
+      "status": "selected_for_documented_simulation_cycles"
+    },
+    "walking-adjusted": {
+      "path": "results/posture-v07/policies/walking-adjusted/policy.onnx",
+      "sha256": "99a3a0ca9bd13f6a36d3e25fbe6fe86e3bc721cd115bba6564564ba121afa346",
+      "status": "selected_for_documented_simulation_commands"
+    },
+    "recovery-candidate": {
+      "path": "results/posture-v07/policies/recovery-candidate/policy.onnx",
+      "sha256": "e6c3ca7d823ecd1554cfacdf51e1e4acd1721aa4af68d31a6408c0c92413c6f8",
+      "status": "rejected_as_general_recovery"
+    },
+    "sitstand-neutral-baseline": {
+      "path": "results/posture-v07/policies/sitstand-neutral-baseline/policy.onnx",
+      "sha256": "0d406b0ea02c17491e0333353011a5a067bbccb08d4cb5dfa0d29e769e7336b1",
+      "status": "unselected_baseline"
+    },
+    "walking-neutral-head": {
+      "path": "results/posture-v07/policies/walking-neutral-head/policy.onnx",
+      "sha256": "95b287ac08d35fc9f322fc55adc459a78ddf97cab05a2dd66584c0f133038109",
+      "status": "unselected_baseline"
+    }
+  }
+}

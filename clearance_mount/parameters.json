@@ -1,0 +1,321 @@
+{
+  "units": "mm",
+  "tray_origin_trunk_mm": [
+    90,
+    0,
+    15
+  ],
+  "tray_euler_xyz_deg": [
+    90,
+    0,
+    90
+  ],
+  "torso_side_inner_y": 33.1,
+  "torso_arm_wall": 4,
+  "torso_clip_x_range": [
+    -24,
+    -12
+  ],
+  "torso_top_pad_mm": 1.0,
+  "torso_front_pad_mm": 2.0,
+  "lower_capture_lip_y": 30.0,
+  "lower_capture_lip_z": [
+    1.2,
+    2.8
+  ],
+  "gate_screw_y": 40,
+  "gate_screw_z": 24,
+  "dock_x": 59,
+  "dock_hole_y": 0,
+  "dock_pin_y": -7,
+  "dock_pin_diameter": 5.0,
+  "dock_pin_clearance_diameter": 5.6,
+  "m4_clearance_diameter": 4.5,
+  "m4_nut_pocket_af": 7.25,
+  "m4_nut_pocket_depth": 3.5,
+  "jetson_base_size": [
+    103,
+    90.5,
+    6.5
+  ],
+  "jetson_base_clearance_per_side": 0.6,
+  "jetson_bottom_z": 4.0,
+  "jetson_rail_capture_x": 50.7,
+  "jetson_rail_cap_bottom_z": 11.0,
+  "tray_thickness": 3.0,
+  "battery_size": [
+    73,
+    18,
+    32
+  ],
+  "battery_cradle_origin_trunk_mm": [
+    -165,
+    0,
+    35
+  ],
+  "battery_cradle_euler_xyz_deg": [
+    90,
+    0,
+    -90
+  ],
+  "battery_local_center_mm": [
+    0,
+    0,
+    18.6
+  ],
+  "connector_keepout_size_mm": [
+    99.4,
+    50,
+    46.9
+  ],
+  "connector_keepout_center_mm": [
+    0,
+    70.8,
+    26.55
+  ],
+  "battery_clearance_per_side": 1.0,
+  "petg_density_g_cm3": 1.27,
+  "printed_mass_scale": 1.0,
+  "jetson_mass_g": 175,
+  "battery_mass_g": 73,
+  "ancillary_mass_g": 74,
+  "notes": "External captive saddle fitted to the pinned simulation shell, not verified against production hardware. Six M4 thumb screws and nuts (two torso, two removable tray, two Jetson end gate). No original robot screws are removed. OEM Jetson base retained. Foam pad dimensions are nominal. Physical fit, shell strength and swept motions remain required. v04: Jetson rotated 180 degrees in its tray, connectors face up. Data route ends at an unconnected provisional head-side USB plug; exact production host socket and shell entry require measurement. Converter is a fit allowance, not an electrically selected part. Ancillary masses are estimates; flexible cable tension is not modeled. v05: GNB8504S60AHV 4S LiHV 850mAh pack, manufacturer body 73x18x32 mm and 73g +/-2g; cradle resized with 1mm side clearance and a 0.6mm bottom pad. Battery shell/plug details and flexible factory leads are simplified. Electrical protection/cutoff and conditioning remain unselected. v06: front Jetson tray with independent corner gates; rear battery cradle integrated into saddle. More-open tray windows. Same electronics and conservative component masses. Balance and moving-head clearance are evaluated in simulation, not a hardware payload rating. v07 clearance candidate: front compute plane +35mm X/+33mm Z, rear battery -61mm X/+35mm Z; upper rear webs and shorter raised front dock. Torso clip interface and Jetson OEM-base retention unchanged. Neutral head posture is required for seated policy; unrestricted head/get-up motion not verified. Clearance and revised inertials must be tested before hardware use. Revised capture: shoulder seats remain at the fitted rear location, side arms pass above folded legs, and underside capture lips move to the front shell. Front tray receives an additional 5mm outward clearance for the neck +/-0.2 rad port survey. Front capture tongues now sit below the reference shell front lobes (z>=23.25mm at x24mm), with 1.25mm nominal gap, instead of floating below the feet. Final assembly correction: underside capture tongues and their forward-access hooks belong to the removable front gate; the saddle has no front underside obstruction during rear-to-front installation. Torso gate screw bosses move outboard to +/-40mm so they clear the shell sides along the rear-to-front saddle installation path.",
+  "revision": "v07",
+  "jetson_inplane_rotation_deg": 180,
+  "hardware_pads_straps_mass_g": 22,
+  "data_cable_mass_g": 14,
+  "power_cable_mass_g": 18,
+  "converter_mass_g": 20,
+  "converter_size_trunk_mm": [
+    14,
+    24,
+    12
+  ],
+  "converter_center_trunk_mm": [
+    -64,
+    54,
+    35
+  ],
+  "jetson_usb_c_face_tray_mm": [
+    -42,
+    45.45,
+    12.2
+  ],
+  "jetson_dc_face_tray_mm": [
+    44,
+    45.1,
+    15.4
+  ],
+  "data_cable_diameter_mm": 4.5,
+  "power_cable_diameter_mm": 3,
+  "data_cable_route_trunk_mm": [
+    [
+      102.2,
+      -42,
+      90
+    ],
+    [
+      102.2,
+      -42,
+      110
+    ],
+    [
+      115,
+      -70,
+      130
+    ],
+    [
+      110,
+      -105,
+      130
+    ],
+    [
+      85,
+      -125,
+      130
+    ],
+    [
+      55,
+      -112,
+      125
+    ],
+    [
+      50,
+      -95,
+      120
+    ],
+    [
+      50,
+      -75,
+      120
+    ]
+  ],
+  "power_cable_route_trunk_mm": [
+    [
+      105.4,
+      44,
+      86
+    ],
+    [
+      105.4,
+      44,
+      106
+    ],
+    [
+      125,
+      62,
+      122
+    ],
+    [
+      137,
+      88,
+      107
+    ],
+    [
+      108,
+      98,
+      85
+    ],
+    [
+      40,
+      98,
+      66
+    ],
+    [
+      -35,
+      97,
+      40
+    ],
+    [
+      -85,
+      104,
+      39
+    ],
+    [
+      -120,
+      104,
+      39
+    ],
+    [
+      -137.68,
+      96.68,
+      39
+    ],
+    [
+      -145,
+      79,
+      39
+    ],
+    [
+      -137.68,
+      61.32,
+      39
+    ],
+    [
+      -120,
+      54,
+      39
+    ],
+    [
+      -71,
+      54,
+      39
+    ]
+  ],
+  "head_usb_plug_body_center_trunk_mm": [
+    50,
+    -66,
+    120
+  ],
+  "head_usb_access_marker_trunk_mm": [
+    50,
+    -47.5,
+    120
+  ],
+  "minimum_cable_bend_radius_mm": 10,
+  "battery_pocket_depth_mm": 36,
+  "battery_bottom_pad_mm": 0.6,
+  "converter_pad_center_trunk_mm": [
+    -54,
+    47,
+    35
+  ],
+  "converter_pad_size_trunk_mm": [
+    4,
+    54,
+    20
+  ],
+  "converter_strap_slot_y_mm": [
+    40,
+    69
+  ],
+  "battery_model": "GNB8504S60AHV",
+  "battery_nominal_voltage_v": 15.2,
+  "battery_capacity_mah": 850,
+  "battery_energy_wh": 12.92,
+  "battery_max_voltage_v": 17.4,
+  "battery_mass_tolerance_g": 2,
+  "battery_extension_route_trunk_mm": [
+    [
+      -196,
+      91.5,
+      32
+    ],
+    [
+      -201,
+      104,
+      32
+    ],
+    [
+      -219,
+      109,
+      32
+    ],
+    [
+      -236,
+      94,
+      32
+    ],
+    [
+      -231,
+      71,
+      32
+    ],
+    [
+      -201,
+      54,
+      39
+    ],
+    [
+      -135,
+      54,
+      39
+    ],
+    [
+      -71,
+      54,
+      39
+    ]
+  ],
+  "tray_window_size_mm": [
+    24,
+    24
+  ],
+  "tray_window_pitch_mm": 30,
+  "rear_web_center_z_mm": 40,
+  "dock_bridge_x_limits_mm": [
+    40,
+    79
+  ],
+  "dock_riser_x_mm": 81,
+  "converter_strap_slot_z_mm": 35,
+  "side_arm_center_z_mm": 41,
+  "front_capture_x_range_mm": [
+    24,
+    36
+  ],
+  "front_capture_inner_y_mm": 14,
+  "front_capture_lip_top_z_mm": 22,
+  "front_capture_lip_thickness_mm": 2.4,
+  "front_capture_outer_y_mm": 23
+}

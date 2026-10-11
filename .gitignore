@@ -4,3 +4,7 @@ __pycache__/
 *.py[cod]
 .DS_Store
 *.zip
+
+# Unversioned aliases generated from the canonical v07 assembly previews.
+clearance_mount/GLB/equipped_mount.glb
+clearance_mount/GLB/microduck_easy_mount.glb

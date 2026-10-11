@@ -1,0 +1,14 @@
+{
+  "sitstand": {
+    "path": "results/posture-v07/sitstand-demo.mp4",
+    "duration_s": 19.0,
+    "frames": 475,
+    "fps": 25,
+    "crop_top_pixels": 64,
+    "continuous": true,
+    "seed": 250,
+    "sha256": "1b8aafeb5fe37f8240e04e317253d4e926cfdfe5f7cb349671740e47005cbb6d",
+    "captioned_source_sha256": "2c94f1e87b471f474769b01f87b183700705623abed059e6c0f9ece620f3b0ef",
+    "revision": "v07"
+  }
+}

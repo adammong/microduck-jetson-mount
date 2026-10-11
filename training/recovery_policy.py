@@ -20,7 +20,7 @@ class RecoveryPolicy:
             action[i]+=np.clip(correction,-.75,.75)
         return [action]
 
-def export(parameters,out):
+def export(parameters,out,revision="v06",scope=None):
     import json
     from pathlib import Path
     import onnx
@@ -54,6 +54,8 @@ def export(parameters,out):
     nodes.extend(original);nodes.append(onnx.helper.make_node('Add',['recovery_base_action',correction],[output]))
     del model.graph.node[:];model.graph.node.extend(nodes);model.graph.initializer.extend(initializers)
     prop=model.metadata_props.add();prop.key='simulation_only';prop.value='true'
-    prop=model.metadata_props.add();prop.key='validated_scope';prop.value='Limited mounted front recovery; full sitting and back/side recovery unresolved'
+    prop=model.metadata_props.add();prop.key='validated_scope';prop.value=scope or 'Limited mounted front recovery; full sitting and back/side recovery unresolved'
+    if revision!='v06':
+        prop=model.metadata_props.add();prop.key='cad_revision';prop.value=revision
     onnx.checker.check_model(model);out=Path(out);out.mkdir(parents=True,exist_ok=True);onnx.save(model,out/'policy.onnx')
     (out/'parameters.json').write_text(json.dumps(dict(parameters=list(map(float,p)),method='gravity_conditioned_recovery',status='limited_simulation_candidate',additional_correction_limit_rad=.75,base_policy='tmp/sim-inputs/alpha_stand.onnx'),indent=2)+'\n')

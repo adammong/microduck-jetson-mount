@@ -1,0 +1,26 @@
+{
+  "method": "neutral_head_sitstand",
+  "stand_parameters": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sit_parameters": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "parameters": [],
+  "status": "simulation_candidate"
+}

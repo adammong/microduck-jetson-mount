@@ -2,7 +2,21 @@
 
 Uses [MicroDuck Lab](https://github.com/jonathanhawkins/microduck-lab/tree/bbf0326ef97975f7062368914e0729504d17226f), pinned to `bbf0326ef97975f7062368914e0729504d17226f`. Native CPU MuJoCo and PPO work on Apple Silicon; CUDA is unnecessary for these experiments.
 
-The current CAD revision is the source of payload mass, inertia and collision boxes. Stock and loaded scenes share the robot, floor, STAND keyframe, BAM XL330 motor model, 200 Hz physics and 50 Hz policy interface: **61 observations / 14 actions**. Both use the fuller groundcontact robot. The Jetson visual is an envelope; cables are fixed and the mount cannot slip or break in this model.
+The explicitly selected CAD revision is the source of payload mass, inertia and collision boxes. Stock and loaded scenes share the robot, floor, STAND keyframe, BAM XL330 motor model, 200 Hz physics and 50 Hz policy interface: **61 observations / 14 actions**. Both use the fuller groundcontact robot. The Jetson visual is an envelope; cables are fixed and the mount cannot slip or break in this model.
+
+## Current v07 mount
+
+The [clearance study](../results/posture-v07/REPORT.md) selects separate sit/stand and walking ONNX actors. Fresh tests pass 16/16 sit/stand cycles and 88/88 walking trials. Head pitch stays neutral. General recovery remains rejected; the live controller does not enable automatic recovery or posture switching. v06 policy defaults and historical results below are preserved.
+
+After the Mac setup command below, build the current scenes explicitly:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/build_scenes.py --mount clearance_mount
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/verify_clearance.py --out tmp/v07-check.json
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/posture-v07/policies/walking-adjusted/policy.onnx
+```
+
+Open http://127.0.0.1:8798. The walking actor retains velocity commands and the inherited command ramp/watchdog. The sit/stand actor instead reads observation slot 48 as a posture flag: 0=stand, 1=sit. Never use that actor in the walking command page. CAD and simulation alone do not validate real assembly, servo heat or hardware control.
 
 ## Run
 
@@ -15,7 +29,7 @@ tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate.py --strict
 tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate.py --variant loaded --strict --extended --bus-delay --obs-noise
 ```
 
-Outputs use the revision in `easy_mount/parameters.json`: current metrics/videos go into `results/mac-v06/`, and compiled scenes into `tmp/mac-models/v06/`. `--revision v05` evaluates preserved local v05 scenes if present; a fresh checkout must build those from the historical CAD revision first. Existing historical results are committed in `results/mac-v05/`.
+The legacy commands below use the revision in `easy_mount/parameters.json`: v06 metrics/videos go into `results/mac-v06/`, and compiled scenes into `tmp/mac-models/v06/`. `--revision v05` evaluates preserved local v05 scenes if present; a fresh checkout must build those from the historical CAD revision first. Existing historical results are committed in `results/mac-v05/`.
 
 ## Exact teacher import and bounded fine-tuning
 

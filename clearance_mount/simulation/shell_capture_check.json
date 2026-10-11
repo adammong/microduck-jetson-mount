@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "units": "mm",
+  "required_gap_mm": 0.7,
+  "shells": [
+    {
+      "shell": "right_shell",
+      "sampled_points": 50512,
+      "minimum_tongue_shell_gap_mm": 1.3250730986095818,
+      "front_lobe_capture_overlap_y_mm": 4.39999941485577
+    },
+    {
+      "shell": "left_shell",
+      "sampled_points": 46475,
+      "minimum_tongue_shell_gap_mm": 1.2465725450867347,
+      "front_lobe_capture_overlap_y_mm": 3.899999393480524
+    }
+  ],
+  "scope": "21 X cross sections of pinned shell surface, 11 samples per edge. Reference fit only; no shell strength, tolerance, foam compression or physical verification."
+}

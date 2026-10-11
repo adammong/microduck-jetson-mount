@@ -1,0 +1,31 @@
+{
+  "policies": {
+    "sitstand": {
+      "path": "results/posture-v07/policies/sitstand/policy.onnx",
+      "sha256": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56",
+      "status": "selected_for_documented_simulation_cycles"
+    },
+    "walking-adjusted": {
+      "path": "results/posture-v07/policies/walking-adjusted/policy.onnx",
+      "sha256": "99a3a0ca9bd13f6a36d3e25fbe6fe86e3bc721cd115bba6564564ba121afa346",
+      "status": "selected_for_documented_simulation_commands"
+    },
+    "recovery-candidate": {
+      "path": "results/posture-v07/policies/recovery-candidate/policy.onnx",
+      "sha256": "e6c3ca7d823ecd1554cfacdf51e1e4acd1721aa4af68d31a6408c0c92413c6f8",
+      "status": "rejected_as_general_recovery"
+    },
+    "sitstand-neutral-baseline": {
+      "path": "results/posture-v07/policies/sitstand-neutral-baseline/policy.onnx",
+      "sha256": "0d406b0ea02c17491e0333353011a5a067bbccb08d4cb5dfa0d29e769e7336b1",
+      "status": "unselected_baseline"
+    },
+    "walking-neutral-head": {
+      "path": "results/posture-v07/policies/walking-neutral-head/policy.onnx",
+      "sha256": "95b287ac08d35fc9f322fc55adc459a78ddf97cab05a2dd66584c0f133038109",
+      "status": "unselected_baseline"
+    }
+  },
+  "scope": "Separate interfaces; no automatic switching or hardware deployment.",
+  "reason": "Sitting and walking pass the documented fresh trials. Recovery does not improve paired general-recovery results."
+}

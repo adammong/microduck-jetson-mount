@@ -1,0 +1,389 @@
+{
+  "revision": "v07",
+  "simulation_only": true,
+  "sitstand": {
+    "nominal": {
+      "passed": 8,
+      "trials": 8
+    },
+    "randomized": {
+      "passed": 8,
+      "trials": 8
+    },
+    "v06-geometry-control": {
+      "passed": 0,
+      "trials": 8
+    }
+  },
+  "walking": {
+    "nominal": {
+      "passed": 44,
+      "trials": 44
+    },
+    "randomized": {
+      "passed": 44,
+      "trials": 44
+    }
+  },
+  "walking_commands": {
+    "nominal": {
+      "stop": {
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.0002589149547631564,
+          -8.507578592745911e-05,
+          -0.002453966877402845
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "forward": {
+        "command": [
+          0.2,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.20037240844506485,
+          0.011698124435529979,
+          0.01689975239353004
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "backward": {
+        "command": [
+          -0.15,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.15760439942662532,
+          -0.008593528244841414,
+          -0.04302645975886618
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "left": {
+        "command": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.01686866373024084,
+          0.09535300555430275,
+          0.0223386324754981
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "right": {
+        "command": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.008504523726147944,
+          -0.08769007659412147,
+          -0.0710021371546657
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "turn_left": {
+        "command": [
+          0.0,
+          0.0,
+          0.4
+        ],
+        "mean_sustained_twist": [
+          -0.0009314094300746617,
+          -0.0004783340811039894,
+          0.4456718592947368
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "turn_right": {
+        "command": [
+          0.0,
+          0.0,
+          -0.4
+        ],
+        "mean_sustained_twist": [
+          -0.006001549934676404,
+          -0.005285015661590408,
+          -0.40289581777701466
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "curve_left": {
+        "command": [
+          0.15,
+          0.0,
+          0.3
+        ],
+        "mean_sustained_twist": [
+          0.13933663860249978,
+          0.0037691761689739697,
+          0.32745742702898745
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "curve_right": {
+        "command": [
+          0.15,
+          0.0,
+          -0.3
+        ],
+        "mean_sustained_twist": [
+          0.12996423188596964,
+          0.005816926955860184,
+          -0.30276777975180375
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "diagonal_left": {
+        "command": [
+          0.15,
+          0.07,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.13402774270910484,
+          0.09604348165517737,
+          -0.0790631469070336
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "diagonal_right": {
+        "command": [
+          0.15,
+          -0.07,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.107588380915471,
+          -0.06171721367706666,
+          0.0356231371957036
+        ],
+        "passed": 4,
+        "trials": 4
+      }
+    },
+    "randomized": {
+      "stop": {
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.0002490104792301596,
+          -8.832033744278843e-05,
+          -0.0016125671004431194
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "forward": {
+        "command": [
+          0.2,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.1968315420901546,
+          0.012820569807525037,
+          0.009966201048405166
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "backward": {
+        "command": [
+          -0.15,
+          0.0,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.14545948142454457,
+          -0.009584729288841258,
+          -0.02217144652621177
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "left": {
+        "command": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.01479989598425863,
+          0.09500963777731299,
+          0.04454278315448608
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "right": {
+        "command": [
+          0.0,
+          -0.1,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          -0.0084740342708098,
+          -0.08755434841185118,
+          -0.06922055765669839
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "turn_left": {
+        "command": [
+          0.0,
+          0.0,
+          0.4
+        ],
+        "mean_sustained_twist": [
+          0.0007453297643080357,
+          0.00022237239624910924,
+          0.4558081131118668
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "turn_right": {
+        "command": [
+          0.0,
+          0.0,
+          -0.4
+        ],
+        "mean_sustained_twist": [
+          -0.004611409913837598,
+          -0.005271878168216343,
+          -0.4028614078338615
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "curve_left": {
+        "command": [
+          0.15,
+          0.0,
+          0.3
+        ],
+        "mean_sustained_twist": [
+          0.13466109014474428,
+          0.005001588878626184,
+          0.3358132188948679
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "curve_right": {
+        "command": [
+          0.15,
+          0.0,
+          -0.3
+        ],
+        "mean_sustained_twist": [
+          0.129847632834258,
+          0.006845121684613192,
+          -0.3126315222336203
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "diagonal_left": {
+        "command": [
+          0.15,
+          0.07,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.13166797374446804,
+          0.09566226084162525,
+          -0.07661887521232734
+        ],
+        "passed": 4,
+        "trials": 4
+      },
+      "diagonal_right": {
+        "command": [
+          0.15,
+          -0.07,
+          0.0
+        ],
+        "mean_sustained_twist": [
+          0.10571015488096658,
+          -0.060211321016802405,
+          0.03880000738092118
+        ],
+        "passed": 4,
+        "trials": 4
+      }
+    }
+  },
+  "recovery": {
+    "recovery-nominal": {
+      "passed": 1,
+      "trials": 32
+    },
+    "recovery-randomized": {
+      "passed": 0,
+      "trials": 32
+    },
+    "recovery-baseline-nominal": {
+      "passed": 1,
+      "trials": 32
+    },
+    "recovery-baseline-randomized": {
+      "passed": 0,
+      "trials": 32
+    },
+    "recovery-physical-falls": {
+      "passed": 11,
+      "trials": 16
+    },
+    "recovery-baseline-physical-falls": {
+      "passed": 11,
+      "trials": 16
+    },
+    "limp-physical-falls": {
+      "passed": 0,
+      "trials": 16
+    }
+  },
+  "recorded_fall_distribution": {
+    "count": 16,
+    "tilt_range_deg": [
+      1.264703783653008,
+      89.20811211179827
+    ],
+    "height_range_m": [
+      0.038982026604345715,
+      0.0781554343866981
+    ],
+    "tilt_under_20_deg": 13
+  },
+  "payload_mass_kg": 0.44755573415024874,
+  "total_mass_kg": 1.1847989141502486,
+  "payload_increase_g": 5.4616529383956784,
+  "neutral_head_required": true,
+  "automatic_recovery_enabled": false
+}

@@ -1,0 +1,1829 @@
+{
+  "policy": "limp",
+  "revision": "v07",
+  "trials": [
+    {
+      "pose": "back",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 944,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.049981327779926525,
+        "head_height_m": 0.10911045477791191,
+        "tilt_deg": 15.462054853641831,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.4666969160907989
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.049981327779926525,
+        0.9904034883965651,
+        0.00481552164215771,
+        -0.1344365954744609,
+        0.031694521931465526,
+        0.0989617431787611,
+        0.3846259079347271,
+        -0.1496698188879221,
+        1.5715147002451266,
+        1.5711236260210724,
+        1.0478990623475832,
+        0.46696433760672135,
+        -0.018463768953304933,
+        0.0019207237966601786,
+        -0.1108488064563907,
+        -0.3846199031540645,
+        0.14989334728713427,
+        -1.5715084091268388,
+        -1.5711194256386567
+      ],
+      "final": {
+        "height_m": 0.04946696057286274,
+        "head_height_m": 0.10960129504554393,
+        "tilt_deg": 14.619453131376307,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.4628602524998118,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.049513197427127634,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0021373379314428955,
+      "payload_floor_fraction": 0.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 0.4628602524998118,
+      "payload_pairs": [
+        "easy_rear_battery_web_-1 / ",
+        "easy_rear_battery_web_1 / "
+      ],
+      "final_qpos": [
+        -0.00022599292973897748,
+        -7.556498625474698e-05,
+        0.04946696057286274,
+        0.9914008914663783,
+        0.004415851592464891,
+        -0.12715638107157376,
+        0.030594564993895654,
+        0.17539395729643179,
+        0.38463696042787804,
+        -0.16892660987797523,
+        1.571510051214327,
+        1.5710997047027635,
+        1.0479012586539596,
+        0.46698658229514667,
+        -0.018495829081351035,
+        0.0024119357341384523,
+        -0.18734976135266862,
+        -0.38463131963230146,
+        0.16923347559418392,
+        -1.5715052938212357,
+        -1.5711003393392886
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "back",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 945,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.04935753818030902,
+        "head_height_m": 0.10971137667188373,
+        "tilt_deg": 14.446710675945047,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.7889590701849629
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.04935753818030902,
+        0.9919772475153972,
+        -0.0010585028933645002,
+        -0.12573322421283073,
+        -0.013083436568739424,
+        0.23097594403712707,
+        0.38464839704707504,
+        -0.19360037352070783,
+        1.5714921535159607,
+        1.3680368429394756,
+        1.0479041736424726,
+        0.46731994856354375,
+        -0.027873421985642566,
+        -0.006333918326355933,
+        -0.24623833989334684,
+        -0.3846420270691245,
+        0.19469402001779756,
+        -1.5714823431068596,
+        -1.314328667419522
+      ],
+      "final": {
+        "height_m": 0.048966806222809904,
+        "head_height_m": 0.11005486591697913,
+        "tilt_deg": 13.821124396997993,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.7529836312030701,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.04900102759121381,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0021000545835280706,
+      "payload_floor_fraction": 0.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 0.8348658234047953,
+      "payload_pairs": [
+        "easy_rear_battery_web_-1 / ",
+        "easy_rear_battery_web_1 / "
+      ],
+      "final_qpos": [
+        -0.0002989589523597758,
+        -4.374393425748596e-05,
+        0.048966806222809904,
+        0.992636458895117,
+        -0.0011273615999055839,
+        -0.12031450991322729,
+        -0.014000294008557821,
+        0.29633019180433956,
+        0.38465579237729386,
+        -0.21008518584158756,
+        1.5714855255504023,
+        1.36952736863852,
+        1.0479046502258285,
+        0.4672907810734833,
+        -0.02775110543180359,
+        -0.004665418389862036,
+        -0.3111839205647619,
+        -0.38465070905739995,
+        0.21108307315434022,
+        -1.5714782755127323,
+        -1.3152294954766903
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "back",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 946,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.04997729990903525,
+        "head_height_m": 0.10910665265961969,
+        "tilt_deg": 15.457442654310256,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.8036239181920523
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.04997729990903525,
+        0.9899043179959778,
+        -0.005484668108216286,
+        -0.13437099349881057,
+        -0.044763777039064825,
+        0.09858199756313424,
+        0.3846269215342533,
+        -0.14974605941838623,
+        1.5715151948289288,
+        1.5711241149304507,
+        1.0478986079433343,
+        0.4668709427536453,
+        -0.008592602420888464,
+        0.009203745197672211,
+        -0.1476670082269652,
+        -0.3846211744465074,
+        0.1677094743010415,
+        -1.571491050441599,
+        -1.4157369851141341
+      ],
+      "final": {
+        "height_m": 0.04946243517927091,
+        "head_height_m": 0.10959780544541796,
+        "tilt_deg": 14.614405365805611,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.7815735317069313,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.04950904557342339,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.002136850645499561,
+      "payload_floor_fraction": 0.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 0.8194654200621891,
+      "payload_pairs": [
+        "easy_rear_battery_web_-1 / ",
+        "easy_rear_battery_web_1 / "
+      ],
+      "final_qpos": [
+        -0.0002480589842679519,
+        -0.00010294573155879768,
+        0.04946243517927091,
+        0.9907872618356682,
+        -0.0053848442202946295,
+        -0.12707529158685252,
+        -0.04651317560670296,
+        0.17489893213748198,
+        0.3846389249594661,
+        -0.16899473732006295,
+        1.5715115621760363,
+        1.5711006933440264,
+        1.0479008513529284,
+        0.46690157266397847,
+        -0.008770986047175442,
+        0.008621053401218796,
+        -0.22491992933914193,
+        -0.3846358067521603,
+        0.18744530504496204,
+        -1.5714869986799194,
+        -1.4178593458834625
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "back",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 947,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.04967889093185542,
+        "head_height_m": 0.10933364067610184,
+        "tilt_deg": 15.02535588178971,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.4709618520733617
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.04967889093185542,
+        0.9913531399961266,
+        -0.0029233885899455562,
+        -0.13071289962748678,
+        -0.011159905463148522,
+        0.1648957149282771,
+        0.3846295490761607,
+        -0.16014766115063608,
+        1.5715092364513954,
+        1.5711044546306354,
+        1.0478998336554948,
+        0.467003780654397,
+        0.02055826341147675,
+        -0.0015099465032781822,
+        -0.15431876524592653,
+        -0.3846278644716184,
+        0.17106597817168265,
+        -1.5714969504658252,
+        -1.4891354035343163
+      ],
+      "final": {
+        "height_m": 0.04918708036019527,
+        "head_height_m": 0.1097867490947121,
+        "tilt_deg": 14.22849803817063,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          ""
+        ],
+        "payload_floor": [],
+        "payload_internal": [
+          "easy_rear_battery_web_-1 / ",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 0.46197832449001996,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.049231981224516705,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0021122788809706736,
+      "payload_floor_fraction": 0.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 0.4662498904216056,
+      "payload_pairs": [
+        "easy_rear_battery_web_-1 / ",
+        "easy_rear_battery_web_1 / "
+      ],
+      "final_qpos": [
+        -0.0005531138293815535,
+        1.8983591739103153e-05,
+        0.04918708036019527,
+        0.9922444283576543,
+        -0.0027410553541669445,
+        -0.1238179245813822,
+        -0.01061143539281339,
+        0.24217586817165546,
+        0.38464343028130293,
+        -0.17946668178559494,
+        1.5715054925264624,
+        1.5710998024614218,
+        1.0479019187650143,
+        0.4670337266289795,
+        0.020523029708587832,
+        -0.0013674242594746051,
+        -0.22956325242520134,
+        -0.3846409171227937,
+        0.18974579282995788,
+        -1.5714911832308944,
+        -1.4969163722404428
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "front",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 940,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.05293157996013709,
+        "head_height_m": 0.16493312887410333,
+        "tilt_deg": 10.278390942959156,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.8803130995837707
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.05293157996013709,
+        0.9959621043934529,
+        -0.0005907544494245081,
+        0.0895736468039986,
+        0.005974899126941115,
+        -0.42671197079977974,
+        0.38494481808595454,
+        0.048471307535031476,
+        1.5721028727844517,
+        1.2859163461356629,
+        -0.024183386794298885,
+        0.6131313170086693,
+        -0.0019526721203240024,
+        0.00041634867898515936,
+        0.42477815109212175,
+        -0.3849577359438751,
+        -0.05343587315901293,
+        -1.5721148389896693,
+        -1.2809143776655845
+      ],
+      "final": {
+        "height_m": 0.05291092200314873,
+        "head_height_m": 0.16492532107621694,
+        "tilt_deg": 10.26460130384081,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.8885669939669958,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.052913668945266036,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0036325002300471856,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 1.9231846410815214,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        -2.5957424208491467e-05,
+        -1.1745378063128388e-06,
+        0.05291092200314873,
+        0.9959728027500347,
+        -0.000600382525262692,
+        0.08945386484469318,
+        0.005985130525859882,
+        -0.4299252091062611,
+        0.38493805274424925,
+        0.04049969813567216,
+        1.572091935214947,
+        1.294272090269934,
+        -0.02423227886888958,
+        0.6130400640573554,
+        -0.0019141496094045426,
+        0.0005087431678679097,
+        0.4272556687385038,
+        -0.3849630313369381,
+        -0.04713668267590798,
+        -1.5721235055257965,
+        -1.2876099039457964
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "front",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 941,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.04714581376225803,
+        "head_height_m": 0.1624567757994633,
+        "tilt_deg": 6.449291071133336,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "",
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.737366667234899
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.04714581376225803,
+        0.9982700472017101,
+        -0.0009993449868396377,
+        0.056242051271519586,
+        0.01710981701434455,
+        -0.4365290329267453,
+        0.3849120727341671,
+        -0.40152337458627774,
+        1.571481532878119,
+        0.33092582367109247,
+        -0.024660300785518324,
+        0.6131237091875948,
+        0.0010366325498708882,
+        -1.0175284559681425e-05,
+        0.43652270606987575,
+        -0.3848895604005869,
+        0.40158789566175784,
+        -1.571472039098281,
+        -0.3311117198459358
+      ],
+      "final": {
+        "height_m": 0.047129537881656296,
+        "head_height_m": 0.16244938959403438,
+        "tilt_deg": 6.4372094103931214,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "",
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.6861410534741836,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.047130651742336306,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0021786564022473567,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 1.7447077123908297,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        6.078926116415498e-07,
+        -2.7985078611076102e-09,
+        0.047129537881656296,
+        0.9982759652929057,
+        -0.0009973318872222524,
+        0.05613689409687502,
+        0.0171099844763885,
+        -0.43654119790070506,
+        0.3849211176716064,
+        -0.4002758396114558,
+        1.5714568940857088,
+        0.32901913544329997,
+        -0.024482907135865914,
+        0.6135086657923456,
+        0.0010739181287321093,
+        0.0003872621986196075,
+        0.4365347270377454,
+        -0.38489765220139316,
+        0.4003294662908298,
+        -1.5714470574397446,
+        -0.3291928598499732
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "front",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 942,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.05305220061847316,
+        "head_height_m": 0.1649896220068864,
+        "tilt_deg": 10.346305854124203,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_jetson",
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_jetson",
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.263742396124603
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.05305220061847316,
+        0.995926077195966,
+        8.868998944503731e-05,
+        0.09016580962293075,
+        -0.0011694743183063225,
+        -0.3435680058643291,
+        0.3849910977304962,
+        0.27264093930737426,
+        1.572054123262431,
+        1.0588724599125465,
+        -0.024306866832798653,
+        0.6129646699245749,
+        -0.0018493627516169668,
+        0.000558598573214886,
+        0.3421443147098847,
+        -0.3849530354670232,
+        -0.27650660842037433,
+        -1.5720103440527078,
+        -1.0548467106217831
+      ],
+      "final": {
+        "height_m": 0.053047598586767004,
+        "head_height_m": 0.16498716050412648,
+        "tilt_deg": 10.343833574683098,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_jetson",
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_jetson",
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.2810819235177173,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.05304806314417101,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0036725772279897167,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 1.2810819235177173,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_jetson",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        8.042730107917692e-06,
+        3.583466614526271e-07,
+        0.053047598586767004,
+        0.995928013624385,
+        8.87546888156901e-05,
+        0.09014439595951962,
+        -0.0011711865283181692,
+        -0.34328988458774184,
+        0.38498811893120866,
+        0.2734892506374392,
+        1.572047684764808,
+        1.0610810514810383,
+        -0.024364670258302086,
+        0.6128714060220659,
+        -0.0018104476580892272,
+        0.0006501449210452744,
+        0.3418740721687707,
+        -0.3849504785397421,
+        -0.277335271694035,
+        -1.5720042978041755,
+        -1.0570039513674014
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "front",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 943,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.05275873241842111,
+        "head_height_m": 0.16490931325934144,
+        "tilt_deg": 10.099250283533175,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.406385189541963
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.05275873241842111,
+        0.9961184829784874,
+        -0.0014815336354560907,
+        0.08800601321200414,
+        0.0008453196149687476,
+        -0.38133825573160446,
+        0.3845367701997119,
+        -0.1929316548371029,
+        1.5715463061797188,
+        1.5107038339290926,
+        -0.02546410856546355,
+        0.6123086007819539,
+        0.000492399561415609,
+        -0.0005642400879111334,
+        0.40559487636549535,
+        -0.38555291623494586,
+        -0.10256264464690192,
+        -1.5727759785098616,
+        -1.2564311397082082
+      ],
+      "final": {
+        "height_m": 0.052470130135770635,
+        "head_height_m": 0.16487105166259702,
+        "tilt_deg": 9.829053480419661,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.311532096300856,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.052490847352823,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0035324755609363848,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 3.381645302495161,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        -0.000673904939957037,
+        0.00022751188033570202,
+        0.052470130135770635,
+        0.9963235681984158,
+        -0.002413917646305893,
+        0.08563544802339491,
+        -0.0003008252072989325,
+        -0.38355192309855957,
+        0.3845436297040475,
+        -0.25795697997955197,
+        1.5715284620058994,
+        1.5711408190674505,
+        -0.025311038413404128,
+        0.6126401069466076,
+        0.0005581135309444241,
+        -0.00017907948343696988,
+        0.4367135407205901,
+        -0.3855222113463491,
+        -0.020933190785569267,
+        -1.572766625076308,
+        -1.3462103944963808
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "left",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 948,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.038982026604345715,
+        "head_height_m": 0.15355670127443688,
+        "tilt_deg": 1.264703783653008,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.6458574057313027
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.038982026604345715,
+        0.9959365453221479,
+        -0.0010215123066502905,
+        0.010988604388588482,
+        0.0893789951721622,
+        0.031334708399992126,
+        0.38481731597855556,
+        1.5715990008597671,
+        1.5701626969200784,
+        -0.022553680364910705,
+        0.3401939099749853,
+        1.1764951292956487,
+        -0.0004919873381261807,
+        -0.007494817709413465,
+        -0.030609386009817552,
+        -0.3848009178245401,
+        -1.5715858463687626,
+        -1.5702199921962119,
+        0.02241145401425206
+      ],
+      "final": {
+        "height_m": 0.03897092667376705,
+        "head_height_m": 0.14665290587433022,
+        "tilt_deg": 1.2538259783206582,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_side_arm_-1 / ",
+          "easy_side_arm_1 / ",
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.4768125159359415,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.03897166848353302,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0008905131318527815,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 0.986,
+      "peak_payload_contact_force_n": 1.832693327346409,
+      "payload_pairs": [
+        "easy_side_arm_-1 / ",
+        "easy_side_arm_1 / ",
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        1.0756515261523073e-05,
+        2.290930633778685e-06,
+        0.03897092667376705,
+        0.9959377358366923,
+        -0.001013553551594256,
+        0.010894655302732655,
+        0.08937732112519753,
+        0.03084322667781797,
+        0.3848439724472511,
+        1.5716182912580678,
+        1.5686909556059954,
+        -0.023880582347007243,
+        0.6347848553368961,
+        1.4934089252444775,
+        1.706080357400014e-06,
+        1.2137052933442236e-05,
+        -0.030136634914280896,
+        -0.3848268973280925,
+        -1.5716060239466394,
+        -1.5687804332070574,
+        0.023696703872605984
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "left",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 949,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.05215383227491572,
+        "head_height_m": 0.1641927478997395,
+        "tilt_deg": 9.090012530495732,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.1459237987111415
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.05215383227491572,
+        0.9951290486303856,
+        -0.015047758206661122,
+        0.07780021033233701,
+        0.058641869148101336,
+        -0.10822625206034292,
+        0.3846230054612299,
+        0.7154925073478957,
+        1.5715809885249579,
+        0.6965185329379232,
+        0.16590166471000709,
+        0.9433244149141395,
+        -0.0029421213035460384,
+        -0.026548424729871498,
+        0.3485584668663718,
+        -0.3854769657306358,
+        -0.2590695323625481,
+        -1.5726991819138563,
+        -1.1223718574360768
+      ],
+      "final": {
+        "height_m": 0.05203739209684138,
+        "head_height_m": 0.16328007940863876,
+        "tilt_deg": 8.91870084590444,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.003585537123979,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.05206281221474779,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0034697177832857737,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 3.151351701351547,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        -3.346373427666525e-05,
+        0.00021497978911571268,
+        0.05203739209684138,
+        0.9952710485640062,
+        -0.01653470797573899,
+        0.07597326351209673,
+        0.05822548027953819,
+        -0.11090183351013937,
+        0.38465029691903296,
+        0.743065552882241,
+        1.5716087297526309,
+        0.6887289834662452,
+        0.264003533239029,
+        1.0805281771047275,
+        -0.0027921633050696673,
+        -0.02621183636738492,
+        0.34900129598720775,
+        -0.38547449799727934,
+        -0.257796914943671,
+        -1.5726676723940787,
+        -1.1284460055192134
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "left",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 950,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.038989305424816656,
+        "head_height_m": 0.1548561421088669,
+        "tilt_deg": 1.269799577412887,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.6569641864944438
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.038989305424816656,
+        0.9976071242911939,
+        -0.0007859772924540858,
+        0.01105245030549891,
+        0.06824405575136085,
+        0.04649201118736875,
+        0.3848149286502461,
+        1.5715980133196001,
+        1.57010416772306,
+        -0.022683928248914083,
+        0.26550363226595675,
+        1.0819079512418042,
+        0.0016452109858441418,
+        0.004644149870684943,
+        -0.04064077991637715,
+        -0.38479380412109254,
+        -1.5715794484828658,
+        -1.5701437088000052,
+        0.022597350510879504
+      ],
+      "final": {
+        "height_m": 0.03897676860345203,
+        "head_height_m": 0.14664929615456637,
+        "tilt_deg": 1.2572548569279975,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_side_arm_-1 / ",
+          "easy_side_arm_1 / ",
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.4024052171150125,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.03897733700232566,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0008911537722149077,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 0.988,
+      "peak_payload_contact_force_n": 1.6468979277130669,
+      "payload_pairs": [
+        "easy_side_arm_-1 / ",
+        "easy_side_arm_1 / ",
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        9.949700565180028e-06,
+        1.6630259985663231e-06,
+        0.03897676860345203,
+        0.9976084366070408,
+        -0.0007788541111856347,
+        0.010943756879784158,
+        0.06824247051570133,
+        0.045994598936233484,
+        0.3848480236112248,
+        1.5716222948146357,
+        1.5686321449784906,
+        -0.023988402446145488,
+        0.6354441108645713,
+        1.4933451471148271,
+        0.0016450380933908128,
+        0.00023009382336216142,
+        -0.040168648574762406,
+        -0.3848260317234276,
+        -1.5716057388458236,
+        -1.568711175105895,
+        0.023820560397365666
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "left",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 951,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.03905139547629096,
+        "head_height_m": 0.15801011249767694,
+        "tilt_deg": 1.308208162836227,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.6758426017119294
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.03905139547629096,
+        0.9984152428435645,
+        -0.0006693158952290378,
+        0.011396623818452177,
+        0.055106005474887775,
+        0.045636142237789154,
+        0.3848240127332094,
+        1.5715268090948398,
+        1.571023975258868,
+        -0.002874714869231288,
+        -0.02379534854661824,
+        0.6139270535332397,
+        0.0016188703824186537,
+        0.0005024070423889097,
+        -0.04565478183307917,
+        -0.38481230918563314,
+        -1.571519491903335,
+        -1.5710211288547795,
+        0.0018374693916571457
+      ],
+      "final": {
+        "height_m": 0.038998270050190964,
+        "head_height_m": 0.1579745652368739,
+        "tilt_deg": 1.2777880794193184,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.7328774825637734,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.03899852704162819,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0008934005960513025,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 1.7332609986548935,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        -0.00011432369650228396,
+        -1.3384099971559716e-05,
+        0.038998270050190964,
+        0.9984183106001425,
+        -0.0006422177503833841,
+        0.01113206196721107,
+        0.05510482566051463,
+        0.04513533833031483,
+        0.38478899171450187,
+        1.5715766142156045,
+        1.5696825143220972,
+        -0.02326227100324363,
+        -0.023718092136392106,
+        0.6142197419902059,
+        0.0014339097751897868,
+        0.0007523148349380569,
+        -0.0451653645782332,
+        -0.38477689247806984,
+        -1.5715687929577487,
+        -1.5697172869829614,
+        0.023113360105878517
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "right",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 952,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.03899571796353128,
+        "head_height_m": 0.15694733118976684,
+        "tilt_deg": 1.275181958901221,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.699419724621921
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.03899571796353128,
+        0.9984676893377753,
+        0.0005722725892008234,
+        0.011113131866785388,
+        -0.05420741787504416,
+        0.045267292506075786,
+        0.3847986849235841,
+        1.5715842035139516,
+        1.5703848141557746,
+        -0.022508164722079147,
+        0.10969561833365618,
+        0.8557504442483373,
+        -3.318264109854667e-05,
+        0.0020057724434691783,
+        -0.045362893276631344,
+        -0.38478513481425475,
+        -1.571573137032699,
+        -1.570404879270261,
+        0.022403580162600172
+      ],
+      "final": {
+        "height_m": 0.0389888462609259,
+        "head_height_m": 0.15448868339143743,
+        "tilt_deg": 1.2691829949462077,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 1.6504232811887714,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.03898970660218339,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0008924868738095682,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 1.702207476618153,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        7.308630651470887e-06,
+        -4.66616102674298e-06,
+        0.0389888462609259,
+        0.9984697886371173,
+        0.0005637802332861083,
+        0.011061664871864715,
+        -0.05417935862540742,
+        0.0447910822364908,
+        0.3848139454425291,
+        1.5715964442669257,
+        1.568971118096335,
+        -0.023837359808024573,
+        0.28750883184324244,
+        1.1109529426043012,
+        -1.2096306677584832e-05,
+        0.0023982828766876702,
+        -0.04490181106384227,
+        -0.3847982513632957,
+        -1.571585373077098,
+        -1.5690171135355664,
+        0.023688607512800563
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "right",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 953,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.0781554343866981,
+        "head_height_m": 0.1606937170355654,
+        "tilt_deg": 42.9776821204759,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.71406647067107
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.0781554343866981,
+        0.9291847432727902,
+        -0.3531071955772076,
+        0.09749695930326525,
+        -0.04924798703801785,
+        -0.4370756149258422,
+        0.38593617979429506,
+        0.029991256579763027,
+        1.5732967589677913,
+        1.0895181619181695,
+        0.11570146793978985,
+        0.8647227078158136,
+        0.011010980839678672,
+        0.06987177839063555,
+        -0.017285943157082866,
+        0.34157090121975947,
+        0.315371316578102,
+        -0.34331887152221113,
+        -0.30929064302234865
+      ],
+      "final": {
+        "height_m": 0.07816201439304693,
+        "head_height_m": 0.1604911771661634,
+        "tilt_deg": 42.993324731848034,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.715889694064291,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.07816153926729678,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0017161827244660355,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 3.8324673651043666,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        1.736878428503905e-05,
+        -2.4063753652343654e-05,
+        0.07816201439304693,
+        0.9291503441012732,
+        -0.353267109269665,
+        0.09739497097996246,
+        -0.04895106937087636,
+        -0.4370847719880831,
+        0.38594405340742227,
+        0.029810943529449897,
+        1.5733092406292284,
+        1.0895790553081819,
+        0.16593734503166593,
+        0.9427834274880555,
+        0.015960769633660287,
+        0.10695954296824092,
+        -0.01792280354326412,
+        0.3427346803723283,
+        0.3149173074203037,
+        -0.3431077407331953,
+        -0.31155938559807056
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "right",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 954,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.07013646688619025,
+        "head_height_m": 0.07859334404773657,
+        "tilt_deg": 89.20811211179827,
+        "standing": false,
+        "sitting": false,
+        "both_feet": false,
+        "props": [
+          "",
+          "easy_converter_pad",
+          "easy_corner_gate_screw_boss_1",
+          "easy_front_dock_1"
+        ],
+        "payload_floor": [
+          "floor / easy_converter_pad",
+          "floor / easy_corner_gate_screw_boss_1",
+          "floor / easy_front_dock_1"
+        ],
+        "payload_internal": [],
+        "max_payload_force_n": 5.830056200949526
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.07013646688619025,
+        0.7058234704987771,
+        -0.6892687010043393,
+        0.13415793721439118,
+        -0.0933998618373178,
+        0.09579587974875461,
+        -0.017241128147961495,
+        -0.030176036173824316,
+        1.5696883102727381,
+        0.32705425406404887,
+        0.08193272550429705,
+        0.565203641912032,
+        0.47824600329127587,
+        0.0590750709064933,
+        -0.020729874930424882,
+        0.38460829899869475,
+        0.37411181634228047,
+        -0.35336014987405095,
+        -0.30645685797276573
+      ],
+      "final": {
+        "height_m": 0.0701323454671545,
+        "head_height_m": 0.0786093429247426,
+        "tilt_deg": 89.19875443525775,
+        "standing": false,
+        "sitting": false,
+        "both_feet": false,
+        "props": [
+          "",
+          "easy_converter_pad",
+          "easy_corner_gate_screw_boss_1",
+          "easy_front_dock_1"
+        ],
+        "payload_floor": [
+          "floor / easy_converter_pad",
+          "floor / easy_corner_gate_screw_boss_1",
+          "floor / easy_front_dock_1"
+        ],
+        "payload_internal": [],
+        "max_payload_force_n": 5.827729826543271,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.07013264997926356,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 5.721383504790372e-08,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 0.05,
+      "peak_payload_contact_force_n": 5.842912574197958,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_converter_pad",
+        "floor / easy_corner_gate_screw_boss_1",
+        "floor / easy_front_dock_1"
+      ],
+      "final_qpos": [
+        -6.467262373682292e-06,
+        6.284811077522531e-06,
+        0.0701323454671545,
+        0.7058777757045437,
+        -0.6892070434292177,
+        0.1341703862483243,
+        -0.0934265728149,
+        0.09826983058438392,
+        -0.01665166557284432,
+        -0.03012897699057578,
+        1.5696828346737366,
+        0.32703976568189796,
+        0.08091501632315548,
+        0.5652707253311708,
+        0.47865740466962414,
+        0.06119243083507184,
+        -0.019341721378492306,
+        0.38460853494887104,
+        0.375437304364811,
+        -0.35209136617680814,
+        -0.30674525311304207
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    },
+    {
+      "pose": "right",
+      "variant": "loaded",
+      "revision": "v07",
+      "seed": 955,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 10.0,
+      "mass_kg": 1.1847989141502486,
+      "initial": {
+        "height_m": 0.07814906266583677,
+        "head_height_m": 0.16123470092584732,
+        "tilt_deg": 42.71608150352839,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.8065220630805863
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.07814906266583677,
+        0.9312015842539411,
+        -0.35418182506067153,
+        0.08481223537348744,
+        -0.015024280701408679,
+        -0.43731503711799297,
+        0.3858633786199755,
+        -0.011722593316736007,
+        1.5733209332271703,
+        1.1365411788214488,
+        0.0584368548506866,
+        0.7679695665960314,
+        0.008987110496493464,
+        0.0551245369111272,
+        -0.07206834811219662,
+        0.3840735917962817,
+        0.29621988349339373,
+        -0.45466114181906453,
+        -0.3443919836996777
+      ],
+      "final": {
+        "height_m": 0.07813203390738767,
+        "head_height_m": 0.16108740433078478,
+        "tilt_deg": 42.6948224351029,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "easy_tray_plate"
+        ],
+        "payload_floor": [
+          "floor / easy_tray_plate"
+        ],
+        "payload_internal": [
+          "easy_tray_plate / "
+        ],
+        "max_payload_force_n": 3.746211398174135,
+        "time_s": 10.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 0.0,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.0,
+      "final_mean_height_m": 0.07813381431288899,
+      "sit_mean_height_m": null,
+      "sit_mean_tilt_deg": null,
+      "sit_quality": 0.0,
+      "final_quality": 0.0017837863773193163,
+      "payload_floor_fraction": 1.0,
+      "payload_internal_fraction": 1.0,
+      "peak_payload_contact_force_n": 3.8026394968034745,
+      "payload_pairs": [
+        "easy_tray_plate / ",
+        "floor / easy_tray_plate"
+      ],
+      "final_qpos": [
+        2.2364877170683363e-05,
+        -2.036848891152922e-05,
+        0.07813203390738767,
+        0.9312690550490877,
+        -0.35402593372379637,
+        0.08472123013874112,
+        -0.015029920916311654,
+        -0.437321689422762,
+        0.38587167423088053,
+        -0.009566470010330414,
+        1.5733257153473115,
+        1.1366454626776337,
+        0.11430445228320481,
+        0.8626686836349301,
+        0.01427997364467687,
+        0.09468727113096567,
+        -0.07286059319271455,
+        0.38404682009455676,
+        0.29556671540632123,
+        -0.4549001394230574,
+        -0.3468569101832304
+      ],
+      "first_full_stand_s": null,
+      "sitstand_passed": false
+    }
+  ]
+}

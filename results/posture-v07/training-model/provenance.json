@@ -1,0 +1,26 @@
+{
+  "role": "Exact compiled collision-enabled model used for the v07 CEM studies, before front hooks moved onto the removable gate.",
+  "mujoco_version": "3.10.0",
+  "uncompressed_sha256": "0297682544835250f3b8c0372d109bcd87d38e548473042b5c8a69f2fd8ce139",
+  "compressed_bytes": 52217558,
+  "revision": "v07-training-iteration1",
+  "equivalence_checks": [
+    {
+      "pose": "sitstand",
+      "seed": 0,
+      "exact_metrics_and_qpos_equal": true
+    },
+    {
+      "pose": "front",
+      "seed": 1,
+      "exact_metrics_and_qpos_equal": true
+    },
+    {
+      "pose": "back",
+      "seed": 0,
+      "exact_metrics_and_qpos_equal": true
+    }
+  ],
+  "compressed_sha256": "2a78034ffd7be5879f52e81609efc80bb2b60f117fd8fca11518249aacc7ba4d",
+  "scope": "Exact self-contained compiled training model retained; requires pinned MuJoCo 3.10.0. Final geometry is separately rebuilt and evaluated."
+}

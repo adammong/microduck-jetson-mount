@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "policy": "walking-adjusted",
+      "samples": 1000,
+      "maximum_action_error_rad": 2.9802322387695312e-08,
+      "base_tensors_unchanged": true
+    },
+    {
+      "policy": "recovery-candidate",
+      "samples": 1000,
+      "maximum_action_error_rad": 1.1920928955078125e-07,
+      "base_tensors_unchanged": true
+    }
+  ]
+}

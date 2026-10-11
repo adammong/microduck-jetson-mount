@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "moving": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.17469771772623063,
+      -0.0025418459041975437,
+      -0.0676985649193418
+    ],
+    "command": [
+      0.20000000298023224,
+      0.0,
+      0.0
+    ],
+    "seconds": 2.4199999999999706,
+    "paused": false,
+    "simulation_only": true,
+    "revision": "v07",
+    "mass_kg": 1.1847989141502486,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "99a3a0ca9bd13f6a36d3e25fbe6fe86e3bc721cd115bba6564564ba121afa346"
+  },
+  "stopped": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      -0.0002405692296451889,
+      0.0003968917587189935,
+      -0.012302584363191269
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 3.9199999999999386,
+    "paused": false,
+    "simulation_only": true,
+    "revision": "v07",
+    "mass_kg": 1.1847989141502486,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "99a3a0ca9bd13f6a36d3e25fbe6fe86e3bc721cd115bba6564564ba121afa346"
+  }
+}

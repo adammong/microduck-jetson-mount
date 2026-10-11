@@ -8,8 +8,8 @@ from microduck_local.behaviors.getup import _getup_spawn,_getup_place
 from evaluate import scene
 from evaluate_motion import session
 
-def environment(seed,randomized=False,payload_scale=1.,variant='loaded'):
-    path=scene(variant,rev='v06');model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
+def environment(seed,randomized=False,payload_scale=1.,variant='loaded',revision='v06'):
+    path=scene(variant,rev=revision);model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
     assert .8<=payload_scale<=1.2
     if variant=='loaded':
         body=model.body('easy_mount_payload').id;model.body_mass[body]*=payload_scale;model.body_inertia[body]*=payload_scale
@@ -60,8 +60,8 @@ def state(env):
     sitting=bool(height<.07 and tilt<35 and c['props'] and not c['payload_floor'] and not c['payload_internal'])
     return dict(height_m=height,head_height_m=jaw,tilt_deg=tilt,standing=standing,sitting=sitting,**c)
 
-def trial(actor,pose,seed,randomized=False,payload_scale=1.,render=None,replay=None,seconds=None,variant='loaded'):
-    env=environment(seed,randomized,payload_scale,variant)
+def trial(actor,pose,seed,randomized=False,payload_scale=1.,render=None,replay=None,seconds=None,variant='loaded',revision='v06'):
+    env=environment(seed,randomized,payload_scale,variant,revision)
     if replay is None:spawn(env,pose)
     else:
         replay=np.asarray(replay,float)
@@ -85,13 +85,13 @@ def trial(actor,pose,seed,randomized=False,payload_scale=1.,render=None,replay=N
             from PIL import Image,ImageDraw
             camera.lookat[:]=[env.data.qpos[0],env.data.qpos[1],.14];renderer.update_scene(env.data,camera=camera,scene_option=options)
             frame=Image.fromarray(renderer.render());draw=ImageDraw.Draw(frame);draw.rectangle((0,0,640,64),fill='#141414')
-            draw.text((8,5),f'v06 mount | {pose} | seed {seed} | t={t:.2f}s',fill='white')
+            draw.text((8,5),f'{revision} mount | {pose} | seed {seed} | t={t:.2f}s',fill='white')
             draw.text((8,25),f'height {r["height_m"]:.3f}m | tilt {r["tilt_deg"]:.1f} | stand {r["standing"]} | sit {r["sitting"]}',fill='white')
             draw.text((8,45),f'BAM 1.75 A, no assistance | mount floor {bool(r["payload_floor"])}',fill='white');frames.append(frame)
     stand=np.array([r['standing'] for r in rows]);sit=np.array([r['sitting'] for r in rows]);run=best=0
     for value in stand:run=run+1 if value else 0;best=max(best,run)
     final_stand=bool(stand[-100:].all());sit_hold=bool(sit[400:550].all()) if pose=='sitstand' else False
-    result=dict(pose=pose,variant=variant,seed=seed,randomized=randomized,payload_scale=payload_scale,seconds=seconds,mass_kg=float(env.model.body_mass.sum()),initial=initial,initial_qpos=initial_qpos,final=rows[-1],
+    result=dict(pose=pose,variant=variant,revision=revision,seed=seed,randomized=randomized,payload_scale=payload_scale,seconds=seconds,mass_kg=float(env.model.body_mass.sum()),initial=initial,initial_qpos=initial_qpos,final=rows[-1],
         recovered=final_stand and best>=150,full_stand_streak_s=best*.02,sit_hold=sit_hold,sit_fraction=float(sit[250:550].mean()) if pose=='sitstand' else 0.,
         stand_fraction=float(stand.mean()),final_mean_height_m=float(np.mean([r['height_m'] for r in rows[-100:]])),
         sit_mean_height_m=float(np.mean([r['height_m'] for r in rows[250:550]])) if pose=='sitstand' else None,
@@ -116,13 +116,13 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--policy',required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--poses',nargs='+',choices=['stand','sitstand','back','front','left','right'],default=['back','front','left','right'])
     ap.add_argument('--seed-start',type=int,default=100);ap.add_argument('--seeds',type=int,default=4);ap.add_argument('--noise-dr',action='store_true')
-    ap.add_argument('--payload-scales',type=float,nargs='+',default=[1.]);ap.add_argument('--render',action='store_true');a=ap.parse_args()
+    ap.add_argument('--payload-scales',type=float,nargs='+',default=[1.]);ap.add_argument('--render',action='store_true');ap.add_argument('--revision',default='v06');a=ap.parse_args()
     actor='limp' if a.policy=='limp' else session(a.policy);rows=[];a.out.parent.mkdir(parents=True,exist_ok=True)
     for pose in a.poses:
         for seed in range(a.seed_start,a.seed_start+a.seeds):
             for scale in a.payload_scales:
                 dest=a.out.parent/(a.out.stem+f'-{pose}-{seed}-{scale:g}') if a.render and seed==a.seed_start else None
-                r=trial(actor,pose,seed,a.noise_dr,scale,render=dest);rows.append(r)
+                r=trial(actor,pose,seed,a.noise_dr,scale,render=dest,revision=a.revision);rows.append(r)
                 a.out.write_text(json.dumps(dict(policy=a.policy,trials=rows),indent=2)+'\n')
                 print(pose,seed,scale,r['recovered'],r['sitstand_passed'],round(r['final_mean_height_m'],3),round(r['payload_floor_fraction'],3),flush=True)
 if __name__=='__main__':main()

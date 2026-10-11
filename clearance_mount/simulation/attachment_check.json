@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "units": "mm",
+  "reference_shell_sample_points": 68425,
+  "paths": [
+    {
+      "print": "saddle",
+      "steps": 17,
+      "shift_x_limits_mm": [
+        -80.0,
+        0.0
+      ],
+      "shell_points_tested": 390633,
+      "interferences": []
+    },
+    {
+      "print": "front_gate",
+      "steps": 13,
+      "shift_x_limits_mm": [
+        60.0,
+        0.0
+      ],
+      "shell_points_tested": 6404,
+      "interferences": []
+    }
+  ],
+  "scope": "5mm translation samples against pinned shell vertices/face centers, saved CAD solids. Gate and screws removed for saddle installation. Does not prove all triangle interiors, tolerance/foam compression, grip force, production fit or physical assembly."
+}

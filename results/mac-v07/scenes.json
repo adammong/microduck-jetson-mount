@@ -1,0 +1,30 @@
+[
+  {
+    "variant": "stock",
+    "contacts": "walk",
+    "source": "simulation/reference/robot_walk.xml",
+    "source_sha256": "80fc4424ed71e430ec4919110dfdb5c714dc1c4e1138e1832a16865cf31eb8c8",
+    "scene": "tmp/mac-models/v07/stock/src/mjlab_microduck/robot/microduck/scene_feet_only.xml"
+  },
+  {
+    "variant": "stock",
+    "contacts": "groundcontact",
+    "source": "simulation/reference/robot_groundcontact.xml",
+    "source_sha256": "99d23867e46e9d4748ff1398016b850f09fb6cf02a558c0272743b39ce3acf15",
+    "scene": "tmp/mac-models/v07/stock/src/mjlab_microduck/robot/microduck/scene_walk.xml"
+  },
+  {
+    "variant": "loaded",
+    "contacts": "walk",
+    "source": "clearance_mount/simulation/microduck_easy_mount_walk.xml",
+    "source_sha256": "f10b24363fb5177c8ccca147de248ad2c4edc6beda5786be367237f428b6a318",
+    "scene": "tmp/mac-models/v07/loaded/src/mjlab_microduck/robot/microduck/scene_feet_only.xml"
+  },
+  {
+    "variant": "loaded",
+    "contacts": "groundcontact",
+    "source": "clearance_mount/simulation/microduck_easy_mount_groundcontact.xml",
+    "source_sha256": "de9650e50cb6e80f9dabdb699282a41476fe2634707aa50c68e1587c84c3110d",
+    "scene": "tmp/mac-models/v07/loaded/src/mjlab_microduck/robot/microduck/scene_walk.xml"
+  }
+]

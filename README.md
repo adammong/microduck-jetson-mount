@@ -1,10 +1,22 @@
 # MicroDuck Jetson Orin Nano mount
 
-Parametric CAD, printable parts, assembled previews and MuJoCo models for an external MicroDuck compute mount. Current design: **v06**, with the Jetson low in front, ports upward, and a **GNB8504S60AHV 4S LiHV 850 mAh battery** behind the torso to balance it.
+Parametric CAD, printable parts, assembled previews and MuJoCo models for an external MicroDuck compute mount. Current design: **v07**, with a raised front Jetson (ports upward) and a raised rear **GNB8504S60AHV 4S LiHV 850 mAh battery**, leaving room for folded legs.
 
-![MicroDuck with the balanced v06 mount](docs/v06-robot.png)
+![MicroDuck with the v07 clearance mount](docs/v07-robot.png)
 
-## Sit/stand and floor recovery — experimental
+## v07 sitting, standing and walking
+
+[![Mounted sit/stand simulation](docs/v07-sitstand.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/posture-v07/sitstand-demo.mp4)
+
+The revised mount and calibrated posture policy pass **16/16 fresh sit/stand cycles** with collisions active, including noise, randomized physics and ±10% payload mass. The adapted walking policy passes **88/88 fresh 15-second trials** across 11 movement/stop commands. These are limited simulation tests. Head pitch stays neutral, and the two policies have separate command interfaces; automatic switching is not enabled.
+
+The mount uses removable front hooks and thumb screws; the Jetson's OEM base slides into a separate removable tray. Estimated payload is **447.6 g**, about **5.5 g more than v06**. General fall recovery remains unreliable: the new candidate matches the official baseline at **1/64 synthetic fallen starts** and **11/16 recorded fall poses**; many recordings are upright collapsed poses. It is rejected as a general recovery policy. Hardware fit, strength and performance are untested.
+
+[19-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v07/sitstand-demo.mp4) · [Sit/stand ONNX](results/posture-v07/policies/sitstand/policy.onnx) · [Walking ONNX](results/posture-v07/policies/walking-adjusted/policy.onnx) · [Tests and reproduction](results/posture-v07/REPORT.md) · [Assembly and print files](clearance_mount/README.md).
+
+**Try walking on the Mac:** after [setup](training/README.md), run `OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/posture-v07/policies/walking-adjusted/policy.onnx`, then open http://127.0.0.1:8798. W/S, A/D and Q/E move/turn; Space stops. The earlier v06 studies below remain historical comparisons.
+
+## v06 sit/stand and floor recovery — previous mount
 
 [![Successful mounted front-recovery attempt](docs/v06-policy-front-recovery.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/posture-v06/front-recovery-success.mp4)
 
@@ -12,7 +24,7 @@ The trained recovery candidate improves paired front-recovery tests from **3/16 
 
 [Successful MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/front-recovery-success.mp4) · [Failed MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/front-recovery-failure.mp4) · [Sit/stand interference](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/sitstand-interference.mp4) · [Candidate ONNX](results/posture-v06/policies/front-recovery-candidate/policy.onnx) · [Measurements and reproduction](results/posture-v06/REPORT.md).
 
-## Slow movement, stopping and push recovery
+## v06 slow movement, stopping and push recovery
 
 [![Mounted slow-turn and push-recovery simulation](docs/v06-policy-precision.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/precision-v06/motion-demo.mp4)
 
@@ -22,7 +34,7 @@ With the **v06 mount included**, the new controller reduces average slow-command
 
 [Full 35-second MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/precision-v06/motion-demo.mp4) · [15-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/precision-v06/policy-15s.mp4) · [Selected ONNX](results/precision-v06/policies/selected/policy.onnx) · [Measurements and limitations](results/precision-v06/REPORT.md). The continuous GIF/short clip shows slow right turning, stopping and two 4 N side pushes in simulation.
 
-## Directional control
+## v06 directional control
 
 [![Directional-control highlights](docs/v06-policy-directional.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/motion-v06/motion-demo.mp4)
 
@@ -32,7 +44,7 @@ The new **Mac-calibrated directional policy** supports forward/backward, sideste
 
 [Full directional video](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/motion-v06/motion-demo.mp4) · [Selected ONNX](results/motion-v06/policies/selected/policy.onnx) · [Measurements, training and limitations](results/motion-v06/REPORT.md).
 
-## Faster walking video
+## v06 faster walking video
 
 [![Faster walking policy on the loaded v06 robot](docs/v06-policy-fast-walking.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/speed-v06/fast-walking.mp4)
 
@@ -48,20 +60,21 @@ Original policy comparison:
 
 ## Start here
 
-- [Assembly, hardware, printing and limitations](easy_mount/README.md)
+- [Current assembly, hardware, printing and limitations](clearance_mount/README.md)
+- [Previous v06 assembly](easy_mount/README.md)
 - [Wiring and compute-board access](easy_mount/WIRING.md)
 - [Battery selection and runtime assumptions](easy_mount/battery_selection.json)
-- [Complete robot preview](easy_mount/GLB/microduck_easy_mount_v06.glb)
-- [Editable CAD assembly](easy_mount/STEP/easy_mount_assembly.step)
-- [Five print STLs](easy_mount/STL/)
-- [MuJoCo models and validation reports](easy_mount/simulation/)
+- [Complete robot preview](clearance_mount/GLB/microduck_easy_mount_v07.glb)
+- [Editable CAD assembly](clearance_mount/STEP/easy_mount_assembly.step)
+- [Five print STLs](clearance_mount/STL/)
+- [MuJoCo models and validation reports](clearance_mount/simulation/)
 - [Mac simulation and training](training/README.md) · [Faster walking results](results/speed-v06/REPORT.md) · [v06 simulation findings](results/mac-v06/REPORT.md) · [historical v05 findings](results/mac-v05/REPORT.md)
 
-The estimated payload is **442.1 g**, including **120.1 g** fully dense PETG and estimated ancillary hardware. The battery is specified at **73 g**, with **12.92 Wh** nominal energy. Runtime arithmetic estimates 22–37 minutes at 15–25 W total Jetson draw, including reserve and conversion losses; it does not predict robot motor runtime.
+The estimated payload is **447.6 g**, including **125.6 g** fully dense PETG and estimated ancillary hardware. The battery is specified at **73 g**, with **12.92 Wh** nominal energy. Runtime arithmetic estimates 22–37 minutes at 15–25 W total Jetson draw, including reserve and conversion losses; it does not predict robot motor runtime.
 
 ## Prototype status
 
-Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. The directional policy follows the measured motion presets in the loaded simulation; the precision controller improves slow turns and some translations, with remaining translation dead zones and push-recovery failures. The original teacher and rejected candidates remain available for comparison. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
+Physical shell fit, structural strength, power conditioning/protection and hardware walking are unverified. The v07 results cover the reported sit/stand cycles and walking commands; previous low-speed, push and fast-walking measurements apply to v06. The original teacher and rejected candidates remain available for comparison. Full joint travel has recorded collisions. The blue USB cable ends at a free, unverified head-side plug; the amber ring is a survey marker, not a stock port. Approximate purchased leads/connectors are illustrated. The larger 1100 mAh pack was researched but has **not** been integrated into this CAD.
 
 ## Rebuild
 
@@ -70,10 +83,9 @@ Use Python 3.12. From the repository root:
 ```sh
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-sh easy_mount/build.sh
-.venv/bin/python checks/package_easy_mount.py
+sh clearance_mount/build.sh
 ```
 
-Only print the five files in `easy_mount/STL/`. Electronics, battery, wires, knobs and straps are purchased components. CAD dimensions are millimeters; MuJoCo uses meters and kilograms.
+Only print the five files in `clearance_mount/STL/`. Electronics, battery, wires, knobs and straps are purchased components. CAD dimensions are millimeters; MuJoCo uses meters and kilograms.
 
 See [third-party attribution](THIRD_PARTY.md). Upstream robot assets and NVIDIA geometry retain their respective terms.

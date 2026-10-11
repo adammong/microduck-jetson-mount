@@ -1,0 +1,6 @@
+Derived from Pollen Robotics MicroDuck policy actors at revision 088524a64e2557dc453256b6071dbb9d23888802 (Apache 2.0).
+Sit/stand combines alpha_stand and alpha_sitstand, with trained pose/IMU corrections and neutral head pitch.
+Walking retains the inherited precision-v06 actor/calibration and adds neutral head pitch and bounded pose/IMU corrections.
+Recovery candidates retain alpha_stand weights and add gravity/gyro pose corrections; general recovery remains unvalidated.
+All original neural actor and normalizer tensors are retained. See parameters, verification and REPORT.md for modifications and selection status.
+Simulation only; no hardware validation.

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "samples": 1000,
+  "maximum_action_error_rad": 0.0,
+  "neutral_head_targets_verified": true,
+  "input_unmodified": true
+}

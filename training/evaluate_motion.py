@@ -22,8 +22,8 @@ def session(path):
     return ort.InferenceSession(str(path),opts,providers=['CPUExecutionProvider'])
 
 def trial(policy, command, seed, seconds, render=None, noise=False, randomization=False, schedule=None,
-          pushes=(), payload_scale=1., trace=False):
-    path=scene('loaded',rev='v06')
+          pushes=(), payload_scale=1., trace=False,revision='v06'):
+    path=scene('loaded',rev=revision)
     model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
     assert .8<=payload_scale<=1.2
     payload_body=model.body('easy_mount_payload').id
@@ -77,14 +77,14 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
             frame=Image.fromarray(renderer.render());draw=ImageDraw.Draw(frame)
             draw.rectangle((0,0,640,64),fill=(20,20,20))
             measured=np.mean(np.array(vs[-25:]),axis=0);yawrate=np.mean(np.array(ws[-25:])[:,2])
-            draw.text((8,4),f'v06 mounted Microduck | {render.stem} | t={(k+1)*.02:.2f}s | seed {seed}',fill='white')
+            draw.text((8,4),f'{revision} mounted Microduck | {render.stem} | t={(k+1)*.02:.2f}s | seed {seed}',fill='white')
             draw.text((8,23),f'Command vx/vy/wz {cmd[0]:+.2f}/{cmd[1]:+.2f}/{cmd[2]:+.2f} | actual {measured[0]:+.2f}/{measured[1]:+.2f}/{yawrate:+.2f}',fill='white')
             draw.text((8,42),f'BAM, no assistance | trunk {heights[-1]*100:.1f}cm | tilt {tilts[-1]:.1f}deg | floor {g} | mount contact {p}',fill='white')
             frames.append(frame)
         if done:break
     vs=np.array(vs);ws=np.array(ws);cmds=np.array(commands);n=len(vs);warm=min(100,n-1)
     actual=np.column_stack((vs[:,:2],ws[:,2]));error=actual-cmds
-    result=dict(seed=seed,command=list(command),schedule=schedule,seconds=n*.02,requested_seconds=seconds,
+    result=dict(revision=revision,seed=seed,command=list(command),schedule=schedule,seconds=n*.02,requested_seconds=seconds,
         survived=not done,mean_twist=actual.mean(axis=0).tolist(),
         sustained_twist=actual[warm:].mean(axis=0).tolist(),
         mean_absolute_twist_error=np.abs(error).mean(axis=0).tolist(),
@@ -117,13 +117,13 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--policy',type=Path,required=True);ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--tasks',nargs='+',choices=list(COMMANDS),default=list(COMMANDS));ap.add_argument('--seeds',type=int,default=4)
     ap.add_argument('--seed-start',type=int,default=20);ap.add_argument('--seconds',type=float,default=15.)
-    ap.add_argument('--render',action='store_true');ap.add_argument('--obs-noise',action='store_true');ap.add_argument('--domain-rand',action='store_true')
+    ap.add_argument('--revision',default='v06');ap.add_argument('--render',action='store_true');ap.add_argument('--obs-noise',action='store_true');ap.add_argument('--domain-rand',action='store_true')
     args=ap.parse_args();policy=session(args.policy);rows=[];args.out.parent.mkdir(parents=True,exist_ok=True)
     for task in args.tasks:
         for seed in range(args.seed_start,args.seed_start+args.seeds):
             dest=args.out.parent/(args.out.stem+f'-{task}-seed{seed}') if args.render and seed<args.seed_start+2 else None
-            r=trial(policy,COMMANDS[task],seed,args.seconds,dest,args.obs_noise,args.domain_rand);r['task']=task;rows.append(r)
+            r=trial(policy,COMMANDS[task],seed,args.seconds,dest,args.obs_noise,args.domain_rand,revision=args.revision);r['task']=task;rows.append(r)
         group=rows[-args.seeds:]
         print(task,sum(r['survived'] for r in group),'/',args.seeds,'twist',np.round(np.mean([r['mean_twist'] for r in group],axis=0),3).tolist(),'contacts',max(r['payload_selfcontact_fraction'] for r in group),flush=True)
-        args.out.write_text(json.dumps(dict(policy=str(args.policy.relative_to(ROOT)) if args.policy.is_absolute() else str(args.policy),revision='v06',trials=rows),indent=2)+'\n')
+        args.out.write_text(json.dumps(dict(policy=str(args.policy.relative_to(ROOT)) if args.policy.is_absolute() else str(args.policy),revision=args.revision,trials=rows),indent=2)+'\n')
 if __name__=='__main__':main()

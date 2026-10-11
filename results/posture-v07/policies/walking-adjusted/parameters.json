@@ -1,0 +1,16 @@
+{
+  "method": "neutral_head_walking",
+  "base_policy": "results/precision-v06/policies/selected/policy.onnx",
+  "neutral_head_offset": 0.0,
+  "parameters": [
+    0.07375320047140121,
+    -0.05425434559583664,
+    0.08415307849645615,
+    -0.01385192759335041,
+    0.0,
+    0.0,
+    0.2756190896034241,
+    0.13618284463882446
+  ],
+  "status": "simulation_candidate"
+}

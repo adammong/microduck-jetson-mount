@@ -4,6 +4,20 @@ Uses [MicroDuck Lab](https://github.com/jonathanhawkins/microduck-lab/tree/bbf03
 
 The explicitly selected CAD revision is the source of payload mass, inertia and collision boxes. Stock and loaded scenes share the robot, floor, STAND keyframe, BAM XL330 motor model, 200 Hz physics and 50 Hz policy interface: **61 observations / 14 actions**. Both use the fuller groundcontact robot. The Jetson visual is an envelope; cables are fixed and the mount cannot slip or break in this model.
 
+## Uneven-terrain study
+
+The [mounted terrain study](../results/terrain-v07/REPORT.md) adds seeded small bumps, gentle slopes/cross slopes, mixed roughness, a beveled threshold and low-grip conditions. It retains the current mount, servo limits, 61/14 interface and neutral head constraint. Two-stage CPU CEM trains bounded IMU/command corrections; separate validation selects their strength before paired final tests. Selected and rejected artifacts remain clearly labeled. No general fall recovery or real-world terrain claim is made.
+
+After setup and building the v07 scenes:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/terrain_env.py
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/verify_terrain.py --policy results/terrain-v07/policies/candidate/policy.onnx --out tmp/terrain-check.json
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/terrain-v07/policies/selected/policy.onnx --terrain bumps_5mm --terrain-seed 700
+```
+
+Open http://127.0.0.1:8798; the surface is shown beside movement measurements. Terrain seeds independently change roughness. The controller stops at the finite terrain boundary. Omit `--terrain` for the existing flat-floor controller. The core stop/turn tests begin in a flat spawn patch; separate cold starts and long sequences exercise actual rough/sloping ground. See the report for exact tests, thresholds, training commands and scope.
+
 ## Current v07 mount
 
 The [clearance study](../results/posture-v07/REPORT.md) selects separate sit/stand and walking ONNX actors. Fresh tests pass 16/16 sit/stand cycles and 88/88 walking trials. Head pitch stays neutral. General recovery remains rejected; the live controller does not enable automatic recovery or posture switching. v06 policy defaults and historical results below are preserved.

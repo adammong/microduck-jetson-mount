@@ -22,19 +22,24 @@ def session(path):
     return ort.InferenceSession(str(path),opts,providers=['CPUExecutionProvider'])
 
 def trial(policy, command, seed, seconds, render=None, noise=False, randomization=False, schedule=None,
-          pushes=(), payload_scale=1., trace=False,revision='v06'):
-    path=scene('loaded',rev=revision)
+          pushes=(), payload_scale=1., trace=False,revision='v06',terrain=None,terrain_seed=None,terrain_spawn=None):
+    path=scene('loaded',rev='v07-terrain' if terrain and terrain!='flat' else revision)
     model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
     assert .8<=payload_scale<=1.2
     payload_body=model.body('easy_mount_payload').id
     model.body_mass[payload_body]*=payload_scale;model.body_inertia[payload_body]*=payload_scale
-    env=FastRunEnv(model=model,
+    cls=FastRunEnv;extra={}
+    if terrain:
+        from terrain_env import TerrainEnv
+        assert revision=='v07', 'Terrain study requires v07 mount'
+        cls=TerrainEnv;extra=dict(terrain=terrain,terrain_seed=seed if terrain_seed is None else terrain_seed,spawn_xy=terrain_spawn)
+    env=cls(model=model,**extra,
         scene_xml=str(path),seed=seed,actuator_force='bam',domain_rand=randomization,
         obs_noise=noise,action_delay=True,random_yaw=False,
         command_resample_s=1000,max_episode_s=seconds+1)
     obs,_=env.reset(seed=seed);env.head_cmd[:]=0;env.body_cmd[:]=0
     start=env.data.qpos[:3].copy();vs=[];ws=[];yaws=[];heights=[];tilts=[];commands=[]
-    payload=0;ground=0;force_max=0.;depth_max=0.;pairs=set();frames=[];renderer=None;positions=[]
+    payload=0;ground=0;force_max=0.;depth_max=0.;pairs=set();frames=[];renderer=None;positions=[];clearances=[]
     if render:
         renderer=mujoco.Renderer(env.model,height=360,width=640)
         cam=mujoco.MjvCamera();cam.distance=.8;cam.azimuth=125;cam.elevation=-24
@@ -56,6 +61,7 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         rot=env.data.xmat[env.trunk_body_id].reshape(3,3)
         yaws.append(math.atan2(rot[1,0],rot[0,0]))
         heights.append(float(env.data.xpos[env.trunk_body_id,2]))
+        if terrain:clearances.append(heights[-1]-env.terrain_height(env.data.qpos[:2]))
         positions.append(env.data.qpos[:2].copy())
         tilts.append(math.degrees(math.acos(np.clip(-env._projected_gravity()[2],-1,1))))
         p=False;g=False
@@ -72,7 +78,7 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         payload+=p;ground+=g
         if renderer and k%2==0:
             from PIL import Image,ImageDraw
-            cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],.14]
+            cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],env.terrain_height(env.data.qpos[:2])+.14 if terrain else .14]
             renderer.update_scene(env.data,camera=cam,scene_option=opts)
             frame=Image.fromarray(renderer.render());draw=ImageDraw.Draw(frame)
             draw.rectangle((0,0,640,64),fill=(20,20,20))
@@ -111,6 +117,8 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         sheet=Image.new('RGB',(640*4,360*3))
         for i,j in enumerate(np.linspace(0,len(frames)-1,12,dtype=int)):sheet.paste(frames[j],((i%4)*640,(i//4)*360))
         sheet.save(render.with_suffix('.png'));renderer.close()
+    if terrain:
+        result.update(terrain_spawn=terrain_spawn,terrain=terrain,terrain_seed=env.terrain_seed,final_ground_height_m=env.terrain_height(env.data.qpos[:2]),local_trunk_clearance_m=clearances[-1],minimum_local_trunk_clearance_m=min(clearances))
     env.close();return result
 
 def main():

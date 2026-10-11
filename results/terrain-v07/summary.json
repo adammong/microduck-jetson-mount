@@ -1,0 +1,256 @@
+{
+  "revision": "v07",
+  "simulation_only": true,
+  "baseline": {
+    "passed": 1077,
+    "survived": 1144,
+    "contact_free": 1144,
+    "trials": 1144,
+    "mean_scaled_tracking_error": 0.5082425324995775
+  },
+  "candidate": {
+    "passed": 1106,
+    "survived": 1144,
+    "contact_free": 1144,
+    "trials": 1144,
+    "mean_scaled_tracking_error": 0.49581050130765275
+  },
+  "selected": {
+    "passed": 1106,
+    "survived": 1144,
+    "contact_free": 1144,
+    "trials": 1144,
+    "mean_scaled_tracking_error": 0.49581050130765275
+  },
+  "per_terrain": {
+    "flat": {
+      "baseline": {
+        "passed": 87,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.485908307605596
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.47781686969082704
+      }
+    },
+    "bumps_2mm": {
+      "baseline": {
+        "passed": 85,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5055494170258474
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.4868300708698916
+      }
+    },
+    "bumps_5mm": {
+      "baseline": {
+        "passed": 85,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5080840193612429
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.4915259729849604
+      }
+    },
+    "bumps_10mm": {
+      "baseline": {
+        "passed": 87,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5110203429475515
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5002819869975245
+      }
+    },
+    "uphill_3deg": {
+      "baseline": {
+        "passed": 75,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5242377802168782
+      },
+      "candidate": {
+        "passed": 80,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5089510399916798
+      }
+    },
+    "downhill_3deg": {
+      "baseline": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.49436432986132656
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.4878283363109984
+      }
+    },
+    "cross_left_3deg": {
+      "baseline": {
+        "passed": 80,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5073282553976474
+      },
+      "candidate": {
+        "passed": 83,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.49232941721319
+      }
+    },
+    "cross_right_3deg": {
+      "baseline": {
+        "passed": 86,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5057645109946978
+      },
+      "candidate": {
+        "passed": 87,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.48923109383432944
+      }
+    },
+    "uphill_5deg": {
+      "baseline": {
+        "passed": 73,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5442613016461763
+      },
+      "candidate": {
+        "passed": 78,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5304860945249459
+      }
+    },
+    "downhill_5deg": {
+      "baseline": {
+        "passed": 82,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5068729459632634
+      },
+      "candidate": {
+        "passed": 77,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5062964491754899
+      }
+    },
+    "mixed_5mm_3deg": {
+      "baseline": {
+        "passed": 81,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5189009650444381
+      },
+      "candidate": {
+        "passed": 87,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5079136405639101
+      }
+    },
+    "threshold_5mm": {
+      "baseline": {
+        "passed": 84,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.5083144518131489
+      },
+      "candidate": {
+        "passed": 86,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.4947626739027158
+      }
+    },
+    "low_grip": {
+      "baseline": {
+        "passed": 84,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.48654629461669496
+      },
+      "candidate": {
+        "passed": 88,
+        "survived": 88,
+        "contact_free": 88,
+        "trials": 88,
+        "mean_scaled_tracking_error": 0.471282870939023
+      }
+    }
+  },
+  "selected_policy": "candidate",
+  "relative_tracking_error_change": 0.0244608241084882,
+  "no_hardware_validation": true,
+  "long_sequences": {
+    "trials": 16,
+    "passed": 16,
+    "seconds_each": 69,
+    "criterion": "Survival and no sampled non-foot/mount contacts; per-segment tracking is reported separately."
+  },
+  "on_terrain_starts": {
+    "baseline": {
+      "trials": 48,
+      "survived_and_contact_free": 48,
+      "direction_qualified": 44
+    },
+    "candidate": {
+      "trials": 48,
+      "survived_and_contact_free": 48,
+      "direction_qualified": 45
+    }
+  }
+}

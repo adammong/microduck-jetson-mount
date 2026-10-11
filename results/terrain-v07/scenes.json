@@ -1,0 +1,54 @@
+{
+  "revision": "v07",
+  "source_sha256": "1b83e28ca22d1ffef422fbfb26952848adcc481cc9397fad26f2565509c8f267",
+  "terrain_scene_sha256": "db2778d2df07ebca8c11bc26732f815594d1fa6d50883847132aa25df14c5344",
+  "grid": [
+    641,
+    641
+  ],
+  "half_size_m": 5.0,
+  "terrain_seed_independent_of_physics_seed": true,
+  "terrain_catalog": {
+    "flat": {},
+    "bumps_2mm": {
+      "relief_mm": 2.0
+    },
+    "bumps_5mm": {
+      "relief_mm": 5.0
+    },
+    "bumps_10mm": {
+      "relief_mm": 10.0
+    },
+    "uphill_3deg": {
+      "slope_x_deg": 3.0
+    },
+    "downhill_3deg": {
+      "slope_x_deg": -3.0
+    },
+    "cross_left_3deg": {
+      "slope_y_deg": 3.0
+    },
+    "cross_right_3deg": {
+      "slope_y_deg": -3.0
+    },
+    "uphill_5deg": {
+      "slope_x_deg": 5.0
+    },
+    "downhill_5deg": {
+      "slope_x_deg": -5.0
+    },
+    "mixed_5mm_3deg": {
+      "relief_mm": 5.0,
+      "slope_x_deg": 3.0,
+      "slope_y_deg": -2.0
+    },
+    "threshold_5mm": {
+      "threshold_mm": 5.0
+    },
+    "low_grip": {
+      "friction": 0.5
+    }
+  },
+  "collision_model": "Original v07 groundcontact robot; existing floor replaced by a heightfield. Flat controls retain the original plane.",
+  "model_mass_kg": 1.1847989141502486
+}

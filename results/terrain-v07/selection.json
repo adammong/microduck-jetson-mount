@@ -1,0 +1,20 @@
+{
+  "selected_policy": "candidate",
+  "candidate_status": "selected_for_documented_simulation_tests",
+  "criterion": "More paired terrain passes; no aggregate survival or flat-pass regression; mean tracking error no more than 2% worse.",
+  "candidate": {
+    "passed": 1106,
+    "survived": 1144,
+    "contact_free": 1144,
+    "trials": 1144,
+    "mean_scaled_tracking_error": 0.49581050130765275
+  },
+  "baseline": {
+    "passed": 1077,
+    "survived": 1144,
+    "contact_free": 1144,
+    "trials": 1144,
+    "mean_scaled_tracking_error": 0.5082425324995775
+  },
+  "simulation_only": true
+}

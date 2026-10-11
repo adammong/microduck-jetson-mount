@@ -1,0 +1,1 @@
+Initial 8 m ×8 m terrain diagnostics. Six downhill forward trials terminated at the finite terrain boundary; these are not falls. Final comparisons extend the same central terrain grid to 10 m ×10 m and rerun both actors. The CEM training and initial scale validation used this smaller grid; reproduce with terrain_env.py --training-grid.

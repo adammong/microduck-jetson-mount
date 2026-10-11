@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "moving": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.21835576236248017,
+      0.03881612239405513,
+      -0.015415950218087575
+    ],
+    "command": [
+      0.20000000298023224,
+      0.0,
+      0.0
+    ],
+    "seconds": 3.519999999999947,
+    "paused": false,
+    "simulation_only": true,
+    "revision": "v07",
+    "mass_kg": 1.1847989141502486,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "terrain": "bumps_5mm",
+    "terrain_seed": 1701
+  },
+  "stopped": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.0003874813480069861,
+      -4.878531966824085e-05,
+      0.002264729174418655
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 5.019999999999915,
+    "paused": false,
+    "simulation_only": true,
+    "revision": "v07",
+    "mass_kg": 1.1847989141502486,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "terrain": "bumps_5mm",
+    "terrain_seed": 1701
+  },
+  "reset": {
+    "status": "Ready \u2014 hold keys or buttons to move",
+    "actual": [
+      0.009975285895052366,
+      -0.008818697795504704,
+      -0.017220593721324118
+    ],
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "seconds": 0.16000000000000006,
+    "paused": false,
+    "simulation_only": true,
+    "revision": "v07",
+    "mass_kg": 1.1847989141502486,
+    "servo_current_limit_a": 1.75,
+    "policy_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "terrain": "bumps_5mm",
+    "terrain_seed": 1701
+  }
+}

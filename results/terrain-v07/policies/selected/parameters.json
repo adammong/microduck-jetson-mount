@@ -1,0 +1,20 @@
+{
+  "method": "CEM bounded IMU and command feedback",
+  "parameters": [
+    -0.011756731105909357,
+    0.030071376220659515,
+    -0.013354088222013682,
+    -0.18764754082668572,
+    0.03905306161023872,
+    -0.03128877263974463,
+    -0.019254847350546674,
+    0.018488015304085455
+  ],
+  "base_policy": "results/posture-v07/policies/walking-adjusted/policy.onnx",
+  "base_sha256": "99a3a0ca9bd13f6a36d3e25fbe6fe86e3bc721cd115bba6564564ba121afa346",
+  "correction_bound_rad": 0.12,
+  "stopped_actor_unchanged": true,
+  "head_pitch_unchanged": true,
+  "status": "selected_for_documented_simulation_tests",
+  "selection_status": "selected_for_documented_simulation_tests"
+}

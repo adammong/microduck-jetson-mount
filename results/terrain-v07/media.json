@@ -1,0 +1,12 @@
+{
+  "path": "results/terrain-v07/terrain-demo.mp4",
+  "duration_s": 15,
+  "frames": 375,
+  "fps": 25,
+  "crop_top_pixels": 64,
+  "continuous": true,
+  "physics_seed": 710,
+  "terrain_seed": 1700,
+  "terrain": "mixed_5mm_3deg",
+  "sha256": "b84bf380af20d0dd51f89de5545e3866f3cdf4a28e24149a9afd5b7cbf5c7c62"
+}

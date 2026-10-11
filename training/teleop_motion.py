@@ -8,6 +8,7 @@ import mujoco
 from evaluate import scene
 from evaluate_motion import session
 from fast_env import FastRunEnv
+from terrain_env import TERRAINS,TerrainEnv
 from motion_controller import limiter_for_policy
 from paths import ROOT
 
@@ -19,7 +20,7 @@ HTML='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewpor
 <button data-key="a">Left<br><small>A / ←</small></button><button class="stop" id="stop">Stop<br><small>Space</small></button><button data-key="d">Right<br><small>D / →</small></button>
 <span></span><button data-key="s">Backward<br><small>S / ↓</small></button><span></span></div>
 <p><label for="speed">Speed: <span id="speed-label">100%</span></label><input id="speed" type="range" min="0.25" max="1" step="0.05" value="1" style="width:100%"></p>
-<dl><dt>Forward</dt><dd id="vx">—</dd><dt>Sideways</dt><dd id="vy">—</dd><dt>Turning</dt><dd id="wz">—</dd><dt>Time</dt><dd id="time">—</dd></dl><button id="reset">Reset duck</button><p class="muted">Combine movement and turn keys to follow curves. Very small movement commands may still stall.</p></div></section></main>
+<dl><dt>Forward</dt><dd id="vx">—</dd><dt>Sideways</dt><dd id="vy">—</dd><dt>Turning</dt><dd id="wz">—</dd><dt>Surface</dt><dd id="terrain">Flat</dd><dt>Time</dt><dd id="time">—</dd></dl><button id="reset">Reset duck</button><p class="muted">Combine movement and turn keys to follow curves. Very small movement commands may still stall.</p></div></section></main>
 <script>const held=new Set(),map={ArrowUp:'w',ArrowDown:'s',ArrowLeft:'a',ArrowRight:'d'};let busy=false,stopped=false;
 function command(){if(stopped)return [0,0,0];const speed=Number(document.querySelector('#speed').value);return [(held.has('w')?.2:0)-(held.has('s')?.15:0),(held.has('a')?.1:0)-(held.has('d')?.1:0),(held.has('q')?.4:0)-(held.has('e')?.4:0)].map(v=>v*speed)}
 async function send(){if(busy)return;busy=true;try{await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command:command()})})}finally{busy=false}document.querySelectorAll('[data-key]').forEach(b=>b.classList.toggle('active',held.has(b.dataset.key)))}
@@ -29,12 +30,13 @@ document.querySelectorAll('[data-key]').forEach(b=>{b.onpointerdown=e=>{b.setPoi
 window.onkeydown=e=>{const k=map[e.key]||e.key.toLowerCase();if(k===' '){e.preventDefault();clear();return}if('wasdqe'.includes(k)&&k.length===1){e.preventDefault();held.add(k);stopped=false;send()}};
 window.onkeyup=e=>{held.delete(map[e.key]||e.key.toLowerCase());send()};window.onblur=clear;document.onvisibilitychange=()=>{if(document.hidden)clear()};document.querySelector('#stop').onclick=clear;document.querySelector('#reset').onclick=()=>{clear();fetch('/reset',{method:'POST'})};
 setInterval(send,180);let image=document.querySelector('#scene');function frame(){image.src='/frame.jpg?t='+Date.now()}image.onload=()=>setTimeout(frame,100);image.onerror=()=>setTimeout(frame,500);frame();
-setInterval(async()=>{try{let s=await(await fetch('/state')).json();document.querySelector('#status').textContent=s.status;['vx','vy','wz'].forEach((k,i)=>document.querySelector('#'+k).textContent=(s.actual[i]>=0?'+':'')+s.actual[i].toFixed(2)+(i===2?' rad/s':' m/s'));document.querySelector('#time').textContent=s.seconds.toFixed(1)+' s'}catch{}},250);
+setInterval(async()=>{try{let s=await(await fetch('/state')).json();document.querySelector('#status').textContent=s.status;['vx','vy','wz'].forEach((k,i)=>document.querySelector('#'+k).textContent=(s.actual[i]>=0?'+':'')+s.actual[i].toFixed(2)+(i===2?' rad/s':' m/s'));document.querySelector('#time').textContent=s.seconds.toFixed(1)+' s';document.querySelector('#terrain').textContent=(s.terrain||'flat').replaceAll('_',' ')}catch{}},250);
 </script></html>'''
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--policy',type=Path,default=ROOT/'results/motion-v06/policies/selected/policy.onnx')
     ap.add_argument('--revision',choices=['v06','v07']);ap.add_argument('--port',type=int,default=8798);ap.add_argument('--seed',type=int,default=90)
+    ap.add_argument('--terrain',choices=list(TERRAINS));ap.add_argument('--terrain-seed',type=int,default=500)
     ap.add_argument('--idle-exit',type=float,default=15.,help='Exit after this many minutes without input activity (0 disables).');args=ap.parse_args()
     policy=session(args.policy);revision=args.revision or policy.get_modelmeta().custom_metadata_map.get('cad_revision','v06')
     assert revision in ('v06','v07')
@@ -71,14 +73,17 @@ def main():
             except (ValueError,KeyError,TypeError):self.respond(b'{"error":"Invalid command"}',status=400)
     server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
     threading.Thread(target=server.serve_forever,daemon=True).start()
-    path=scene('loaded',rev=revision)
-    env=FastRunEnv(model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb'))),scene_xml=str(path),seed=args.seed,actuator_force='bam',domain_rand=False,obs_noise=False,action_delay=True,random_yaw=False,max_episode_s=36000,command_resample_s=1e9)
+    assert args.terrain is None or revision=='v07', 'Terrain control requires v07 mount'
+    path=scene('loaded',rev='v07-terrain' if args.terrain and args.terrain!='flat' else revision)
+    cls=TerrainEnv if args.terrain else FastRunEnv
+    extra=dict(terrain=args.terrain,terrain_seed=args.terrain_seed) if args.terrain else {}
+    env=cls(**extra,model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb'))),scene_xml=str(path),seed=args.seed,actuator_force='bam',domain_rand=False,obs_noise=False,action_delay=True,random_yaw=False,max_episode_s=36000,command_resample_s=1e9)
     folder='clearance_mount' if revision=='v07' else 'easy_mount'
     payload=json.loads((ROOT/folder/'simulation/mass_properties.json').read_text())['mass_kg']
     assert abs(env.model.body_mass.sum()-(.73724318+payload))<1e-8 and env.bam.max_current==1.75 and not env.spotter
     env.reset(seed=args.seed);env.head_cmd[:]=0;env.body_cmd[:]=0
     renderer=mujoco.Renderer(env.model,height=360,width=640);cam=mujoco.MjvCamera();cam.distance=.8;cam.azimuth=125;cam.elevation=-24
-    opts=mujoco.MjvOption();opts.geomgroup[3:]=0;history=deque(maxlen=25);paused=False;tick=0
+    opts=mujoco.MjvOption();opts.geomgroup[3:]=0;history=deque(maxlen=25);paused=False;tick=0;pause_reason='Duck fell. Reset to continue.'
     print(f'Control simulation: http://127.0.0.1:{args.port} | W/S forward/back, A/D sideways, Q/E turn, Space stop',flush=True)
     try:
         while True:
@@ -94,13 +99,14 @@ def main():
                 history.append([*env.body_lin_vel()[:2],float(env._gyro[2])])
                 if done:
                     paused=True
+                    pause_reason='Reached the terrain edge. Reset to continue.' if info.get('failure_reason')=='terrain_boundary' else 'Duck fell. Reset to continue.'
                     with lock:limiter.stop()
             if tick%5==0:
                 from PIL import Image
-                cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],.14];renderer.update_scene(env.data,camera=cam,scene_option=opts)
+                cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],env.terrain_height(env.data.qpos[:2])+.14 if args.terrain else .14];renderer.update_scene(env.data,camera=cam,scene_option=opts)
                 buf=io.BytesIO();Image.fromarray(renderer.render()).save(buf,format='JPEG',quality=82)
                 with lock:
-                    shared['jpeg']=buf.getvalue();shared['state']=dict(status='Duck fell. Reset to continue.' if paused else 'Ready — hold keys or buttons to move',actual=np.mean(history,axis=0).tolist() if history else [0.,0.,0.],command=command.tolist(),seconds=float(env.data.time),paused=paused,simulation_only=True,revision=revision,mass_kg=float(env.model.body_mass.sum()),servo_current_limit_a=env.bam.max_current,policy_sha256=policy_hash)
+                    shared['jpeg']=buf.getvalue();shared['state']=dict(status=pause_reason if paused else 'Ready — hold keys or buttons to move',actual=np.mean(history,axis=0).tolist() if history else [0.,0.,0.],command=command.tolist(),seconds=float(env.data.time),paused=paused,simulation_only=True,revision=revision,mass_kg=float(env.model.body_mass.sum()),servo_current_limit_a=env.bam.max_current,policy_sha256=policy_hash,terrain=args.terrain or 'flat',terrain_seed=args.terrain_seed)
             tick+=1;time.sleep(max(0,.02-(time.monotonic()-began)))
     except KeyboardInterrupt:pass
     finally:server.shutdown();server.server_close();renderer.close();env.close()

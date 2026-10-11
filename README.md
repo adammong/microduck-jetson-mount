@@ -4,6 +4,16 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the v07 clearance mount](docs/v07-robot.png)
 
+## v07 uneven-terrain walking
+
+[![Mounted duck on rough sloping terrain](docs/v07-terrain.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/terrain-v07/terrain-demo.mp4)
+
+The Mac terrain study includes the v07 Jetson/battery mount on small bumps, 3°/5° grades and cross slopes, mixed roughness, a beveled 5 mm threshold and low grip. The selected actor passes **1106/1144 direction/contact-qualified 15-second trials** across 13 surfaces and 11 commands; **1144/1144 stay upright**. The trained candidate improves paired passes from **1077 to 1106** while retaining the original neural network. Direction-qualified passes are a broad progress/drift check, not precise tracking. All **16 longer control sequences** complete. Separate starts on rough/sloped ground improve standing/turn direction checks from **44/48 to 45/48**, with both actors staying upright. The candidate regresses slightly on 5° downhill direction checks and some cross-slope turns stall; stairs and hardware are untested. The actor uses existing IMU/joint observations, with no terrain map or vision input. Neutral head pitch and the documented command ramp remain required.
+
+[15-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/terrain-v07/terrain-demo.mp4) · [Selected ONNX](results/terrain-v07/policies/selected/policy.onnx) · [Training, per-surface results and limitations](results/terrain-v07/REPORT.md).
+
+**Try it:** after [setup](training/README.md), run `OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/terrain-v07/policies/selected/policy.onnx --terrain bumps_5mm --terrain-seed 700`, then open http://127.0.0.1:8798. Other surfaces include `uphill_3deg`, `cross_left_3deg` and `mixed_5mm_3deg`.
+
 ## v07 sitting, standing and walking
 
 [![Mounted sit/stand simulation](docs/v07-sitstand.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/posture-v07/sitstand-demo.mp4)

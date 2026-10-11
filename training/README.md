@@ -33,6 +33,15 @@ The guard ends an episode after three successive control steps with a non-foot f
 
 ## Results and selection
 
+The [mounted posture study](../results/posture-v06/REPORT.md) adds sit/stand and settled-floor recovery evaluation, CEM adaptation, physical-fall recordings and an exported front-recovery candidate. Front recovery improves 3/16 → 14/16, but full sitting and synthetic back/side recovery remain unresolved due to mount interference. A separate recorded-fall benchmark improves only 7/16 → 8/16. Rejected seated-pose searches and successful/failed videos are retained. The existing walking controller is not modified to enable these unfinished skills.
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/evaluate_posture.py --policy results/posture-v06/policies/front-recovery-candidate/policy.onnx --out tmp/recovery-preview.json --poses front --seed-start 251 --seeds 1 --render
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/verify_posture.py --out tmp/posture-check.json
+```
+
+Setup now fetches both official posture actors at their pinned revision/checksums in [posture_inputs.json](posture_inputs.json). Sit/stand uses slot 48 as a 0/1 posture flag, not a walking velocity. The dedicated posture evaluator permits floor contact during recovery and checks an unsupported full stand at completion; the walking evaluator's support termination would prevent a get-up. These are simulation experiments; no hardware or general-recovery claim is made.
+
 The [mounted precision/recovery study](../results/precision-v06/REPORT.md) trains continuous command shaping, gait amplitude, observable low-turn feedback and standing catch steps while preserving the original neural actor. Final paired tests show 45% lower slow-command tracking error, 464/464 non-push trials without detected contacts, and modest push survival improvement from 74% to 77%. Sixteen fresh full control sequences pass. Tiny translations and stronger push recovery remain unresolved. This is CPU grid/CEM calibration, with all searches and rejected candidates retained.
 
 ```sh

@@ -1,0 +1,16 @@
+[
+  {
+    "file": "alpha_stand.onnx",
+    "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_stand.onnx",
+    "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+    "sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+    "bytes": 793705
+  },
+  {
+    "file": "alpha_sitstand.onnx",
+    "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_sitstand.onnx",
+    "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+    "sha256": "c6c40e35e726eabd803d633e090d112994f469921152448367953fbaf9799bc8",
+    "bytes": 793695
+  }
+]

@@ -18,7 +18,8 @@ def main():
                 if m.name==prefix:continue
                 tar.extract(m,target,filter='data')
         (target/'.source-commit').write_text(COMMIT+'\n')
-    for item in json.loads((ROOT/'training/inputs.json').read_text()):
+    inputs=json.loads((ROOT/'training/inputs.json').read_text())+json.loads((ROOT/'training/posture_inputs.json').read_text())
+    for item in inputs:
         dest=ROOT/'tmp/sim-inputs'/item['file'];dest.parent.mkdir(exist_ok=True)
         if not dest.exists():urllib.request.urlretrieve(item['url'],dest)
         assert hashlib.sha256(dest.read_bytes()).hexdigest()==item['sha256'],f'Input checksum mismatch: {dest}'

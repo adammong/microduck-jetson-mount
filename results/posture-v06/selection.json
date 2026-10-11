@@ -1,0 +1,28 @@
+{
+  "status": "limited_simulation_candidate",
+  "candidate": "policies/front-recovery-candidate/policy.onnx",
+  "candidate_sha256": "feffaef64c303b4d5f1b41980a01a3d349fc6bd527585d37b5136f7de7bd35db",
+  "accepted_scope": "Some front recovery and stand holding; not general fall recovery",
+  "unresolved": [
+    "Full sitting without mount contact",
+    "Recovery from synthetic back/left/right lies",
+    "Reliable recovery across real fall distributions",
+    "Hardware deployment"
+  ],
+  "not_selected": [
+    "recovery-cem",
+    "sitstand-cem",
+    "seated-pose-cem",
+    "seated-pose-v2-cem"
+  ],
+  "invalid_search": {
+    "path": "seated-pose-cem",
+    "reason": "Incorrectly subtracted default pose from already-relative joint observations; source snapshot retained. Rerun corrected in seated-pose-v2-cem."
+  },
+  "diagnostics_only": [
+    "collision-disabled-diagnostic.json",
+    "raised-layout-diagnostic.json"
+  ],
+  "no_CAD_revision_selected": true,
+  "no_controller_auto_enable": true
+}

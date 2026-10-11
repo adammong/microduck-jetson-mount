@@ -1,0 +1,112 @@
+{
+  "status": "limited_simulation_candidate",
+  "model_revision": "v06",
+  "nominal_mass_kg": 1.179337261211853,
+  "estimated_payload_kg": 0.442094081211853,
+  "servo_current_limit_a": 1.75,
+  "additional_action_bound_rad": 0.75,
+  "physics_hz": 200,
+  "policy_hz": 50,
+  "action_delay": true,
+  "no_assistance": true,
+  "no_strength_scaling": true,
+  "source_sha256": {
+    "training/evaluate_posture.py": "7549945f2f18e8be4307b0ce153bb6f1883691649b42338ed55429ff8b178d1a",
+    "training/evaluate_posture_batch.py": "a59158ca4bb74f7dedbe39d8082bf34c18260085d048e75db2c0d4184e07aaea",
+    "training/posture_policy.py": "fd8f7a2ec8d0b739a77d52262c01dc00cf8e806e1c72f9613a53a51442920d16",
+    "training/recovery_policy.py": "7def4e4f524b7b2a951fa0cf90624aacefe66bdf2c9c69954895f9949e3296c7",
+    "training/seated_policy.py": "de1c125e2fc119f9f93d86773e633bbbc4d968f5bb90827fc08c1c7095d28464",
+    "training/tune_posture.py": "0a16d799097784e08801e66bd185f71c8ac83a763bd274f27bac35ef5018f70a",
+    "training/tune_floor_recovery.py": "60677328bd0eced9fd991b7557acd489ddd547b3614f5be42eb0835e08004c4a",
+    "training/tune_seated_pose.py": "992f4e4fd26e9b32d98e0f6f1b4e05be2bb00f5434561c4af5dfcc4a6a6455f7",
+    "training/record_posture_falls.py": "c406430b86579a389e18782bf5466372b0fc09823140d3c86f44373656e2277f",
+    "training/verify_posture.py": "b72e79d0166e42617b2248b83bd604e6fbd0eacb6e94f33c6ac45b722bbe3a44",
+    "training/posture_inputs.json": "58ee54a1c2f463dd6985258c8e6299906701657242d7769b24166644d120d437",
+    "training/setup_mac.py": "a78a03b1ad6c2f9fcbfbddd9620ea571c60b8a4bee9b182a20f40593c67e30e3",
+    "easy_mount/parameters.json": "ea445ba401be0042cb3cf8f91ef27b05c4ee739d234cc69f61e0a1bbbf2791da"
+  },
+  "compiled_scene_sha256": "d9c184ad527f5e52da276b510273f194f388079fcc8cd9050a325db718c2a669",
+  "upstream_inputs": [
+    {
+      "file": "alpha_stand.onnx",
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_stand.onnx",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+      "bytes": 793705
+    },
+    {
+      "file": "alpha_sitstand.onnx",
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_sitstand.onnx",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "sha256": "c6c40e35e726eabd803d633e090d112994f469921152448367953fbaf9799bc8",
+      "bytes": 793695
+    }
+  ],
+  "training_seeds": [
+    0,
+    1
+  ],
+  "training_randomized_seeds": [
+    1
+  ],
+  "validation_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "final_nominal_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207
+  ],
+  "final_randomized_seeds": [
+    220,
+    221,
+    222,
+    223
+  ],
+  "payload_scales": [
+    0.9,
+    1.1
+  ],
+  "physical_tip_seeds": [
+    900,
+    901,
+    902,
+    903
+  ],
+  "physical_replay_environment_seeds": [
+    940,
+    941,
+    942,
+    943,
+    944,
+    945,
+    946,
+    947,
+    948,
+    949,
+    950,
+    951,
+    952,
+    953,
+    954,
+    955
+  ],
+  "demo_seeds": [
+    250,
+    251
+  ],
+  "method": "CPU CEM bounded observable feedback with frozen alpha_stand neural weights; not PPO",
+  "policy_sha256": "feffaef64c303b4d5f1b41980a01a3d349fc6bd527585d37b5136f7de7bd35db"
+}

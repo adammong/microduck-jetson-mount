@@ -1,0 +1,25 @@
+{
+  "success": {
+    "video": "front-recovery-success.mp4",
+    "seed": 251,
+    "seconds": 10
+  },
+  "failure": {
+    "video": "front-recovery-failure.mp4",
+    "seed": 250,
+    "seconds": 10
+  },
+  "sitstand_failure": {
+    "video": "sitstand-interference.mp4",
+    "seed": 0,
+    "seconds": 19
+  },
+  "cropped_top_pixels": 64,
+  "render_size": [
+    640,
+    296
+  ],
+  "simulation_only": true,
+  "successful_gif": "docs/v06-policy-front-recovery.gif",
+  "all_frames_preserved": true
+}

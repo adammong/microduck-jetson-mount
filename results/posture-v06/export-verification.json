@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "observations_checked": 1000,
+  "max_export_error_rad": 1.1920928955078125e-07,
+  "base_tensors_unchanged": true,
+  "base_sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+  "policy_sha256": "feffaef64c303b4d5f1b41980a01a3d349fc6bd527585d37b5136f7de7bd35db"
+}

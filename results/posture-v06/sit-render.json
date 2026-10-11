@@ -1,0 +1,115 @@
+{
+  "policy": "tmp/sim-inputs/alpha_sitstand.onnx",
+  "trials": [
+    {
+      "pose": "sitstand",
+      "seed": 0,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "seconds": 19.0,
+      "mass_kg": 1.179337261211853,
+      "initial": {
+        "height_m": 0.12729655446429944,
+        "head_height_m": 0.23912358725230876,
+        "tilt_deg": 0.0,
+        "standing": false,
+        "sitting": false,
+        "both_feet": false,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "initial_qpos": [
+        0.0,
+        0.0,
+        0.12729655446429944,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.008217701239287258,
+        -0.10107925977388425,
+        -0.4854655885638283,
+        -0.033948341868288254,
+        0.47178021435201634,
+        0.3738311850355292,
+        0.35546399694489667,
+        0.013769793659039903,
+        0.002617499487925372,
+        0.02610434542726609,
+        0.1062176758470084,
+        0.42808831001020886,
+        0.02638425659525416,
+        -0.4809688654816721
+      ],
+      "final": {
+        "height_m": 0.06460287693257727,
+        "head_height_m": 0.10284567002117632,
+        "tilt_deg": 22.500396894086858,
+        "standing": false,
+        "sitting": false,
+        "both_feet": true,
+        "props": [
+          "",
+          "easy_rear_battery_pocket"
+        ],
+        "payload_floor": [
+          "floor / easy_rear_battery_pocket"
+        ],
+        "payload_internal": [
+          "easy_front_dock_-1 / right_foot_collision",
+          "easy_front_dock_1 / left_foot_collision",
+          "easy_rear_battery_web_1 / "
+        ],
+        "max_payload_force_n": 6.927862703266089,
+        "time_s": 19.0,
+        "sit_requested": false
+      },
+      "recovered": false,
+      "full_stand_streak_s": 4.42,
+      "sit_hold": false,
+      "sit_fraction": 0.0,
+      "stand_fraction": 0.2326315789473684,
+      "final_mean_height_m": 0.06460532243209614,
+      "sit_mean_height_m": 0.06500550454469661,
+      "payload_floor_fraction": 0.7421052631578947,
+      "payload_internal_fraction": 0.7652631578947369,
+      "peak_payload_contact_force_n": 30.480738894956477,
+      "payload_pairs": [
+        "easy_front_dock_-1 / right_foot_collision",
+        "easy_front_dock_1 / left_foot_collision",
+        "easy_rear_battery_web_1 / ",
+        "easy_rear_beam / ",
+        "easy_tray_plate / left_foot_collision",
+        "easy_tray_plate / right_foot_collision",
+        "floor / easy_rear_battery_pocket"
+      ],
+      "final_qpos": [
+        -0.05864400969236008,
+        0.0036094886696026503,
+        0.06460287693257727,
+        0.9800585850189518,
+        -0.007355319051871153,
+        -0.1949550157140837,
+        -0.037730770734455514,
+        -0.05822698197452593,
+        0.0033456695741963366,
+        -0.25979787485828915,
+        1.1707477341563906,
+        0.30461147349858336,
+        1.0380704737972335,
+        0.12233557635949098,
+        -0.06765017142237147,
+        0.08620702362952466,
+        0.020265995069477495,
+        -0.01697811297521576,
+        0.3642550430784251,
+        -1.021176734274383,
+        -0.0837607012436869
+      ],
+      "first_full_stand_s": 0.06,
+      "sitstand_passed": false
+    }
+  ]
+}

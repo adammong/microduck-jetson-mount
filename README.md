@@ -4,6 +4,14 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the balanced v06 mount](docs/v06-robot.png)
 
+## Sit/stand and floor recovery — experimental
+
+[![Successful mounted front-recovery attempt](docs/v06-policy-front-recovery.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/posture-v06/front-recovery-success.mp4)
+
+The trained recovery candidate improves paired front-recovery tests from **3/16 to 14/16** with the v06 mount and collisions active. **Full sit/stand is still unresolved:** folded feet intersect the front dock, and the battery pocket supports the duck on the floor. Back/side synthetic recovery remains 0/48; a separate recorded-fall test improves only 7/16 → 8/16. This is a limited simulation candidate; hardware is untested and automatic recovery is not enabled.
+
+[Successful MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/front-recovery-success.mp4) · [Failed MP4](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/front-recovery-failure.mp4) · [Sit/stand interference](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/posture-v06/sitstand-interference.mp4) · [Candidate ONNX](results/posture-v06/policies/front-recovery-candidate/policy.onnx) · [Measurements and reproduction](results/posture-v06/REPORT.md).
+
 ## Slow movement, stopping and push recovery
 
 [![Mounted slow-turn and push-recovery simulation](docs/v06-policy-precision.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/precision-v06/motion-demo.mp4)

@@ -1,0 +1,17 @@
+{
+  "short_path": "results/voice-v07/skills-15s.mp4",
+  "short_duration_s": 15,
+  "frames": 375,
+  "fps": 25,
+  "crop_top_pixels": 64,
+  "continuous": true,
+  "scripted_text_commands": true,
+  "microphone_audio_in_video": false,
+  "full_path": "results/voice-v07/skills-demo.mp4",
+  "full_simulation_s": 29.96,
+  "physics_seed": 850,
+  "sha256": {
+    "skills-15s.mp4": "d8d83e6cbe40d41d5b206bd558bd74fecb4a7c5b5fcb0beb1b68656183f3168b",
+    "skills-demo.mp4": "8753e6e1392a1720d9b79d15844f8d9dd6031b844fdbc8c73e3d38d1e0c2dce0"
+  }
+}

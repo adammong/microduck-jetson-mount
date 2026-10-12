@@ -4,6 +4,16 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the v07 clearance mount](docs/v07-robot.png)
 
+## Talk to MicroDuck: walking, sitting and standing
+
+[![Combined mounted motion demo](docs/v07-voice.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/voice-v07/skills-demo.mp4)
+
+A local voice/text/button controller now combines the mounted walking and sit/stand actors. Say **“walk forward,” “turn left,” “stop,” “sit down,” “stand up,”** or **“walk forward for three seconds.”** Movement is bounded; the duck stands before walking and stops before sitting. English Whisper tiny runs offline on the Mac CPU after setup. Neural actors remain separate behind one controller.
+
+**Prototype results:** 77/80 continuous command sequences pass; 78/80 are contact/fault-free. Two heavier randomized stand-ups contact the Jetson with the floor and one nominal turn under-tracks, so hardware readiness is not claimed. All eight additional mid-posture override tests and the synthetic speech-to-action checks pass. The video shows scripted commands through the same motion controller; human microphone recognition is untested.
+
+[Start the voice controller](results/voice-v07/REPORT.md#run-on-the-mac) · [15-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/voice-v07/skills-15s.mp4) · [Measurements and limits](results/voice-v07/REPORT.md).
+
 ## v07 slope precision and disturbance recovery
 
 [![Experimental mounted recovery candidate](docs/v07-recovery.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/robust-v07/recovery-demo.mp4)

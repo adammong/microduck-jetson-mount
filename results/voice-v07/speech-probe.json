@@ -1,0 +1,165 @@
+{
+  "synthetic_audio": true,
+  "trials": [
+    {
+      "expected_text": "walk forward",
+      "audio": "results/voice-v07/audio/command-00.wav",
+      "speech": {
+        "text": "Walk forward.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.14450456202030182,
+        "duration_s": 1.0355,
+        "elapsed_s": 3.970277917047497,
+        "segments": [
+          {
+            "text": " Walk forward.",
+            "avg_logprob": -0.5428976813952128,
+            "no_speech_prob": 0.07723040133714676
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "sit down",
+      "audio": "results/voice-v07/audio/command-01.wav",
+      "speech": {
+        "text": "Sit down.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.11528794467449188,
+        "duration_s": 0.8388125,
+        "elapsed_s": 0.3644851249991916,
+        "segments": [
+          {
+            "text": " Sit down.",
+            "avg_logprob": -0.6483036776383718,
+            "no_speech_prob": 0.06775791943073273
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "stand up",
+      "audio": "results/voice-v07/audio/command-02.wav",
+      "speech": {
+        "text": "Stand up.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.13037161529064178,
+        "duration_s": 0.8271875,
+        "elapsed_s": 0.34528275002958253,
+        "segments": [
+          {
+            "text": " Stand up.",
+            "avg_logprob": -0.4950261116027832,
+            "no_speech_prob": 0.12447530031204224
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "turn left",
+      "audio": "results/voice-v07/audio/command-03.wav",
+      "speech": {
+        "text": "turn left.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.15238933265209198,
+        "duration_s": 0.882375,
+        "elapsed_s": 0.3306040420429781,
+        "segments": [
+          {
+            "text": " turn left.",
+            "avg_logprob": -0.5737891296545664,
+            "no_speech_prob": 0.27014395594596863
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "stop",
+      "audio": "results/voice-v07/audio/command-04.wav",
+      "speech": {
+        "text": "Stop.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.09958745539188385,
+        "duration_s": 0.6995,
+        "elapsed_s": 0.34109991701552644,
+        "segments": [
+          {
+            "text": " Stop.",
+            "avg_logprob": -0.6611427307128906,
+            "no_speech_prob": 0.10909979045391083
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "walk forward for three seconds",
+      "audio": "results/voice-v07/audio/command-05.wav",
+      "speech": {
+        "text": "Walk forward for three seconds.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.14145837724208832,
+        "duration_s": 1.917875,
+        "elapsed_s": 0.3366982910083607,
+        "segments": [
+          {
+            "text": " Walk forward for three seconds.",
+            "avg_logprob": -0.46045366923014325,
+            "no_speech_prob": 0.03166094049811363
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "do not walk forward",
+      "audio": "results/voice-v07/audio/command-06.wav",
+      "speech": {
+        "text": "Do not walk forward.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.1637788563966751,
+        "duration_s": 1.419875,
+        "elapsed_s": 0.3452974999672733,
+        "segments": [
+          {
+            "text": " Do not walk forward.",
+            "avg_logprob": -0.5399296432733536,
+            "no_speech_prob": 0.15993182361125946
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "expected_text": "hello duck",
+      "audio": "results/voice-v07/audio/command-07.wav",
+      "speech": {
+        "text": "Hello Doc.",
+        "accepted": true,
+        "reason": null,
+        "rms": 0.14433825016021729,
+        "duration_s": 0.9371875,
+        "elapsed_s": 0.3628089579869993,
+        "segments": [
+          {
+            "text": " Hello Doc.",
+            "avg_logprob": -0.7821526626745859,
+            "no_speech_prob": 0.0304206982254982
+          }
+        ]
+      },
+      "passed": true
+    }
+  ]
+}

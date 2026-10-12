@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Talk to MicroDuck</title>
+<style>
+body{margin:0;background:#f7f6f2;color:#25352f;font:16px system-ui,sans-serif}main{max-width:1050px;margin:28px auto;padding:0 20px}h1{margin:12px 0 8px;font-size:34px}.muted{color:#66776d}section{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-top:22px}.panel{background:white;border:1px solid #dfe5dd;border-radius:20px;padding:18px}img{width:100%;border-radius:12px}.tag{background:#e8eee6;border-radius:20px;padding:6px 12px;display:inline-block}button,input{font:inherit;border:1px solid #cdd8ca;border-radius:10px;padding:12px}button{background:#edf2e9;color:inherit;cursor:pointer}button:disabled{opacity:.5;cursor:default}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.stop{background:#f3dfcf}.voice{background:#34664b;color:white;width:100%;margin:10px 0}.voice.recording{background:#9b423d}form{display:flex;gap:8px}input{min-width:0;flex:1;width:100%;box-sizing:border-box}small{font-size:12px}#heard{min-height:2.5em;overflow-wrap:anywhere}dl{display:grid;grid-template-columns:1fr 1fr;gap:8px}dd{margin:0;text-align:right}#reset{width:100%}@media(max-width:760px){section{grid-template-columns:1fr}}
+</style>
+<main><span class="tag">Simulation · Jetson + battery mount</span><h1>Talk to MicroDuck</h1><div class="muted">Say one command, or type it. Movement lasts three seconds unless you specify a duration.</div>
+<section><div class="panel"><img id="scene" alt="Live mounted MicroDuck simulation"><p id="status" role="status">Starting simulation…</p><dl><dt>State</dt><dd id="phase">—</dd><dt>Movement remaining</dt><dd id="remaining">—</dd></dl><small>Voice runs locally. This controller is for simulation; hardware is untested.</small></div>
+<div class="panel"><strong>One command at a time</strong><button id="voice" class="voice" disabled>Speak a command</button><p id="heard" class="muted" role="status">Try “walk forward,” “sit down,” or “stand up.”</p>
+<form id="command-form"><input id="text" aria-label="Command" placeholder="walk forward for three seconds" maxlength="160"><button>Send</button></form>
+<div class="grid"><button data-command="turn left">Turn left</button><button data-command="walk forward">Forward</button><button data-command="turn right">Turn right</button><button data-command="sidestep left">Step left</button><button id="stop" class="stop">Stop</button><button data-command="sidestep right">Step right</button><button data-command="sit">Sit</button><button data-command="walk backward">Backward</button><button data-command="stand">Stand</button></div>
+<button id="reset">Reset simulation</button><p class="muted"><small>The duck stands before walking and stops before sitting. Stop cancels movement; an active sit/stand transition finishes to a stable posture. Space also stops.</small></p></div></section></main>
+<script>
+let generation=0,recording=null,voiceReady=false,recognizing=false;
+const heard=document.querySelector('#heard'),voice=document.querySelector('#voice');
+async function post(path,data,raw=false){const r=await fetch(path,{method:'POST',headers:raw?{'Content-Type':'audio/wav'}:{'Content-Type':'application/json'},body:raw?data:JSON.stringify(data||{})});const out=await r.json();if(!r.ok)throw Error(out.error||'Command failed');return out}
+async function send(text){cancelRecording();generation++;try{const out=await post('/command',{text});heard.textContent='Accepted: '+out.text}catch(e){heard.textContent=e.message}}
+function cancelRecording(){if(recording)recording.cancel()}
+async function stop(){generation++;cancelRecording();try{await post('/stop');heard.textContent='Movement stopped'}catch(e){heard.textContent=e.message}}
+document.querySelectorAll('[data-command]').forEach(b=>b.onclick=()=>send(b.dataset.command));document.querySelector('#stop').onclick=stop;
+document.querySelector('#command-form').onsubmit=e=>{e.preventDefault();send(document.querySelector('#text').value)};
+document.querySelector('#reset').onclick=async()=>{generation++;cancelRecording();await post('/reset');heard.textContent='Reset to standing'};
+window.onkeydown=e=>{if(e.code==='Space'&&!['INPUT','TEXTAREA'].includes(e.target.tagName)){e.preventDefault();stop()}};
+document.onvisibilitychange=()=>{if(document.hidden)stop()};window.addEventListener('pagehide',()=>{generation++;cancelRecording();navigator.sendBeacon('/stop','{}')});
+setInterval(()=>{if(!document.hidden)post('/heartbeat').catch(()=>{})},180);
+let image=document.querySelector('#scene');function frame(){image.src='/frame.jpg?t='+Date.now()}image.onload=()=>setTimeout(frame,100);image.onerror=()=>setTimeout(frame,500);frame();
+setInterval(async()=>{try{const s=await(await fetch('/state')).json();document.querySelector('#status').textContent=s.fault||s.message;document.querySelector('#phase').textContent=(s.phase||'starting').replaceAll('_',' ');document.querySelector('#remaining').textContent=s.remaining_s==null?'—':s.remaining_s.toFixed(1)+' s';voiceReady=s.voice_ready;voice.disabled=!voiceReady||!navigator.mediaDevices||recognizing;if(!voiceReady&&!recording)voice.textContent='Voice setup needed'}catch{}},250);
+function wav(chunks,rate){const length=chunks.reduce((n,x)=>n+x.length,0),source=new Float32Array(length);let offset=0;for(const chunk of chunks){source.set(chunk,offset);offset+=chunk.length}const count=Math.floor(length*16000/rate),buf=new ArrayBuffer(44+count*2),v=new DataView(buf);function str(i,s){for(let j=0;j<s.length;j++)v.setUint8(i+j,s.charCodeAt(j))}str(0,'RIFF');v.setUint32(4,36+count*2,true);str(8,'WAVE');str(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,16000,true);v.setUint32(28,32000,true);v.setUint16(32,2,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,count*2,true);for(let i=0;i<count;i++){const at=i*rate/16000,j=Math.floor(at),a=at-j;const sample=(source[j]||0)*(1-a)+(source[j+1]||0)*a;v.setInt16(44+i*2,Math.round(Math.max(-1,Math.min(1,sample))*32767),true)}return new Blob([buf],{type:'audio/wav'})}
+voice.onclick=async()=>{
+ if(recording){recording.finish();return}
+ const token=++generation;let stream,ctx,node,source,timer;const chunks=[];let done=false,hasSpeech=false,lastSpeech=0;
+ function close(){clearTimeout(timer);if(node){node.onaudioprocess=null;node.disconnect()}if(source)source.disconnect();if(stream)stream.getTracks().forEach(t=>t.stop());if(ctx)ctx.close();recording=null;voice.classList.remove('recording');voice.textContent='Speak a command'}
+ async function finish(cancel=false){if(done)return;done=true;const rate=ctx&&ctx.sampleRate;close();if(cancel||token!==generation)return;heard.textContent='Recognizing locally…';recognizing=true;voice.disabled=true;try{const result=await post('/voice',wav(chunks,rate),true);if(token===generation)heard.textContent='Heard: '+result.text}catch(e){if(token===generation)heard.textContent=e.message}finally{recognizing=false;voice.disabled=!voiceReady}}
+ recording={cancel:()=>finish(true),finish:()=>finish()};voice.classList.add('recording');voice.textContent='Listening… click to finish';heard.textContent='Say one command';
+ try{
+  stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true}});if(done||token!==generation){stream.getTracks().forEach(t=>t.stop());return}
+  ctx=new AudioContext();await ctx.resume();source=ctx.createMediaStreamSource(stream);node=ctx.createScriptProcessor(4096,1,1);source.connect(node);node.connect(ctx.destination);
+  node.onaudioprocess=e=>{if(done)return;const x=e.inputBuffer.getChannelData(0);chunks.push(new Float32Array(x));let energy=0;for(const a of x)energy+=a*a;const now=performance.now();if(Math.sqrt(energy/x.length)>.012){hasSpeech=true;lastSpeech=now}else if(hasSpeech&&now-lastSpeech>500)finish()};
+  timer=setTimeout(()=>finish(),4000);
+ }catch(e){done=true;close();heard.textContent='Microphone unavailable: '+e.message}
+};
+</script></html>

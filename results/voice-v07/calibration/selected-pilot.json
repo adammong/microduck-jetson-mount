@@ -1,0 +1,6447 @@
+{
+  "simulation_only": true,
+  "walking_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+  "posture_sha256": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56",
+  "trials": [
+    {
+      "sequence": "voice_demo",
+      "seed": 10,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for three seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.88,
+          "mean_moving_twist": [
+            0.1718706213998505,
+            0.011403989143016387,
+            -0.0006590950793360678
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 6.88,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 8.18,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit down",
+          "intent": "sit",
+          "issued_s": 8.18,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 11.3,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward for three seconds",
+          "intent": "move",
+          "issued_s": 11.3,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 18.0,
+          "mean_moving_twist": [
+            -0.1780785703708211,
+            0.00144098449042455,
+            -0.08905957220242122
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left for three seconds",
+          "intent": "move",
+          "issued_s": 18.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 22.46,
+          "mean_moving_twist": [
+            -0.002630209623411729,
+            -0.002466921289125223,
+            0.2750828101956056
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 22.46,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.76,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.76,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 26.92,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand up",
+          "intent": "stand",
+          "issued_s": 26.92,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.6,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 8.18,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 8.78,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 10.5,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 11.3,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 13.12,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 13.14,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 13.16,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 16.16,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.76,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.36,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 26.12,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 26.92,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 28.78,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 28.8,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.6,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.814318614552795,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.6,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.003621297422796488,
+          -0.0023831953294575214,
+          -0.010296021365996128
+        ],
+        "height_m": 0.11504310388589557,
+        "head_height_m": 0.228845590987593,
+        "tilt_deg": 2.2910638749037333,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "voice_demo",
+      "seed": 11,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for three seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.68,
+          "mean_moving_twist": [
+            0.14174796614356133,
+            0.013813167711873575,
+            -0.055362506132477764
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 6.68,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 7.98,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit down",
+          "intent": "sit",
+          "issued_s": 7.98,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 11.26,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward for three seconds",
+          "intent": "move",
+          "issued_s": 11.26,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 19.1,
+          "mean_moving_twist": [
+            -0.13181141248141,
+            -0.004461765573119515,
+            -0.053520884651990515
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left for three seconds",
+          "intent": "move",
+          "issued_s": 19.1,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.52,
+          "mean_moving_twist": [
+            -0.002037687852789043,
+            -0.004335739056475464,
+            0.13261787111627124
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 23.52,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 24.82,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 24.82,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 28.16,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand up",
+          "intent": "stand",
+          "issued_s": 28.16,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 31.02,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 7.98,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 8.58,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 10.46,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 11.26,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 13.3,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 13.32,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 13.34,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 16.34,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 19.1,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 22.1,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 24.82,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 25.42,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 27.36,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 28.16,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 30.2,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 30.22,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 31.02,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.686861358604354,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 31.02,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.000990562024526298,
+          0.0016479332698509097,
+          -0.030536851958865095
+        ],
+        "height_m": 0.11410412970202011,
+        "head_height_m": 0.22835813443430852,
+        "tilt_deg": 2.8444809304230696,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "voice_demo",
+      "seed": 12,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for three seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.78,
+          "mean_moving_twist": [
+            0.14291352451416767,
+            0.009239703831781299,
+            -0.03965858262622572
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 6.78,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 8.08,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit down",
+          "intent": "sit",
+          "issued_s": 8.08,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 11.4,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward for three seconds",
+          "intent": "move",
+          "issued_s": 11.4,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 18.3,
+          "mean_moving_twist": [
+            -0.13228381807776815,
+            -0.0025409041008970235,
+            -0.06505406750415758
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left for three seconds",
+          "intent": "move",
+          "issued_s": 18.3,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 22.740000000000002,
+          "mean_moving_twist": [
+            -0.0009982466428433607,
+            0.0012806328413594904,
+            0.23814263174932268
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 22.740000000000002,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 24.04,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 24.04,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 27.3,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand up",
+          "intent": "stand",
+          "issued_s": 27.3,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.3,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 8.08,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 8.68,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 10.6,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 11.4,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 13.42,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 13.44,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 13.46,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 16.46,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.3,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.3,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 24.04,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.64,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 26.5,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 27.3,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 29.48,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 29.5,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 30.3,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.56758566393725,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 30.3,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0012032744707539678,
+          0.000853998470120132,
+          -0.028086520054425263
+        ],
+        "height_m": 0.1141381317149253,
+        "head_height_m": 0.22845974709715208,
+        "tilt_deg": 2.8355895496842134,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "voice_demo",
+      "seed": 13,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for three seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.9,
+          "mean_moving_twist": [
+            0.1691511650181686,
+            0.008531466975101567,
+            -0.018688964129588276
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 6.9,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 8.2,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit down",
+          "intent": "sit",
+          "issued_s": 8.2,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 11.32,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward for three seconds",
+          "intent": "move",
+          "issued_s": 11.32,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 18.36,
+          "mean_moving_twist": [
+            -0.16922717365863113,
+            -0.012863250563694036,
+            -0.06226409276098496
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left for three seconds",
+          "intent": "move",
+          "issued_s": 18.36,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 22.68,
+          "mean_moving_twist": [
+            -0.003297414530741345,
+            -0.0017264272085492165,
+            0.28986528547696466
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 22.68,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.98,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.98,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 27.14,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand up",
+          "intent": "stand",
+          "issued_s": 27.14,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.76,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 8.2,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 8.8,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 10.52,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 11.32,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 13.32,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 13.34,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 13.36,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 16.36,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.36,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.36,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.98,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.58,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 26.34,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 27.14,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 28.94,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 28.96,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.76,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.918494553174035,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.76,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.002135618356987834,
+          0.003869486739858985,
+          -0.05356438796390309
+        ],
+        "height_m": 0.11493407799917867,
+        "head_height_m": 0.2287893870803962,
+        "tilt_deg": 2.3990644919908366,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "directions",
+      "seed": 10,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.88,
+          "mean_moving_twist": [
+            0.1718706213998505,
+            0.011403989143016387,
+            -0.0006590950793360678
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 6.88,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 11.6,
+          "mean_moving_twist": [
+            -0.19297699739238144,
+            -0.002949177064389611,
+            -0.05771501462380714
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep left",
+          "intent": "move",
+          "issued_s": 11.6,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 16.1,
+          "mean_moving_twist": [
+            -0.007197936226431056,
+            0.07811807416105916,
+            0.027537548880004762
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep right",
+          "intent": "move",
+          "issued_s": 16.1,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 20.62,
+          "mean_moving_twist": [
+            -0.0035947166970005016,
+            -0.08748017898176624,
+            -0.07136209898622381
+          ],
+          "mean_requested_twist": [
+            0.0,
+            -0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left",
+          "intent": "move",
+          "issued_s": 20.62,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 25.080000000000002,
+          "mean_moving_twist": [
+            -0.0016753009367187666,
+            0.003105883989346297,
+            0.3004813893792064
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn right",
+          "intent": "move",
+          "issued_s": 25.080000000000002,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.02,
+          "mean_moving_twist": [
+            -0.002188789136845489,
+            0.0005580293857582357,
+            -0.13467461447592155
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            -0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 30.02,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 33.1,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 33.1,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 35.800000000000004,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 35.800000000000004,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 40.58,
+          "mean_moving_twist": [
+            0.17893827042037933,
+            0.0006828804727976805,
+            0.0027288031911041712
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 40.58,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 41.88,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.88,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 9.88,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 11.6,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 14.6,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.1,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 19.1,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 20.62,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 23.62,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 25.08,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 28.08,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 30.02,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 30.62,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 32.3,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 33.1,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 34.98,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 35.0,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 35.8,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 38.8,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 41.88,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.8680074686907,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 41.88,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0003878723655361682,
+          -0.0003372230858076364,
+          0.003930408233216461
+        ],
+        "height_m": 0.1141904038568362,
+        "head_height_m": 0.22809492448059074,
+        "tilt_deg": 2.6259956197323167,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "directions",
+      "seed": 11,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.68,
+          "mean_moving_twist": [
+            0.14174796614356133,
+            0.013813167711873575,
+            -0.055362506132477764
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 6.68,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.32,
+          "mean_moving_twist": [
+            -0.12258399323844868,
+            -0.009791053642200294,
+            -0.05531777148444075
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep left",
+          "intent": "move",
+          "issued_s": 12.32,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 16.78,
+          "mean_moving_twist": [
+            0.000798262645965898,
+            0.06748050350575363,
+            0.05750274688070697
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep right",
+          "intent": "move",
+          "issued_s": 16.78,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 21.26,
+          "mean_moving_twist": [
+            0.0018576412987856641,
+            -0.08802512143673441,
+            -0.038245533036189786
+          ],
+          "mean_requested_twist": [
+            0.0,
+            -0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left",
+          "intent": "move",
+          "issued_s": 21.26,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 25.72,
+          "mean_moving_twist": [
+            -0.0008410332192574634,
+            0.0019473512403304835,
+            0.17998605688324226
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn right",
+          "intent": "move",
+          "issued_s": 25.72,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.400000000000002,
+          "mean_moving_twist": [
+            0.0014533116013900028,
+            -0.0026683999938834084,
+            -0.31963761906036525
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            -0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 30.400000000000002,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 33.7,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 33.7,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 36.6,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 36.6,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 41.38,
+          "mean_moving_twist": [
+            0.13804121678953785,
+            0.007475154403639155,
+            -0.044234246282848964
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 41.38,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 42.68,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.68,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 9.68,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.32,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 15.32,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.78,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 19.78,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 21.26,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 24.26,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 25.72,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 28.72,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 30.4,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 32.9,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 33.7,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 35.78,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 35.8,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 36.6,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 39.6,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 42.68,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.727264336911803,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 42.68,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.0009562547202222049,
+          0.001031531486660242,
+          -0.011627024513075913
+        ],
+        "height_m": 0.11309195492135853,
+        "head_height_m": 0.22812078657080118,
+        "tilt_deg": 2.5706261351393227,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "directions",
+      "seed": 12,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.78,
+          "mean_moving_twist": [
+            0.14291352451416767,
+            0.009239703831781299,
+            -0.03965858262622572
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 6.78,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 11.52,
+          "mean_moving_twist": [
+            -0.13928178049797585,
+            -0.001024020954179738,
+            -0.06567540545519518
+          ],
+          "mean_requested_twist": [
+            -0.1404827638689814,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.02
+        },
+        {
+          "text": "sidestep left",
+          "intent": "move",
+          "issued_s": 11.52,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 16.0,
+          "mean_moving_twist": [
+            0.00019161435173029875,
+            0.06911687280217892,
+            0.04359439291917184
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep right",
+          "intent": "move",
+          "issued_s": 16.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 20.5,
+          "mean_moving_twist": [
+            0.00367590466103011,
+            -0.08757885606956206,
+            -0.024877739973334482
+          ],
+          "mean_requested_twist": [
+            0.0,
+            -0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left",
+          "intent": "move",
+          "issued_s": 20.5,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 24.78,
+          "mean_moving_twist": [
+            0.0009743504459087209,
+            -8.298815040286215e-05,
+            0.24934801290931194
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn right",
+          "intent": "move",
+          "issued_s": 24.78,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.46,
+          "mean_moving_twist": [
+            -0.002919638170016892,
+            -0.000363940154100712,
+            -0.334642233089334
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            -0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 29.46,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 32.82,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 32.82,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 35.72,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 35.72,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 40.52,
+          "mean_moving_twist": [
+            0.14633366653126562,
+            0.00472100990353081,
+            -0.012782220366418483
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 40.52,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 41.82,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.78,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 9.8,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 11.52,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 14.52,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 19.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 20.5,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 23.5,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 24.78,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 27.78,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 29.46,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 30.06,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 32.02,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 32.82,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 34.9,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 34.92,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 35.72,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 38.72,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 41.82,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.540382277260305,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 41.82,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.00014682031178381294,
+          -0.0013159278314560652,
+          0.0009891596113309452
+        ],
+        "height_m": 0.11342945614052158,
+        "head_height_m": 0.2282633005871962,
+        "tilt_deg": 2.5770902008377417,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "directions",
+      "seed": 13,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.9,
+          "mean_moving_twist": [
+            0.1691511650181686,
+            0.008531466975101567,
+            -0.018688964129588276
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 6.9,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 11.72,
+          "mean_moving_twist": [
+            -0.17350584000814706,
+            0.005095808676540198,
+            -0.09584760636012285
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep left",
+          "intent": "move",
+          "issued_s": 11.72,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 16.240000000000002,
+          "mean_moving_twist": [
+            -0.0059171781294235885,
+            0.07921756342887044,
+            0.004700613910825273
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sidestep right",
+          "intent": "move",
+          "issued_s": 16.240000000000002,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 20.84,
+          "mean_moving_twist": [
+            -0.0030430221330363084,
+            -0.09128740528113839,
+            -0.08488330452988137
+          ],
+          "mean_requested_twist": [
+            0.0,
+            -0.09572028160303622,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn left",
+          "intent": "move",
+          "issued_s": 20.84,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 26.080000000000002,
+          "mean_moving_twist": [
+            -0.0030289937647027527,
+            -0.002877826747032712,
+            0.25919875075602944
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "turn right",
+          "intent": "move",
+          "issued_s": 26.080000000000002,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.900000000000002,
+          "mean_moving_twist": [
+            0.0004742848747669666,
+            -0.007914283373408744,
+            -0.3696103027935456
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            -0.37704698363906586
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 30.900000000000002,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 34.0,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 34.0,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 36.76,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 36.76,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 41.52,
+          "mean_moving_twist": [
+            0.1722845334184563,
+            0.003100684808790296,
+            -0.029658173802082285
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 41.52,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 42.82,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 5.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.9,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 9.9,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 11.72,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 14.72,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.24,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 19.24,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 20.84,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 23.84,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 26.08,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 29.08,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 30.9,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.5,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.2,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 34.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 35.94,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 35.96,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 36.76,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 39.76,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 42.82,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.057115807314654,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 42.82,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0005564725724980235,
+          -0.0008467403240501881,
+          0.0011543817308834906
+        ],
+        "height_m": 0.11387010264122596,
+        "head_height_m": 0.22794665970968617,
+        "tilt_deg": 2.486088408777685,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "cycles",
+      "seed": 10,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 2.0,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 5.14,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.14,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 7.88,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 7.88,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.82,
+          "mean_moving_twist": [
+            0.1743608358762382,
+            0.012033069718098786,
+            -0.013449839224874785
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 12.82,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 15.94,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 15.94,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 18.64,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 18.64,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.46,
+          "mean_moving_twist": [
+            -0.18491366364630973,
+            -0.00024094201924324606,
+            -0.0753216104784705
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.46,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 26.6,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 26.6,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.26,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.34,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 5.14,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.06,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.08,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 7.88,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 10.88,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.82,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 13.42,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 15.14,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 15.94,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 17.82,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 17.84,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.64,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.64,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.46,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.06,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 25.8,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 26.6,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 28.44,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 28.46,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.26,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.873207097441592,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.26,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.0030204877257347107,
+          0.002161579905077815,
+          -0.04056732148105008
+        ],
+        "height_m": 0.11503618277996709,
+        "head_height_m": 0.22880480534719475,
+        "tilt_deg": 2.354679832357207,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "cycles",
+      "seed": 11,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 2.0,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 5.46,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.46,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 8.34,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 8.34,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 13.040000000000001,
+          "mean_moving_twist": [
+            0.14248855725034243,
+            0.015120341272146712,
+            -0.06634222254992356
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 13.040000000000001,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 16.38,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 16.38,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 19.18,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 19.18,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.8,
+          "mean_moving_twist": [
+            -0.1001180319342691,
+            -0.00013799448707787733,
+            -0.07838075402918863
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.8,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 27.16,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 27.16,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.0,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.66,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 5.46,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.52,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.54,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 8.34,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 11.34,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 13.04,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 13.64,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 15.58,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 16.38,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 18.36,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 18.38,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 19.18,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 22.18,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.8,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.4,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 26.36,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 27.16,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 29.18,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 29.2,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 30.0,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.719261882008302,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 30.0,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.0014831225853413343,
+          0.00022811067174188793,
+          -0.01750698540816614
+        ],
+        "height_m": 0.1141062125032765,
+        "head_height_m": 0.2283430538870674,
+        "tilt_deg": 2.8903568533936492,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "cycles",
+      "seed": 12,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 2.0,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 5.36,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.36,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 8.24,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 8.24,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.9,
+          "mean_moving_twist": [
+            0.14281970393171328,
+            0.01249824103150685,
+            -0.02880267987671412
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 12.9,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 16.2,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 16.2,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 18.92,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 18.92,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.94,
+          "mean_moving_twist": [
+            -0.04073727511947962,
+            -0.004865247042033616,
+            -0.08052174124483645
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.94,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 27.28,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 27.28,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 30.18,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.56,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 5.36,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.42,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.44,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 8.24,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 11.24,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.9,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 13.5,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 15.4,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 16.2,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 18.1,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 18.12,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.92,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.92,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.94,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.54,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 26.48,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 27.28,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 29.36,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 29.38,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 30.18,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.646861387199419,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 30.18,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0003543878556229174,
+          0.0004658315738197416,
+          -0.025562162562549104
+        ],
+        "height_m": 0.11408594741841008,
+        "head_height_m": 0.2282820141406587,
+        "tilt_deg": 2.8373838510099207,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "cycles",
+      "seed": 13,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 2.0,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 5.2,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.2,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 7.94,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 7.94,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.780000000000001,
+          "mean_moving_twist": [
+            0.174145784277212,
+            0.005283212662546028,
+            0.02380049768112988
+          ],
+          "mean_requested_twist": [
+            0.1806551725443067,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.02
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 12.780000000000001,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 15.9,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 15.9,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 18.66,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 18.66,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 23.48,
+          "mean_moving_twist": [
+            -0.17883540975809512,
+            -0.0028908182171613183,
+            -0.06143118593349982
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 23.48,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 26.64,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 26.64,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.44,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.4,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 5.2,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.12,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.14,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 7.94,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 10.96,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.78,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 13.38,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 15.1,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 15.9,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 17.84,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 17.86,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 18.66,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 21.66,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 23.48,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 24.08,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 25.84,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 26.64,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 28.62,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 28.64,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.44,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.067572991230064,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.44,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.0007714300299994648,
+          0.0025150785222649574,
+          -0.04260886072618342
+        ],
+        "height_m": 0.11490574172095419,
+        "head_height_m": 0.22870939051340877,
+        "tilt_deg": 2.3538484660992802,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "interrupts",
+      "seed": 10,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 3.02,
+          "mean_moving_twist": [
+            0.056086516256133714,
+            0.02110779446601454,
+            -0.08093179038674475
+          ],
+          "mean_requested_twist": [
+            0.13766666046447223,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.02
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 3.02,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 7.34,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 7.34,
+          "phases": [
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 8.64,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 8.64,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 15.44,
+          "mean_moving_twist": [
+            -0.17793163709898685,
+            -0.01318625047477124,
+            -0.06750933503974448
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 15.44,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 18.580000000000002,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 18.580000000000002,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 25.38,
+          "mean_moving_twist": [
+            0.17997835782767246,
+            0.002704015822018846,
+            -0.02455116956991764
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 25.38,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 26.68,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 26.68,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 27.98,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.02,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 4.8,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 6.54,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 8.64,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 10.52,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 10.54,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 10.56,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.56,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 15.44,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 16.04,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 17.78,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 18.58,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 20.46,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 20.48,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 20.5,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 23.5,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 27.98,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.940853970589,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 27.98,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0009115288848988712,
+          -0.0008586345356889069,
+          0.004452965439831995
+        ],
+        "height_m": 0.11408880468737878,
+        "head_height_m": 0.22796885237492445,
+        "tilt_deg": 2.3148604004238313,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "interrupts",
+      "seed": 11,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 3.02,
+          "mean_moving_twist": [
+            0.06142513335992893,
+            0.02054035008336036,
+            -0.1245284572881756
+          ],
+          "mean_requested_twist": [
+            0.13766666046447223,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.02
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 3.02,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 7.66,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 7.66,
+          "phases": [
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 8.96,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 8.96,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 16.8,
+          "mean_moving_twist": [
+            -0.1328806663126064,
+            0.002575666598406517,
+            -0.06706632527450983
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 16.8,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 20.12,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 20.12,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 26.900000000000002,
+          "mean_moving_twist": [
+            0.14401689812237034,
+            0.012799831604449233,
+            -0.07761584897081869
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 26.900000000000002,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 28.2,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 28.2,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.5,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.02,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 4.9,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 6.86,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 8.96,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 10.98,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.0,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 11.02,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 14.02,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.8,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.4,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.32,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 20.12,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 22.18,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 22.2,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 22.22,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 25.22,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.5,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.808860857046772,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.5,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.0036576336715370417,
+          0.0006567293894477189,
+          -0.014828828553610831
+        ],
+        "height_m": 0.11309472177093716,
+        "head_height_m": 0.22785179966524743,
+        "tilt_deg": 2.802257768657875,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "interrupts",
+      "seed": 12,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 3.02,
+          "mean_moving_twist": [
+            0.05702504362497065,
+            0.01902095864651427,
+            -0.1054948696505014
+          ],
+          "mean_requested_twist": [
+            0.13766666046447223,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.02
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 3.02,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 7.74,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 7.74,
+          "phases": [
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.040000000000001,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 9.040000000000001,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 15.92,
+          "mean_moving_twist": [
+            -0.13291571523586754,
+            -0.0008742990022357036,
+            -0.08182174363317556
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 15.92,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 19.240000000000002,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 19.240000000000002,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 26.42,
+          "mean_moving_twist": [
+            0.14186277744496087,
+            0.013108315667422075,
+            -0.08173396932187667
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 26.42,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 27.72,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 27.72,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.02,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.02,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 4.98,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 6.94,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.04,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 11.12,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.14,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 11.16,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 14.16,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 15.92,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 16.52,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 18.44,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.24,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.44,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.46,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 21.48,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 24.48,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.02,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.442574652763039,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.02,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.000571052310988307,
+          -0.0020910853054374456,
+          0.0012097703055272493
+        ],
+        "height_m": 0.11282623914708635,
+        "head_height_m": 0.22752652483502472,
+        "tilt_deg": 2.7596019285320814,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "interrupts",
+      "seed": 13,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 3.02,
+          "mean_moving_twist": [
+            0.06985958421395885,
+            0.01796669315792517,
+            -0.09356517160544298
+          ],
+          "mean_requested_twist": [
+            0.13766666046447223,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.02
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 3.02,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 7.7,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 7.7,
+          "phases": [
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.02,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk backward",
+          "intent": "move",
+          "issued_s": 9.02,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 16.9,
+          "mean_moving_twist": [
+            -0.16883141386723663,
+            -0.011954584801666593,
+            -0.07934871075716778
+          ],
+          "mean_requested_twist": [
+            -0.14041667191001275,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 16.9,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 20.04,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward",
+          "intent": "move",
+          "issued_s": 20.04,
+          "phases": [
+            "standing",
+            "settling",
+            "idle",
+            "moving"
+          ],
+          "completed": true,
+          "ended_s": 26.900000000000002,
+          "mean_moving_twist": [
+            0.17023654240700933,
+            0.011114774183321666,
+            -0.028593817053778954
+          ],
+          "mean_requested_twist": [
+            0.18052083344405723,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": true,
+          "movement_seconds": 3.0
+        },
+        {
+          "text": "stop",
+          "intent": "stop",
+          "issued_s": 26.900000000000002,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 28.2,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 28.2,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 29.5,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.02,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 5.18,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 6.9,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.02,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 10.94,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 10.96,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 10.98,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.98,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 16.9,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.5,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.24,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 20.04,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.78,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.8,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 21.82,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 24.82,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 29.5,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.861688560360978,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 29.5,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0006303127156570554,
+          -0.00026997909299097955,
+          0.0005043755712874654
+        ],
+        "height_m": 0.11399435742066749,
+        "head_height_m": 0.22799824953594114,
+        "tilt_deg": 2.4473663701767494,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "lease_loss",
+      "seed": 10,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 5.0,
+          "mean_moving_twist": [
+            0.053286911962045866,
+            0.023565180046716705,
+            -0.08039698206340053
+          ],
+          "mean_requested_twist": [
+            0.13624999358911405,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.0,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.3,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 6.3,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.46,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 9.46,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.120000000000001,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": false,
+          "automatic_stand": true,
+          "movement_seconds": 0.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 12.120000000000001,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 13.42,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.3,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 6.9,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 8.66,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.46,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 11.3,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.32,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 13.42,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.807464247242859,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 13.42,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          -0.00012220349162817,
+          -0.0024018811527639627,
+          0.006865377724579977
+        ],
+        "height_m": 0.11492386314526466,
+        "head_height_m": 0.22853487105937756,
+        "tilt_deg": 2.5153615238825053,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "lease_loss",
+      "seed": 11,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 5.0600000000000005,
+          "mean_moving_twist": [
+            0.059275519928302274,
+            0.02274440659431837,
+            -0.12366258509475848
+          ],
+          "mean_requested_twist": [
+            0.13624999358911405,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.0600000000000005,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.36,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 6.36,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.68,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 9.68,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.5,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": false,
+          "automatic_stand": true,
+          "movement_seconds": 0.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 12.5,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 13.8,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.36,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 6.96,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 8.88,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.68,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 11.68,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.7,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 13.8,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.235871517760085,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 13.8,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          9.427993791177869e-05,
+          5.384639371186495e-05,
+          -0.012256720055925098
+        ],
+        "height_m": 0.11406641257761116,
+        "head_height_m": 0.22806982483625596,
+        "tilt_deg": 3.090918449274962,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "lease_loss",
+      "seed": 12,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 5.04,
+          "mean_moving_twist": [
+            0.05554045360027389,
+            0.018760471930942334,
+            -0.10606179797437969
+          ],
+          "mean_requested_twist": [
+            0.13624999358911405,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 5.04,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.34,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 6.34,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.66,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 9.66,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.5,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": false,
+          "automatic_stand": true,
+          "movement_seconds": 0.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 12.5,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 13.8,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.34,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 6.94,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 8.86,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.66,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 11.68,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.7,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 13.8,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 10.499231018430457,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 13.8,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0003113409911748022,
+          0.001449375762604177,
+          -0.023141219861883416
+        ],
+        "height_m": 0.11412725378162396,
+        "head_height_m": 0.22822506042943946,
+        "tilt_deg": 3.095538505017844,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    },
+    {
+      "sequence": "lease_loss",
+      "seed": 13,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "blend_s": 0.3,
+      "passed": true,
+      "completed": true,
+      "safe": true,
+      "fault": null,
+      "commands": [
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 2.0,
+          "phases": [
+            "moving",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 4.98,
+          "mean_moving_twist": [
+            0.06743648686361584,
+            0.01878711354154141,
+            -0.09335382316027081
+          ],
+          "mean_requested_twist": [
+            0.13624999358911405,
+            0.0,
+            0.0
+          ],
+          "direction_followed": true,
+          "automatic_stand": false,
+          "movement_seconds": 1.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 4.98,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 6.28,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "sit",
+          "intent": "sit",
+          "issued_s": 6.28,
+          "phases": [
+            "stopping",
+            "sitting",
+            "seated"
+          ],
+          "completed": true,
+          "ended_s": 9.44,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        },
+        {
+          "text": "walk forward for ten seconds",
+          "intent": "move",
+          "issued_s": 9.44,
+          "phases": [
+            "standing",
+            "settling",
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 12.24,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": false,
+          "automatic_stand": true,
+          "movement_seconds": 0.0,
+          "lease_stopped": true
+        },
+        {
+          "text": "stand",
+          "intent": "stand",
+          "issued_s": 12.24,
+          "phases": [
+            "idle"
+          ],
+          "completed": true,
+          "ended_s": 13.540000000000001,
+          "mean_moving_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_requested_twist": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction_followed": null,
+          "automatic_stand": false,
+          "movement_seconds": 0.0
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 3.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 6.28,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 6.88,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 8.64,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 9.44,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 11.42,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 11.44,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "seconds": 13.540000000000001,
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "no_spotter": true,
+      "max_tilt_deg": 9.873107513167422,
+      "max_payload_force_n": 0.0,
+      "final": {
+        "time_s": 13.540000000000001,
+        "phase": "idle",
+        "goal": "stand",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actual": [
+          0.0032620278652757406,
+          0.0009693850297480822,
+          -0.016886616065736403
+        ],
+        "height_m": 0.11485415286732574,
+        "head_height_m": 0.22848274554180775,
+        "tilt_deg": 2.521346179820612,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      },
+      "simulation_only": true
+    }
+  ]
+}

@@ -1,0 +1,1645 @@
+{
+  "simulation_only": true,
+  "trials": [
+    {
+      "seed": 880,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.54,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 8.02,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 8.04,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.92,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.46,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.48,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.5,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.52,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.48,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 39.96,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 39.98,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11428285039613892,
+        "head_height_m": 0.22861016049324911,
+        "tilt_deg": 2.7170694191439853,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 881,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.68,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 8.06,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 8.08,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.92,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.5,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.52,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.6,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.62,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.7,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.62,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 39.98,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 40.0,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.1142406220062961,
+        "head_height_m": 0.2286034280196541,
+        "tilt_deg": 2.7927414975006197,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 882,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.4,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.9,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.92,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.86,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.42,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.44,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.4,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.42,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.78,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.56,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 39.92,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 39.94,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11470057899114687,
+        "head_height_m": 0.2286040833009611,
+        "tilt_deg": 2.654906783288664,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 883,
+      "randomized": false,
+      "payload_scale": 1.0,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "idle"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.48,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.74,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.76,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.8,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.38,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.4,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.46,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.48,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.8,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11381908220893322,
+        "head_height_m": 0.2279836652613407,
+        "tilt_deg": 2.688826250709749,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 890,
+      "randomized": true,
+      "payload_scale": 0.9,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "idle"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.34,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.86,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.88,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 15.06,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.28,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.3,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.28,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.3,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 32.38,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11402127579735827,
+        "head_height_m": 0.22760057157266295,
+        "tilt_deg": 2.5108441882222765,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 890,
+      "randomized": true,
+      "payload_scale": 1.1,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 5.12,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 8.3,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 8.32,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 15.86,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.42,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.44,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.44,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.46,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.62,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.46,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 40.06,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 40.08,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11361039840475684,
+        "head_height_m": 0.22722232727188313,
+        "tilt_deg": 3.0836897361393873,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 891,
+      "randomized": true,
+      "payload_scale": 0.9,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.32,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 7.7,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 7.72,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.72,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.3,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.32,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.14,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.16,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.72,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.4,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 39.72,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 39.74,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.1152787017650232,
+        "head_height_m": 0.2296289479029333,
+        "tilt_deg": 1.596549073054073,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    },
+    {
+      "seed": 891,
+      "randomized": true,
+      "payload_scale": 1.1,
+      "passed": true,
+      "safe": true,
+      "fault": null,
+      "seconds": 44.0,
+      "events": [
+        {
+          "time_s": 2.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 3.0,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 6.0,
+          "text": "walk forward",
+          "phase_before": "seated"
+        },
+        {
+          "time_s": 6.5,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 12.0,
+          "text": "walk forward for ten seconds",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 13.0,
+          "text": "sit",
+          "phase_before": "moving"
+        },
+        {
+          "time_s": 14.0,
+          "text": "stop",
+          "phase_before": "stopping"
+        },
+        {
+          "time_s": 17.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 19.0,
+          "text": "walk forward",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 20.0,
+          "text": "stop",
+          "phase_before": "standing"
+        },
+        {
+          "time_s": 27.0,
+          "text": "walk forward",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "text": "sit",
+          "phase_before": "idle"
+        },
+        {
+          "time_s": 31.8,
+          "text": "stop",
+          "phase_before": "sitting"
+        },
+        {
+          "time_s": 38.0,
+          "text": "stand",
+          "phase_before": "seated"
+        }
+      ],
+      "transitions": [
+        {
+          "time_s": 2.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 2.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 4.5,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 6.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 8.02,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 8.04,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 12.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 13.0,
+          "from_phase": "moving",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 14.74,
+          "from_phase": "stopping",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 17.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 17.6,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 19.36,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 19.38,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 21.32,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 21.34,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 27.0,
+          "from_phase": "idle",
+          "to_phase": "moving"
+        },
+        {
+          "time_s": 30.0,
+          "from_phase": "moving",
+          "to_phase": "idle"
+        },
+        {
+          "time_s": 31.0,
+          "from_phase": "idle",
+          "to_phase": "stopping"
+        },
+        {
+          "time_s": 31.7,
+          "from_phase": "stopping",
+          "to_phase": "sitting"
+        },
+        {
+          "time_s": 33.46,
+          "from_phase": "sitting",
+          "to_phase": "seated"
+        },
+        {
+          "time_s": 38.0,
+          "from_phase": "seated",
+          "to_phase": "standing"
+        },
+        {
+          "time_s": 39.7,
+          "from_phase": "standing",
+          "to_phase": "settling"
+        },
+        {
+          "time_s": 39.72,
+          "from_phase": "settling",
+          "to_phase": "idle"
+        }
+      ],
+      "final": {
+        "height_m": 0.11498040391469788,
+        "head_height_m": 0.2293935598845722,
+        "tilt_deg": 2.1183096604150498,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0
+      }
+    }
+  ]
+}

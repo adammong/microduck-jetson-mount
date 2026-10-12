@@ -4,6 +4,19 @@ Uses [MicroDuck Lab](https://github.com/jonathanhawkins/microduck-lab/tree/bbf03
 
 The explicitly selected CAD revision is the source of payload mass, inertia and collision boxes. Stock and loaded scenes share the robot, floor, STAND keyframe, BAM XL330 motor model, 200 Hz physics and 50 Hz policy interface: **61 observations / 14 actions**. Both use the fuller groundcontact robot. The Jetson visual is an envelope; cables are fixed and the mount cannot slip or break in this model.
 
+## Voice and combined motion
+
+The [voice/skill controller](../results/voice-v07/REPORT.md) adds local English speech, typed commands and buttons for walking, sidestepping, turning, stop, sit and stand. It manages separate actor interfaces and posture handoffs; movement defaults to three seconds and cancels on a stale client connection. Current prototype: 77/80 sequence passes, 78/80 contact/fault-free, with randomized heavier stand-up failures explicitly retained. Hardware and human microphone accuracy remain untested.
+
+After simulation setup and building the v07 scenes:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/setup_voice.py
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_skills.py
+```
+
+Open http://127.0.0.1:8798. Voice is optional; buttons and text work without its setup. Speech dependencies/model live in separate ignored `tmp/voice-venv` and `tmp/voice-model` directories. Press **Speak a command** to request microphone access. The report documents exact commands, transition/fault behavior, verification and reproduction.
+
 ## Slope precision and push/trip/slip recovery
 
 The [mounted robustness study](../results/robust-v07/REPORT.md) adds measured external torso shoves, swing-foot snag proxies and temporary low-grip patches. Applied force impulses, effective contact friction, sliding exposure and return-to-command windows are checked separately from survival. Two initial CEM stages and a progressive slip curriculum train a frozen-network adaptation, with independent validation/final comparisons and ordinary-terrain regression checks. Selected and rejected profiles are labeled; hardware and general fallen-pose get-up remain unvalidated.
@@ -32,7 +45,7 @@ Open http://127.0.0.1:8798; the surface is shown beside movement measurements. T
 
 ## Current v07 mount
 
-The [clearance study](../results/posture-v07/REPORT.md) selects separate sit/stand and walking ONNX actors. Fresh tests pass 16/16 sit/stand cycles and 88/88 walking trials. Head pitch stays neutral. General recovery remains rejected; the live controller does not enable automatic recovery or posture switching. v06 policy defaults and historical results below are preserved.
+The [clearance study](../results/posture-v07/REPORT.md) selects separate sit/stand and walking ONNX actors. Fresh tests pass 16/16 sit/stand cycles and 88/88 walking trials. Head pitch stays neutral. General recovery remains rejected; the legacy walking page does not enable automatic recovery or posture switching; the combined controller above adds explicit posture commands. v06 policy defaults and historical results below are preserved.
 
 After the Mac setup command below, build the current scenes explicitly:
 

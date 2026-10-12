@@ -1,0 +1,500 @@
+{
+  "passed": true,
+  "synthetic_audio_only": true,
+  "commands": [
+    {
+      "expected": "walk forward",
+      "response": {
+        "ok": true,
+        "text": "Walk forward.",
+        "intent": "move",
+        "seconds": 3.0,
+        "speech": {
+          "text": "Walk forward.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.14450456202030182,
+          "duration_s": 1.0355,
+          "elapsed_s": 1.0365069169783965,
+          "segments": [
+            {
+              "text": " Walk forward.",
+              "avg_logprob": -0.5428976813952128,
+              "no_speech_prob": 0.07723040133714676
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "idle",
+        "goal": "stand",
+        "active_actor": "walking",
+        "command": [
+          0.18500001728534698,
+          0.0,
+          0.0
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          0.2649560868740082,
+          0.21545377373695374,
+          -0.18546238773770138
+        ],
+        "seconds": 3.619999999999945,
+        "measurement": {
+          "height_m": 0.10900599712468395,
+          "head_height_m": 0.22241302590432063,
+          "tilt_deg": 4.544157131550632,
+          "standing": false,
+          "sitting": false,
+          "both_feet": false,
+          "props": [],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "Walk forward.",
+        "message": "Accepted: Walk forward.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 4.250457249989267
+    },
+    {
+      "expected": "sit down",
+      "response": {
+        "ok": true,
+        "text": "Sit down.",
+        "intent": "sit",
+        "seconds": 0.0,
+        "speech": {
+          "text": "Sit down.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.11528794467449188,
+          "duration_s": 0.8388125,
+          "elapsed_s": 0.6855317919980735,
+          "segments": [
+            {
+              "text": " Sit down.",
+              "avg_logprob": -0.6483036776383718,
+              "no_speech_prob": 0.06775791943073273
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "seated",
+        "goal": "sit",
+        "active_actor": "posture",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          0.00019303066073916852,
+          -1.7168630392916384e-06,
+          -0.005482374419844543
+        ],
+        "seconds": 7.339999999999866,
+        "measurement": {
+          "height_m": 0.05537742147958555,
+          "head_height_m": 0.16867360076885504,
+          "tilt_deg": 0.752774825428519,
+          "standing": false,
+          "sitting": true,
+          "both_feet": true,
+          "props": [
+            ""
+          ],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "Sit down.",
+        "message": "Accepted: Sit down.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 4.4663634590106085
+    },
+    {
+      "expected": "stand up",
+      "response": {
+        "ok": true,
+        "text": "Stand up.",
+        "intent": "stand",
+        "seconds": 0.0,
+        "speech": {
+          "text": "Stand up.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.13037161529064178,
+          "duration_s": 0.8271875,
+          "elapsed_s": 0.6233212079969235,
+          "segments": [
+            {
+              "text": " Stand up.",
+              "avg_logprob": -0.4950261116027832,
+              "no_speech_prob": 0.12447530031204224
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "idle",
+        "goal": "stand",
+        "active_actor": "walking",
+        "command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          0.00019441504264250398,
+          0.001772416871972382,
+          -0.02279856419618284
+        ],
+        "seconds": 10.060000000000173,
+        "measurement": {
+          "height_m": 0.1142066890035155,
+          "head_height_m": 0.22852433979820447,
+          "tilt_deg": 2.1025443631870724,
+          "standing": true,
+          "sitting": false,
+          "both_feet": true,
+          "props": [],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "Stand up.",
+        "message": "Accepted: Stand up.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 3.604325166961644
+    },
+    {
+      "expected": "turn left",
+      "response": {
+        "ok": true,
+        "text": "turn left.",
+        "intent": "move",
+        "seconds": 3.0,
+        "speech": {
+          "text": "turn left.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.15238933265209198,
+          "duration_s": 0.882375,
+          "elapsed_s": 0.6826632909942418,
+          "segments": [
+            {
+              "text": " turn left.",
+              "avg_logprob": -0.5737891296545664,
+              "no_speech_prob": 0.27014395594596863
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "idle",
+        "goal": "stand",
+        "active_actor": "walking",
+        "command": [
+          0.0,
+          0.0,
+          0.3399999737739563
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          -0.03740151226520538,
+          -0.12405682355165482,
+          0.3244341200482348
+        ],
+        "seconds": 13.100000000000648,
+        "measurement": {
+          "height_m": 0.11298844784470234,
+          "head_height_m": 0.22655941303932678,
+          "tilt_deg": 2.37940357395196,
+          "standing": false,
+          "sitting": false,
+          "both_feet": false,
+          "props": [],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "turn left.",
+        "message": "Accepted: turn left.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 4.070802791975439
+    },
+    {
+      "expected": "stop",
+      "response": {
+        "ok": true,
+        "text": "Stop.",
+        "intent": "stop",
+        "seconds": 0.0,
+        "speech": {
+          "text": "Stop.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.09958745539188385,
+          "duration_s": 0.6995,
+          "elapsed_s": 0.33472616696963087,
+          "segments": [
+            {
+              "text": " Stop.",
+              "avg_logprob": -0.6611427307128906,
+              "no_speech_prob": 0.10909979045391083
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "idle",
+        "goal": "stand",
+        "active_actor": "walking",
+        "command": [
+          0.0,
+          0.0,
+          0.03999996930360794
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          0.029187031090259552,
+          -0.10526132583618164,
+          0.08956769475120727
+        ],
+        "seconds": 13.400000000000695,
+        "measurement": {
+          "height_m": 0.11567488864213116,
+          "head_height_m": 0.22932688275225596,
+          "tilt_deg": 3.300433008423846,
+          "standing": false,
+          "sitting": false,
+          "both_feet": false,
+          "props": [],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "turn left.",
+        "message": "Accepted: turn left.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 0.40087895799661055
+    },
+    {
+      "expected": "walk forward for three seconds",
+      "response": {
+        "ok": true,
+        "text": "Walk forward for three seconds.",
+        "intent": "move",
+        "seconds": 3.0,
+        "speech": {
+          "text": "Walk forward for three seconds.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.14145837724208832,
+          "duration_s": 1.917875,
+          "elapsed_s": 0.41168833296978846,
+          "segments": [
+            {
+              "text": " Walk forward for three seconds.",
+              "avg_logprob": -0.46045366923014325,
+              "no_speech_prob": 0.03166094049811363
+            }
+          ]
+        }
+      },
+      "final": {
+        "phase": "idle",
+        "goal": "stand",
+        "active_actor": "walking",
+        "command": [
+          0.19500000774860382,
+          0.0,
+          0.0
+        ],
+        "remaining_s": null,
+        "pending_movement": false,
+        "fault": null,
+        "actual": [
+          0.21481743454933167,
+          -0.12233157455921173,
+          -0.016836128538824283
+        ],
+        "seconds": 16.140000000001073,
+        "measurement": {
+          "height_m": 0.11583396060119706,
+          "head_height_m": 0.22972157752270436,
+          "tilt_deg": 3.884788970993096,
+          "standing": false,
+          "sitting": false,
+          "both_feet": false,
+          "props": [],
+          "payload_floor": [],
+          "payload_internal": [],
+          "max_payload_force_n": 0.0
+        },
+        "voice_ready": true,
+        "last_text": "Walk forward for three seconds.",
+        "message": "Accepted: Walk forward for three seconds.",
+        "mass_kg": 1.1847989141502486,
+        "actuator_current_a": 1.75,
+        "policy_sha256": {
+          "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+          "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+        },
+        "simulation_only": true
+      },
+      "end_to_end_s": 3.665074958000332
+    }
+  ],
+  "negated_and_unknown_speech_rejected": true,
+  "silence_rejected": true,
+  "invalid_commands_rejected": true,
+  "foreign_origin_rejected": true,
+  "stale_voice_cancelled": [
+    {
+      "route": "/stop",
+      "response": [
+        409,
+        {
+          "error": "Voice command cancelled or controller disconnected",
+          "speech": {
+            "text": "Walk forward.",
+            "accepted": true,
+            "reason": null,
+            "rms": 0.14450456202030182,
+            "duration_s": 1.0355,
+            "elapsed_s": 0.8384370839921758,
+            "segments": [
+              {
+                "text": " Walk forward.",
+                "avg_logprob": -0.5428976813952128,
+                "no_speech_prob": 0.07723040133714676
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "route": "/reset",
+      "response": [
+        409,
+        {
+          "error": "Voice command cancelled or controller disconnected",
+          "speech": {
+            "text": "Walk forward.",
+            "accepted": true,
+            "reason": null,
+            "rms": 0.14450456202030182,
+            "duration_s": 1.0355,
+            "elapsed_s": 0.31997270800638944,
+            "segments": [
+              {
+                "text": " Walk forward.",
+                "avg_logprob": -0.5428976813952128,
+                "no_speech_prob": 0.07723040133714676
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "disconnected_voice_rejected": true,
+  "lost_client_stops": {
+    "phase": "idle",
+    "goal": "stand",
+    "active_actor": "walking",
+    "command": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "remaining_s": null,
+    "pending_movement": false,
+    "fault": null,
+    "actual": [
+      0.004232475068420172,
+      0.005842625629156828,
+      -0.04983200442331625
+    ],
+    "seconds": 1.919999999999981,
+    "measurement": {
+      "height_m": 0.1133667022159784,
+      "head_height_m": 0.2258474938292937,
+      "tilt_deg": 3.5526425064107134,
+      "standing": true,
+      "sitting": false,
+      "both_feet": true,
+      "props": [],
+      "payload_floor": [],
+      "payload_internal": [],
+      "max_payload_force_n": 0.0
+    },
+    "voice_ready": true,
+    "last_text": "walk forward for ten seconds",
+    "message": "Accepted: walk forward for ten seconds",
+    "mass_kg": 1.1847989141502486,
+    "actuator_current_a": 1.75,
+    "policy_sha256": {
+      "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+      "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+    },
+    "simulation_only": true
+  }
+}

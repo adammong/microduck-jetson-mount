@@ -1,0 +1,26 @@
+{
+  "status": "experimental_combined_controller",
+  "revision": "v07",
+  "walking": "results/terrain-v07/policies/selected/policy.onnx",
+  "posture": "results/posture-v07/policies/sitstand/policy.onnx",
+  "command_interface": "body-frame forward m/s, lateral m/s, yaw rad/s; posture slot 48 is separately encoded 0/1",
+  "default_movement_s": 3,
+  "maximum_movement_s": 10,
+  "client_lease_s": 0.6,
+  "action_blend_s": 0.3,
+  "standing_ready_s": 1.0,
+  "sitting_ready_s": 0.5,
+  "stop_settle_s": 0.6,
+  "reverse_joint_bias_rad": {
+    "left_hip_pitch": -0.04,
+    "right_hip_pitch": 0.04,
+    "left_knee": -0.04,
+    "right_knee": 0.04,
+    "left_ankle": 0.08,
+    "right_ankle": -0.08
+  },
+  "reverse_bias_gate": "walking actor only, clip(-command_vx/0.05,0,1)",
+  "neural_weights_unchanged": true,
+  "terrain_validation": "flat only for combined posture transitions",
+  "simulation_only": true
+}

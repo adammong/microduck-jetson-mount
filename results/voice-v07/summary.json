@@ -1,0 +1,74 @@
+{
+  "simulation_only": true,
+  "status": "experimental_combined_controller",
+  "passed": 77,
+  "safe": 78,
+  "trials": 80,
+  "nominal": {
+    "passed": 39,
+    "safe": 40,
+    "trials": 40
+  },
+  "randomized": {
+    "passed": 38,
+    "safe": 38,
+    "trials": 40
+  },
+  "per_sequence": {
+    "voice_demo": {
+      "trials": 16,
+      "passed": 13,
+      "safe": 14
+    },
+    "directions": {
+      "trials": 16,
+      "passed": 16,
+      "safe": 16
+    },
+    "cycles": {
+      "trials": 16,
+      "passed": 16,
+      "safe": 16
+    },
+    "interrupts": {
+      "trials": 16,
+      "passed": 16,
+      "safe": 16
+    },
+    "lease_loss": {
+      "trials": 16,
+      "passed": 16,
+      "safe": 16
+    }
+  },
+  "failures": [
+    {
+      "sequence": "voice_demo",
+      "seed": 800,
+      "payload_scale": 1.0,
+      "fault": null,
+      "failed_motion": [
+        "turn left for three seconds"
+      ]
+    },
+    {
+      "sequence": "voice_demo",
+      "seed": 820,
+      "payload_scale": 1.1,
+      "fault": "Mount contact",
+      "failed_motion": []
+    },
+    {
+      "sequence": "voice_demo",
+      "seed": 823,
+      "payload_scale": 1.1,
+      "fault": "Mount contact",
+      "failed_motion": []
+    }
+  ],
+  "mid_posture_overrides": {
+    "passed": 8,
+    "trials": 8
+  },
+  "speech_http_passed": true
+}

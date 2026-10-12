@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "identity_matches_base_exactly": true,
+  "inherited_tensors_unchanged": true,
+  "head_pitch_unchanged": true,
+  "export_samples": 1000,
+  "max_export_error_rad": 1.4901161193847656e-08,
+  "correction_bound_rad": 0.12,
+  "exported_correction_bound_checked": true,
+  "slip_contact_friction_checked": true,
+  "friction_restoration_checked": true,
+  "actual_force_impulse_checked": true,
+  "no_residual_external_forces": true,
+  "no_event_control_matches_original_exactly": true,
+  "swing_foot_snag_trigger_checked": true,
+  "actuator_current_a": 1.75,
+  "base_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+  "policy_sha256": "59deec2dd58a4ec307ff38c5688792e60e59ac93032d35cb23d0849a5a9d4e3c"
+}

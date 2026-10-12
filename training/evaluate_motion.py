@@ -22,7 +22,7 @@ def session(path):
     return ort.InferenceSession(str(path),opts,providers=['CPUExecutionProvider'])
 
 def trial(policy, command, seed, seconds, render=None, noise=False, randomization=False, schedule=None,
-          pushes=(), payload_scale=1., trace=False,revision='v06',terrain=None,terrain_seed=None,terrain_spawn=None):
+          pushes=(), payload_scale=1., trace=False,revision='v06',terrain=None,terrain_seed=None,terrain_spawn=None,events=()):
     path=scene('loaded',rev='v07-terrain' if terrain and terrain!='flat' else revision)
     model=mujoco.MjModel.from_binary_path(str(path.with_suffix('.mjb')))
     assert .8<=payload_scale<=1.2
@@ -33,6 +33,10 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         from terrain_env import TerrainEnv
         assert revision=='v07', 'Terrain study requires v07 mount'
         cls=TerrainEnv;extra=dict(terrain=terrain,terrain_seed=seed if terrain_seed is None else terrain_seed,spawn_xy=terrain_spawn)
+        if events:
+            from robust_env import RobustTerrainEnv
+            cls=RobustTerrainEnv;extra['events']=events
+    assert not events or terrain, 'Disturbance tests require an explicit terrain'
     env=cls(model=model,**extra,
         scene_xml=str(path),seed=seed,actuator_force='bam',domain_rand=randomization,
         obs_noise=noise,action_delay=True,random_yaw=False,
@@ -80,6 +84,16 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
             from PIL import Image,ImageDraw
             cam.lookat[:]=[env.data.qpos[0],env.data.qpos[1],env.terrain_height(env.data.qpos[:2])+.14 if terrain else .14]
             renderer.update_scene(env.data,camera=cam,scene_option=opts)
+            if events:
+                for event,record in zip(events,env.disturbance_records):
+                    start_s=record['trigger_s']
+                    if event['kind']=='slip' or start_s is None or not start_s<=env.data.time<start_s+event['duration']:continue
+                    body=env.trunk_body_id if event['kind']=='push' else env.foot_bodies[event['foot']]
+                    end=env.data.xpos[body].copy();rotation=env.data.xmat[env.trunk_body_id].reshape(3,3)
+                    begin=end-rotation@np.asarray(event['force_body'])*.035
+                    geom=renderer.scene.geoms[renderer.scene.ngeom]
+                    mujoco.mjv_initGeom(geom,mujoco.mjtGeom.mjGEOM_ARROW,np.zeros(3),np.zeros(3),np.eye(3).ravel(),np.array([1.,.15,.05,1.],np.float32))
+                    mujoco.mjv_connector(geom,mujoco.mjtGeom.mjGEOM_ARROW,.003,begin,end);renderer.scene.ngeom+=1
             frame=Image.fromarray(renderer.render());draw=ImageDraw.Draw(frame)
             draw.rectangle((0,0,640,64),fill=(20,20,20))
             measured=np.mean(np.array(vs[-25:]),axis=0);yawrate=np.mean(np.array(ws[-25:])[:,2])
@@ -119,6 +133,7 @@ def trial(policy, command, seed, seconds, render=None, noise=False, randomizatio
         sheet.save(render.with_suffix('.png'));renderer.close()
     if terrain:
         result.update(terrain_spawn=terrain_spawn,terrain=terrain,terrain_seed=env.terrain_seed,final_ground_height_m=env.terrain_height(env.data.qpos[:2]),local_trunk_clearance_m=clearances[-1],minimum_local_trunk_clearance_m=min(clearances))
+    if events:result['disturbances']=env.disturbance_records
     env.close();return result
 
 def main():

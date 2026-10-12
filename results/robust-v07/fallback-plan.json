@@ -1,0 +1,33 @@
+{
+  "reason": "Full-strength recovery profile regresses paired push safety; reject it and test the next-ranked eligible validation profile.",
+  "next_validation_profile": "slope_0.25",
+  "new_physics_seeds": {
+    "nominal": [
+      300,
+      301,
+      302,
+      303
+    ],
+    "randomized": [
+      320,
+      321,
+      322,
+      323
+    ]
+  },
+  "new_terrain_seeds": {
+    "nominal": [
+      1300,
+      1301,
+      1302,
+      1303
+    ],
+    "randomized": [
+      1320,
+      1321,
+      1322,
+      1323
+    ]
+  },
+  "selection_rule": "Apply the same acceptance guard; compare both actors on new paired seeds. Retain initial failed comparison separately."
+}

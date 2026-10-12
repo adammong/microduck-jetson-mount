@@ -1,0 +1,65 @@
+{
+  "profile": "slope_0.25",
+  "status": "rejected_due_to_regression",
+  "simulation_only": true,
+  "per_suite": {
+    "slope": {
+      "baseline": {
+        "trials": 224,
+        "passed": 198,
+        "safe": 224,
+        "mean_tracking_error": 0.6459659544489883
+      },
+      "conservative": {
+        "trials": 224,
+        "passed": 201,
+        "safe": 224,
+        "mean_tracking_error": 0.6437341938993661
+      }
+    },
+    "push": {
+      "baseline": {
+        "trials": 192,
+        "passed": 156,
+        "safe": 156,
+        "mean_tracking_error": 0.459992931327065
+      },
+      "conservative": {
+        "trials": 192,
+        "passed": 154,
+        "safe": 154,
+        "mean_tracking_error": 0.4647215099659811
+      }
+    },
+    "trip_slip": {
+      "baseline": {
+        "trials": 144,
+        "passed": 106,
+        "safe": 106,
+        "mean_tracking_error": 0.4971107254060549
+      },
+      "conservative": {
+        "trials": 144,
+        "passed": 101,
+        "safe": 103,
+        "mean_tracking_error": 0.5315113140798552
+      }
+    },
+    "regression": {
+      "baseline": {
+        "trials": 64,
+        "passed": 64,
+        "safe": 64,
+        "mean_tracking_error": 0.23730836501255198
+      },
+      "conservative": {
+        "trials": 64,
+        "passed": 64,
+        "safe": 64,
+        "mean_tracking_error": 0.2323111998020233
+      }
+    }
+  },
+  "reason": "Two fewer push recoveries and three fewer safe trip/slip runs on new paired scenes.",
+  "plan": "fallback-plan.json"
+}

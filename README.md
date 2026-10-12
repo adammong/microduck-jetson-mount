@@ -4,6 +4,18 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 ![MicroDuck with the v07 clearance mount](docs/v07-robot.png)
 
+## v07 slope precision and disturbance recovery
+
+[![Experimental mounted recovery candidate](docs/v07-recovery.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/robust-v07/recovery-demo.mp4)
+
+The Mac study trains slope precision, push recovery and simulated foot-snag/slip recovery with the current mount included. The candidate has **4.9% lower mean slope tracking error**, changes push-recovery passes **163/192 →152/192**, and trip/slip passes **104/144 →107/144** on fresh paired nominal/randomized tests. The candidate fails the regression guard; the previous terrain controller remains selected. All inherited neural weights remain fixed; observable command/IMU/joint corrections are calibrated on the CPU. A gentler follow-up profile also failed fresh push/trip checks. Harder disturbances still cause falls; this does not enable reliable get-up from the floor.
+
+The video shows the **experimental full candidate (rejected as a replacement)** on 5 mm roughness, with a 4 N side shove, a 2 N right swing-foot force pulse and a 0.35-friction patch. It completes one continuous 15-second run and meets this trial’s safety and recovery criteria. The foot-force pulse is a snag proxy, not a real curb collision. Hardware is untested.
+
+[MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/robust-v07/recovery-demo.mp4) · [Selected ONNX](results/robust-v07/policies/selected/policy.onnx) · [Candidate](results/robust-v07/policies/candidate/) · [Paired push failure](results/robust-v07/REPORT.md#paired-push-failure-demonstration) · [Measurements and reproduction](results/robust-v07/REPORT.md).
+
+**Try it:** after [setup](training/README.md), run `OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/robust-v07/policies/selected/policy.onnx --terrain downhill_3deg`, then open http://127.0.0.1:8798.
+
 ## v07 uneven-terrain walking
 
 [![Mounted duck on rough sloping terrain](docs/v07-terrain.gif)](https://github.com/adammong/microduck-jetson-mount/blob/main/results/terrain-v07/terrain-demo.mp4)

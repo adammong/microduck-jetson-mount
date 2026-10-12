@@ -4,6 +4,18 @@ Uses [MicroDuck Lab](https://github.com/jonathanhawkins/microduck-lab/tree/bbf03
 
 The explicitly selected CAD revision is the source of payload mass, inertia and collision boxes. Stock and loaded scenes share the robot, floor, STAND keyframe, BAM XL330 motor model, 200 Hz physics and 50 Hz policy interface: **61 observations / 14 actions**. Both use the fuller groundcontact robot. The Jetson visual is an envelope; cables are fixed and the mount cannot slip or break in this model.
 
+## Slope precision and push/trip/slip recovery
+
+The [mounted robustness study](../results/robust-v07/REPORT.md) adds measured external torso shoves, swing-foot snag proxies and temporary low-grip patches. Applied force impulses, effective contact friction, sliding exposure and return-to-command windows are checked separately from survival. Two initial CEM stages and a progressive slip curriculum train a frozen-network adaptation, with independent validation/final comparisons and ordinary-terrain regression checks. Selected and rejected profiles are labeled; hardware and general fallen-pose get-up remain unvalidated.
+
+Use the selected actor with the existing terrain control page:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_motion.py --revision v07 --policy results/robust-v07/policies/selected/policy.onnx --terrain downhill_3deg
+```
+
+The report provides scene setup, training, validation and exact disturbance tests. These are simulated environmental challenges, never hidden balance assistance or actor inputs.
+
 ## Uneven-terrain study
 
 The [mounted terrain study](../results/terrain-v07/REPORT.md) adds seeded small bumps, gentle slopes/cross slopes, mixed roughness, a beveled threshold and low-grip conditions. It retains the current mount, servo limits, 61/14 interface and neutral head constraint. Two-stage CPU CEM trains bounded IMU/command corrections; separate validation selects their strength before paired final tests. Selected and rejected artifacts remain clearly labeled. No general fall recovery or real-world terrain claim is made.

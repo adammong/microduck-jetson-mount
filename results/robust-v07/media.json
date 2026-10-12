@@ -1,0 +1,15 @@
+{
+  "path": "results/robust-v07/recovery-demo.mp4",
+  "policy_kind": "rejected_candidate",
+  "policy_sha256": "59deec2dd58a4ec307ff38c5688792e60e59ac93032d35cb23d0849a5a9d4e3c",
+  "duration_s": 15.0,
+  "frames": 375,
+  "fps": 25,
+  "crop_top_pixels": 64,
+  "continuous": true,
+  "physics_seed": 600,
+  "terrain_seed": 1600,
+  "safe": true,
+  "recovery_complete": true,
+  "sha256": "46874dcd83512abf571bcf788eb0dc644c8feae9c4df2cc08455ebf5ac8e04b7"
+}

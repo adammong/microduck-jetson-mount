@@ -1,0 +1,184 @@
+{
+  "parent_commit": "8475725e7df4e141dd01ccc6b63bd639b07797f2",
+  "revision": "v07",
+  "simulation_only": true,
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "arm64",
+    "mujoco": "3.10.0",
+    "numpy": "2.5.2",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.29.0"
+  },
+  "harness_commit": "bbf0326ef97975f7062368914e0729504d17226f",
+  "official_policy_revision": "088524a64e2557dc453256b6071dbb9d23888802",
+  "nominal_total_mass_kg": 1.1847989141502486,
+  "payload_mass_kg": 0.4475557341502486,
+  "actuator_current_a": 1.75,
+  "scene": {
+    "revision": "v07",
+    "source_sha256": "1b83e28ca22d1ffef422fbfb26952848adcc481cc9397fad26f2565509c8f267",
+    "terrain_scene_sha256": "db2778d2df07ebca8c11bc26732f815594d1fa6d50883847132aa25df14c5344",
+    "grid": [
+      641,
+      641
+    ],
+    "half_size_m": 5.0,
+    "terrain_seed_independent_of_physics_seed": true,
+    "terrain_catalog": {
+      "flat": {},
+      "bumps_2mm": {
+        "relief_mm": 2.0
+      },
+      "bumps_5mm": {
+        "relief_mm": 5.0
+      },
+      "bumps_10mm": {
+        "relief_mm": 10.0
+      },
+      "uphill_3deg": {
+        "slope_x_deg": 3.0
+      },
+      "downhill_3deg": {
+        "slope_x_deg": -3.0
+      },
+      "cross_left_3deg": {
+        "slope_y_deg": 3.0
+      },
+      "cross_right_3deg": {
+        "slope_y_deg": -3.0
+      },
+      "uphill_5deg": {
+        "slope_x_deg": 5.0
+      },
+      "downhill_5deg": {
+        "slope_x_deg": -5.0
+      },
+      "mixed_5mm_3deg": {
+        "relief_mm": 5.0,
+        "slope_x_deg": 3.0,
+        "slope_y_deg": -2.0
+      },
+      "threshold_5mm": {
+        "threshold_mm": 5.0
+      },
+      "low_grip": {
+        "friction": 0.5
+      }
+    },
+    "collision_model": "Original v07 groundcontact robot; existing floor replaced by a heightfield. Flat controls retain the original plane.",
+    "model_mass_kg": 1.1847989141502486
+  },
+  "training_definition": "Six slope CEM generations and eight joint-recovery generations; additional six progressive slip generations; sixteen candidates; paired seeds 0/1 with noise/DR on 1; 8-second slope/ordinary and 12-second disturbance trials.",
+  "base_actor_sha256": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+  "files_sha256": {
+    "results/robust-v07/REPORT.md": "c6ef20f901b57c9e069a9e9bb9b3b4e7d28123d9b8ca56ffd5c68874ae6f6aba",
+    "results/robust-v07/ablation-probe.json": "6f71bbcab3e7658ec0edfcd66e63beedfd9436eedda670f194eec5054101fe20",
+    "results/robust-v07/ablation_probe.py": "c8de62ef43233e00283791019840a3307b761daa3cd35905084475bb2a6ffcf5",
+    "results/robust-v07/baseline-fresh-nominal.json": "40b88b76ccaf00f06e6bc32bf978ad61e50dc8da8e395faafc2983fc39b8cb92",
+    "results/robust-v07/baseline-fresh-randomized.json": "6a67c5135d884527dfff29d03dbdd81b2643dab4c615c41577786b3c11a2e300",
+    "results/robust-v07/baseline-nominal.json": "d6804940afb61a6f7518f09ea0db7b18d432eb79f7b9fea9e7a1c2c1756e97d9",
+    "results/robust-v07/baseline-randomized.json": "96d6f1375df673ae09f799d1cfd1131546b6e5cd8b658b7a89e515e6a590f46a",
+    "results/robust-v07/blend-probe.json": "d7a6fd3497ce6a1edfe220f1f27c94ff0525122ba9bf8aa5e1deecb40a39f42c",
+    "results/robust-v07/blend_probe.py": "6bbe6ce1e8e35d8e5cbb533e0bb9acf4c779f147fd048fb6379a80ccead68461",
+    "results/robust-v07/brake-probe.json": "e82c4bffe2405813803f5472a18490821bfa0299d7e47ab9750ed22cd825f17d",
+    "results/robust-v07/brake_probe.py": "5c886e72d96786c117c0ddf465b14f5e9e16b1ac6ff97e50e1c74bd438d280a4",
+    "results/robust-v07/candidate-nominal.json": "3171546f7af50f51b56091d439ed15a596b13b563d8247acfe516a13123cd884",
+    "results/robust-v07/candidate-randomized.json": "2addcae307200bd80fd4232c7844baa733cd98597cab1f5f44e0cac5476754e7",
+    "results/robust-v07/conservative-fresh-nominal.json": "caf4fcff878f59424e0481e8840bd15fedd0975028a028e0e9bdf675b10240c7",
+    "results/robust-v07/conservative-fresh-randomized.json": "e1bfc5487da7ef8fdcbaf1a9546cfa5a4ffd95d7f017948a6f7e8ebf546ca587",
+    "results/robust-v07/conservative-summary.json": "5f8e0236a25ded1de59bb42733e3194486c0b7aac886c5f9f2adea4c5a2f781b",
+    "results/robust-v07/controller-verification.json": "7e8468e846d042210f04a721cf5f0a7ce0bf2bc9324b7248b5f0d2d25d9e61f9",
+    "results/robust-v07/controller_smoke.py": "b9417f21d6a415d9ddaffe629468da211e19277ec35a206ec1b496fac978da16",
+    "results/robust-v07/curriculum/candidate/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/curriculum/candidate/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/curriculum/candidate/parameters.json": "58809d69b41df253a9d4a56c0bca0d26084ea735cc05f3ff7b4c3befccb8e5c2",
+    "results/robust-v07/curriculum/candidate/policy.onnx": "59deec2dd58a4ec307ff38c5688792e60e59ac93032d35cb23d0849a5a9d4e3c",
+    "results/robust-v07/curriculum/recovery-candidate/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/curriculum/recovery-candidate/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/curriculum/recovery-candidate/parameters.json": "58809d69b41df253a9d4a56c0bca0d26084ea735cc05f3ff7b4c3befccb8e5c2",
+    "results/robust-v07/curriculum/recovery-candidate/policy.onnx": "59deec2dd58a4ec307ff38c5688792e60e59ac93032d35cb23d0849a5a9d4e3c",
+    "results/robust-v07/curriculum/search.json": "1168383f8cf1fd8937fb3155142e9370e22edf1d0f3377eea11bc1ba5a8b211b",
+    "results/robust-v07/curriculum/slope-candidate/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/curriculum/slope-candidate/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/curriculum/slope-candidate/parameters.json": "4c54c633b13d2e7b7e5cd2d5f26dfea2f42403a1c0c4cf0c8b6839a5764d0756",
+    "results/robust-v07/curriculum/slope-candidate/policy.onnx": "0cf03fcb510beca47fa8f63ca4c9e6d9c2c966cef2baae41c8d00a920947d98e",
+    "results/robust-v07/fallback-plan.json": "17b5ae8a527821e7802b79af11e42f5cb4d593ae4a256090ac2145d33aa01beb",
+    "results/robust-v07/media.json": "46037948aca7d094a993c99b556f49dfbceecb85dff73b5bf0cdfa1f35a08f91",
+    "results/robust-v07/physics-verification.json": "44c87937a8b9ca2c3a10e466b7f608fb361953ac6145c21887197e7e90d52991",
+    "results/robust-v07/pilot-baseline.json": "9fec43e6c345524fe1368e9f05df573bf2465a0eabddf28c3acf62c3397547c6",
+    "results/robust-v07/policies/ablation-pose_and_command_only/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/ablation-pose_and_command_only/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/ablation-pose_and_command_only/parameters.json": "6f5a522bdca0460b60f53cbf0dd52f1637e0060a2923b47ab089446567a004fb",
+    "results/robust-v07/policies/ablation-pose_and_command_only/policy.onnx": "68bfd7ca03962f9adbc8c916e43405f5c2060a4734deb892dc22aeab6bb69256",
+    "results/robust-v07/policies/ablation-without_all_new_gyro/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/ablation-without_all_new_gyro/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/ablation-without_all_new_gyro/parameters.json": "8aba3434e1272224ff6bd3b451e0eea70bb17af99be357b0f9ae9159de747c8d",
+    "results/robust-v07/policies/ablation-without_all_new_gyro/policy.onnx": "a289790e0507489f95a735307aa5930347f0142f1df511c7c13b5ba3a9d75528",
+    "results/robust-v07/policies/ablation-without_pitch_roll_gyro/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/ablation-without_pitch_roll_gyro/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/ablation-without_pitch_roll_gyro/parameters.json": "8ac8c3333dcc1a31dbe44e50d4d6f24da9294c82b25c73df0c8f35c530849e9f",
+    "results/robust-v07/policies/ablation-without_pitch_roll_gyro/policy.onnx": "985c5d02a1e7e5556c8b37fdbef3940879884238e58d70a2741cffd481d7603f",
+    "results/robust-v07/policies/brake-control-snapshot/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/brake-control-snapshot/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/brake-control-snapshot/parameters.json": "2a0a290c68167f8ce015065e5001cc233481127e772aff990cf262c449a60e5a",
+    "results/robust-v07/policies/brake-control-snapshot/policy.onnx": "8389cea22724fb0832ab7525296f34fa2fde37035946b9946e0b928231b251d6",
+    "results/robust-v07/policies/candidate/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/candidate/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/candidate/parameters.json": "d8df05b6075ddd65ea75e329ed9e56ce2d2f78032a2050f3747ae1363310f235",
+    "results/robust-v07/policies/candidate/policy.onnx": "59deec2dd58a4ec307ff38c5688792e60e59ac93032d35cb23d0849a5a9d4e3c",
+    "results/robust-v07/policies/conservative/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/conservative/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/conservative/parameters.json": "afae74926df30ecb3fea8c9f68234dd3d1a1bff7b37e0001dbe8273f1a582652",
+    "results/robust-v07/policies/conservative/policy.onnx": "afab1e3cf709deafa2670a5a11cb2171151031566850c9cd32872701d9af0558",
+    "results/robust-v07/policies/identity/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/identity/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/policies/identity/parameters.json": "c967845a97f84c73183cd87f977389b2992593b2c57612f8051bae47e801dae0",
+    "results/robust-v07/policies/identity/policy.onnx": "8469ca0c97e814e1128800aa24b8aa6b940be6c359c02dfc7f9724d8e76ec956",
+    "results/robust-v07/policies/selected/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/policies/selected/NOTICE": "d09c8d5615d076ea144567f1700c6fadadb184d710192cbbaa8058f35020bda8",
+    "results/robust-v07/policies/selected/parameters.json": "52e39028c3e278e51c66989a8fd727052352cc2dfd96f7a9b5e7e916283ee574",
+    "results/robust-v07/policies/selected/policy.onnx": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "results/robust-v07/push-baseline-captioned.mp4": "dfc98754d29232aa63c803f47f0418874787848bbc48e109a16db46c565307e8",
+    "results/robust-v07/push-baseline-captioned.png": "5ed7442c631ed6ef4dd371960eea6286587d6ff97fefa1488a39091e4172c4f1",
+    "results/robust-v07/push-baseline.mp4": "211cc03a1a8846fc42377c7015f35542c10aeeb0b62d0826da4d29b69cc59bb2",
+    "results/robust-v07/push-candidate-captioned.mp4": "4a65ae70626f7f7008b1c6235d24f0055903a95379952fff961a8d0fd6145498",
+    "results/robust-v07/push-candidate-captioned.png": "1d9e25e73bfde02c81c2723f57391d01ab15addea947835e219711d6a11d4a51",
+    "results/robust-v07/push-candidate.mp4": "6cc57c659e149d838d123c8ed12376ab3aa15e7be957ca92bdd965724d7e6a56",
+    "results/robust-v07/push-regression-demo.json": "56d99588793730969be7b3947266c4771d3e58562e0cb035186bf9cba4da84d3",
+    "results/robust-v07/recovery-demo-captioned.mp4": "8c822d9d3569a272020458f092c8712117665acb38b36874bc421ba93bd406c5",
+    "results/robust-v07/recovery-demo-captioned.png": "8195c9107fc10cf2615231d34dfffb93e2e5d1a4c57389f2df3143e7f4318e9a",
+    "results/robust-v07/recovery-demo.json": "b8bc501d220234ca97aa6e808a995f5f0911917d485f18a15802e94e33953fd2",
+    "results/robust-v07/recovery-demo.mp4": "46874dcd83512abf571bcf788eb0dc644c8feae9c4df2cc08455ebf5ac8e04b7",
+    "results/robust-v07/render_demo.py": "45fcac158c2389de7d40faf1d883c0238d5515d74ed2a8af33d46bd9ba939468",
+    "results/robust-v07/render_failure.py": "379d085547d0439a7f15394c8dfb7597f70bf1afa84b88ebfb3f84d5f298ecfc",
+    "results/robust-v07/selection.json": "ebd78a1069f6ccdef112dfe1f54fc06d0437027ec322ccfb194f602666d71d1c",
+    "results/robust-v07/sequences.json": "6cb0d329b3fc9e9872c12942bdc4c044065688a18bbb74fda23d8d524829c226",
+    "results/robust-v07/slip-curriculum/candidate/LICENSE": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+    "results/robust-v07/slip-curriculum/candidate/NOTICE": "6a9b4b05f0984ec414fb86b8d7bc27f94a81f511c186764998f880969e9f9a80",
+    "results/robust-v07/slip-curriculum/candidate/parameters.json": "e4689d4be37361d1080df6d39da89a74af4d53e92c757e0c9d7d26b8f6b58eeb",
+    "results/robust-v07/slip-curriculum/candidate/policy.onnx": "3e16f5df62153c1b6c43beb5d9a53b4dc631f189add3868eed23249afee8908a",
+    "results/robust-v07/slip-curriculum/search.json": "ae925d0eaa90a1deba5bbd7d0ed818e9240ba34e965c502a02d43ab37d0a11d7",
+    "results/robust-v07/summary.json": "5915719d1474d342b3c9e838297dae1696600d5d35127ce5c883932f1b09bbd7",
+    "results/robust-v07/terrain-regression-nominal.json": "0fe1bfbafcd0cdd65255fbb5e9f45504ba82f2e6eca2d8c2de07f0b0cbe78c52",
+    "results/robust-v07/terrain-regression-randomized.json": "1013c1825501e5959b495e4b56bea2dd726f5bb0e6f846128c931936d3b2a88a",
+    "results/robust-v07/validation.json": "c39538f03339359623499eec77d9dc642102e0cafd65e26f01fb9cd0dc84a8f8",
+    "results/robust-v07/verification.json": "e04ddb5d65ef0d98d41f7a73e5da65c31b0571b8e9dbac5cd0dce3daeee28b2c",
+    "training/robust_env.py": "ffb62c30531f4d24612b9e1a9a0d4658a1a78badde11dd34a9369627f1d34a58",
+    "training/robust_policy.py": "ba0a01e4973099669d551b447f0d518f1a46f62fc45bc9880178de05b71b78f7",
+    "training/evaluate_robust.py": "f34d70c883902e78fed1d1130781d08eb218bdbeb0ba0a5caa1940d334519f50",
+    "training/tune_robust.py": "1f9c6051dc5afc5622bf36f53944f36cafec414a402defa9594d00d13f5bce17",
+    "training/tune_robust_slip.py": "0fafe8d40b9b4b97e30f064f1f620ca67bd3f6a360b9d42a0a9e0b6903283735",
+    "training/validate_robust.py": "25bc80139712aee01effae33da3f4e1e06de18b411e5b9782da45d4520c93b0a",
+    "training/verify_robust.py": "7d1107b3fe8401411a03b9c240b25640ebbdb2cd8001d079ff17236c2a009f5b",
+    "training/evaluate_motion.py": "96dc1328e5a3fccdd06fea492038d3d0242358ffd94133b9bb960f355b7091ab",
+    "training/teleop_motion.py": "c0a8597730fecdf8705ed665eb0c890b1d1acfd41887588149f957955a156910",
+    "training/evaluate_terrain.py": "5a94cd6ef041e1f2e1d408f9c0e229adeeea2da4877193d45337705d577875e1",
+    "training/evaluate_terrain_sequences.py": "0633d370448ef9244700211cc94b02b0f3b3b158fd90cea5836f38bb6d92ad6f",
+    "training/terrain_env.py": "29e2bda88ecdea6fa1fe77b7fb5cc97d51239873d66aa97105885026b0aa810a",
+    "training/motion_controller.py": "36c280f14b3ae404c158fd250a6aa7123aee5b992395cba388178219a64a9870",
+    "clearance_mount/simulation/mass_properties.json": "083f6c1d00bf19f0c713152ebec9d84b46b2c9612fd196dd26a58ba95b4fd00d",
+    "results/terrain-v07/policies/selected/policy.onnx": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "docs/v07-recovery.gif": "cb0bea6f984d9b1ecd6aa96bc6d841fe0742d241d5f7200e0d25173865b720f2"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "backend": "whisper",
+      "format": [
+        2,
+        2,
+        16000,
+        16000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whisper",
+      "format": [
+        1,
+        1,
+        16000,
+        16000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whisper",
+      "format": [
+        1,
+        2,
+        8000,
+        8000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whisper",
+      "format": [
+        1,
+        2,
+        16000,
+        1599
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whisper",
+      "format": [
+        1,
+        2,
+        16000,
+        96001
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whisper",
+      "incomplete_rejected": true
+    },
+    {
+      "backend": "whistle",
+      "format": [
+        2,
+        2,
+        16000,
+        16000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whistle",
+      "format": [
+        1,
+        1,
+        16000,
+        16000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whistle",
+      "format": [
+        1,
+        2,
+        8000,
+        8000
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whistle",
+      "format": [
+        1,
+        2,
+        16000,
+        1599
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whistle",
+      "format": [
+        1,
+        2,
+        16000,
+        96001
+      ],
+      "rejected": true
+    },
+    {
+      "backend": "whistle",
+      "incomplete_rejected": true
+    }
+  ],
+  "silence_rejected_before_model_loading": true
+}

@@ -25,6 +25,15 @@ This adds **LFM2.5-350M** with the bundled duck-command adapter. The language ru
 
 Open http://127.0.0.1:8798. Voice is optional; buttons and text work without its setup. Speech dependencies/model live in separate ignored `tmp/voice-venv` and `tmp/voice-model` directories. Press **Speak a command** to request microphone access. The report documents exact commands, transition/fault behavior, verification and reproduction.
 
+To try **Whistle** speech recognition on an Apple Silicon Mac while retaining LFM for natural-language interpretation:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/setup_whistle.py
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_skills.py --speech-backend whistle --port 8800 --seed 950
+```
+
+Open http://127.0.0.1:8800. The page names the active speech model. Whistle runs offline from pinned weights/native runtime in ignored `tmp/whistle-model`, with telemetry disabled. It is faster in our small synthetic comparison but less accurate on short clean commands; unclear speech is refused. Whisper remains the default and can be selected with `--speech-backend whisper`. [Comparison, checks and limits](../results/whistle-v07/REPORT.md).
+
 ## Slope precision and push/trip/slip recovery
 
 The [mounted robustness study](../results/robust-v07/REPORT.md) adds measured external torso shoves, swing-foot snag proxies and temporary low-grip patches. Applied force impulses, effective contact friction, sliding exposure and return-to-command windows are checked separately from survival. Two initial CEM stages and a progressive slip curriculum train a frozen-network adaptation, with independent validation/final comparisons and ordinary-terrain regression checks. Selected and rejected profiles are labeled; hardware and general fallen-pose get-up remain unvalidated.

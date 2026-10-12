@@ -1,0 +1,94 @@
+{
+  "parent_commit": "b20b13b91842f796fd91b146d3a60dca8933f2f6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "speech_backend": "whistle",
+  "language_model": "LFM2.5-350M with existing duck adapter",
+  "sim_seed": 950,
+  "synthetic_audio_only": true,
+  "files": {
+    "results/whistle-v07/REPORT.md": {
+      "bytes": 5703,
+      "sha256": "d85c5570ff78fa0b1d0a55014cc19182c96d6247509d7d9c340ae70235a7cd45"
+    },
+    "results/whistle-v07/audio/noise.wav": {
+      "bytes": 64044,
+      "sha256": "96a0d9362256756357e245e8dfeb73c1d73a5a604f3a68ce1b25669c893793d2"
+    },
+    "results/whistle-v07/audio/noisy-00.wav": {
+      "bytes": 33180,
+      "sha256": "96bf62c83633865106b2c947cf71fba8c25d8f1936cdb46986e411b62d2f260d"
+    },
+    "results/whistle-v07/audio/noisy-01.wav": {
+      "bytes": 26886,
+      "sha256": "3304f0ccccda732fef6169ce70f9cfa9f9e4ddf4e73fcbafecab391a3a655a5d"
+    },
+    "results/whistle-v07/audio/noisy-02.wav": {
+      "bytes": 26514,
+      "sha256": "00fdb5654e56086c078698ab5b4dbbf670ff2f79ae98a29c2208c94938084ea7"
+    },
+    "results/whistle-v07/audio/noisy-03.wav": {
+      "bytes": 28280,
+      "sha256": "bb3d17f2de2493a6b5aa2f9e1716504a8a9147297accc4f66ca276b27fcf2022"
+    },
+    "results/whistle-v07/audio/noisy-04.wav": {
+      "bytes": 22428,
+      "sha256": "a7f6c6a234a5a9cf7fbc05c70999c951dfca77b71d3ab8da71b9bd066623185c"
+    },
+    "results/whistle-v07/audio/noisy-05.wav": {
+      "bytes": 61416,
+      "sha256": "ac2021b457f89a8033035194515c52068e9f86a9f0923d5988281aabda8e092d"
+    },
+    "results/whistle-v07/audio/noisy-06.wav": {
+      "bytes": 45480,
+      "sha256": "d00fbba00f0462548d0f091ca256e65ee5c788fb2f0a9180dafc644e6502fd11"
+    },
+    "results/whistle-v07/audio/noisy-07.wav": {
+      "bytes": 30034,
+      "sha256": "121fc621bb75c857f29de7266a45de56db4672e342728288aad5787b4241e2be"
+    },
+    "results/whistle-v07/audio/noisy-08.wav": {
+      "bytes": 95834,
+      "sha256": "38a4d0b87cca9618be8aa3b21b5b33b68bdb8040417b77ce3c2c5a9ca61d2d3e"
+    },
+    "results/whistle-v07/audio/noisy-09.wav": {
+      "bytes": 86546,
+      "sha256": "e0b5cb1a6d8658536e735a46bcb5dc937f5b262ea9603b889f0fd706ef3ff992"
+    },
+    "results/whistle-v07/audio/silence.wav": {
+      "bytes": 64044,
+      "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa"
+    },
+    "results/whistle-v07/audio/tone.wav": {
+      "bytes": 64044,
+      "sha256": "be6dfca32f8ae3ec6eb99a7150099847b1bf0ccb5eda53a6e8e95881d6186b46"
+    },
+    "results/whistle-v07/browser-audio-verification.json": {
+      "bytes": 193,
+      "sha256": "55c074a5d5e532a1dbdcd02876c7f8a5eaf285d6b8ac2a730e57ff7d6ed07017"
+    },
+    "results/whistle-v07/comparison.json": {
+      "bytes": 48581,
+      "sha256": "bda3ed57b0d59ec54475d531c75360c3a0850519929740cfae06355c86fe08ee"
+    },
+    "results/whistle-v07/control-page.jpg": {
+      "bytes": 77908,
+      "sha256": "86151d9b22e8a247d351e258e5f5c1b81a9b35af8f66c369e701ef17ecf348a0"
+    },
+    "results/whistle-v07/http-verification.json": {
+      "bytes": 8999,
+      "sha256": "077fc76ca9979dc72451f92ee179404be3ea5aac639fb211103418513d18d324"
+    },
+    "results/whistle-v07/http_probe.py": {
+      "bytes": 3810,
+      "sha256": "ebb0ed445ce62f733ca427b787c61403d4615e52a82494a76df4e4461e82aea0"
+    },
+    "results/whistle-v07/speech-model.json": {
+      "bytes": 750,
+      "sha256": "a2655a9fac3e1c869d541e0c367af177e6cb532443a1818ac02d6f45aa6150d5"
+    },
+    "results/whistle-v07/validation.json": {
+      "bytes": 1652,
+      "sha256": "55ebfc90e9db5d39b1767a696d8f5ebad59ebe108c3a2ca6cb5aea6e799ecad2"
+    }
+  }
+}

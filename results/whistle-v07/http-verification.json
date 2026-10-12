@@ -1,0 +1,361 @@
+{
+  "passed": true,
+  "synthetic_audio_only": true,
+  "microphone_tested": false,
+  "completed": [
+    {
+      "audio": "results/voice-v07/audio/command-00.wav",
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "Walk forward.",
+        "intent": "move",
+        "seconds": 3.0,
+        "steps": [
+          {
+            "action": "forward",
+            "seconds": 3.0
+          }
+        ],
+        "speech": {
+          "text": "Walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.14450456263497435,
+          "duration_s": 1.0355,
+          "elapsed_s": 0.027101790998131037,
+          "words": [
+            {
+              "word": "Walk",
+              "start": 0.08,
+              "end": 0.32,
+              "probability": 0.673
+            },
+            {
+              "word": "forward.",
+              "start": 0.32,
+              "end": 0.8,
+              "probability": 0.994
+            }
+          ],
+          "ttft_ms": 1.9,
+          "decode_tps": 1361.6
+        }
+      },
+      "request_wall_s": 0.051343917031772435,
+      "execution": {
+        "final_phase": "idle",
+        "peak_tilt_deg": 2.9083836401374232,
+        "phases": [
+          "idle"
+        ]
+      }
+    },
+    {
+      "audio": "results/language-v07/audio/command-00.wav",
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "Please back up for two seconds, then sit down.",
+        "intent": "move",
+        "seconds": 2.0,
+        "steps": [
+          {
+            "action": "backward",
+            "seconds": 2.0
+          },
+          {
+            "action": "sit"
+          }
+        ],
+        "language": {
+          "model": "LFM2.5-350M",
+          "elapsed_s": 0.16796354204416275,
+          "load_s": 0.2468770410050638
+        },
+        "speech": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1368587093092637,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.04861229099333286,
+          "words": [
+            {
+              "word": "Please",
+              "start": 0.0,
+              "end": 0.32,
+              "probability": 0.979
+            },
+            {
+              "word": "back",
+              "start": 0.32,
+              "end": 0.56,
+              "probability": 0.993
+            },
+            {
+              "word": "up",
+              "start": 0.56,
+              "end": 0.8,
+              "probability": 0.999
+            },
+            {
+              "word": "for",
+              "start": 0.8,
+              "end": 1.04,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 0.986
+            },
+            {
+              "word": "seconds,",
+              "start": 1.28,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "then",
+              "start": 2.08,
+              "end": 2.24,
+              "probability": 1.0
+            },
+            {
+              "word": "sit",
+              "start": 2.24,
+              "end": 2.48,
+              "probability": 0.999
+            },
+            {
+              "word": "down.",
+              "start": 2.48,
+              "end": 2.72,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 7.8,
+          "decode_tps": 1120.5
+        }
+      },
+      "request_wall_s": 2.8320148340426385,
+      "execution": {
+        "final_phase": "idle",
+        "peak_tilt_deg": 2.7657661991876057,
+        "phases": [
+          "idle"
+        ]
+      }
+    },
+    {
+      "audio": "results/language-v07/audio/command-01.wav",
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "Could you stand up and turn right for two seconds?",
+        "intent": "stand",
+        "seconds": 0.0,
+        "steps": [
+          {
+            "action": "stand"
+          },
+          {
+            "action": "turn_right",
+            "seconds": 2.0
+          }
+        ],
+        "language": {
+          "model": "LFM2.5-350M",
+          "elapsed_s": 0.1633909170050174,
+          "load_s": 0.19905470800586045
+        },
+        "speech": {
+          "text": "Could you stand up and turn right for two seconds?",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1572231774772201,
+          "duration_s": 2.7031875,
+          "elapsed_s": 0.03673049999633804,
+          "words": [
+            {
+              "word": "Could",
+              "start": 0.08,
+              "end": 0.16,
+              "probability": 0.818
+            },
+            {
+              "word": "you",
+              "start": 0.16,
+              "end": 0.4,
+              "probability": 0.999
+            },
+            {
+              "word": "stand",
+              "start": 0.4,
+              "end": 0.64,
+              "probability": 1.0
+            },
+            {
+              "word": "up",
+              "start": 0.64,
+              "end": 0.88,
+              "probability": 1.0
+            },
+            {
+              "word": "and",
+              "start": 0.88,
+              "end": 1.04,
+              "probability": 0.996
+            },
+            {
+              "word": "turn",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 1.0
+            },
+            {
+              "word": "right",
+              "start": 1.28,
+              "end": 1.52,
+              "probability": 0.996
+            },
+            {
+              "word": "for",
+              "start": 1.52,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.68,
+              "end": 2.0,
+              "probability": 0.993
+            },
+            {
+              "word": "seconds?",
+              "start": 2.0,
+              "end": 2.4,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 3.6,
+          "decode_tps": 1359.8
+        }
+      },
+      "request_wall_s": 2.111284832993988,
+      "execution": {
+        "final_phase": "idle",
+        "peak_tilt_deg": 2.720956923048626,
+        "phases": [
+          "idle"
+        ]
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "audio": "results/voice-v07/audio/command-06.wav",
+      "status": 400,
+      "response": {
+        "error": "That request is outside the supported motion commands."
+      }
+    },
+    {
+      "audio": "results/voice-v07/audio/command-07.wav",
+      "status": 400,
+      "response": {
+        "error": "No supported motion request found."
+      }
+    },
+    {
+      "audio": "results/whistle-v07/audio/noise.wav",
+      "status": 422,
+      "response": {
+        "error": "Speech was unclear",
+        "speech": {
+          "text": "",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.02999141554568038,
+          "duration_s": 2.0,
+          "elapsed_s": 0.025012083002366126,
+          "words": [],
+          "ttft_ms": 0.0,
+          "decode_tps": 0.0
+        }
+      }
+    },
+    {
+      "audio": "results/whistle-v07/audio/tone.wav",
+      "status": 422,
+      "response": {
+        "error": "Speech was unclear",
+        "speech": {
+          "text": "",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.07070931099996748,
+          "duration_s": 2.0,
+          "elapsed_s": 0.025473291985690594,
+          "words": [],
+          "ttft_ms": 0.0,
+          "decode_tps": 0.0
+        }
+      }
+    },
+    {
+      "audio": "results/whistle-v07/audio/silence.wav",
+      "status": 422,
+      "response": {
+        "error": "No speech detected",
+        "speech": {
+          "text": "",
+          "accepted": false,
+          "reason": "No speech detected",
+          "rms": 0.0,
+          "backend": "whistle",
+          "elapsed_s": 0.001899541006423533
+        }
+      }
+    },
+    {
+      "audio": "results/whistle-v07/audio/noisy-06.wav",
+      "status": 400,
+      "response": {
+        "error": "That request is outside the supported motion commands."
+      }
+    }
+  ],
+  "cancelled": [
+    {
+      "route": "/stop",
+      "response": [
+        409,
+        {
+          "error": "Request cancelled or controller disconnected"
+        }
+      ]
+    },
+    {
+      "route": "/reset",
+      "response": [
+        409,
+        {
+          "error": "Request cancelled or controller disconnected"
+        }
+      ]
+    }
+  ],
+  "invalid_wav_rejected": true,
+  "unchanged_policy_sha256": {
+    "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+    "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+  }
+}

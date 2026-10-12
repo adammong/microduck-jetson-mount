@@ -13,14 +13,19 @@ from paths import ROOT
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--port',type=int,default=8798);ap.add_argument('--seed',type=int,default=900)
     ap.add_argument('--no-render',action='store_true');ap.add_argument('--idle-exit',type=float,default=15.)
-    ap.add_argument('--voice-python',type=Path,default=ROOT/'tmp/voice-venv/bin/python');ap.add_argument('--voice-model',type=Path,default=ROOT/'tmp/voice-model')
+    ap.add_argument('--speech-backend',choices=['whisper','whistle'],default='whisper')
+    ap.add_argument('--voice-python',type=Path);ap.add_argument('--voice-model',type=Path)
     ap.add_argument('--language-python',type=Path,default=ROOT/'tmp/language-venv/bin/python');ap.add_argument('--language-model',type=Path,default=ROOT/'tmp/language-model')
     ap.add_argument('--language-adapter',type=Path,default=ROOT/'results/language-v07/adapter')
-    a=ap.parse_args();env=environment(a.seed,revision='v07');controller=SkillController(session(WALKING),session(POSTURE))
+    a=ap.parse_args()
+    prefix='whistle' if a.speech_backend=='whistle' else 'voice'
+    a.voice_python=a.voice_python or ROOT/f'tmp/{prefix}-venv/bin/python'
+    a.voice_model=a.voice_model or ROOT/f'tmp/{prefix}-model'
+    env=environment(a.seed,revision='v07');controller=SkillController(session(WALKING),session(POSTURE))
     plan=PlanRunner()
     assert abs(env.model.body_mass.sum()-1.1847989141502486)<1e-8 and env.bam.max_current==1.75 and not env.spotter
     lock=threading.RLock();speech_lock=threading.Lock();shared=dict(epoch=0,reset=False,touched=time.monotonic(),jpeg=b'',state={},last_text='',last_message='Ready')
-    voice_ready=a.voice_python.is_file() and (a.voice_model/'model.bin').is_file()
+    voice_ready=a.voice_python.is_file() and ((a.voice_model/'whistle.cact').is_file() and (a.voice_model/'libneedle.dylib').is_file() if a.speech_backend=='whistle' else (a.voice_model/'model.bin').is_file())
     language_ready=a.language_python.is_file() and (a.language_model/'model.safetensors').is_file() and (a.language_adapter/'adapters.safetensors').is_file()
     hashes={name:hashlib.sha256(path.read_bytes()).hexdigest() for name,path in [('walking',WALKING),('posture',POSTURE)]}
     class Handler(BaseHTTPRequestHandler):
@@ -110,7 +115,7 @@ def main():
                     with lock:result=self.accept(text)
                     return self.respond(result)
                 if self.path=='/voice':
-                    if not voice_ready:raise ValueError('Run training/setup_voice.py first.')
+                    if not voice_ready:raise ValueError('Run training/setup_'+('whistle' if a.speech_backend=='whistle' else 'voice')+'.py first.')
                     if not speech_lock.acquire(blocking=False):return self.respond(dict(error='Already recognizing speech'),409)
                     try:
                         audio=self.rfile.read(n)
@@ -120,7 +125,7 @@ def main():
                         with tempfile.NamedTemporaryFile(dir=folder,suffix='.wav') as f:
                             f.write(audio);f.flush()
                             options=os.environ.copy();options['HF_HUB_OFFLINE']='1';options['OMP_NUM_THREADS']='2'
-                            output=subprocess.run([str(a.voice_python),str(ROOT/'training/speech_command.py'),f.name,'--model',str(a.voice_model)],capture_output=True,text=True,timeout=20,env=options)
+                            output=subprocess.run([str(a.voice_python),str(ROOT/'training/speech_command.py'),f.name,'--model',str(a.voice_model),'--backend',a.speech_backend],capture_output=True,text=True,timeout=20,env=options)
                         if output.returncode:raise ValueError('Speech runtime failed; check the local voice setup.')
                         speech=json.loads(output.stdout)
                         if not speech['accepted']:
@@ -167,7 +172,7 @@ def main():
                 shared['state']=dict(**controller.status(time.monotonic()),actual=[float(x) for x in [*env.body_lin_vel()[:2],env._gyro[2]]],
                                      seconds=float(env.data.time),measurement=m,voice_ready=voice_ready,last_text=shared['last_text'],message=shared['last_message'],
                                      mass_kg=float(env.model.body_mass.sum()),actuator_current_a=env.bam.max_current,policy_sha256=hashes,simulation_only=True)
-                shared['state'].update(language_ready=language_ready,language_model='LFM2.5-350M' if language_ready else None,plan=plan.status())
+                shared['state'].update(language_ready=language_ready,language_model='LFM2.5-350M' if language_ready else None,speech_backend=a.speech_backend,plan=plan.status())
             if renderer and tick%5==0:
                 from PIL import Image
                 camera.lookat[:]=[env.data.qpos[0],env.data.qpos[1],.14];renderer.update_scene(env.data,camera=camera,scene_option=options)

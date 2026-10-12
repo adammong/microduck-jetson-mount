@@ -1,0 +1,25 @@
+{
+  "repository": "Cactus-Compute/whistle",
+  "revision": "ca5287601bef25af26dcf2e1b2bdc0843a7c19e5",
+  "engine_repository": "Cactus-Compute/needle3",
+  "engine_revision": "93e88ede867e4311c39151285e74df513e4b835b",
+  "engine_version": "3.3.1",
+  "files": {
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "libneedle.dylib": {
+      "sha256": "993d617e1136d644560c1fe59058e40810b9386645d01d2f6472af042f4c72ec",
+      "bytes": 1070464
+    },
+    "whistle.cact": {
+      "sha256": "b6e02f048568ac5d01a2042556c658061e699acbc0aa2a1439f52f3d461dffeb",
+      "bytes": 16919407
+    }
+  },
+  "packages": {
+    "cactus-needle": "3.2.1",
+    "huggingface-hub": "2.2.0"
+  }
+}

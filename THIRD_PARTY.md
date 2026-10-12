@@ -41,3 +41,7 @@ The optional voice controller uses SYSTRAN faster-whisper (MIT) and the English 
 ## Local LFM language interpretation
 
 LFM2.5-350M is copyright Liquid AI, Inc. and governed by the LFM Open License v1.0. The official 4-bit MLX model is downloaded separately at a pinned revision. The included duck-command LoRA adapter is a modified derivative, trained locally on synthetic requests; see `results/language-v07/adapter/LICENSE` and `NOTICE.md`. MLX-LM and MLX are MIT-licensed. Original model weights and runtime dependencies are not vendored. Synthetic spoken requests were generated on macOS; no human microphone recordings are included.
+
+## Optional Whistle speech recognition
+
+[Cactus-Compute/whistle](https://huggingface.co/Cactus-Compute/whistle) and the [Needle runtime](https://github.com/cactus-compute/needle) are Apache-2.0 licensed. Pinned weights/native runtime are downloaded separately by `training/setup_whistle.py`, with provenance and checksums in `results/whistle-v07/speech-model.json`; neither is vendored. Recognition uses the native Apple Silicon library through cactus-needle 3.2.1. Synthetic/noise test audio contains no user microphone recordings. Existing LFM adapter and motion policy attribution still applies.

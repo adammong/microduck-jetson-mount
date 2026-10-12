@@ -1,0 +1,1591 @@
+{
+  "synthetic_audio_only": true,
+  "human_microphone_tested": false,
+  "noise": "Seeded additive white noise at 15 dB, not robot/motor noise",
+  "keyword_biasing": false,
+  "runtime": "Fresh process per request, matching simulator integration",
+  "summary": {
+    "whisper": {
+      "clean": {
+        "trials": 10,
+        "correct": 9,
+        "word_error_rate": 0.02564102564102564,
+        "median_process_wall_s": 0.40037627101992257,
+        "exact_transcripts": 9,
+        "rejected": 0
+      },
+      "white_noise_15db": {
+        "trials": 10,
+        "correct": 6,
+        "word_error_rate": 0.10256410256410256,
+        "median_process_wall_s": 0.39304699999047443,
+        "exact_transcripts": 7,
+        "rejected": 2
+      },
+      "non_speech": {
+        "trials": 3,
+        "correct": 1,
+        "word_error_rate": null,
+        "median_process_wall_s": 0.3918334580375813,
+        "exact_transcripts": 1,
+        "rejected": 3
+      }
+    },
+    "whistle": {
+      "clean": {
+        "trials": 10,
+        "correct": 6,
+        "word_error_rate": 0.10256410256410256,
+        "median_process_wall_s": 0.053179187467321754,
+        "exact_transcripts": 7,
+        "rejected": 2
+      },
+      "white_noise_15db": {
+        "trials": 10,
+        "correct": 6,
+        "word_error_rate": 0.07692307692307693,
+        "median_process_wall_s": 0.05343758300296031,
+        "exact_transcripts": 7,
+        "rejected": 3
+      },
+      "non_speech": {
+        "trials": 3,
+        "correct": 3,
+        "word_error_rate": null,
+        "median_process_wall_s": 0.04647637502057478,
+        "exact_transcripts": 3,
+        "rejected": 3
+      }
+    }
+  },
+  "trials": [
+    {
+      "expected_text": "walk forward",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-00.wav",
+      "audio_sha256": "10311fa775b30b9c463d46ff8def2dcab4cd2b7c018b0d763a1584fa37cd9a4d",
+      "results": {
+        "whisper": {
+          "text": "Walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.14450456263497435,
+          "duration_s": 1.0355,
+          "elapsed_s": 0.43150883296038955,
+          "segments": [
+            {
+              "text": " Walk forward.",
+              "avg_logprob": -0.5428976813952128,
+              "no_speech_prob": 0.07723040133714676
+            }
+          ],
+          "process_wall_s": 0.4663209160207771,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.14450456263497435,
+          "duration_s": 1.0355,
+          "elapsed_s": 0.03641758399317041,
+          "words": [
+            {
+              "word": "Walk",
+              "start": 0.08,
+              "end": 0.32,
+              "probability": 0.673
+            },
+            {
+              "word": "forward.",
+              "start": 0.32,
+              "end": 0.8,
+              "probability": 0.994
+            }
+          ],
+          "ttft_ms": 4.1,
+          "decode_tps": 788.6,
+          "process_wall_s": 0.05802533298265189,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "walk forward",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-00.wav",
+      "audio_sha256": "96bf62c83633865106b2c947cf71fba8c25d8f1936cdb46986e411b62d2f260d",
+      "results": {
+        "whisper": {
+          "text": "Lock forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.14676859680233326,
+          "duration_s": 1.0355,
+          "elapsed_s": 0.3577625000034459,
+          "segments": [
+            {
+              "text": " Lock forward.",
+              "avg_logprob": -0.7157821456591288,
+              "no_speech_prob": 0.08529876172542572
+            }
+          ],
+          "process_wall_s": 0.39512212498812005,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "Lock forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.14676859680233326,
+          "duration_s": 1.0355,
+          "elapsed_s": 0.02827370900195092,
+          "words": [
+            {
+              "word": "Lock",
+              "start": 0.08,
+              "end": 0.4,
+              "probability": 0.772
+            },
+            {
+              "word": "forward.",
+              "start": 0.4,
+              "end": 0.64,
+              "probability": 0.683
+            }
+          ],
+          "ttft_ms": 2.5,
+          "decode_tps": 1198.2,
+          "process_wall_s": 0.05126966699026525,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "sit down",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-01.wav",
+      "audio_sha256": "7e5256c8fc6758b8e5675803b1e5631f32f27d7d89bd3aa5fd48f73ae7eebdf1",
+      "results": {
+        "whisper": {
+          "text": "Sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.11528793966635875,
+          "duration_s": 0.8388125,
+          "elapsed_s": 0.3539809579961002,
+          "segments": [
+            {
+              "text": " Sit down.",
+              "avg_logprob": -0.6483036776383718,
+              "no_speech_prob": 0.06775791943073273
+            }
+          ],
+          "process_wall_s": 0.3968720830162056,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Sidon",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.11528793966635875,
+          "duration_s": 0.8388125,
+          "elapsed_s": 0.029339541972149163,
+          "words": [
+            {
+              "word": "Sidon",
+              "start": 0.16,
+              "end": 0.64,
+              "probability": 0.658
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1007.0,
+          "process_wall_s": 0.05130920803640038,
+          "word_edits": 2,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "sit down",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-01.wav",
+      "audio_sha256": "3304f0ccccda732fef6169ce70f9cfa9f9e4ddf4e73fcbafecab391a3a655a5d",
+      "results": {
+        "whisper": {
+          "text": "Sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.11705062639399087,
+          "duration_s": 0.8388125,
+          "elapsed_s": 0.3542008330114186,
+          "segments": [
+            {
+              "text": " Sit down.",
+              "avg_logprob": -0.5085282524426779,
+              "no_speech_prob": 0.25465601682662964
+            }
+          ],
+          "process_wall_s": 0.38834112498443574,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Set down.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.11705062639399087,
+          "duration_s": 0.8388125,
+          "elapsed_s": 0.028031333000399172,
+          "words": [
+            {
+              "word": "Set",
+              "start": 0.08,
+              "end": 0.32,
+              "probability": 0.16
+            },
+            {
+              "word": "down.",
+              "start": 0.32,
+              "end": 0.64,
+              "probability": 0.993
+            }
+          ],
+          "ttft_ms": 1.9,
+          "decode_tps": 1243.1,
+          "process_wall_s": 0.05089012504322454,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "stand up",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-02.wav",
+      "audio_sha256": "d91043edbd34cd19630b7de31a16ea6197f34850a339cef5fc759cec64049005",
+      "results": {
+        "whisper": {
+          "text": "Stand up.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1303716221755216,
+          "duration_s": 0.8271875,
+          "elapsed_s": 0.3653414999716915,
+          "segments": [
+            {
+              "text": " Stand up.",
+              "avg_logprob": -0.4950261116027832,
+              "no_speech_prob": 0.12447530031204224
+            }
+          ],
+          "process_wall_s": 0.40197008301038295,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Stand up.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1303716221755216,
+          "duration_s": 0.8271875,
+          "elapsed_s": 0.027200000011362135,
+          "words": [
+            {
+              "word": "Stand",
+              "start": 0.0,
+              "end": 0.48,
+              "probability": 0.916
+            },
+            {
+              "word": "up.",
+              "start": 0.48,
+              "end": 0.64,
+              "probability": 0.919
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1149.2,
+          "process_wall_s": 0.04983029200229794,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "stand up",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-02.wav",
+      "audio_sha256": "00fdb5654e56086c078698ab5b4dbbf670ff2f79ae98a29c2208c94938084ea7",
+      "results": {
+        "whisper": {
+          "text": "Stand up.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1320733915893449,
+          "duration_s": 0.8271875,
+          "elapsed_s": 0.358178082969971,
+          "segments": [
+            {
+              "text": " Stand up.",
+              "avg_logprob": -0.5359086891015371,
+              "no_speech_prob": 0.38766300678253174
+            }
+          ],
+          "process_wall_s": 0.39722250000340864,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "stand up.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.1320733915893449,
+          "duration_s": 0.8271875,
+          "elapsed_s": 0.02652470802422613,
+          "words": [
+            {
+              "word": "stand",
+              "start": 0.0,
+              "end": 0.4,
+              "probability": 0.076
+            },
+            {
+              "word": "up.",
+              "start": 0.4,
+              "end": 0.64,
+              "probability": 0.854
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1303.0,
+          "process_wall_s": 0.04794158402364701,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "turn left",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-03.wav",
+      "audio_sha256": "39189da3bec3d92f24963a09f8fff7d0e932bade6a4891b42ba2b2e5ed6fcd8b",
+      "results": {
+        "whisper": {
+          "text": "turn left.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1523893297721155,
+          "duration_s": 0.882375,
+          "elapsed_s": 0.35285049997037277,
+          "segments": [
+            {
+              "text": " turn left.",
+              "avg_logprob": -0.5737891296545664,
+              "no_speech_prob": 0.27014395594596863
+            }
+          ],
+          "process_wall_s": 0.3933950419886969,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Turn left.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.1523893297721155,
+          "duration_s": 0.882375,
+          "elapsed_s": 0.027500667027197778,
+          "words": [
+            {
+              "word": "Turn",
+              "start": 0.0,
+              "end": 0.32,
+              "probability": 0.151
+            },
+            {
+              "word": "left.",
+              "start": 0.32,
+              "end": 0.64,
+              "probability": 0.868
+            }
+          ],
+          "ttft_ms": 2.5,
+          "decode_tps": 1276.5,
+          "process_wall_s": 0.052516624971758574,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "turn left",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-03.wav",
+      "audio_sha256": "bb3d17f2de2493a6b5aa2f9e1716504a8a9147297accc4f66ca276b27fcf2022",
+      "results": {
+        "whisper": {
+          "text": "Turn left.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.15464015234395345,
+          "duration_s": 0.882375,
+          "elapsed_s": 0.3559165420010686,
+          "segments": [
+            {
+              "text": " Turn left.",
+              "avg_logprob": -0.5543530980745951,
+              "no_speech_prob": 0.13383877277374268
+            }
+          ],
+          "process_wall_s": 0.3894327079760842,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Turn left.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.15464015234395345,
+          "duration_s": 0.882375,
+          "elapsed_s": 0.033004958007950336,
+          "words": [
+            {
+              "word": "Turn",
+              "start": 0.0,
+              "end": 0.24,
+              "probability": 0.58
+            },
+            {
+              "word": "left.",
+              "start": 0.24,
+              "end": 0.64,
+              "probability": 0.821
+            }
+          ],
+          "ttft_ms": 3.4,
+          "decode_tps": 650.4,
+          "process_wall_s": 0.0546317920088768,
+          "word_edits": 0,
+          "reference_words": 2,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "stop",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-04.wav",
+      "audio_sha256": "f51af3becb86393e2cf605a39dc6c72e6ed97af9efa1c454216b1609ac3a5fd0",
+      "results": {
+        "whisper": {
+          "text": "Stop.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.09958745462505093,
+          "duration_s": 0.6995,
+          "elapsed_s": 0.3501052919891663,
+          "segments": [
+            {
+              "text": " Stop.",
+              "avg_logprob": -0.6611427307128906,
+              "no_speech_prob": 0.10909979045391083
+            }
+          ],
+          "process_wall_s": 0.384190334007144,
+          "word_edits": 0,
+          "reference_words": 1,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Stob",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.09958745462505093,
+          "duration_s": 0.6995,
+          "elapsed_s": 0.025224165990948677,
+          "words": [
+            {
+              "word": "Stob",
+              "start": 0.0,
+              "end": 0.48,
+              "probability": 0.502
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1163.9,
+          "process_wall_s": 0.046886000025551766,
+          "word_edits": 1,
+          "reference_words": 1,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "stop",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-04.wav",
+      "audio_sha256": "a7f6c6a234a5a9cf7fbc05c70999c951dfca77b71d3ab8da71b9bd066623185c",
+      "results": {
+        "whisper": {
+          "text": "Stop.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whisper",
+          "rms": 0.10103186967329263,
+          "duration_s": 0.6995,
+          "elapsed_s": 0.3528075839858502,
+          "segments": [
+            {
+              "text": " Stop.",
+              "avg_logprob": -0.8029775619506836,
+              "no_speech_prob": 0.39825260639190674
+            }
+          ],
+          "process_wall_s": 0.38941162498667836,
+          "word_edits": 0,
+          "reference_words": 1,
+          "exact_transcript": true,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "Stop.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.10103186967329263,
+          "duration_s": 0.6995,
+          "elapsed_s": 0.026827541005332023,
+          "words": [
+            {
+              "word": "Stop.",
+              "start": 0.24,
+              "end": 0.48,
+              "probability": 0.762
+            }
+          ],
+          "ttft_ms": 2.7,
+          "decode_tps": 1179.5,
+          "process_wall_s": 0.05308529100148007,
+          "word_edits": 0,
+          "reference_words": 1,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "walk forward for three seconds",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-05.wav",
+      "audio_sha256": "c7d3a2eed93ce3bce7333535579b308c51ecbd133f723452bc951915ab41c0cb",
+      "results": {
+        "whisper": {
+          "text": "Walk forward for three seconds.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1414583806838873,
+          "duration_s": 1.917875,
+          "elapsed_s": 0.36457058298401535,
+          "segments": [
+            {
+              "text": " Walk forward for three seconds.",
+              "avg_logprob": -0.46045366923014325,
+              "no_speech_prob": 0.03166094049811363
+            }
+          ],
+          "process_wall_s": 0.3999952920130454,
+          "word_edits": 0,
+          "reference_words": 5,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Walk forward for three seconds.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1414583806838873,
+          "duration_s": 1.917875,
+          "elapsed_s": 0.035369375022128224,
+          "words": [
+            {
+              "word": "Walk",
+              "start": 0.08,
+              "end": 0.32,
+              "probability": 0.6
+            },
+            {
+              "word": "forward",
+              "start": 0.32,
+              "end": 0.64,
+              "probability": 0.978
+            },
+            {
+              "word": "for",
+              "start": 0.64,
+              "end": 0.96,
+              "probability": 0.999
+            },
+            {
+              "word": "three",
+              "start": 0.96,
+              "end": 1.2,
+              "probability": 0.988
+            },
+            {
+              "word": "seconds.",
+              "start": 1.2,
+              "end": 1.6,
+              "probability": 0.998
+            }
+          ],
+          "ttft_ms": 2.7,
+          "decode_tps": 1351.5,
+          "process_wall_s": 0.0598372079548426,
+          "word_edits": 0,
+          "reference_words": 5,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "walk forward for three seconds",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-05.wav",
+      "audio_sha256": "ac2021b457f89a8033035194515c52068e9f86a9f0923d5988281aabda8e092d",
+      "results": {
+        "whisper": {
+          "text": "Watch forward for 3 seconds.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.14371566657099608,
+          "duration_s": 1.917875,
+          "elapsed_s": 0.3554106250521727,
+          "segments": [
+            {
+              "text": " Watch forward for 3 seconds.",
+              "avg_logprob": -0.638818105061849,
+              "no_speech_prob": 0.06447438150644302
+            }
+          ],
+          "process_wall_s": 0.3909718749928288,
+          "word_edits": 2,
+          "reference_words": 5,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "Walk forward for three seconds.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.14371566657099608,
+          "duration_s": 1.917875,
+          "elapsed_s": 0.04554558399831876,
+          "words": [
+            {
+              "word": "Walk",
+              "start": 0.08,
+              "end": 0.32,
+              "probability": 0.641
+            },
+            {
+              "word": "forward",
+              "start": 0.32,
+              "end": 0.64,
+              "probability": 0.996
+            },
+            {
+              "word": "for",
+              "start": 0.64,
+              "end": 0.96,
+              "probability": 1.0
+            },
+            {
+              "word": "three",
+              "start": 0.96,
+              "end": 1.2,
+              "probability": 0.991
+            },
+            {
+              "word": "seconds.",
+              "start": 1.2,
+              "end": 1.6,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 4.1,
+          "decode_tps": 698.0,
+          "process_wall_s": 0.06933483300963417,
+          "word_edits": 0,
+          "reference_words": 5,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "do not walk forward",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-06.wav",
+      "audio_sha256": "4673003e525531faf93cff5e690fb8f0eed136ea7c13e5e734d7fb9001086260",
+      "results": {
+        "whisper": {
+          "text": "Do not walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.16377886482363108,
+          "duration_s": 1.419875,
+          "elapsed_s": 0.36380275001283735,
+          "segments": [
+            {
+              "text": " Do not walk forward.",
+              "avg_logprob": -0.5399296432733536,
+              "no_speech_prob": 0.15993182361125946
+            }
+          ],
+          "process_wall_s": 0.39947300002677366,
+          "word_edits": 0,
+          "reference_words": 4,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Do not walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.16377886482363108,
+          "duration_s": 1.419875,
+          "elapsed_s": 0.03023937501711771,
+          "words": [
+            {
+              "word": "Do",
+              "start": 0.0,
+              "end": 0.16,
+              "probability": 0.586
+            },
+            {
+              "word": "not",
+              "start": 0.16,
+              "end": 0.4,
+              "probability": 0.999
+            },
+            {
+              "word": "walk",
+              "start": 0.4,
+              "end": 0.72,
+              "probability": 0.999
+            },
+            {
+              "word": "forward.",
+              "start": 0.72,
+              "end": 1.04,
+              "probability": 0.997
+            }
+          ],
+          "ttft_ms": 2.3,
+          "decode_tps": 1060.0,
+          "process_wall_s": 0.05384174996288493,
+          "word_edits": 0,
+          "reference_words": 4,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "do not walk forward",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-06.wav",
+      "audio_sha256": "d00fbba00f0462548d0f091ca256e65ee5c788fb2f0a9180dafc644e6502fd11",
+      "results": {
+        "whisper": {
+          "text": "Do not walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.16626587451207162,
+          "duration_s": 1.419875,
+          "elapsed_s": 0.3650325830094516,
+          "segments": [
+            {
+              "text": " Do not walk forward.",
+              "avg_logprob": -0.6619063690304756,
+              "no_speech_prob": 0.11199269443750381
+            }
+          ],
+          "process_wall_s": 0.40312229201663285,
+          "word_edits": 0,
+          "reference_words": 4,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "do not walk forward.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.16626587451207162,
+          "duration_s": 1.419875,
+          "elapsed_s": 0.02909666602499783,
+          "words": [
+            {
+              "word": "do",
+              "start": 0.0,
+              "end": 0.16,
+              "probability": 0.514
+            },
+            {
+              "word": "not",
+              "start": 0.16,
+              "end": 0.4,
+              "probability": 0.998
+            },
+            {
+              "word": "walk",
+              "start": 0.4,
+              "end": 0.72,
+              "probability": 0.973
+            },
+            {
+              "word": "forward.",
+              "start": 0.72,
+              "end": 1.04,
+              "probability": 0.998
+            }
+          ],
+          "ttft_ms": 2.4,
+          "decode_tps": 1329.2,
+          "process_wall_s": 0.0497564590186812,
+          "word_edits": 0,
+          "reference_words": 4,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "hello duck",
+      "kind": "clean",
+      "audio": "results/voice-v07/audio/command-07.wav",
+      "audio_sha256": "4e31102c8168d0473ee703b64867dbc55179eefe4c03916570ab77d9d24aea49",
+      "results": {
+        "whisper": {
+          "text": "Hello Doc.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.14433824771542775,
+          "duration_s": 0.9371875,
+          "elapsed_s": 0.3557882910245098,
+          "segments": [
+            {
+              "text": " Hello Doc.",
+              "avg_logprob": -0.7821526626745859,
+              "no_speech_prob": 0.0304206982254982
+            }
+          ],
+          "process_wall_s": 0.40075725002679974,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "Hello Dog",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.14433824771542775,
+          "duration_s": 0.9371875,
+          "elapsed_s": 0.028657374961767346,
+          "words": [
+            {
+              "word": "Hello",
+              "start": 0.08,
+              "end": 0.48,
+              "probability": 0.977
+            },
+            {
+              "word": "Dog",
+              "start": 0.48,
+              "end": 0.72,
+              "probability": 0.528
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1192.6,
+          "process_wall_s": 0.05115441599627957,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "hello duck",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-07.wav",
+      "audio_sha256": "121fc621bb75c857f29de7266a45de56db4672e342728288aad5787b4241e2be",
+      "results": {
+        "whisper": {
+          "text": "Hello dog.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whisper",
+          "rms": 0.14657082905801314,
+          "duration_s": 0.9371875,
+          "elapsed_s": 0.35432491597021,
+          "segments": [
+            {
+              "text": " Hello dog.",
+              "avg_logprob": -0.8009066681067148,
+              "no_speech_prob": 0.1714988350868225
+            }
+          ],
+          "process_wall_s": 0.3893550829961896,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "Hello dog.",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.14657082905801314,
+          "duration_s": 0.9371875,
+          "elapsed_s": 0.03146883303998038,
+          "words": [
+            {
+              "word": "Hello",
+              "start": 0.08,
+              "end": 0.48,
+              "probability": 0.982
+            },
+            {
+              "word": "dog.",
+              "start": 0.48,
+              "end": 0.64,
+              "probability": 0.282
+            }
+          ],
+          "ttft_ms": 1.7,
+          "decode_tps": 1246.5,
+          "process_wall_s": 0.053789875004440546,
+          "word_edits": 1,
+          "reference_words": 2,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        }
+      }
+    },
+    {
+      "expected_text": "Please back up for two seconds, then sit down.",
+      "kind": "clean",
+      "audio": "results/language-v07/audio/command-00.wav",
+      "audio_sha256": "82de7053f19aab759ac44b840fbd935915989de8d99838b17afca131baaf7ad4",
+      "results": {
+        "whisper": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1368587093092637,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.38373270898591727,
+          "segments": [
+            {
+              "text": " Please back up for two seconds, then sit down.",
+              "avg_logprob": -0.4241424947977066,
+              "no_speech_prob": 0.10519666224718094
+            }
+          ],
+          "process_wall_s": 0.41666587500367314,
+          "word_edits": 0,
+          "reference_words": 9,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1368587093092637,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.04297729197423905,
+          "words": [
+            {
+              "word": "Please",
+              "start": 0.0,
+              "end": 0.32,
+              "probability": 0.979
+            },
+            {
+              "word": "back",
+              "start": 0.32,
+              "end": 0.56,
+              "probability": 0.993
+            },
+            {
+              "word": "up",
+              "start": 0.56,
+              "end": 0.8,
+              "probability": 0.999
+            },
+            {
+              "word": "for",
+              "start": 0.8,
+              "end": 1.04,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 0.986
+            },
+            {
+              "word": "seconds,",
+              "start": 1.28,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "then",
+              "start": 2.08,
+              "end": 2.24,
+              "probability": 1.0
+            },
+            {
+              "word": "sit",
+              "start": 2.24,
+              "end": 2.48,
+              "probability": 0.999
+            },
+            {
+              "word": "down.",
+              "start": 2.48,
+              "end": 2.72,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 3.8,
+          "decode_tps": 1439.5,
+          "process_wall_s": 0.06415929202921689,
+          "word_edits": 0,
+          "reference_words": 9,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "Please back up for two seconds, then sit down.",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-08.wav",
+      "audio_sha256": "38a4d0b87cca9618be8aa3b21b5b33b68bdb8040417b77ce3c2c5a9ca61d2d3e",
+      "results": {
+        "whisper": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.13908548465163217,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.39347116701537743,
+          "segments": [
+            {
+              "text": " Please back up for two seconds, then sit down.",
+              "avg_logprob": -0.3302467955010278,
+              "no_speech_prob": 0.04829102382063866
+            }
+          ],
+          "process_wall_s": 0.42851270898245275,
+          "word_edits": 0,
+          "reference_words": 9,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.13908548465163217,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.039350583974737674,
+          "words": [
+            {
+              "word": "Please",
+              "start": 0.0,
+              "end": 0.4,
+              "probability": 0.992
+            },
+            {
+              "word": "back",
+              "start": 0.4,
+              "end": 0.56,
+              "probability": 0.93
+            },
+            {
+              "word": "up",
+              "start": 0.56,
+              "end": 0.8,
+              "probability": 0.994
+            },
+            {
+              "word": "for",
+              "start": 0.8,
+              "end": 1.04,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 0.974
+            },
+            {
+              "word": "seconds,",
+              "start": 1.28,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "then",
+              "start": 2.08,
+              "end": 2.24,
+              "probability": 0.982
+            },
+            {
+              "word": "sit",
+              "start": 2.24,
+              "end": 2.48,
+              "probability": 0.997
+            },
+            {
+              "word": "down.",
+              "start": 2.48,
+              "end": 2.8,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 5.3,
+          "decode_tps": 1340.5,
+          "process_wall_s": 0.0655037080287002,
+          "word_edits": 0,
+          "reference_words": 9,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "Could you stand up and turn right for two seconds?",
+      "kind": "clean",
+      "audio": "results/language-v07/audio/command-01.wav",
+      "audio_sha256": "ffec050e90765eaa4f32311c9b077796fa8b47d5504d760b2b1de19a5d5ac4f9",
+      "results": {
+        "whisper": {
+          "text": "Could you stand up and turn right for two seconds?",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.1572231774772201,
+          "duration_s": 2.7031875,
+          "elapsed_s": 0.38109537499258295,
+          "segments": [
+            {
+              "text": " Could you stand up and turn right for two seconds?",
+              "avg_logprob": -0.3644576839038304,
+              "no_speech_prob": 0.07470543682575226
+            }
+          ],
+          "process_wall_s": 0.4225741670234129,
+          "word_edits": 0,
+          "reference_words": 10,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Could you stand up and turn right for two seconds?",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.1572231774772201,
+          "duration_s": 2.7031875,
+          "elapsed_s": 0.039419167034793645,
+          "words": [
+            {
+              "word": "Could",
+              "start": 0.08,
+              "end": 0.16,
+              "probability": 0.818
+            },
+            {
+              "word": "you",
+              "start": 0.16,
+              "end": 0.4,
+              "probability": 0.999
+            },
+            {
+              "word": "stand",
+              "start": 0.4,
+              "end": 0.64,
+              "probability": 1.0
+            },
+            {
+              "word": "up",
+              "start": 0.64,
+              "end": 0.88,
+              "probability": 1.0
+            },
+            {
+              "word": "and",
+              "start": 0.88,
+              "end": 1.04,
+              "probability": 0.996
+            },
+            {
+              "word": "turn",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 1.0
+            },
+            {
+              "word": "right",
+              "start": 1.28,
+              "end": 1.52,
+              "probability": 0.996
+            },
+            {
+              "word": "for",
+              "start": 1.52,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.68,
+              "end": 2.0,
+              "probability": 0.993
+            },
+            {
+              "word": "seconds?",
+              "start": 2.0,
+              "end": 2.4,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 5.1,
+          "decode_tps": 1284.2,
+          "process_wall_s": 0.062205958005506545,
+          "word_edits": 0,
+          "reference_words": 10,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "Could you stand up and turn right for two seconds?",
+      "kind": "white_noise_15db",
+      "audio": "results/whistle-v07/audio/noisy-09.wav",
+      "audio_sha256": "e0b5cb1a6d8658536e735a46bcb5dc937f5b262ea9603b889f0fd706ef3ff992",
+      "results": {
+        "whisper": {
+          "text": "Could you stand up and turn right for two seconds?",
+          "accepted": true,
+          "reason": null,
+          "backend": "whisper",
+          "rms": 0.15961238758419666,
+          "duration_s": 2.7031875,
+          "elapsed_s": 0.37986433296464384,
+          "segments": [
+            {
+              "text": " Could you stand up and turn right for two seconds?",
+              "avg_logprob": -0.4006667711905071,
+              "no_speech_prob": 0.1307448148727417
+            }
+          ],
+          "process_wall_s": 0.42527199996402487,
+          "word_edits": 0,
+          "reference_words": 10,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "Could you stand up and turn right for two seconds?",
+          "accepted": true,
+          "reason": null,
+          "backend": "whistle",
+          "rms": 0.15961238758419666,
+          "duration_s": 2.7031875,
+          "elapsed_s": 0.04785912501392886,
+          "words": [
+            {
+              "word": "Could",
+              "start": 0.0,
+              "end": 0.16,
+              "probability": 0.776
+            },
+            {
+              "word": "you",
+              "start": 0.16,
+              "end": 0.4,
+              "probability": 0.997
+            },
+            {
+              "word": "stand",
+              "start": 0.4,
+              "end": 0.64,
+              "probability": 0.999
+            },
+            {
+              "word": "up",
+              "start": 0.64,
+              "end": 0.88,
+              "probability": 0.956
+            },
+            {
+              "word": "and",
+              "start": 0.88,
+              "end": 1.04,
+              "probability": 0.999
+            },
+            {
+              "word": "turn",
+              "start": 1.04,
+              "end": 1.28,
+              "probability": 0.999
+            },
+            {
+              "word": "right",
+              "start": 1.28,
+              "end": 1.44,
+              "probability": 0.997
+            },
+            {
+              "word": "for",
+              "start": 1.44,
+              "end": 1.68,
+              "probability": 1.0
+            },
+            {
+              "word": "two",
+              "start": 1.68,
+              "end": 2.0,
+              "probability": 0.997
+            },
+            {
+              "word": "seconds?",
+              "start": 2.0,
+              "end": 2.32,
+              "probability": 1.0
+            }
+          ],
+          "ttft_ms": 6.5,
+          "decode_tps": 890.6,
+          "process_wall_s": 0.07159420801326632,
+          "word_edits": 0,
+          "reference_words": 10,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "",
+      "kind": "silence",
+      "audio": "results/whistle-v07/audio/silence.wav",
+      "audio_sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "results": {
+        "whisper": {
+          "text": "",
+          "accepted": false,
+          "reason": "No speech detected",
+          "rms": 0.0,
+          "backend": "whisper",
+          "elapsed_s": 0.0016074999584816396,
+          "process_wall_s": 0.02114270895253867,
+          "word_edits": 0,
+          "reference_words": 0,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        },
+        "whistle": {
+          "text": "",
+          "accepted": false,
+          "reason": "No speech detected",
+          "rms": 0.0,
+          "backend": "whistle",
+          "elapsed_s": 0.0017265420174226165,
+          "process_wall_s": 0.02585999999428168,
+          "word_edits": 0,
+          "reference_words": 0,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "",
+      "kind": "noise",
+      "audio": "results/whistle-v07/audio/noise.wav",
+      "audio_sha256": "96a0d9362256756357e245e8dfeb73c1d73a5a604f3a68ce1b25669c893793d2",
+      "results": {
+        "whisper": {
+          "text": "I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whisper",
+          "rms": 0.02999141554568038,
+          "duration_s": 2.0,
+          "elapsed_s": 1.1419647500151768,
+          "segments": [
+            {
+              "text": " I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look at how it looks like I'm going to take a look",
+              "avg_logprob": -0.24781755447387696,
+              "no_speech_prob": 0.95658940076828
+            }
+          ],
+          "process_wall_s": 1.1767782090464607,
+          "word_edits": 223,
+          "reference_words": 0,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.02999141554568038,
+          "duration_s": 2.0,
+          "elapsed_s": 0.02911141701042652,
+          "words": [],
+          "ttft_ms": 0.0,
+          "decode_tps": 0.0,
+          "process_wall_s": 0.051778791996184736,
+          "word_edits": 0,
+          "reference_words": 0,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    },
+    {
+      "expected_text": "",
+      "kind": "tone",
+      "audio": "results/whistle-v07/audio/tone.wav",
+      "audio_sha256": "be6dfca32f8ae3ec6eb99a7150099847b1bf0ccb5eda53a6e8e95881d6186b46",
+      "results": {
+        "whisper": {
+          "text": "You",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whisper",
+          "rms": 0.07070931099996748,
+          "duration_s": 2.0,
+          "elapsed_s": 0.35686025000177324,
+          "segments": [
+            {
+              "text": " You",
+              "avg_logprob": -0.9805819988250732,
+              "no_speech_prob": 0.8327880501747131
+            }
+          ],
+          "process_wall_s": 0.3918334580375813,
+          "word_edits": 1,
+          "reference_words": 0,
+          "exact_transcript": false,
+          "recognized_correctly": false
+        },
+        "whistle": {
+          "text": "",
+          "accepted": false,
+          "reason": "Speech was unclear",
+          "backend": "whistle",
+          "rms": 0.07070931099996748,
+          "duration_s": 2.0,
+          "elapsed_s": 0.023211291001643986,
+          "words": [],
+          "ttft_ms": 0.0,
+          "decode_tps": 0.0,
+          "process_wall_s": 0.04647637502057478,
+          "word_edits": 0,
+          "reference_words": 0,
+          "exact_transcript": true,
+          "recognized_correctly": true
+        }
+      }
+    }
+  ]
+}

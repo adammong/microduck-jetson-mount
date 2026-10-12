@@ -1,0 +1,69 @@
+{
+  "validation": [
+    [
+      1,
+      0.25
+    ],
+    [
+      50,
+      0.47
+    ],
+    [
+      100,
+      0.386
+    ],
+    [
+      150,
+      0.294
+    ],
+    [
+      200,
+      0.329
+    ],
+    [
+      250,
+      0.268
+    ],
+    [
+      300,
+      0.274
+    ],
+    [
+      350,
+      0.235
+    ],
+    [
+      400,
+      0.321
+    ],
+    [
+      450,
+      0.268
+    ],
+    [
+      500,
+      0.262
+    ],
+    [
+      550,
+      0.229
+    ],
+    [
+      600,
+      0.265
+    ]
+  ],
+  "selected_iteration": 550,
+  "selection": "Minimum validation loss before evaluating the final hand-written holdout",
+  "initial_iterations": 250,
+  "continued_iterations": 600,
+  "batch_size": 4,
+  "rank": 8,
+  "learning_rate": 0.0001,
+  "seed": 3525,
+  "train_requests": 4827,
+  "validation_requests": 160,
+  "trainable_parameters": 2998000,
+  "resumed_adapter_sha256": "2b2e920ab0ce0a458539932db235f9ee9d3d8c0c3032521913f6072b028184b7",
+  "adapter_sha256": "d143417328c70fe19f931157050c109e442396a5f067816129698ef3605eb84b"
+}

@@ -10,6 +10,8 @@ Parametric CAD, printable parts, assembled previews and MuJoCo models for an ext
 
 A local voice/text/button controller now combines the mounted walking and sit/stand actors. Say **“walk forward,” “turn left,” “stop,” “sit down,” “stand up,”** or **“walk forward for three seconds.”** Movement is bounded; the duck stands before walking and stops before sitting. English Whisper tiny runs offline on the Mac CPU after setup. Neural actors remain separate behind one controller.
 
+The optional **LFM2.5-350M** language layer now interprets requests such as **“please move ahead briefly and then take a seat.”** A small adapter was trained locally on the Mac; plans are checked and executed in order. Final language checks: **14/24 supported requests matched exactly; 24/24 unsupported requests were rejected.** The remaining supported requests were refused. Both synthetic multistep voice requests completed in simulation. This remains an experimental language interface. [Setup, adapter and full results](results/language-v07/REPORT.md).
+
 **Prototype results:** 77/80 continuous command sequences pass; 78/80 are contact/fault-free. Two heavier randomized stand-ups contact the Jetson with the floor and one nominal turn under-tracks, so hardware readiness is not claimed. All eight additional mid-posture override tests and the synthetic speech-to-action checks pass. The video shows scripted commands through the same motion controller; human microphone recognition is untested.
 
 [Start the voice controller](results/voice-v07/REPORT.md#run-on-the-mac) · [15-second MP4, top text removed](https://github.com/adammong/microduck-jetson-mount/raw/refs/heads/main/results/voice-v07/skills-15s.mp4) · [Measurements and limits](results/voice-v07/REPORT.md).

@@ -11,6 +11,7 @@ const context=vm.createContext({Float32Array,ArrayBuffer,DataView,Blob,Math});vm
   assert.equal(v.getUint32(40,true),32000);assert.equal(Buffer.from(buffer).subarray(0,4).toString(),'RIFF');
   for(let i=0;i<16000;i++)assert.ok(Math.abs(v.getInt16(44+2*i,true))<=32767);
  }
- const output={passed:true,input_rates_hz:[16000,44100,48000],output_rate_hz:16000,mono_pcm16:true,microphone_recording_tested:false};
- fs.mkdirSync('results/voice-v07',{recursive:true});fs.writeFileSync('results/voice-v07/browser-audio-verification.json',JSON.stringify(output,null,2)+'\n');console.log('Browser WAV/resampling checks passed');
+ const long=await context.wav([new Float32Array(48000*8)],48000).arrayBuffer();assert.equal(long.byteLength,192044);
+ const output={passed:true,input_rates_hz:[16000,44100,48000],output_rate_hz:16000,mono_pcm16:true,recording_max_s:6,microphone_recording_tested:false};
+ const destination=process.argv[2]||'results/voice-v07/browser-audio-verification.json';fs.mkdirSync(require('node:path').dirname(destination),{recursive:true});fs.writeFileSync(destination,JSON.stringify(output,null,2)+'\n');console.log('Browser WAV/resampling checks passed');
 })();

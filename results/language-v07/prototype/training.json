@@ -1,0 +1,37 @@
+{
+  "validation": [
+    [
+      1,
+      2.885
+    ],
+    [
+      50,
+      0.308
+    ],
+    [
+      100,
+      0.254
+    ],
+    [
+      150,
+      0.249
+    ],
+    [
+      200,
+      0.226
+    ],
+    [
+      250,
+      0.198
+    ]
+  ],
+  "selected_iteration": 250,
+  "selection": "Minimum validation loss, before evaluating the hand-written holdout",
+  "iterations": 250,
+  "batch_size": 4,
+  "rank": 8,
+  "learning_rate": 0.0001,
+  "seed": 3525,
+  "train_requests": 3828,
+  "validation_requests": 160
+}

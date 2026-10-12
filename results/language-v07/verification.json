@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "invalid_plans_rejected": 21,
+  "ordered_actions": [
+    "forward",
+    "sit",
+    "stand"
+  ],
+  "lease_cancels_entire_plan": true,
+  "stop_reset_fault_cancel_plan": true,
+  "action_timeout_checked": true
+}

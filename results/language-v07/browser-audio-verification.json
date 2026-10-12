@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "input_rates_hz": [
+    16000,
+    44100,
+    48000
+  ],
+  "output_rate_hz": 16000,
+  "mono_pcm16": true,
+  "recording_max_s": 6,
+  "microphone_recording_tested": false
+}

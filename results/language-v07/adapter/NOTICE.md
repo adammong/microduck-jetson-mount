@@ -1,0 +1,1 @@
+MicroDuck command adapter: modified LFM2.5-350M by supervised LoRA training on synthetic duck requests. Base model copyright Liquid AI, Inc.; LFM Open License v1.0 applies. This directory contains our trained adapter, not the original model weights.

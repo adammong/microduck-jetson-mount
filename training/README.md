@@ -15,6 +15,14 @@ OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/se
 OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/teleop_skills.py
 ```
 
+For natural requests and ordered action plans, also run:
+
+```sh
+OMP_NUM_THREADS=1 tmp/microduck-lab/microduck_local/.venv/bin/python training/setup_language.py
+```
+
+This adds **LFM2.5-350M** with the bundled duck-command adapter. The language runtime/model live in ignored `tmp/language-venv` and `tmp/language-model`. Supported example: “could you stand up and turn right for two seconds.” Reliability remains limited: 14/24 supported final requests worked; the other ten were refused, and all 24 unsupported requests were rejected. See the [language report](../results/language-v07/REPORT.md) for training, limits, failures and checks. The Mac uses MLX; Jetson export and hardware communication are not implemented.
+
 Open http://127.0.0.1:8798. Voice is optional; buttons and text work without its setup. Speech dependencies/model live in separate ignored `tmp/voice-venv` and `tmp/voice-model` directories. Press **Speak a command** to request microphone access. The report documents exact commands, transition/fault behavior, verification and reproduction.
 
 ## Slope precision and push/trip/slip recovery

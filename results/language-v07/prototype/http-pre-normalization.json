@@ -1,0 +1,377 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "text": "back up a little, then sit down",
+      "status": 400,
+      "response": {
+        "error": "Could not turn that request into supported actions."
+      },
+      "interpretation_wall_s": 2.0537218329845928,
+      "completed": false
+    },
+    {
+      "text": "could you stand up and turn right for two seconds",
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "could you stand up and turn right for two seconds",
+        "intent": "stand",
+        "seconds": 0.0,
+        "steps": [
+          {
+            "action": "stand"
+          },
+          {
+            "action": "turn_right",
+            "seconds": 2.0
+          }
+        ],
+        "language": {
+          "model": "LFM2.5-350M",
+          "elapsed_s": 0.17602541600354016,
+          "load_s": 0.2057689999928698
+        }
+      },
+      "interpretation_wall_s": 2.1003753329860047,
+      "execution": {
+        "final": {
+          "phase": "idle",
+          "goal": "stand",
+          "active_actor": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_s": null,
+          "pending_movement": false,
+          "fault": null,
+          "actual": [
+            -0.0022563650272786617,
+            -0.0019649832975119352,
+            0.0024413191628461775
+          ],
+          "seconds": 64.72000000001363,
+          "measurement": {
+            "height_m": 0.11423296509397088,
+            "head_height_m": 0.22827799174708258,
+            "tilt_deg": 2.849912354992969,
+            "standing": true,
+            "sitting": false,
+            "both_feet": true,
+            "props": [],
+            "payload_floor": [],
+            "payload_internal": [],
+            "max_payload_force_n": 0.0,
+            "motion_settled": true
+          },
+          "voice_ready": true,
+          "last_text": "",
+          "message": "Understanding locally\u2026",
+          "mass_kg": 1.1847989141502486,
+          "actuator_current_a": 1.75,
+          "policy_sha256": {
+            "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+            "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+          },
+          "simulation_only": true,
+          "language_ready": true,
+          "language_model": "LFM2.5-350M",
+          "plan": {
+            "current": null,
+            "remaining": []
+          }
+        },
+        "phases": [
+          "idle"
+        ],
+        "actions_seen": [],
+        "peak_tilt_deg": 2.849912354992969,
+        "sampled_frames": 1
+      },
+      "completed": true
+    },
+    {
+      "text": "please move ahead briefly and then take a seat",
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "please move ahead briefly and then take a seat",
+        "intent": "move",
+        "seconds": 1.0,
+        "steps": [
+          {
+            "action": "forward",
+            "seconds": 1.0
+          },
+          {
+            "action": "sit"
+          }
+        ],
+        "language": {
+          "model": "LFM2.5-350M",
+          "elapsed_s": 0.16424033301882446,
+          "load_s": 0.20208833395736292
+        }
+      },
+      "interpretation_wall_s": 2.050776332966052,
+      "execution": {
+        "final": {
+          "phase": "idle",
+          "goal": "stand",
+          "active_actor": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_s": null,
+          "pending_movement": false,
+          "fault": null,
+          "actual": [
+            0.00018849455227609724,
+            0.0008565145544707775,
+            0.0012018269335747041
+          ],
+          "seconds": 66.42000000001208,
+          "measurement": {
+            "height_m": 0.11413381078730739,
+            "head_height_m": 0.2281879533996829,
+            "tilt_deg": 2.907171862012316,
+            "standing": true,
+            "sitting": false,
+            "both_feet": true,
+            "props": [],
+            "payload_floor": [],
+            "payload_internal": [],
+            "max_payload_force_n": 0.0,
+            "motion_settled": true
+          },
+          "voice_ready": true,
+          "last_text": "could you stand up and turn right for two seconds",
+          "message": "Understanding locally\u2026",
+          "mass_kg": 1.1847989141502486,
+          "actuator_current_a": 1.75,
+          "policy_sha256": {
+            "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+            "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+          },
+          "simulation_only": true,
+          "language_ready": true,
+          "language_model": "LFM2.5-350M",
+          "plan": {
+            "current": null,
+            "remaining": []
+          }
+        },
+        "phases": [
+          "idle"
+        ],
+        "actions_seen": [],
+        "peak_tilt_deg": 2.907171862012316,
+        "sampled_frames": 1
+      },
+      "completed": true
+    },
+    {
+      "text": "take a seat, then rise to your feet",
+      "status": 400,
+      "response": {
+        "error": "Could not turn that request into supported actions."
+      },
+      "interpretation_wall_s": 2.0712401249911636,
+      "completed": false
+    },
+    {
+      "audio": "audio/command-00.wav",
+      "synthetic_audio_only": true,
+      "status": 200,
+      "response": {
+        "ok": true,
+        "text": "Please back up for two seconds, then sit down.",
+        "intent": "move",
+        "seconds": 2.0,
+        "steps": [
+          {
+            "action": "backward",
+            "seconds": 2.0
+          },
+          {
+            "action": "sit"
+          }
+        ],
+        "language": {
+          "model": "LFM2.5-350M",
+          "elapsed_s": 0.17749270901549608,
+          "load_s": 0.20307645801221952
+        },
+        "speech": {
+          "text": "Please back up for two seconds, then sit down.",
+          "accepted": true,
+          "reason": null,
+          "rms": 0.1368587166070938,
+          "duration_s": 2.9934375,
+          "elapsed_s": 0.7808695419807918,
+          "segments": [
+            {
+              "text": " Please back up for two seconds, then sit down.",
+              "avg_logprob": -0.4241424947977066,
+              "no_speech_prob": 0.10519666224718094
+            }
+          ]
+        }
+      },
+      "interpretation_wall_s": 2.952504125016276,
+      "execution": {
+        "final": {
+          "phase": "idle",
+          "goal": "stand",
+          "active_actor": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_s": null,
+          "pending_movement": false,
+          "fault": null,
+          "actual": [
+            0.0015343609265983105,
+            0.0016646863659843802,
+            -0.010610651317892229
+          ],
+          "seconds": 70.60000000000828,
+          "measurement": {
+            "height_m": 0.11413688437461292,
+            "head_height_m": 0.22820801974891392,
+            "tilt_deg": 2.9120831739022943,
+            "standing": true,
+            "sitting": false,
+            "both_feet": true,
+            "props": [],
+            "payload_floor": [],
+            "payload_internal": [],
+            "max_payload_force_n": 0.0,
+            "motion_settled": true
+          },
+          "voice_ready": true,
+          "last_text": "please move ahead briefly and then take a seat",
+          "message": "Understanding locally\u2026",
+          "mass_kg": 1.1847989141502486,
+          "actuator_current_a": 1.75,
+          "policy_sha256": {
+            "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+            "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+          },
+          "simulation_only": true,
+          "language_ready": true,
+          "language_model": "LFM2.5-350M",
+          "plan": {
+            "current": null,
+            "remaining": []
+          }
+        },
+        "phases": [
+          "idle"
+        ],
+        "actions_seen": [],
+        "peak_tilt_deg": 2.9120831739022943,
+        "sampled_frames": 1
+      },
+      "completed": true
+    },
+    {
+      "audio": "audio/command-01.wav",
+      "synthetic_audio_only": true,
+      "status": 400,
+      "response": {
+        "error": "Could not turn that request into supported actions."
+      },
+      "interpretation_wall_s": 2.592490667011589,
+      "completed": false
+    }
+  ],
+  "completed_plans": 3,
+  "tested_plans": 6,
+  "unsupported_requests_rejected": true,
+  "foreign_origin_rejected": true,
+  "stop_reset_supersede_inference": [
+    {
+      "route": "/stop",
+      "response": [
+        409,
+        {
+          "error": "Request cancelled or controller disconnected"
+        }
+      ]
+    },
+    {
+      "route": "/reset",
+      "response": [
+        409,
+        {
+          "error": "Request cancelled or controller disconnected"
+        }
+      ]
+    }
+  ],
+  "lost_client_cancels_pending_sit": {
+    "final": {
+      "phase": "idle",
+      "goal": "stand",
+      "active_actor": "walking",
+      "command": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "remaining_s": null,
+      "pending_movement": false,
+      "fault": null,
+      "actual": [
+        0.008050667122006416,
+        0.02171461470425129,
+        -0.0347355154210909
+      ],
+      "seconds": 2.639999999999966,
+      "measurement": {
+        "height_m": 0.11306946974708164,
+        "head_height_m": 0.22577678365210868,
+        "tilt_deg": 4.033277424385154,
+        "standing": true,
+        "sitting": false,
+        "both_feet": true,
+        "props": [],
+        "payload_floor": [],
+        "payload_internal": [],
+        "max_payload_force_n": 0.0,
+        "motion_settled": true
+      },
+      "voice_ready": true,
+      "last_text": "please move ahead for two seconds, then take a seat",
+      "message": "Plan: forward (2s) \u2192 sit",
+      "mass_kg": 1.1847989141502486,
+      "actuator_current_a": 1.75,
+      "policy_sha256": {
+        "walking": "7c32e388f4fcb377b306c4f2092bc166b7eb316ffe388d65d27a4293c9d5af8f",
+        "posture": "34aca4da9b026f7e345e7ea39a9cb70c0b184fd888bf8c234bce4f38407a1f56"
+      },
+      "simulation_only": true,
+      "language_ready": true,
+      "language_model": "LFM2.5-350M",
+      "plan": {
+        "current": null,
+        "remaining": []
+      }
+    },
+    "phases": [
+      "idle"
+    ],
+    "actions_seen": [],
+    "peak_tilt_deg": 4.033277424385154,
+    "sampled_frames": 1
+  },
+  "expired_lease_rejected": true,
+  "microphone_capture_tested": false
+}

@@ -1,0 +1,20 @@
+model: tmp/language-model
+data: results/language-v07/data
+train: true
+mask_prompt: true
+fine_tune_type: lora
+num_layers: 16
+batch_size: 4
+iters: 250
+learning_rate: 0.0001
+steps_per_report: 10
+steps_per_eval: 50
+val_batches: 5
+save_every: 50
+max_seq_length: 512
+adapter_path: tmp/language-study/adapters
+seed: 3525
+lora_parameters:
+  rank: 8
+  dropout: 0.0
+  scale: 20.0

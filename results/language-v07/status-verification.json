@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "rejection_status_is_visible": true,
+  "subsequent_valid_request_accepted": true,
+  "response": {
+    "ok": true,
+    "text": "please move ahead briefly and then take a seat",
+    "intent": "move",
+    "seconds": 1.0,
+    "steps": [
+      {
+        "action": "forward",
+        "seconds": 1.0
+      },
+      {
+        "action": "sit"
+      }
+    ],
+    "language": {
+      "model": "LFM2.5-350M",
+      "elapsed_s": 0.19203924998873845,
+      "load_s": 0.2596647500176914
+    }
+  }
+}

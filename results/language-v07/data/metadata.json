@@ -1,0 +1,5 @@
+{
+  "seed": 3525,
+  "synthetic_text_only": true,
+  "validation_split": "Exact requests disjoint; generated phrase families shared. Separate hand-written holdout required."
+}

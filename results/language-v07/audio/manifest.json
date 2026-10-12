@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Please back up for two seconds, then sit down.",
+    "file": "results/language-v07/audio/command-00.wav",
+    "seconds": 2.9934375,
+    "source": "macOS synthetic speech; no human microphone recording"
+  },
+  {
+    "text": "Could you stand up and turn right for two seconds?",
+    "file": "results/language-v07/audio/command-01.wav",
+    "seconds": 2.7031875,
+    "source": "macOS synthetic speech; no human microphone recording"
+  }
+]

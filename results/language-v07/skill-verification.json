@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "invalid_phrases_rejected": 13,
+  "command_slots_isolated": true,
+  "lease_cancellation_checked": true,
+  "automatic_stand_before_movement": true,
+  "stop_cancels_pending_movement": true,
+  "walking_settle_after_posture": true,
+  "mount_contact_fault_checked": true,
+  "reset_checked": true,
+  "reverse_correction_bound_rad": 0.08,
+  "head_unmodified_by_reverse_correction": true
+}
